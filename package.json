@@ -1,0 +1,22 @@
+{
+  "name": "omarchy.nixfred.com",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Omarchy OS in the browser — a Hyprland session you can actually use.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "deploy": "wrangler pages deploy dist --project-name=omarchy-nixfred-com --branch main"
+  },
+  "dependencies": {
+    "preact": "^10.27.0"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.1.0",
+    "wrangler": "^4.129.0"
+  }
+}

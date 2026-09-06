@@ -1,53 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fred Nix — one human, one AI, one fleet</title>
-  <meta name="description" content="AI Infrastructure Architect in Atlanta. A desktop-shaped tour of the fleet, the projects, and Larry — the persistent AI that helps build all of it.">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>🖥️</text></svg>">
-</head>
-<body>
-  <main class="desktop-shell" id="shell" data-theme-mode="dark" data-agent-phase="typing">
-
-    <header class="top-panel">
-      <nav class="workspace-switcher" id="workspace-switcher" aria-label="Workspaces"></nav>
-      <button class="panel-wordmark-button" id="wordmark" aria-label="Go home">
-        <span class="panel-wordmark">nixfred<i>_</i></span>
-      </button>
-      <div class="panel-status">
-        <span class="panel-addon" id="panel-addon" hidden></span>
-        <time id="panel-clock">--:--</time>
-        <button id="search-button" aria-label="Open search">search <kbd>space</kbd></button>
-      </div>
-    </header>
-
-    <div class="wallpaper-stack" id="wallpaper-stack" aria-hidden="true"></div>
-
-    <div class="desktop-workspace" id="workspace-root"></div>
-
-    <footer class="desktop-footer">
-      <span class="footer-context"><b>fred nix · atlanta ga</b><i id="footer-ws">workspace 1 / 4</i></span>
-      <div class="footer-theme-cycle" aria-label="Theme cycle">
-        <button id="theme-prev" aria-label="Previous theme">‹</button>
-        <button class="footer-theme-display" id="theme-display" title="Pause theme cycle">
-          <span id="theme-name">Tokyo Night</span><small id="theme-count">1/8</small><i id="theme-progress"></i>
-        </button>
-        <button id="theme-next" aria-label="Next theme">›</button>
-      </div>
-      <a href="https://github.com/nixfred" target="_blank" rel="noreferrer">github.com/nixfred ↗</a>
-    </footer>
-
-    <div class="command-overlay" id="command-overlay" hidden>
-      <div class="command-palette" role="dialog" aria-label="Search">
-        <input id="command-input" type="text" placeholder="Search workspaces, cards, writing…" autocomplete="off" spellcheck="false">
-        <ul id="command-results"></ul>
-        <footer><span><kbd>↑↓</kbd> navigate</span><span><kbd>enter</kbd> open</span><span><kbd>esc</kbd> close</span></footer>
-      </div>
-    </div>
-
-  </main>
-  <script src="app.js"></script>
-</body>
+<html lang="en" data-theme="tokyo-night" data-theme-mode="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Omarchy</title>
+    <meta
+      name="description"
+      content="Omarchy OS in your browser. A Hyprland session you can actually use — tiling, Super+Space, real themes, a terminal, a browser."
+    />
+    <meta property="og:title" content="Omarchy — in the browser" />
+    <meta property="og:description" content="A fully usable Omarchy desktop session, running entirely in your browser." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/icon.png" type="image/png" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

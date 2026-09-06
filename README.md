@@ -1,46 +1,53 @@
 # omarchy.nixfred.com
 
-A personal site that cosplays an [Omarchy](https://omarchy.org/) desktop:
-workspace switcher in the bar, tiled app windows, cycling themes with real
-Omarchy palettes, a command palette on `Space`, and a terminal where Larry —
-my persistent AI collaborator — replays real shipped requests.
+**Omarchy OS in the browser.** A Hyprland session you can actually use: dwindle tiling, the stock Omarchy 4 theme set, a terminal, a file system, a browser, lock, boot, screensaver.
 
-**Live: https://omarchy.nixfred.com**
+Live: https://omarchy.nixfred.com
 
-Heavily inspired by the excellent [omarchy.rvbbit.ai](https://omarchy.rvbbit.ai/)
-design exploration by RVBBIT. Theme palettes and wallpapers are from
-[Omarchy](https://github.com/basecamp/omarchy)'s theme set.
-
-## Run it
-
-No build step, no dependencies — three files of vanilla HTML/CSS/JS.
-
-```bash
-python3 -m http.server 8462
-# → http://localhost:8462
-```
+This is not a portfolio dressed as windows. The earlier desktop-shell site that lived here moved conceptually to [oatlug.org](https://oatlug.org). This repo is the OS.
 
 ## Drive it
 
+Super is **Alt** in the browser (the host OS already owns Super). Tap Alt, then a key, if a chord gets stolen.
+
 | Input | Action |
-|-------|--------|
-| `Alt+1..4` | Workspaces: Home · Cards · Writing · Fleet |
-| `Space` | Command palette (searches everything) |
-| footer `‹ ›` | Theme cycle — 8 themes, auto-advances every 20s; click the name to pause |
+|---|---|
+| `SUPER + Return` | Terminal |
+| `SUPER + Space` | Launcher |
+| `SUPER + K` | Keybindings |
+| `SUPER + W` | Close window |
+| `SUPER + T` | Toggle floating |
+| `SUPER + F` | Fullscreen |
+| `SUPER + 1..0` | Workspaces |
+| `SUPER + H/J` or arrows | Focus |
+| `SUPER + Shift + arrows` | Swap |
+| `SUPER + Shift + B / F / N` | Browser / Files / Editor |
+| `SUPER + Ctrl + L` | Lock |
+| `SUPER + [` `]` | Cycle themes |
 | `?theme=gruvbox` | Deep-link a theme |
-| `#cards` `#writing` `#fleet` | Deep-link a workspace |
+| `?noboot` | Skip Plymouth |
+| `?boot=1` | Replay the boot |
 
-On Home, the Larry terminal loops through six real projects (clipsync, Blip,
-upstream watch, Swish, larry.status, plonk) — when a scenario completes, its
-widget chip appears in the top bar.
+The terminal is a shell. `help`, `fastfetch`, `omarchy theme set kanagawa`, `ls`, `nvim README.md`, `firefox omarchy.org`.
 
-## Structure
+Idle: 2 minutes → screensaver, 5 minutes → lock. Any password unlocks.
 
-All content is plain data at the top of `app.js` — `THEMES`, `HERO_COPY`
-(per-theme hero taglines), `CARDS` (the twelve projects), `SCENARIOS`
-(the Larry demo), `DOCS` (writing), `FLEET` (hosts). Edit, refresh, done.
+## Stack
+
+- Vite + Preact + TypeScript
+- Palettes and wallpapers from `/usr/share/omarchy/themes` (Omarchy 4.0.2)
+- Cloudflare Pages (`omarchy-nixfred-com`) + a `/proxy` Pages Function for the in-session browser
+
+## Run it
+
+```bash
+bun install
+bun run dev        # http://localhost:4720
+bun run build
+bun run deploy     # wrangler pages deploy
+```
 
 ## License
 
-MIT © Fred Nix. Wallpaper images belong to their respective Omarchy theme
-authors.
+MIT. Wallpaper images and palettes belong to their Omarchy theme authors.
+The Omarchy wordmark belongs to Omarchy.
