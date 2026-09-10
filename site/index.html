@@ -19,37 +19,51 @@
 </head>
 <body>
 
-<!-- The bar is the hero. These are real widgets, animating, and each one scrolls to its plugin. -->
-<div class="omabar" id="omabar" role="navigation" aria-label="Live plugin bar"></div>
+<!-- The bar is a browser-drawn simulation of the widgets, animating on sample
+     numbers. Each one links through to the real plugin. -->
+<div class="omabar" id="omabar" role="navigation" aria-label="Widget preview bar"></div>
 <div class="bartip" id="bartip" role="tooltip" aria-hidden="true"></div>
 
 <header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">plugins for the omarchy desktop</div>
-    <!-- The genuine wordmark, copied from /usr/share/omarchy/logo.svg on this
-         machine. Never redrawn by hand. -->
-    <div class="lockup">
-      <span class="oma" id="oma-mark" role="img" aria-label="Omarchy"></span>
-      <span class="plugins">plugins</span>
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy">
+      <div class="eyebrow">plugins for the omarchy desktop</div>
+      <!-- The genuine wordmark, copied from /usr/share/omarchy/logo.svg on this
+           machine. Never redrawn by hand. -->
+      <div class="lockup">
+        <span class="oma" id="oma-mark" role="img" aria-label="Omarchy"></span>
+        <span class="plugins">plugins</span>
+      </div>
+      <p class="lede">
+        Explore interactive previews inspired by the widgets, then click through to each
+        real plugin.
+      </p>
+      <p class="sub">
+        The bar above is drawn in your browser on sample numbers, not a running desktop.
+        Everything it points at is real: <a href="https://github.com/nixfred">Fred Nix</a>
+        builds these in the open, and the marketplace status on every card comes from the
+        official registry, refreshed daily, rather than being typed in here.
+      </p>
+      <div class="stats" id="stats"></div>
     </div>
-    <p class="lede">
-      Everything above this line is real. That bar is running the widgets, the way they run
-      on the machine that built them. Click one and it takes you to the plugin.
-    </p>
-    <p class="sub">
-      Built by <a href="https://github.com/nixfred" style="color:var(--fg-2);border-bottom:1px solid var(--line-2)">Fred Nix</a>.
-      Every plugin is public source. Marketplace listing status on each card is read straight
-      from the official registry, so nothing here is a claim you have to take on trust.
-    </p>
-    <div class="stats" id="stats"></div>
+
+    <aside class="hero-pick" aria-label="Featured plugin">
+      <div class="hero-pick-head">
+        <span class="kicker">Featured</span>
+        <div class="pickers" id="hero-pickers" role="tablist" aria-label="Choose a featured plugin"></div>
+      </div>
+      <div id="hero-feature"></div>
+    </aside>
+
   </div>
 </header>
 
 <section id="featured">
   <div class="wrap">
     <header>
-      <h2>Featured</h2>
-      <p>The three that define the rest. Two flagships and a family of six built on one idea.</p>
+      <h2>All three, side by side</h2>
+      <p>Two flagships and a family of six built on one idea.</p>
     </header>
     <div class="feat-grid" id="feat-grid"></div>
   </div>

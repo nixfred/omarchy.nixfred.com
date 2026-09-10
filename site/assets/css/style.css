@@ -580,3 +580,121 @@ section h2 { letter-spacing: 0.02em; font-weight: 700; }
 
 /* The bar sits on Omarchy's own grid: square widgets, hard edges. */
 .omabar { border-bottom-width: 2px; }
+
+/* ───────────────────────────────────────────────── hero, two halves
+
+   The opening screen is split: copy and identity on one side, a real plugin
+   card on the other, so the page starts on a plugin instead of on whitespace. */
+
+.hero { padding: 54px 0 40px; }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 52px;
+  align-items: start;
+}
+
+.hero-copy .lede { max-width: 40ch; margin-bottom: 12px; }
+.hero-copy .sub { max-width: 46ch; margin-bottom: 28px; }
+.hero-copy .sub a { color: var(--fg-2); border-bottom: 1px solid var(--line-2); }
+.hero-copy .sub a:hover { color: var(--accent); border-color: var(--accent); }
+.hero-copy .stats .stat { min-width: 96px; padding: 11px 15px; }
+.hero-copy .stats .stat b { font-size: 22px; }
+
+.hero-pick { position: sticky; top: calc(var(--bar-h) + 20px); }
+
+.hero-pick-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  min-height: 26px;
+}
+.hero-pick-head .kicker {
+  font: 600 10.5px/1 var(--mono);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+
+.pickers { display: flex; gap: 6px; }
+.pickers button {
+  height: 26px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--fg-3);
+  font: 500 11px/1 var(--mono);
+  cursor: pointer;
+  transition: 0.15s;
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+}
+.pickers button:hover { color: var(--fg); border-color: var(--line-2); }
+.pickers button[aria-selected="true"] {
+  color: #06080b;
+  background: var(--pa, var(--accent));
+  border-color: var(--pa, var(--accent));
+}
+
+/* The hero card is one whole click target, straight through to the plugin. */
+.hero-card {
+  --ca: var(--accent);
+  position: relative;
+  display: block;
+  padding: 26px;
+  border: 1px solid color-mix(in srgb, var(--ca) 30%, var(--line));
+  background:
+    radial-gradient(130% 100% at 88% 0%, color-mix(in srgb, var(--ca) 15%, transparent), transparent 64%),
+    var(--panel);
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s, background 0.2s;
+  clip-path: polygon(
+    var(--chamfer) 0, 100% 0,
+    100% calc(100% - var(--chamfer)), calc(100% - var(--chamfer)) 100%,
+    0 100%, 0 var(--chamfer)
+  );
+}
+.hero-card:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--ca) 58%, transparent); }
+
+.hero-card .row1 { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.hero-card .mark {
+  width: 52px; height: 52px;
+  display: grid; place-items: center;
+  border: 1px solid color-mix(in srgb, var(--ca) 34%, transparent);
+  background: color-mix(in srgb, var(--ca) 12%, transparent);
+  color: var(--ca);
+  flex: 0 0 auto;
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+}
+.hero-card .mark svg { width: 27px; height: 27px; }
+.hero-card h3 { font-size: 22px; }
+.hero-card .tagline { color: var(--ca); font-size: 13.5px; margin-top: 4px; }
+.hero-card p.d { color: var(--fg-2); font-size: 13.8px; line-height: 1.66; margin: 0 0 16px; }
+.hero-card .siblings { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.hero-card .siblings span {
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  clip-path: polygon(7px 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0 7px);
+}
+.hero-card .siblings svg { width: 18px; height: 18px; }
+
+.hero-card .go {
+  display: inline-flex; align-items: center; gap: 8px;
+  font: 600 12.5px/1 var(--mono);
+  color: var(--ca);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.hero-card .go svg { width: 14px; height: 14px; }
+.hero-card:hover .go .arr { transform: translateX(3px); }
+.hero-card .go .arr { transition: transform 0.18s; }
+
+@media (max-width: 940px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 34px; }
+  .hero-pick { position: static; }
+  .hero-copy .lede, .hero-copy .sub { max-width: 60ch; }
+}
