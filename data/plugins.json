@@ -1,0 +1,244 @@
+{
+  "$comment": "Hand-editable source of truth for omarchy.nixfred.com. scripts/build.ts merges this with live GitHub stars and the official marketplace registry.json to produce site/data.json. Never edit site/data.json by hand.",
+  "owner": "nixfred",
+  "families": [
+    { "id": "pulse",     "name": "The Pulse Suite",   "blurb": "Six siblings drawn as living silicon. One visual language for everything the machine is doing to itself." },
+    { "id": "bridge",    "name": "The Mac Bridge",    "blurb": "Your phone and your Mac, in the Linux bar. The Mac is the gateway, this machine is the client, nothing is proxied through a stranger." },
+    { "id": "workspace", "name": "Workspace Control", "blurb": "Hyprland workspaces that name themselves, pack themselves, and remember what belonged on them." },
+    { "id": "desk",      "name": "The AI Desk",       "blurb": "What the agents on this machine are actually doing, and what they are costing." },
+    { "id": "infra",     "name": "Infrastructure",    "blurb": "The boring, load-bearing ones. Backups, exposed ports, latency, fleet health." },
+    { "id": "media",     "name": "Media and Output",  "blurb": "Sound and pixels leaving this machine for somewhere else in the house." },
+    { "id": "system",    "name": "System and Desk",   "blurb": "Everyday surfaces. Clipboard, clock, bluetooth, sleep, the car." }
+  ],
+  "plugins": [
+    {
+      "id": "nixfred.ram-pulse", "name": "RAM Pulse", "family": "pulse", "status": "live",
+      "repo": "nixfred/ram.plugin.omarchy", "dir": "ram.plugin.omarchy", "version": "1.5.0",
+      "tagline": "A living memory chip.",
+      "description": "A living memory chip: continuous history, RAM pressure, swap and zram insight, and focus-only RAM hoarders.",
+      "accent": "#7c5cff"
+    },
+    {
+      "id": "nixfred.cpu-pulse", "name": "CPU Pulse", "family": "pulse", "status": "live",
+      "repo": "nixfred/omacpu", "dir": "omacpu", "version": "1.3.1",
+      "tagline": "A living processor die.",
+      "description": "A living processor die: per-thread load, clocks, temperature, CPU pressure, seven-day history, and focus-only CPU hogs.",
+      "accent": "#ff6b4a"
+    },
+    {
+      "id": "nixfred.net-pulse", "name": "Net Pulse", "family": "pulse", "status": "live",
+      "repo": "nixfred/omanet.plugin.omarchy", "dir": "omanet.plugin.omarchy", "version": "1.5.0",
+      "tagline": "A living network chip.",
+      "description": "A living network chip: throughput, latency, Wi-Fi radio detail, interface settings, seven-day history, and focus-only top talkers.",
+      "accent": "#3ddc97"
+    },
+    {
+      "id": "nixfred.disk-pulse", "name": "Disk Pulse", "family": "pulse", "status": "live",
+      "repo": "nixfred/disk.pulse", "dir": "disk.pulse", "version": "1.0.1",
+      "tagline": "A living storage die.",
+      "description": "A living storage die: free space, read and write throughput, drive busy time, I/O pressure, drive temperature and SMART health, btrfs allocation, seven-day history, and focus-only disk hogs.",
+      "accent": "#4aa8ff"
+    },
+    {
+      "id": "pi.audio", "name": "Audio Pulse", "family": "pulse", "status": "live",
+      "repo": "nixfred/audio.pulse.omarchy", "dir": "audio.pulse.omarchy", "version": "1.0.0",
+      "tagline": "A living audio chip.",
+      "description": "A living audio chip: volume, mute, output picker and per-app mixer, drawn as a sibling of RAM Pulse, CPU Pulse and Net Pulse.",
+      "accent": "#ffc857"
+    },
+    {
+      "id": "pi.power", "name": "Power Pulse", "family": "pulse", "status": "live",
+      "repo": "nixfred/power-pulse", "dir": "power.omarchy", "version": "1.4.2",
+      "tagline": "Battery as a glowing flux cell whose colour is its charge.",
+      "description": "Battery as a glowing flux cell whose colour is its charge: blue when full, yellow in the middle, red when low. A stream of glowing atoms rides in while charging, out on battery, with glints popping around them. Hour-long up and down power trace, live wattage, power profiles.",
+      "accent": "#5ad1ff",
+      "supersedes": "Flux Power"
+    },
+
+    {
+      "id": "nixfred.blip", "name": "Blip", "family": "bridge", "status": "live", "flagship": true,
+      "repo": "nixfred/blip", "dir": "blip", "version": "2.4.0",
+      "tagline": "iMessage in the Omarchy bar.",
+      "description": "iMessage in the Omarchy bar. Reads and sends through a Mac you own over a multiplexed SSH socket. iMessage is macOS-only, so this machine is a thin client and the Mac is the gateway. The bar badge counts every unread; desktop toasts fire only for handles on your allowlist, because chat.db is mostly bank alerts and 2FA codes.",
+      "accent": "#0a84ff"
+    },
+    {
+      "id": "nixfred.apple-notes", "name": "Apple Notes", "family": "bridge", "status": "unreleased",
+      "repo": null, "dir": "notes.apple.omarchy.app", "version": "2.0.0",
+      "tagline": "Apple Notes, read and written from Linux.",
+      "description": "A safety-first Apple Notes browser for Omarchy, using a Mac you own as the private source. Search, read, create, and safely append over a confined SSH bridge.",
+      "accent": "#ffd60a"
+    },
+    {
+      "id": "nixfred.wisp", "name": "Wisp", "family": "bridge", "status": "shelved",
+      "repo": "nixfred/wisp", "dir": "whatsapp.plugin.omarchy", "version": "0.1.0",
+      "tagline": "WhatsApp in the Omarchy bar.",
+      "description": "WhatsApp in the Omarchy bar. A local wacli sync daemon pairs as a linked WhatsApp Web device and mirrors your messages into SQLite on this machine, so nothing is proxied through another host. The badge is WhatsApp's own unread count with muted chats excluded, exactly what the phone shows.",
+      "accent": "#25d366"
+    },
+
+    {
+      "id": "io.github.nixfred.plonk", "name": "Plonk", "family": "workspace", "status": "live",
+      "repo": "nixfred/plonk", "dir": "plonk", "version": "1.2.4",
+      "tagline": "Workspaces close their own gaps.",
+      "description": "Packs numeric Hyprland workspaces into 1 through N as gaps appear, preserving order, tiling, monitor placement, and focus.",
+      "accent": "#9d7bff"
+    },
+    {
+      "id": "nixfred.rift", "name": "Rift", "family": "workspace", "status": "live",
+      "repo": "nixfred/rift", "dir": "rift", "version": "0.3.8",
+      "tagline": "Hyprland tiles, Rift remembers.",
+      "description": "Save the applications on a workspace as a named Rift and reopen them on demand or at login, straight from the Omarchy bar. No geometry is saved, so Hyprland keeps tiling.",
+      "accent": "#c77dff"
+    },
+    {
+      "id": "nixfred.workspace-names", "name": "Workspace Names", "family": "workspace", "status": "live",
+      "repo": "nixfred/workspace-names", "dir": "larry.workspace.name", "version": "0.8.0",
+      "tagline": "Numbers stay numbers. Now they have a name too.",
+      "description": "Give Hyprland workspaces a title without touching their numbers. Workspaces name themselves from their windows until you rename them. Includes inline rename and a live Workspace Map with occupancy and app identities.",
+      "accent": "#68d8d6"
+    },
+    {
+      "id": "nixfred.menubar-overload", "name": "MenuBar Overload", "family": "workspace", "status": "live",
+      "repo": "nixfred/menu.bar.overload", "dir": "menu.bar.overload/nixfred.menubar-overload", "version": "0.9.0",
+      "tagline": "Add as many plugins as you like.",
+      "description": "The Omarchy bar with a dock-magnified carousel on each side. Add as many plugins as you like; roll through the ones that do not fit with the mouse wheel or a trackpad swipe, and each one pops out as it arrives.",
+      "accent": "#ff9f1c"
+    },
+
+    {
+      "id": "nixfred.infomarchy", "name": "Infomarchy", "family": "desk", "status": "live", "flagship": true,
+      "repo": "nixfred/infomarchy", "dir": "infomarchy", "version": "1.3.2",
+      "tagline": "Your wallpaper becomes a live information desk.",
+      "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven, on a SUPER+D overlay.",
+      "accent": "#00e5ff"
+    },
+    {
+      "id": "nixfred.burnbar", "name": "Burn Bar", "family": "desk", "status": "live",
+      "repo": "nixfred/burnbar", "dir": "burnbar", "version": "1.11.0",
+      "tagline": "A thermal heat map of what the AIs are costing you.",
+      "description": "Live thermal heat map of the AIs this machine actually uses, Claude, Codex, Grok, and local Ollama when a GPU is present, with weekly quota gauges and the share of tokens kept off frontier models.",
+      "accent": "#ff4d4d"
+    },
+    {
+      "id": "larry.status", "name": "Larry Status", "family": "desk", "status": "live",
+      "repo": "nixfred/larry.status", "dir": "larry.status", "version": "0.5.0",
+      "tagline": "A face in the bar that reacts to your agents.",
+      "description": "Larry's face in the bar, alive. Reacts to the agents running on this host: asleep, idle, thinking, working, needs-you, speaking, alert. The panel is Agents on Deck, with service health, fleet state, and one-click actions.",
+      "accent": "#7dd3fc"
+    },
+
+    {
+      "id": "io.github.nixfred.watchtower", "name": "Watchtower", "family": "infra", "status": "live",
+      "repo": "nixfred/omarchy-watchtower", "dir": "omarchy-watchtower", "version": "1.0.0",
+      "tagline": "A quiet perimeter alarm that explains itself.",
+      "description": "A quiet perimeter alarm that explains exposed listeners with process, service, container, firewall, and network-scope context.",
+      "accent": "#ffb703"
+    },
+    {
+      "id": "io.github.nixfred.tailscale-host-monitor", "name": "Tailscale Host Monitor", "family": "infra", "status": "live",
+      "repo": "nixfred/omarchy-server-status", "dir": "omarchy-server-status", "version": "0.8.0",
+      "tagline": "Your whole tailnet, from the bar.",
+      "description": "Select nodes from your Tailscale network, track every device type, and collect deep Linux metrics over read-only SSH.",
+      "accent": "#41b883"
+    },
+    {
+      "id": "pi.backup-monitor", "name": "Backup Sizzle", "family": "infra", "status": "live",
+      "repo": "nixfred/backup.omarchy", "dir": "backup.omarchy", "version": "3.0.0",
+      "tagline": "Restic, with a countdown ring and an outcome calendar.",
+      "description": "Restic backup with live B2 throughput, countdown ring, outcome calendar, anomaly notes, snapshot browser and run history.",
+      "accent": "#06d6a0"
+    },
+    {
+      "id": "nixfred.internet-latency", "name": "Internet Latency", "family": "infra", "status": "live",
+      "repo": "nixfred/omarchy-internet-latency", "dir": "plugin.latency.internet.test", "version": "1.0.1",
+      "tagline": "Live color-coded latency, with the loss and jitter behind it.",
+      "description": "Live color-coded internet latency with target selection, packet loss, jitter, and history.",
+      "accent": "#ef476f"
+    },
+    {
+      "id": "io.github.nixfred.local-intelligence", "name": "Local Intelligence", "family": "infra", "status": "live",
+      "repo": "nixfred/omarchy-local-intelligence", "dir": "plugin.local.llm.monitor", "version": "1.0.0",
+      "tagline": "Ollama, watched and driven from the bar.",
+      "description": "Monitor Ollama activity and control locally installed models from the Omarchy bar.",
+      "accent": "#b388ff"
+    },
+
+    {
+      "id": "nixfred.beatdeck", "name": "Beatdeck", "family": "media", "status": "live",
+      "repo": "nixfred/beatdeck.omarchy", "dir": "beatdeck.omarchy", "version": "1.6.0",
+      "tagline": "A live spectrum that opens a media cockpit.",
+      "description": "Beatbar's live spectrum as the trigger for the Living Media Cockpit. Click for now playing, right click for the visuals.",
+      "accent": "#f72585"
+    },
+    {
+      "id": "io.github.nixfred.sonomarchy", "name": "Sonomarchy", "family": "media", "status": "live",
+      "repo": "nixfred/sonomarchy", "dir": "sonomarchy", "version": "1.5.4",
+      "tagline": "Every Sonos zone as a system audio output.",
+      "description": "Makes every Sonos zone on your network a selectable system audio output, including legacy Play:1, Play:3, Play:5, Playbar and Connect speakers that have no AirPlay.",
+      "accent": "#8ecae6"
+    },
+    {
+      "id": "nixfred.mirror", "name": "Mirror", "family": "media", "status": "live",
+      "repo": "nixfred/omarchy-mirror", "dir": "mirror.omarchy.plugin", "version": "0.2.0",
+      "tagline": "Throw this screen at the TV.",
+      "description": "Mirror this screen, or extend your desktop, to a Google TV or Chromecast on the LAN, straight from the Omarchy bar. GPU-encoded HLS, played by the TV's Default Media Receiver.",
+      "accent": "#fb8500"
+    },
+
+    {
+      "id": "nixfred.pastey", "name": "Pastey", "family": "system", "status": "live",
+      "repo": "nixfred/Pastey", "dir": "Pastey", "version": "1.3.0",
+      "tagline": "A clipboard that remembers.",
+      "description": "A compact, searchable 200-item clipboard history for the Omarchy bar, with real screenshot thumbnails and the whole clip on hover.",
+      "accent": "#adb5bd"
+    },
+    {
+      "id": "pi.bluetooth", "name": "Halo Bluetooth", "family": "system", "status": "live",
+      "repo": "nixfred/omarchy-halo-bluetooth", "dir": "bluetooth.omarchy", "version": "1.0.0",
+      "tagline": "A live sonar hero with battery halos.",
+      "description": "Bluetooth with a live sonar hero, per-device battery halos and type-aware glyphs.",
+      "accent": "#4cc9f0"
+    },
+    {
+      "id": "nixfred.chronos", "name": "Chronos", "family": "system", "status": "live", "fork_of": "Omarchy's stock clock",
+      "repo": "nixfred/omarchy-chronos", "dir": "plugin.working.dir/chronos.omarchy", "version": "1.0.0",
+      "tagline": "A clock and calendar with a pulse.",
+      "description": "Clock and calendar with a pulse: a day-progress ring, shimmering year and life rails, a drawn moon phase, and a month grid that arrives on a stagger.",
+      "accent": "#e0aaff"
+    },
+    {
+      "id": "lgse.sandman", "name": "Sandman", "family": "system", "status": "live", "fork_of": "lgse/sandman",
+      "repo": "nixfred/sandman", "dir": "plugin.working.dir/sandman.omarchy", "version": "0.9.2",
+      "tagline": "When the screen rests, locks, sleeps and hibernates.",
+      "description": "Set lid-close actions and when your screen rests, locks, sleeps, and hibernates. A two-column fork.",
+      "accent": "#6c757d"
+    },
+    {
+      "id": "jankeesvw.tesla", "name": "Tesla", "family": "system", "status": "live", "fork_of": "jankeesvw/omarchy-tesla",
+      "repo": "nixfred/omarchy-tesla", "dir": "omarchy-tesla", "version": "1.3.0",
+      "tagline": "Your car in the bar.",
+      "description": "Your Tesla in the bar: where it is, how full it is, how far that gets you, and whether it is charging right now.",
+      "accent": "#e82127"
+    }
+  ],
+  "themes": [
+    {
+      "id": "2-hackrz", "name": "2 Hackrz", "repo": "nixfred/omarchy-2-haxorz-theme",
+      "dir": "omarchy-2-haxorz-theme",
+      "tagline": "Midnight blue, muted steel, warm terminal.",
+      "description": "A midnight-blue Omarchy Quattro theme with muted steel accents and warm terminal colors."
+    }
+  ],
+  "tools": [
+    { "name": "Omavoice",      "repo": "nixfred/omavoice",      "description": "Voice recorder with live whisper.cpp transcription for Omarchy. GTK4 and PipeWire." },
+    { "name": "Imprint",       "repo": "nixfred/imprint",       "description": "Stamp one Omarchy machine onto another." },
+    { "name": "Remarchy",      "repo": "nixfred/remarchy",      "description": "Remake your Omarchy machine from a file. A declarative machine manifest you save, diff and apply." },
+    { "name": "Clipsync",      "repo": "nixfred/clipsync",      "description": "One clipboard across Linux, macOS and iPhone. Copy anywhere, paste on Linux, text and photos." },
+    { "name": "Swish",         "repo": "nixfred/swish",         "description": "macOS Cmd+Tab for Omarchy. Hold SUPER, tab through glass workspace cards with live preview." },
+    { "name": "claude-on-mac", "repo": "nixfred/claude-on-mac", "description": "Teach Claude Code to use the Apple ecosystem on macOS. The bridge Blip and Apple Notes are built on." }
+  ],
+  "retired": [
+    { "name": "Flux Power", "repo": "nixfred/omarchy-flux-power-recovered", "reason": "Replaced by Power Pulse, which is the same idea finished. Repo archived 2026-09-09." }
+  ]
+}
