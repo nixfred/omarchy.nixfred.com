@@ -65,17 +65,61 @@ const repoNames = [
 ];
 
 console.error(`→ fetching ${repoNames.length} repos from GitHub…`);
-const repoStats = new Map<string, { stars: number; pushed: string | null; created: string | null; archived: boolean; license: string | null }>();
+type RepoStat = {
+  stars: number;
+  forks: number;
+  watchers: number;
+  open_issues: number;      // issues only, pulls subtracted
+  open_prs: number;
+  pushed: string | null;
+  created: string | null;
+  archived: boolean;
+  license: string | null;
+  language: string | null;
+  topics: string[];
+  default_branch: string;
+  release: { tag: string; published: string | null } | null;
+  contributors: { login: string; avatar: string; commits: number }[];
+  commits: number;          // total across the returned contributors
+};
+
+const repoStats = new Map<string, RepoStat>();
 await Promise.all(
   repoNames.map(async (r) => {
-    const j = await ghJson(`repos/${r}`);
+    // The repo record, its open pull requests, its contributors and its latest
+    // release, in parallel. GitHub counts pulls inside open_issues_count, so the
+    // pulls list is what makes an honest issue count possible.
+    const [j, pulls, contribs, rel] = await Promise.all([
+      ghJson(`repos/${r}`),
+      ghJson(`repos/${r}/pulls?state=open&per_page=100`),
+      ghJson(`repos/${r}/contributors?per_page=8&anon=0`),
+      ghJson(`repos/${r}/releases/latest`),
+    ]);
     if (!j || j.message) return;
+
+    const openPrs = Array.isArray(pulls) ? pulls.length : 0;
+    const people = Array.isArray(contribs) ? contribs : [];
+
     repoStats.set(r, {
       stars: j.stargazers_count ?? 0,
+      forks: j.forks_count ?? 0,
+      watchers: j.subscribers_count ?? 0,
+      open_issues: Math.max(0, (j.open_issues_count ?? 0) - openPrs),
+      open_prs: openPrs,
       pushed: j.pushed_at ?? null,
       created: j.created_at ?? null,
       archived: !!j.archived,
       license: j.license?.spdx_id ?? null,
+      language: j.language ?? null,
+      topics: j.topics ?? [],
+      default_branch: j.default_branch ?? "main",
+      release: rel && !rel.message ? { tag: rel.tag_name, published: rel.published_at ?? null } : null,
+      contributors: people.map((c: any) => ({
+        login: c.login,
+        avatar: c.avatar_url,
+        commits: c.contributions ?? 0,
+      })),
+      commits: people.reduce((n: number, c: any) => n + (c.contributions ?? 0), 0),
     });
   }),
 );
@@ -151,9 +195,19 @@ const plugins = src.plugins.map((p) => {
   return {
     ...p,
     stars: stats?.stars ?? 0,
+    forks: stats?.forks ?? 0,
+    watchers: stats?.watchers ?? 0,
+    open_prs: stats?.open_prs ?? 0,
+    open_issues: stats?.open_issues ?? 0,
     pushed: stats?.pushed ?? null,
     created: stats?.created ?? null,
     license: stats?.license ?? null,
+    language: stats?.language ?? null,
+    topics: stats?.topics ?? [],
+    default_branch: stats?.default_branch ?? "main",
+    release: stats?.release ?? null,
+    contributors: stats?.contributors ?? [],
+    commits: stats?.commits ?? 0,
     repo_url: p.repo ? `https://github.com/${p.repo}` : null,
     glyph: glyphFor(p.id),
     shot: haveShot.has(p.id.replace(/\./g, "-")) ? `assets/img/shot/${p.id.replace(/\./g, "-")}.png` : null,
@@ -163,6 +217,7 @@ const plugins = src.plugins.map((p) => {
     marketplace_category: listing?.category ?? null,
     marketplace_tags: listing?.tags ?? [],
     install: p.repo ? `omarchy plugin install ${p.repo}` : null,
+    clone: p.repo ? `git clone https://github.com/${p.repo}.git` : null,
   };
 });
 

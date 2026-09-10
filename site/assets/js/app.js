@@ -14,6 +14,7 @@
     store: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18l-1.5 11H4.5L3 9Z"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/></svg>',
     star: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8L12 2Z"/></svg>',
     arrow: '<svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+    chev: '<svg class="chv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>',
     dotm: '<svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="4"/></svg>',
     plug: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 0 1-6 6 6 6 0 0 1-6-6V8ZM12 17v5"/></svg>',
   };
@@ -153,6 +154,76 @@
 
   // ─────────────────────────────────────────────────────── cards
 
+
+  const fmtDate = (iso) =>
+    iso ? new Date(iso).toLocaleDateString("en-GB", { month: "short", year: "numeric" }) : "—";
+  const ago = (iso) => {
+    if (!iso) return "—";
+    const d = Math.floor((Date.now() - Date.parse(iso)) / 86400000);
+    if (d <= 0) return "today";
+    if (d === 1) return "yesterday";
+    if (d < 30) return `${d}d ago`;
+    if (d < 365) return `${Math.round(d / 30)}mo ago`;
+    return `${(d / 365).toFixed(1)}y ago`;
+  };
+
+  /** A copy-to-clipboard box. The command travels in a data attribute so the
+      visible label can be shortened without changing what lands on the clipboard. */
+  function cmdBox(label, cmd) {
+    if (!cmd) return "";
+    return `<div class="cmd-row">
+      <span class="cmd-label">${esc(label)}</span>
+      <button class="cmd-box" type="button" data-cmd="${esc(cmd)}" title="Copy: ${esc(cmd)}">
+        <code>${esc(cmd)}</code>${ICON.copy}
+      </button>
+    </div>`;
+  }
+
+  /** Everything GitHub knows about the plugin, folded away until asked for. */
+  function detailsBlock(p) {
+    if (!p.repo) return "";
+    // Numbers are set large; text values are set smaller so they are not
+    // truncated in a narrow card column.
+    const cells = [
+      ["stars", p.stars],
+      ["forks", p.forks],
+      ["watching", p.watchers],
+      ["open PRs", p.open_prs],
+      ["open issues", p.open_issues],
+      ["commits", p.commits || "—"],
+      ["language", p.language || "—", true],
+      ["licence", p.license || "—", true],
+      ["release", p.release ? p.release.tag : "—", true],
+      ["created", fmtDate(p.created), true],
+      ["last push", ago(p.pushed), true],
+      ["branch", p.default_branch || "—", true],
+    ];
+
+    const people = (p.contributors || []).length
+      ? `<div class="who">
+           <span class="who-h">${p.contributors.length} contributor${p.contributors.length === 1 ? "" : "s"}</span>
+           <div class="faces">${p.contributors.map((c) =>
+             `<a href="https://github.com/${esc(c.login)}" target="_blank" rel="noopener"
+                 title="${esc(c.login)} — ${c.commits} commit${c.commits === 1 ? "" : "s"}">
+                <img src="${esc(c.avatar)}&s=64" alt="${esc(c.login)}" loading="lazy" decoding="async">
+              </a>`).join("")}</div>
+         </div>`
+      : "";
+
+    return `<details class="drop">
+      <summary><span>Details</span>${ICON.chev}</summary>
+      <div class="drop-body">
+        <div class="kv">${cells.map(([k, v, isText]) =>
+          `<div class="kv-c"><b${isText ? ' class="t"' : ""}>${esc(String(v))}</b><span>${esc(k)}</span></div>`).join("")}</div>
+        ${people}
+        <div class="cmds">
+          ${cmdBox("Install", p.install)}
+          ${cmdBox("Clone", p.clone)}
+        </div>
+      </div>
+    </details>`;
+  }
+
   function statusTags(p) {
     const t = [];
     if (p.listed) {
@@ -189,10 +260,8 @@
       ${p.shot ? `<img class="shot" src="${esc(p.shot)}" alt="${esc(p.name)} running in the Omarchy bar" loading="lazy" decoding="async">` : ""}
       <p class="desc">${esc(p.description)}</p>
       <div class="tags">${statusTags(p)}</div>
-      <div class="foot">
-        ${p.install ? `<button class="btn copy" type="button" data-cmd="${esc(p.install)}" title="Copy: ${esc(p.install)}"><span class="cmd">${esc(p.repo)}</span>${ICON.copy}</button>` : ""}
-        ${links.join("")}
-      </div>`;
+      <div class="foot">${links.join("")}</div>
+      ${detailsBlock(p)}`;
 
     // Swap in the real glyph when Codex's SVG exists; the plug icon is the fallback.
     const holder = c.querySelector(".glyph");
@@ -200,16 +269,6 @@
       if (svg && svg.trim().startsWith("<svg")) holder.innerHTML = svg;
     }).catch(() => {});
 
-    const btn = c.querySelector(".copy");
-    if (btn) btn.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(btn.dataset.cmd);
-        const prev = btn.innerHTML;
-        btn.classList.add("done");
-        btn.innerHTML = `<span class="cmd">copied</span>${ICON.check}`;
-        setTimeout(() => { btn.classList.remove("done"); btn.innerHTML = prev; }, 1400);
-      } catch { /* clipboard blocked */ }
-    });
     return c;
   }
 
@@ -367,9 +426,10 @@
         <p class="d">${esc(p.description)}</p>
         <div class="tags">${statusTags(p)}</div>
         <div class="foot">
-          <a class="btn primary" href="#p-${esc(p.id)}">Details</a>
-          ${p.repo_url ? `<a class="btn" href="${esc(p.repo_url)}" target="_blank" rel="noopener">${ICON.github} Source</a>` : ""}
-        </div>`;
+          ${p.repo_url ? `<a class="btn primary" href="${esc(p.repo_url)}" target="_blank" rel="noopener">${ICON.github} Source</a>` : ""}
+          ${p.listing_url ? `<a class="btn" href="${esc(p.listing_url)}" target="_blank" rel="noopener">${ICON.store} Marketplace</a>` : ""}
+        </div>
+        ${detailsBlock(p)}`;
       fetch(p.glyph).then((r) => (r.ok ? r.text() : null)).then((svg) => {
         if (svg && svg.trim().startsWith("<svg")) n.querySelector(".mark").innerHTML = svg;
       }).catch(() => {});
@@ -482,6 +542,21 @@
 
     $("#built").textContent = `generated ${new Date(DATA.generated_at).toISOString().slice(0, 16).replace("T", " ")} UTC · listing status read live from the official registry`;
   }
+
+  // One listener for every copy box on the page, present and future, so cards
+  // rendered later by a filter do not need re-wiring.
+  document.addEventListener("click", async (e) => {
+    const btn = e.target.closest?.("[data-cmd]");
+    if (!btn) return;
+    e.preventDefault();
+    try {
+      await navigator.clipboard.writeText(btn.dataset.cmd);
+      const prev = btn.innerHTML;
+      btn.classList.add("done");
+      btn.innerHTML = `<code>copied</code>${ICON.check}`;
+      setTimeout(() => { btn.classList.remove("done"); btn.innerHTML = prev; }, 1400);
+    } catch { /* clipboard blocked, leave the text visible to select by hand */ }
+  });
 
   // The genuine Omarchy wordmark is inlined rather than used as <img>, because
   // an <img> cannot inherit currentColor and the file ships filled with black.

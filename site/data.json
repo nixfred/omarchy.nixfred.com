@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10T23:52:25.300Z",
+  "generated_at": "2026-09-10T23:56:38.278Z",
   "owner": "nixfred",
   "families": [
     {
@@ -51,9 +51,25 @@
       "description": "A living storage die: free space, read and write throughput, drive busy time, I/O pressure, drive temperature and SMART health, btrfs allocation, seven-day history, and focus-only disk hogs.",
       "accent": "#4aa8ff",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-10T15:48:12Z",
       "created": "2026-09-10T14:32:47Z",
       "license": "MIT",
+      "language": "Python",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 4
+        }
+      ],
+      "commits": 4,
       "repo_url": "https://github.com/nixfred/disk.pulse",
       "glyph": "assets/img/glyph/nixfred-disk-pulse.svg",
       "shot": null,
@@ -62,7 +78,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/disk.pulse"
+      "install": "omarchy plugin install nixfred/disk.pulse",
+      "clone": "git clone https://github.com/nixfred/disk.pulse.git"
     },
     {
       "id": "nixfred.pr-hunter",
@@ -76,9 +93,25 @@
       "description": "GitHub pull requests and issues for Herdr and your saved projects, in the bar. Opens the right workspace or terminal and hands the work to an agent that is already running.",
       "accent": "#a78bfa",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-10T15:29:00Z",
       "created": "2026-09-10T02:16:48Z",
       "license": null,
+      "language": "Python",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 4
+        }
+      ],
+      "commits": 4,
       "repo_url": "https://github.com/nixfred/pr.hunter",
       "glyph": "assets/img/glyph/nixfred-pr-hunter.svg",
       "shot": null,
@@ -87,7 +120,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/pr.hunter"
+      "install": "omarchy plugin install nixfred/pr.hunter",
+      "clone": "git clone https://github.com/nixfred/pr.hunter.git"
     },
     {
       "id": "nixfred.menubar-overload",
@@ -101,9 +135,28 @@
       "description": "The Omarchy bar with a dock-magnified carousel on each side. Add as many plugins as you like; roll through the ones that do not fit with the mouse wheel or a trackpad swipe, and each one pops out as it arrives.",
       "accent": "#ff9f1c",
       "stars": 3,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-09T15:57:37Z",
       "created": "2026-09-09T03:28:34Z",
       "license": null,
+      "language": "QML",
+      "topics": [],
+      "default_branch": "main",
+      "release": {
+        "tag": "v0.9.0",
+        "published": "2026-09-09T14:38:53Z"
+      },
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 12
+        }
+      ],
+      "commits": 12,
       "repo_url": "https://github.com/nixfred/menu.bar.overload",
       "glyph": "assets/img/glyph/nixfred-menubar-overload.svg",
       "shot": null,
@@ -112,7 +165,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/menu.bar.overload"
+      "install": "omarchy plugin install nixfred/menu.bar.overload",
+      "clone": "git clone https://github.com/nixfred/menu.bar.overload.git"
     },
     {
       "id": "pi.audio",
@@ -126,9 +180,25 @@
       "description": "A living audio chip: volume, mute, output picker and per-app mixer, drawn as a sibling of RAM Pulse, CPU Pulse and Net Pulse.",
       "accent": "#ffc857",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-06T20:29:45Z",
       "created": "2026-09-06T18:19:26Z",
       "license": "MIT",
+      "language": "QML",
+      "topics": [],
+      "default_branch": "master",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 2
+        }
+      ],
+      "commits": 2,
       "repo_url": "https://github.com/nixfred/audio.pulse.omarchy",
       "glyph": "assets/img/glyph/pi-audio.svg",
       "shot": null,
@@ -137,7 +207,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/audio.pulse.omarchy"
+      "install": "omarchy plugin install nixfred/audio.pulse.omarchy",
+      "clone": "git clone https://github.com/nixfred/audio.pulse.omarchy.git"
     },
     {
       "id": "nixfred.net-pulse",
@@ -151,9 +222,32 @@
       "description": "A living network chip: throughput, latency, Wi-Fi radio detail, interface settings, seven-day history, and focus-only top talkers.",
       "accent": "#3ddc97",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-10T01:30:50Z",
       "created": "2026-09-06T03:22:57Z",
       "license": "MIT",
+      "language": "QML",
+      "topics": [
+        "bar-widget",
+        "hyprland",
+        "networkmanager",
+        "omarchy",
+        "quickshell",
+        "wayland"
+      ],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 13
+        }
+      ],
+      "commits": 13,
       "repo_url": "https://github.com/nixfred/omanet.plugin.omarchy",
       "glyph": "assets/img/glyph/nixfred-net-pulse.svg",
       "shot": null,
@@ -162,7 +256,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/omanet.plugin.omarchy"
+      "install": "omarchy plugin install nixfred/omanet.plugin.omarchy",
+      "clone": "git clone https://github.com/nixfred/omanet.plugin.omarchy.git"
     },
     {
       "id": "nixfred.cpu-pulse",
@@ -176,9 +271,25 @@
       "description": "A living processor die: per-thread load, clocks, temperature, CPU pressure, seven-day history, and focus-only CPU hogs.",
       "accent": "#ff6b4a",
       "stars": 5,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-10T01:30:36Z",
       "created": "2026-09-06T01:09:35Z",
       "license": "MIT",
+      "language": "Python",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 8
+        }
+      ],
+      "commits": 8,
       "repo_url": "https://github.com/nixfred/omacpu",
       "glyph": "assets/img/glyph/nixfred-cpu-pulse.svg",
       "shot": null,
@@ -187,7 +298,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/omacpu"
+      "install": "omarchy plugin install nixfred/omacpu",
+      "clone": "git clone https://github.com/nixfred/omacpu.git"
     },
     {
       "id": "nixfred.ram-pulse",
@@ -201,9 +313,35 @@
       "description": "A living memory chip: continuous history, RAM pressure, swap and zram insight, and focus-only RAM hoarders.",
       "accent": "#7c5cff",
       "stars": 2,
+      "forks": 2,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 2,
       "pushed": "2026-09-10T16:36:13Z",
       "created": "2026-09-05T21:18:31Z",
       "license": "MIT",
+      "language": "Python",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 22
+        },
+        {
+          "login": "GreyforgeLabs",
+          "avatar": "https://avatars.githubusercontent.com/u/252855775?v=4",
+          "commits": 8
+        },
+        {
+          "login": "kurtlieber",
+          "avatar": "https://avatars.githubusercontent.com/u/3666535?v=4",
+          "commits": 1
+        }
+      ],
+      "commits": 31,
       "repo_url": "https://github.com/nixfred/ram.plugin.omarchy",
       "glyph": "assets/img/glyph/nixfred-ram-pulse.svg",
       "shot": null,
@@ -212,7 +350,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/ram.plugin.omarchy"
+      "install": "omarchy plugin install nixfred/ram.plugin.omarchy",
+      "clone": "git clone https://github.com/nixfred/ram.plugin.omarchy.git"
     },
     {
       "id": "pi.power",
@@ -227,9 +366,25 @@
       "accent": "#5ad1ff",
       "supersedes": "Flux Power",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-09T17:19:11Z",
       "created": "2026-09-04T23:19:28Z",
       "license": "NOASSERTION",
+      "language": "QML",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 13
+        }
+      ],
+      "commits": 13,
       "repo_url": "https://github.com/nixfred/power-pulse",
       "glyph": "assets/img/glyph/pi-power.svg",
       "shot": null,
@@ -238,7 +393,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/power-pulse"
+      "install": "omarchy plugin install nixfred/power-pulse",
+      "clone": "git clone https://github.com/nixfred/power-pulse.git"
     },
     {
       "id": "io.github.nixfred.sonomarchy",
@@ -252,9 +408,25 @@
       "description": "Makes every Sonos zone on your network a selectable system audio output, including legacy Play:1, Play:3, Play:5, Playbar and Connect speakers that have no AirPlay.",
       "accent": "#8ecae6",
       "stars": 1,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-10T13:35:33Z",
       "created": "2026-09-04T21:48:56Z",
       "license": "MIT",
+      "language": "Python",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 38
+        }
+      ],
+      "commits": 38,
       "repo_url": "https://github.com/nixfred/sonomarchy",
       "glyph": "assets/img/glyph/io-github-nixfred-sonomarchy.svg",
       "shot": null,
@@ -263,7 +435,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/sonomarchy"
+      "install": "omarchy plugin install nixfred/sonomarchy",
+      "clone": "git clone https://github.com/nixfred/sonomarchy.git"
     },
     {
       "id": "nixfred.wisp",
@@ -277,9 +450,25 @@
       "description": "WhatsApp in the Omarchy bar. A local wacli sync daemon pairs as a linked WhatsApp Web device and mirrors your messages into SQLite on this machine, so nothing is proxied through another host. The badge is WhatsApp's own unread count with muted chats excluded, exactly what the phone shows.",
       "accent": "#25d366",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-04T20:13:16Z",
       "created": "2026-09-04T20:07:07Z",
       "license": "MIT",
+      "language": "TypeScript",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 3
+        }
+      ],
+      "commits": 3,
       "repo_url": "https://github.com/nixfred/wisp",
       "glyph": "assets/img/glyph/nixfred-wisp.svg",
       "shot": null,
@@ -288,7 +477,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/wisp"
+      "install": "omarchy plugin install nixfred/wisp",
+      "clone": "git clone https://github.com/nixfred/wisp.git"
     },
     {
       "id": "lgse.sandman",
@@ -303,9 +493,45 @@
       "description": "Set lid-close actions and when your screen rests, locks, sleeps, and hibernates. A two-column fork.",
       "accent": "#6c757d",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-04T18:39:11Z",
       "created": "2026-09-04T18:36:25Z",
       "license": "MIT",
+      "language": "QML",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "l0gicgate",
+          "avatar": "https://avatars.githubusercontent.com/u/6510935?v=4",
+          "commits": 29
+        },
+        {
+          "login": "calebmill",
+          "avatar": "https://avatars.githubusercontent.com/u/22310180?v=4",
+          "commits": 2
+        },
+        {
+          "login": "cossssmin",
+          "avatar": "https://avatars.githubusercontent.com/u/1656595?v=4",
+          "commits": 2
+        },
+        {
+          "login": "tuthan",
+          "avatar": "https://avatars.githubusercontent.com/u/567269?v=4",
+          "commits": 2
+        },
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 1
+        }
+      ],
+      "commits": 36,
       "repo_url": "https://github.com/nixfred/sandman",
       "glyph": "assets/img/glyph/lgse-sandman.svg",
       "shot": null,
@@ -314,7 +540,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/sandman"
+      "install": "omarchy plugin install nixfred/sandman",
+      "clone": "git clone https://github.com/nixfred/sandman.git"
     },
     {
       "id": "nixfred.chronos",
@@ -329,9 +556,25 @@
       "description": "Clock and calendar with a pulse: a day-progress ring, shimmering year and life rails, a drawn moon phase, and a month grid that arrives on a stagger.",
       "accent": "#e0aaff",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-04T14:20:03Z",
       "created": "2026-09-04T14:19:34Z",
       "license": "NOASSERTION",
+      "language": "QML",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 2
+        }
+      ],
+      "commits": 2,
       "repo_url": "https://github.com/nixfred/omarchy-chronos",
       "glyph": "assets/img/glyph/nixfred-chronos.svg",
       "shot": null,
@@ -340,7 +583,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/omarchy-chronos"
+      "install": "omarchy plugin install nixfred/omarchy-chronos",
+      "clone": "git clone https://github.com/nixfred/omarchy-chronos.git"
     },
     {
       "id": "nixfred.pastey",
@@ -354,9 +598,36 @@
       "description": "A compact, searchable 200-item clipboard history for the Omarchy bar, with real screenshot thumbnails and the whole clip on hover.",
       "accent": "#adb5bd",
       "stars": 6,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-09T17:28:49Z",
       "created": "2026-09-04T04:04:01Z",
       "license": "MIT",
+      "language": "QML",
+      "topics": [
+        "bar-widget",
+        "clipboard",
+        "clipboard-history",
+        "clipboard-manager",
+        "hyprland",
+        "omarchy",
+        "omarchy-plugin",
+        "qml",
+        "quickshell",
+        "wayland"
+      ],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 12
+        }
+      ],
+      "commits": 12,
       "repo_url": "https://github.com/nixfred/Pastey",
       "glyph": "assets/img/glyph/nixfred-pastey.svg",
       "shot": null,
@@ -365,7 +636,176 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/Pastey"
+      "install": "omarchy plugin install nixfred/Pastey",
+      "clone": "git clone https://github.com/nixfred/Pastey.git"
+    },
+    {
+      "id": "io.github.nixfred.watchtower",
+      "name": "Watchtower",
+      "family": "infra",
+      "status": "live",
+      "repo": "nixfred/omarchy-watchtower",
+      "dir": "omarchy-watchtower",
+      "version": "1.0.0",
+      "tagline": "A quiet perimeter alarm that explains itself.",
+      "description": "A quiet perimeter alarm that explains exposed listeners with process, service, container, firewall, and network-scope context.",
+      "accent": "#ffb703",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
+      "pushed": "2026-09-04T04:04:02Z",
+      "created": "2026-09-04T04:04:00Z",
+      "license": "MIT",
+      "language": "Python",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 1
+        }
+      ],
+      "commits": 1,
+      "repo_url": "https://github.com/nixfred/omarchy-watchtower",
+      "glyph": "assets/img/glyph/io-github-nixfred-watchtower.svg",
+      "shot": null,
+      "listed": false,
+      "listed_at": null,
+      "listing_url": null,
+      "marketplace_category": null,
+      "marketplace_tags": [],
+      "install": "omarchy plugin install nixfred/omarchy-watchtower",
+      "clone": "git clone https://github.com/nixfred/omarchy-watchtower.git"
+    },
+    {
+      "id": "nixfred.burnbar",
+      "name": "Burn Bar",
+      "family": "desk",
+      "status": "live",
+      "repo": "nixfred/burnbar",
+      "dir": "burnbar",
+      "version": "1.11.0",
+      "tagline": "A thermal heat map of what the AIs are costing you.",
+      "description": "Live thermal heat map of the AIs this machine actually uses, Claude, Codex, Grok, and local Ollama when a GPU is present, with weekly quota gauges and the share of tokens kept off frontier models.",
+      "accent": "#ff4d4d",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
+      "pushed": "2026-09-10T16:45:48Z",
+      "created": "2026-09-04T04:03:59Z",
+      "license": "MIT",
+      "language": "QML",
+      "topics": [],
+      "default_branch": "master",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 32
+        }
+      ],
+      "commits": 32,
+      "repo_url": "https://github.com/nixfred/burnbar",
+      "glyph": "assets/img/glyph/nixfred-burnbar.svg",
+      "shot": null,
+      "listed": false,
+      "listed_at": null,
+      "listing_url": null,
+      "marketplace_category": null,
+      "marketplace_tags": [],
+      "install": "omarchy plugin install nixfred/burnbar",
+      "clone": "git clone https://github.com/nixfred/burnbar.git"
+    },
+    {
+      "id": "pi.backup-monitor",
+      "name": "Backup Sizzle",
+      "family": "infra",
+      "status": "live",
+      "repo": "nixfred/backup.omarchy",
+      "dir": "backup.omarchy",
+      "version": "3.0.0",
+      "tagline": "Restic, with a countdown ring and an outcome calendar.",
+      "description": "Restic backup with live B2 throughput, countdown ring, outcome calendar, anomaly notes, snapshot browser and run history.",
+      "accent": "#06d6a0",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
+      "pushed": "2026-09-06T20:45:49Z",
+      "created": "2026-09-04T04:03:59Z",
+      "license": null,
+      "language": "QML",
+      "topics": [],
+      "default_branch": "master",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 15
+        }
+      ],
+      "commits": 15,
+      "repo_url": "https://github.com/nixfred/backup.omarchy",
+      "glyph": "assets/img/glyph/pi-backup-monitor.svg",
+      "shot": null,
+      "listed": false,
+      "listed_at": null,
+      "listing_url": null,
+      "marketplace_category": null,
+      "marketplace_tags": [],
+      "install": "omarchy plugin install nixfred/backup.omarchy",
+      "clone": "git clone https://github.com/nixfred/backup.omarchy.git"
+    },
+    {
+      "id": "nixfred.beatdeck",
+      "name": "Beatdeck",
+      "family": "media",
+      "status": "live",
+      "repo": "nixfred/beatdeck.omarchy",
+      "dir": "beatdeck.omarchy",
+      "version": "1.6.0",
+      "tagline": "A live spectrum that opens a media cockpit.",
+      "description": "Beatbar's live spectrum as the trigger for the Living Media Cockpit. Click for now playing, right click for the visuals.",
+      "accent": "#f72585",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
+      "pushed": "2026-09-10T13:59:58Z",
+      "created": "2026-09-04T04:03:58Z",
+      "license": null,
+      "language": "QML",
+      "topics": [],
+      "default_branch": "master",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 11
+        }
+      ],
+      "commits": 11,
+      "repo_url": "https://github.com/nixfred/beatdeck.omarchy",
+      "glyph": "assets/img/glyph/nixfred-beatdeck.svg",
+      "shot": null,
+      "listed": false,
+      "listed_at": null,
+      "listing_url": null,
+      "marketplace_category": null,
+      "marketplace_tags": [],
+      "install": "omarchy plugin install nixfred/beatdeck.omarchy",
+      "clone": "git clone https://github.com/nixfred/beatdeck.omarchy.git"
     },
     {
       "id": "pi.bluetooth",
@@ -379,9 +819,25 @@
       "description": "Bluetooth with a live sonar hero, per-device battery halos and type-aware glyphs.",
       "accent": "#4cc9f0",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-04T03:47:04Z",
       "created": "2026-09-04T03:46:55Z",
       "license": "MIT",
+      "language": "QML",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 4
+        }
+      ],
+      "commits": 4,
       "repo_url": "https://github.com/nixfred/omarchy-halo-bluetooth",
       "glyph": "assets/img/glyph/pi-bluetooth.svg",
       "shot": null,
@@ -390,7 +846,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/omarchy-halo-bluetooth"
+      "install": "omarchy plugin install nixfred/omarchy-halo-bluetooth",
+      "clone": "git clone https://github.com/nixfred/omarchy-halo-bluetooth.git"
     },
     {
       "id": "jankeesvw.tesla",
@@ -405,9 +862,45 @@
       "description": "Your Tesla in the bar: where it is, how full it is, how far that gets you, and whether it is charging right now.",
       "accent": "#e82127",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-10T00:54:08Z",
       "created": "2026-09-04T02:29:07Z",
       "license": "MIT",
+      "language": "Shell",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "jankeesvw",
+          "avatar": "https://avatars.githubusercontent.com/u/167882?v=4",
+          "commits": 16
+        },
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 15
+        },
+        {
+          "login": "jzetterman",
+          "avatar": "https://avatars.githubusercontent.com/u/10645254?v=4",
+          "commits": 1
+        },
+        {
+          "login": "zedutch",
+          "avatar": "https://avatars.githubusercontent.com/u/3418190?v=4",
+          "commits": 1
+        },
+        {
+          "login": "salemsayed",
+          "avatar": "https://avatars.githubusercontent.com/u/283208?v=4",
+          "commits": 1
+        }
+      ],
+      "commits": 34,
       "repo_url": "https://github.com/nixfred/omarchy-tesla",
       "glyph": "assets/img/glyph/jankeesvw-tesla.svg",
       "shot": null,
@@ -416,7 +909,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/omarchy-tesla"
+      "install": "omarchy plugin install nixfred/omarchy-tesla",
+      "clone": "git clone https://github.com/nixfred/omarchy-tesla.git"
     },
     {
       "id": "nixfred.mirror",
@@ -430,9 +924,25 @@
       "description": "Mirror this screen, or extend your desktop, to a Google TV or Chromecast on the LAN, straight from the Omarchy bar. GPU-encoded HLS, played by the TV's Default Media Receiver.",
       "accent": "#fb8500",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-02T01:22:10Z",
       "created": "2026-09-02T00:56:54Z",
       "license": "MIT",
+      "language": "QML",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 5
+        }
+      ],
+      "commits": 5,
       "repo_url": "https://github.com/nixfred/omarchy-mirror",
       "glyph": "assets/img/glyph/nixfred-mirror.svg",
       "shot": null,
@@ -441,7 +951,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/omarchy-mirror"
+      "install": "omarchy plugin install nixfred/omarchy-mirror",
+      "clone": "git clone https://github.com/nixfred/omarchy-mirror.git"
     },
     {
       "id": "nixfred.blip",
@@ -456,9 +967,70 @@
       "description": "iMessage in the Omarchy bar. Reads and sends through a Mac you own over a multiplexed SSH socket. iMessage is macOS-only, so this machine is a thin client and the Mac is the gateway. The bar badge counts every unread; desktop toasts fire only for handles on your allowlist, because chat.db is mostly bank alerts and 2FA codes.",
       "accent": "#0a84ff",
       "stars": 139,
+      "forks": 24,
+      "watchers": 1,
+      "open_prs": 3,
+      "open_issues": 3,
       "pushed": "2026-09-10T22:55:01Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
+      "language": "TypeScript",
+      "topics": [
+        "bun",
+        "hyprland",
+        "imessage",
+        "linux",
+        "omarchy",
+        "quickshell"
+      ],
+      "default_branch": "main",
+      "release": {
+        "tag": "v2.3.3",
+        "published": "2026-09-05T03:41:55Z"
+      },
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 176
+        },
+        {
+          "login": "Fileri",
+          "avatar": "https://avatars.githubusercontent.com/u/955867?v=4",
+          "commits": 36
+        },
+        {
+          "login": "jondkinney",
+          "avatar": "https://avatars.githubusercontent.com/u/4521?v=4",
+          "commits": 30
+        },
+        {
+          "login": "johanthoren",
+          "avatar": "https://avatars.githubusercontent.com/u/7789670?v=4",
+          "commits": 12
+        },
+        {
+          "login": "adamgamble",
+          "avatar": "https://avatars.githubusercontent.com/u/237171?v=4",
+          "commits": 7
+        },
+        {
+          "login": "joshuaswarren",
+          "avatar": "https://avatars.githubusercontent.com/u/816217?v=4",
+          "commits": 2
+        },
+        {
+          "login": "zachwilke",
+          "avatar": "https://avatars.githubusercontent.com/u/45574453?v=4",
+          "commits": 2
+        },
+        {
+          "login": "tlehman",
+          "avatar": "https://avatars.githubusercontent.com/u/261552?v=4",
+          "commits": 1
+        }
+      ],
+      "commits": 266,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "shot": null,
@@ -467,7 +1039,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/blip"
+      "install": "omarchy plugin install nixfred/blip",
+      "clone": "git clone https://github.com/nixfred/blip.git"
     },
     {
       "id": "io.github.nixfred.local-intelligence",
@@ -481,9 +1054,25 @@
       "description": "Monitor Ollama activity and control locally installed models from the Omarchy bar.",
       "accent": "#b388ff",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-07T17:29:01Z",
       "created": "2026-08-28T00:08:04Z",
       "license": "MIT",
+      "language": "QML",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 6
+        }
+      ],
+      "commits": 6,
       "repo_url": "https://github.com/nixfred/omarchy-local-intelligence",
       "glyph": "assets/img/glyph/io-github-nixfred-local-intelligence.svg",
       "shot": null,
@@ -492,7 +1081,50 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/omarchy-local-intelligence"
+      "install": "omarchy plugin install nixfred/omarchy-local-intelligence",
+      "clone": "git clone https://github.com/nixfred/omarchy-local-intelligence.git"
+    },
+    {
+      "id": "larry.status",
+      "name": "Larry Status",
+      "family": "desk",
+      "status": "developing",
+      "repo": "nixfred/larry.status",
+      "dir": "larry.status",
+      "version": "0.5.0",
+      "tagline": "A face in the bar that reacts to your agents.",
+      "description": "Larry's face in the bar, alive. Reacts to the agents running on this host: asleep, idle, thinking, working, needs-you, speaking, alert. The panel is Agents on Deck, with service health, fleet state, and one-click actions.",
+      "accent": "#7dd3fc",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
+      "pushed": "2026-08-29T03:22:27Z",
+      "created": "2026-08-23T03:28:28Z",
+      "license": null,
+      "language": "QML",
+      "topics": [],
+      "default_branch": "master",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 15
+        }
+      ],
+      "commits": 15,
+      "repo_url": "https://github.com/nixfred/larry.status",
+      "glyph": "assets/img/glyph/larry-status.svg",
+      "shot": null,
+      "listed": false,
+      "listed_at": null,
+      "listing_url": null,
+      "marketplace_category": null,
+      "marketplace_tags": [],
+      "install": "omarchy plugin install nixfred/larry.status",
+      "clone": "git clone https://github.com/nixfred/larry.status.git"
     },
     {
       "id": "io.github.nixfred.tailscale-host-monitor",
@@ -506,9 +1138,40 @@
       "description": "Select nodes from your Tailscale network, track every device type, and collect deep Linux metrics over read-only SSH.",
       "accent": "#41b883",
       "stars": 21,
+      "forks": 2,
+      "watchers": 0,
+      "open_prs": 1,
+      "open_issues": 0,
       "pushed": "2026-09-10T02:50:57Z",
       "created": "2026-08-23T03:09:01Z",
       "license": "MIT",
+      "language": "QML",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 17
+        },
+        {
+          "login": "Fileri",
+          "avatar": "https://avatars.githubusercontent.com/u/955867?v=4",
+          "commits": 3
+        },
+        {
+          "login": "ryuhzk",
+          "avatar": "https://avatars.githubusercontent.com/u/213640356?v=4",
+          "commits": 3
+        },
+        {
+          "login": "kanthi",
+          "avatar": "https://avatars.githubusercontent.com/u/1001550?v=4",
+          "commits": 1
+        }
+      ],
+      "commits": 24,
       "repo_url": "https://github.com/nixfred/omarchy-server-status",
       "glyph": "assets/img/glyph/io-github-nixfred-tailscale-host-monitor.svg",
       "shot": null,
@@ -517,7 +1180,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/omarchy-server-status"
+      "install": "omarchy plugin install nixfred/omarchy-server-status",
+      "clone": "git clone https://github.com/nixfred/omarchy-server-status.git"
     },
     {
       "id": "nixfred.internet-latency",
@@ -531,9 +1195,25 @@
       "description": "Live color-coded internet latency with target selection, packet loss, jitter, and history.",
       "accent": "#ef476f",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-08-29T03:28:19Z",
       "created": "2026-08-23T02:41:24Z",
       "license": "MIT",
+      "language": "QML",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 16
+        }
+      ],
+      "commits": 16,
       "repo_url": "https://github.com/nixfred/omarchy-internet-latency",
       "glyph": "assets/img/glyph/nixfred-internet-latency.svg",
       "shot": null,
@@ -546,7 +1226,8 @@
         "quickshell",
         "system"
       ],
-      "install": "omarchy plugin install nixfred/omarchy-internet-latency"
+      "install": "omarchy plugin install nixfred/omarchy-internet-latency",
+      "clone": "git clone https://github.com/nixfred/omarchy-internet-latency.git"
     },
     {
       "id": "nixfred.infomarchy",
@@ -561,9 +1242,43 @@
       "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven, on a SUPER+D overlay.",
       "accent": "#00e5ff",
       "stars": 95,
+      "forks": 12,
+      "watchers": 1,
+      "open_prs": 14,
+      "open_issues": 2,
       "pushed": "2026-09-10T02:58:45Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
+      "language": "TypeScript",
+      "topics": [
+        "arch-linux",
+        "claude-code",
+        "codex",
+        "dashboard",
+        "hyprland",
+        "ollama",
+        "omarchy",
+        "quickshell",
+        "wallpaper"
+      ],
+      "default_branch": "master",
+      "release": {
+        "tag": "v1.0.0",
+        "published": "2026-09-05T18:13:01Z"
+      },
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 80
+        },
+        {
+          "login": "sooners0",
+          "avatar": "https://avatars.githubusercontent.com/u/5647533?v=4",
+          "commits": 1
+        }
+      ],
+      "commits": 81,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "shot": null,
@@ -572,7 +1287,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/infomarchy"
+      "install": "omarchy plugin install nixfred/infomarchy",
+      "clone": "git clone https://github.com/nixfred/infomarchy.git"
     },
     {
       "id": "nixfred.workspace-names",
@@ -586,9 +1302,25 @@
       "description": "Give Hyprland workspaces a title without touching their numbers. Workspaces name themselves from their windows until you rename them. Includes inline rename and a live Workspace Map with occupancy and app identities.",
       "accent": "#68d8d6",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-10T21:16:46Z",
       "created": "2026-08-22T04:33:59Z",
       "license": "MIT",
+      "language": "QML",
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 18
+        }
+      ],
+      "commits": 18,
       "repo_url": "https://github.com/nixfred/workspace-names",
       "glyph": "assets/img/glyph/nixfred-workspace-names.svg",
       "shot": null,
@@ -597,7 +1329,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/workspace-names"
+      "install": "omarchy plugin install nixfred/workspace-names",
+      "clone": "git clone https://github.com/nixfred/workspace-names.git"
     },
     {
       "id": "io.github.nixfred.plonk",
@@ -611,9 +1344,28 @@
       "description": "Packs numeric Hyprland workspaces into 1 through N as gaps appear, preserving order, tiling, monitor placement, and focus.",
       "accent": "#9d7bff",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": "2026-09-10T19:49:29Z",
       "created": "2026-08-22T02:11:38Z",
       "license": "MIT",
+      "language": "Shell",
+      "topics": [],
+      "default_branch": "main",
+      "release": {
+        "tag": "v1.2.4",
+        "published": "2026-09-10T19:50:34Z"
+      },
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 45
+        }
+      ],
+      "commits": 45,
       "repo_url": "https://github.com/nixfred/plonk",
       "glyph": "assets/img/glyph/io-github-nixfred-plonk.svg",
       "shot": null,
@@ -622,7 +1374,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/plonk"
+      "install": "omarchy plugin install nixfred/plonk",
+      "clone": "git clone https://github.com/nixfred/plonk.git"
     },
     {
       "id": "nixfred.rift",
@@ -636,9 +1389,37 @@
       "description": "Save the applications on a workspace as a named Rift and reopen them on demand or at login, straight from the Omarchy bar. No geometry is saved, so Hyprland keeps tiling.",
       "accent": "#c77dff",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 1,
+      "open_issues": 11,
       "pushed": "2026-09-07T17:56:15Z",
       "created": "2026-08-21T23:52:08Z",
       "license": "MIT",
+      "language": "Python",
+      "topics": [
+        "archlinux",
+        "hyprland",
+        "omarchy",
+        "omarchy-plugin",
+        "quickshell",
+        "session-manager",
+        "wayland",
+        "workspace"
+      ],
+      "default_branch": "main",
+      "release": {
+        "tag": "v0.3.2",
+        "published": "2026-08-22T01:14:43Z"
+      },
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 69
+        }
+      ],
+      "commits": 69,
       "repo_url": "https://github.com/nixfred/rift",
       "glyph": "assets/img/glyph/nixfred-rift.svg",
       "shot": null,
@@ -647,7 +1428,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/rift"
+      "install": "omarchy plugin install nixfred/rift",
+      "clone": "git clone https://github.com/nixfred/rift.git"
     },
     {
       "id": "nixfred.apple-notes",
@@ -661,9 +1443,19 @@
       "description": "A safety-first Apple Notes browser for Omarchy, using a Mac you own as the private source. Search, read, create, and safely append over a confined SSH bridge.",
       "accent": "#ffd60a",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
       "pushed": null,
       "created": null,
       "license": null,
+      "language": null,
+      "topics": [],
+      "default_branch": "main",
+      "release": null,
+      "contributors": [],
+      "commits": 0,
       "repo_url": null,
       "glyph": "assets/img/glyph/nixfred-apple-notes.svg",
       "shot": null,
@@ -672,132 +1464,8 @@
       "listing_url": null,
       "marketplace_category": null,
       "marketplace_tags": [],
-      "install": null
-    },
-    {
-      "id": "nixfred.burnbar",
-      "name": "Burn Bar",
-      "family": "desk",
-      "status": "live",
-      "repo": "nixfred/burnbar",
-      "dir": "burnbar",
-      "version": "1.11.0",
-      "tagline": "A thermal heat map of what the AIs are costing you.",
-      "description": "Live thermal heat map of the AIs this machine actually uses, Claude, Codex, Grok, and local Ollama when a GPU is present, with weekly quota gauges and the share of tokens kept off frontier models.",
-      "accent": "#ff4d4d",
-      "stars": 0,
-      "pushed": null,
-      "created": null,
-      "license": null,
-      "repo_url": "https://github.com/nixfred/burnbar",
-      "glyph": "assets/img/glyph/nixfred-burnbar.svg",
-      "shot": null,
-      "listed": false,
-      "listed_at": null,
-      "listing_url": null,
-      "marketplace_category": null,
-      "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/burnbar"
-    },
-    {
-      "id": "larry.status",
-      "name": "Larry Status",
-      "family": "desk",
-      "status": "developing",
-      "repo": "nixfred/larry.status",
-      "dir": "larry.status",
-      "version": "0.5.0",
-      "tagline": "A face in the bar that reacts to your agents.",
-      "description": "Larry's face in the bar, alive. Reacts to the agents running on this host: asleep, idle, thinking, working, needs-you, speaking, alert. The panel is Agents on Deck, with service health, fleet state, and one-click actions.",
-      "accent": "#7dd3fc",
-      "stars": 0,
-      "pushed": null,
-      "created": null,
-      "license": null,
-      "repo_url": "https://github.com/nixfred/larry.status",
-      "glyph": "assets/img/glyph/larry-status.svg",
-      "shot": null,
-      "listed": false,
-      "listed_at": null,
-      "listing_url": null,
-      "marketplace_category": null,
-      "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/larry.status"
-    },
-    {
-      "id": "io.github.nixfred.watchtower",
-      "name": "Watchtower",
-      "family": "infra",
-      "status": "live",
-      "repo": "nixfred/omarchy-watchtower",
-      "dir": "omarchy-watchtower",
-      "version": "1.0.0",
-      "tagline": "A quiet perimeter alarm that explains itself.",
-      "description": "A quiet perimeter alarm that explains exposed listeners with process, service, container, firewall, and network-scope context.",
-      "accent": "#ffb703",
-      "stars": 0,
-      "pushed": null,
-      "created": null,
-      "license": null,
-      "repo_url": "https://github.com/nixfred/omarchy-watchtower",
-      "glyph": "assets/img/glyph/io-github-nixfred-watchtower.svg",
-      "shot": null,
-      "listed": false,
-      "listed_at": null,
-      "listing_url": null,
-      "marketplace_category": null,
-      "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/omarchy-watchtower"
-    },
-    {
-      "id": "pi.backup-monitor",
-      "name": "Backup Sizzle",
-      "family": "infra",
-      "status": "live",
-      "repo": "nixfred/backup.omarchy",
-      "dir": "backup.omarchy",
-      "version": "3.0.0",
-      "tagline": "Restic, with a countdown ring and an outcome calendar.",
-      "description": "Restic backup with live B2 throughput, countdown ring, outcome calendar, anomaly notes, snapshot browser and run history.",
-      "accent": "#06d6a0",
-      "stars": 0,
-      "pushed": null,
-      "created": null,
-      "license": null,
-      "repo_url": "https://github.com/nixfred/backup.omarchy",
-      "glyph": "assets/img/glyph/pi-backup-monitor.svg",
-      "shot": null,
-      "listed": false,
-      "listed_at": null,
-      "listing_url": null,
-      "marketplace_category": null,
-      "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/backup.omarchy"
-    },
-    {
-      "id": "nixfred.beatdeck",
-      "name": "Beatdeck",
-      "family": "media",
-      "status": "live",
-      "repo": "nixfred/beatdeck.omarchy",
-      "dir": "beatdeck.omarchy",
-      "version": "1.6.0",
-      "tagline": "A live spectrum that opens a media cockpit.",
-      "description": "Beatbar's live spectrum as the trigger for the Living Media Cockpit. Click for now playing, right click for the visuals.",
-      "accent": "#f72585",
-      "stars": 0,
-      "pushed": null,
-      "created": null,
-      "license": null,
-      "repo_url": "https://github.com/nixfred/beatdeck.omarchy",
-      "glyph": "assets/img/glyph/nixfred-beatdeck.svg",
-      "shot": null,
-      "listed": false,
-      "listed_at": null,
-      "listing_url": null,
-      "marketplace_category": null,
-      "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/beatdeck.omarchy"
+      "install": null,
+      "clone": null
     }
   ],
   "themes": [
@@ -2564,14 +3232,14 @@
         },
         {
           "date": "2026-07-25",
-          "count": 29,
+          "count": 31,
           "level": 2
         }
       ],
       [
         {
           "date": "2026-07-26",
-          "count": 19,
+          "count": 17,
           "level": 1
         },
         {
@@ -2650,12 +3318,12 @@
         },
         {
           "date": "2026-08-10",
-          "count": 15,
+          "count": 16,
           "level": 1
         },
         {
           "date": "2026-08-11",
-          "count": 7,
+          "count": 6,
           "level": 1
         },
         {
@@ -2675,15 +3343,15 @@
         },
         {
           "date": "2026-08-15",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-08-16",
-          "count": 1,
-          "level": 1
+          "count": 0,
+          "level": 0
         },
         {
           "date": "2026-08-17",
@@ -2707,7 +3375,7 @@
         },
         {
           "date": "2026-08-21",
-          "count": 209,
+          "count": 213,
           "level": 4
         },
         {
@@ -2719,8 +3387,8 @@
       [
         {
           "date": "2026-08-23",
-          "count": 4,
-          "level": 1
+          "count": 0,
+          "level": 0
         },
         {
           "date": "2026-08-24",
@@ -2739,66 +3407,66 @@
         },
         {
           "date": "2026-08-27",
-          "count": 22,
+          "count": 25,
           "level": 1
         },
         {
           "date": "2026-08-28",
-          "count": 14,
+          "count": 16,
           "level": 1
         },
         {
           "date": "2026-08-29",
-          "count": 5,
-          "level": 1
+          "count": 0,
+          "level": 0
         }
       ],
       [
         {
           "date": "2026-08-30",
-          "count": 15,
+          "count": 16,
           "level": 1
         },
         {
           "date": "2026-08-31",
-          "count": 64,
+          "count": 63,
           "level": 3
         },
         {
           "date": "2026-09-01",
-          "count": 31,
+          "count": 34,
           "level": 2
         },
         {
           "date": "2026-09-02",
-          "count": 21,
+          "count": 18,
           "level": 1
         },
         {
           "date": "2026-09-03",
-          "count": 65,
+          "count": 68,
           "level": 3
         },
         {
           "date": "2026-09-04",
-          "count": 81,
+          "count": 79,
           "level": 4
         },
         {
           "date": "2026-09-05",
-          "count": 60,
+          "count": 62,
           "level": 3
         }
       ],
       [
         {
           "date": "2026-09-06",
-          "count": 52,
-          "level": 3
+          "count": 49,
+          "level": 2
         },
         {
           "date": "2026-09-07",
-          "count": 100,
+          "count": 101,
           "level": 4
         },
         {
@@ -2808,12 +3476,12 @@
         },
         {
           "date": "2026-09-09",
-          "count": 58,
+          "count": 59,
           "level": 3
         },
         {
           "date": "2026-09-10",
-          "count": 48,
+          "count": 46,
           "level": 2
         }
       ]
