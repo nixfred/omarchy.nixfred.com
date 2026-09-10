@@ -364,6 +364,7 @@ section header p { color: var(--fg-3); margin: 9px 0 0; font-size: 14.5px; }
 .tag.listed { color: var(--ok); border-color: color-mix(in srgb, var(--ok) 34%, transparent); background: color-mix(in srgb, var(--ok) 9%, transparent); }
 .tag.pending { color: var(--dim); border-style: dashed; }
 .tag.fork { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 30%, transparent); }
+.tag.developing { color: #5ad1e6; border-color: rgba(90, 209, 230, 0.32); background: color-mix(in srgb, #5ad1e6 8%, transparent); border-style: dashed; }
 .tag.shelved, .tag.unreleased { color: #ff8fa3; border-color: rgba(255, 143, 163, 0.3); }
 .tag.stars { color: var(--fg-2); }
 

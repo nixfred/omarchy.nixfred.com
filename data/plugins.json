@@ -85,7 +85,7 @@
       "accent": "#9d7bff"
     },
     {
-      "id": "nixfred.rift", "name": "Rift", "family": "workspace", "status": "live",
+      "id": "nixfred.rift", "name": "Rift", "family": "workspace", "status": "developing",
       "repo": "nixfred/rift", "dir": "rift", "version": "0.3.8",
       "tagline": "Hyprland tiles, Rift remembers.",
       "description": "Save the applications on a workspace as a named Rift and reopen them on demand or at login, straight from the Omarchy bar. No geometry is saved, so Hyprland keeps tiling.",
@@ -121,7 +121,7 @@
       "accent": "#ff4d4d"
     },
     {
-      "id": "larry.status", "name": "Larry Status", "family": "desk", "status": "live",
+      "id": "larry.status", "name": "Larry Status", "family": "desk", "status": "developing",
       "repo": "nixfred/larry.status", "dir": "larry.status", "version": "0.5.0",
       "tagline": "A face in the bar that reacts to your agents.",
       "description": "Larry's face in the bar, alive. Reacts to the agents running on this host: asleep, idle, thinking, working, needs-you, speaking, alert. The panel is Agents on Deck, with service health, fleet state, and one-click actions.",
@@ -186,7 +186,7 @@
       "accent": "#8ecae6"
     },
     {
-      "id": "nixfred.mirror", "name": "Mirror", "family": "media", "status": "live",
+      "id": "nixfred.mirror", "name": "Mirror", "family": "media", "status": "developing",
       "repo": "nixfred/omarchy-mirror", "dir": "mirror.omarchy.plugin", "version": "0.2.0",
       "tagline": "Throw this screen at the TV.",
       "description": "Mirror this screen, or extend your desktop, to a Google TV or Chromecast on the LAN, straight from the Omarchy bar. GPU-encoded HLS, played by the TV's Default Media Receiver.",
@@ -215,7 +215,7 @@
       "accent": "#e0aaff"
     },
     {
-      "id": "lgse.sandman", "name": "Sandman", "family": "system", "status": "live", "fork_of": "lgse/sandman",
+      "id": "lgse.sandman", "name": "Sandman", "family": "system", "status": "developing", "fork_of": "lgse/sandman",
       "repo": "nixfred/sandman", "dir": "plugin.working.dir/sandman.omarchy", "version": "0.9.2",
       "tagline": "When the screen rests, locks, sleeps and hibernates.",
       "description": "Set lid-close actions and when your screen rests, locks, sleeps, and hibernates. A two-column fork.",

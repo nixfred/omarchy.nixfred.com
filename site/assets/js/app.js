@@ -161,6 +161,7 @@
     } else if (p.status === "live") {
       t.push(`<span class="tag pending" title="Not submitted to the official marketplace yet. This flips on its own when it is.">${ICON.dotm} not submitted</span>`);
     }
+    if (p.status === "developing") t.push(`<span class="tag developing" title="Still being built. Public source and installable, but expect rough edges and breaking changes before 1.0.">${ICON.dotm} developing</span>`);
     if (p.status === "shelved") t.push(`<span class="tag shelved">shelved</span>`);
     if (p.status === "unreleased") t.push(`<span class="tag unreleased">unreleased</span>`);
     if (p.fork_of) t.push(`<span class="tag fork" title="A fork of ${esc(p.fork_of)}">fork</span>`);
