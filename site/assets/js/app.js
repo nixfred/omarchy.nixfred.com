@@ -284,88 +284,68 @@
     }
   }
 
-  /** The hero's right half: one real plugin card, switchable between the three
-      featured entries, clicking straight through to the plugin itself. */
+  /** The hero's right half: compact links to the featured plugins, filling the
+      column beside the copy rather than leaving it empty. */
   function heroFeature() {
     const byId = new Map(DATA.plugins.map((p) => [p.id, p]));
     const pulse = DATA.plugins.filter((p) => p.family === "pulse");
-
-    const picks = [
-      { key: "infomarchy", label: "Infomarchy", id: "nixfred.infomarchy" },
-      { key: "blip", label: "Blip", id: "nixfred.blip" },
-      { key: "pulse", label: "Pulse ×" + pulse.length, family: true, accent: "#4aa8ff" },
-    ].filter((k) => k.family || byId.has(k.id));
-
     const host = $("#hero-feature");
-    const bar = $("#hero-pickers");
 
     const inlineSvg = (node, url) =>
       fetch(url).then((r) => (r.ok ? r.text() : null)).then((svg) => {
         if (svg && svg.trim().startsWith("<svg")) node.innerHTML = svg;
       }).catch(() => {});
 
-    function draw(pick) {
-      host.textContent = "";
-      const a = el("a", "hero-card");
+    const rows = [];
 
-      if (pick.family) {
-        const stars = pulse.reduce((n, p) => n + p.stars, 0);
-        a.href = "#f-pulse";
-        a.style.setProperty("--ca", pick.accent);
-        a.innerHTML = `
-          <div class="row1">
-            <span class="mark" id="hero-mark">${ICON.plug}</span>
-            <div>
-              <h3>The Pulse Suite</h3>
-              <div class="tagline">One visual language for the whole machine.</div>
-            </div>
-          </div>
-          <p class="d">RAM, CPU, Net, Disk, Audio and Power, drawn as ${pulse.length} siblings of the
-             same living silicon. Learn one and you have learned all six.</p>
-          <div class="siblings">${pulse.map((p) =>
-            `<span title="${esc(p.name)}" style="color:${esc(p.accent)}" data-g="${esc(p.glyph)}">${ICON.plug}</span>`).join("")}</div>
-          <div class="tags">
-            <span class="tag stars">${ICON.star} ${stars}</span>
-            <span class="tag">${pulse.filter((p) => p.listed).length}/${pulse.length} listed</span>
-          </div>
-          <span class="go">See all six ${ICON.arrow}</span>`;
-        inlineSvg(a.querySelector("#hero-mark"), "assets/img/family/pulse.svg");
-      } else {
-        const p = byId.get(pick.id);
-        a.href = p.repo_url || `#p-${p.id}`;
-        if (p.repo_url) { a.target = "_blank"; a.rel = "noopener"; }
-        a.style.setProperty("--ca", p.accent);
-        a.innerHTML = `
-          <div class="row1">
-            <span class="mark" id="hero-mark">${ICON.plug}</span>
-            <div>
-              <h3>${esc(p.name)} <span class="ver">v${esc(p.version)}</span></h3>
-              <div class="tagline">${esc(p.tagline)}</div>
-            </div>
-          </div>
-          <p class="d">${esc(p.description)}</p>
-          <div class="tags">${statusTags(p)}</div>
-          <span class="go">Open the source ${ICON.arrow}</span>`;
-        inlineSvg(a.querySelector("#hero-mark"), p.glyph);
-      }
+    for (const id of ["nixfred.infomarchy", "nixfred.blip"]) {
+      const p = byId.get(id);
+      if (!p) continue;
+      rows.push({
+        href: p.repo_url || `#p-${p.id}`,
+        external: !!p.repo_url,
+        accent: p.accent,
+        glyph: p.glyph,
+        kicker: "flagship",
+        title: p.name,
+        meta: `v${p.version}`,
+        tagline: p.tagline,
+        tags: statusTags(p),
+      });
+    }
 
-      for (const n of a.querySelectorAll("[data-g]")) inlineSvg(n, n.dataset.g);
+    if (pulse.length) {
+      rows.push({
+        href: "#f-pulse",
+        external: false,
+        accent: "#4aa8ff",
+        glyph: "assets/img/family/pulse.svg",
+        kicker: "the family",
+        title: "The Pulse Suite",
+        meta: `×${pulse.length}`,
+        tagline: "One visual language for the whole machine.",
+        tags: `<span class="tag stars">${ICON.star} ${pulse.reduce((n, p) => n + p.stars, 0)}</span>` +
+              `<span class="tag">${pulse.map((p) => p.name.replace(/ Pulse$/, "")).join(" · ")}</span>`,
+      });
+    }
+
+    for (const r of rows) {
+      const a = el("a", "hero-link");
+      a.href = r.href;
+      if (r.external) { a.target = "_blank"; a.rel = "noopener"; }
+      a.style.setProperty("--ca", r.accent);
+      a.innerHTML = `
+        <span class="g">${ICON.plug}</span>
+        <span class="body">
+          <span class="k">${esc(r.kicker)}</span>
+          <span class="t">${esc(r.title)} <span class="ver">${esc(r.meta)}</span></span>
+          <span class="tl">${esc(r.tagline)}</span>
+          <span class="tags">${r.tags}</span>
+        </span>
+        <span class="arrw">${ICON.arrow}</span>`;
+      inlineSvg(a.querySelector(".g"), r.glyph);
       host.append(a);
-
-      for (const b of bar.children) b.setAttribute("aria-selected", String(b.dataset.key === pick.key));
     }
-
-    for (const pick of picks) {
-      const b = el("button", null, esc(pick.label));
-      b.type = "button";
-      b.dataset.key = pick.key;
-      b.setAttribute("role", "tab");
-      const accent = pick.family ? pick.accent : byId.get(pick.id).accent;
-      b.style.setProperty("--pa", accent);
-      b.addEventListener("click", () => draw(pick));
-      bar.append(b);
-    }
-    draw(picks[0]);
   }
 
   /** Two flagships and the six-strong Pulse family, above the catalogue. */
