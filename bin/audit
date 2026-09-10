@@ -1,0 +1,185 @@
+#!/usr/bin/env bun
+/**
+ * bin/audit — reconcile ~/Projects against data/plugins.json.
+ *
+ *   bin/audit                  scan every plugin dir under ~/Projects and report drift
+ *   bin/audit <dir>            propose a data/plugins.json entry for one plugin directory
+ *   bin/audit --apply          write version bumps back into data/plugins.json
+ *
+ * Reports: plugins on disk that the site does not list, version drift, dead
+ * directories, missing screenshots, missing glyphs, and newly listed plugins.
+ */
+
+import { $ } from "bun";
+import { readdir } from "node:fs/promises";
+
+const ROOT = new URL("..", import.meta.url).pathname;
+const PROJECTS = `${process.env.HOME}/Projects`;
+const DATA = `${ROOT}data/plugins.json`;
+
+const C = {
+  r: "\x1b[0m", b: "\x1b[1m", dim: "\x1b[2m",
+  red: "\x1b[31m", grn: "\x1b[32m", yel: "\x1b[33m", blu: "\x1b[36m",
+};
+
+const src = JSON.parse(await Bun.file(DATA).text());
+const known = new Map(src.plugins.map((p: any) => [p.id, p]));
+const args = process.argv.slice(2);
+const APPLY = args.includes("--apply");
+const target = args.find((a) => !a.startsWith("--"));
+
+/** Every manifest.json under ~/Projects, three levels deep, skipping archives. */
+async function findManifests(base: string, depth = 3): Promise<string[]> {
+  if (depth === 0) return [];
+  let ents;
+  try { ents = await readdir(base, { withFileTypes: true }); } catch { return []; }
+  const out: string[] = [];
+  for (const e of ents) {
+    if (!e.isDirectory()) continue;
+    if (["node_modules", ".git", "_archive", "dist", "build"].includes(e.name)) continue;
+    const dir = `${base}/${e.name}`;
+    if (await Bun.file(`${dir}/manifest.json`).exists()) out.push(dir);
+    out.push(...(await findManifests(dir, depth - 1)));
+  }
+  return out;
+}
+
+async function ownerOf(dir: string): Promise<string | null> {
+  try {
+    const u = (await $`git -C ${dir} remote get-url origin`.quiet()).stdout.toString().trim();
+    // Repo names legitimately contain dots (pr.hunter, disk.pulse), so only a
+    // trailing ".git" may be stripped.
+    const m = u.match(/github\.com[:/]([^/]+)\/(.+?)(?:\.git)?$/);
+    return m ? `${m[1]}/${m[2]}` : null;
+  } catch { return null; }
+}
+
+async function readManifest(dir: string) {
+  try {
+    const j = JSON.parse(await Bun.file(`${dir}/manifest.json`).text());
+    return j?.id ? j : null;
+  } catch { return null; }
+}
+
+// ── single-directory mode: print a ready-to-paste entry ──────────────────────
+
+if (target) {
+  const dir = target.startsWith("/") ? target : `${PROJECTS}/${target}`;
+  const m = await readManifest(dir);
+  if (!m) { console.error(`${C.red}no readable manifest.json in ${dir}${C.r}`); process.exit(1); }
+  if (known.has(m.id)) { console.error(`${C.yel}${m.id} is already in data/plugins.json${C.r}`); process.exit(1); }
+  const repo = await ownerOf(dir);
+  const entry = {
+    id: m.id, name: m.name, family: "system", status: "live",
+    repo, dir: dir.replace(`${PROJECTS}/`, ""), version: m.version,
+    tagline: String(m.description ?? "").split(/(?<=[.:])\s/)[0] || m.name,
+    description: m.description ?? "",
+    accent: "#4aa8ff",
+  };
+  console.log(`${C.grn}New plugin. Paste into data/plugins.json → plugins[], then set family and accent:${C.r}\n`);
+  console.log(JSON.stringify(entry, null, 2).split("\n").map((l) => "    " + l).join("\n"));
+  console.log(`\n${C.dim}Families: ${src.families.map((f: any) => f.id).join(", ")}${C.r}`);
+  console.log(`${C.dim}Then: bun scripts/build.ts${C.r}`);
+  process.exit(0);
+}
+
+// ── full sweep ──────────────────────────────────────────────────────────────
+
+console.log(`${C.b}Scanning ${PROJECTS}…${C.r}`);
+const dirs = await findManifests(PROJECTS);
+const onDisk = new Map<string, { dir: string; version: string; name: string; repo: string | null }>();
+
+for (const dir of dirs) {
+  const m = await readManifest(dir);
+  if (!m) continue;
+  const repo = await ownerOf(dir);
+  // Only ours. A fork we maintain still lives under our account.
+  if (!repo?.toLowerCase().startsWith(`${src.owner.toLowerCase()}/`) && !known.has(m.id)) continue;
+  const prev = onDisk.get(m.id);
+  // Duplicate checkouts happen; keep the higher version.
+  if (!prev || Bun.semver.order(m.version ?? "0.0.0", prev.version ?? "0.0.0") > 0) {
+    onDisk.set(m.id, { dir: dir.replace(`${PROJECTS}/`, ""), version: m.version, name: m.name, repo });
+  }
+}
+
+const issues: string[] = [];
+const bumps: { id: string; from: string; to: string }[] = [];
+
+console.log(`\n${C.b}NEW — on disk, not on the site${C.r}`);
+let n = 0;
+for (const [id, d] of onDisk) {
+  if (known.has(id)) continue;
+  n++;
+  console.log(`  ${C.grn}+${C.r} ${d.name.padEnd(24)} ${C.dim}${id}  ${d.dir}${C.r}`);
+  console.log(`    ${C.dim}bin/audit ${d.dir}${C.r}`);
+}
+if (!n) console.log(`  ${C.dim}none${C.r}`); else issues.push(`${n} new`);
+
+console.log(`\n${C.b}VERSION DRIFT${C.r}`);
+n = 0;
+for (const [id, d] of onDisk) {
+  const k = known.get(id);
+  if (!k || k.version === d.version) continue;
+  n++; bumps.push({ id, from: k.version, to: d.version });
+  console.log(`  ${C.yel}~${C.r} ${k.name.padEnd(24)} ${C.dim}site${C.r} ${k.version} ${C.dim}→ disk${C.r} ${C.b}${d.version}${C.r}`);
+}
+if (!n) console.log(`  ${C.dim}none${C.r}`); else issues.push(`${n} version drift`);
+
+console.log(`\n${C.b}MISSING ON DISK — listed but no local checkout${C.r}`);
+n = 0;
+for (const [id, k] of known) {
+  if (onDisk.has(id)) continue;
+  n++;
+  console.log(`  ${C.red}!${C.r} ${k.name.padEnd(24)} ${C.dim}expected ${k.dir}${C.r}`);
+}
+if (!n) console.log(`  ${C.dim}none${C.r}`);
+
+console.log(`\n${C.b}ASSET GAPS${C.r}`);
+let gaps = 0;
+for (const [id, k] of known) {
+  const slug = id.replace(/\./g, "-");
+  const hasGlyph = await Bun.file(`${ROOT}site/assets/img/glyph/${slug}.svg`).exists();
+  const hasShot = await Bun.file(`${ROOT}site/assets/img/shot/${slug}.png`).exists();
+  if (hasGlyph && hasShot) continue;
+  gaps++;
+  const miss = [!hasGlyph && "glyph", !hasShot && "screenshot"].filter(Boolean).join(" + ");
+  console.log(`  ${C.blu}?${C.r} ${k.name.padEnd(24)} ${C.dim}no ${miss}${C.r}`);
+}
+if (!gaps) console.log(`  ${C.dim}none${C.r}`);
+
+console.log(`\n${C.b}MARKETPLACE${C.r}`);
+try {
+  const reg = (await (await fetch("https://raw.githubusercontent.com/omacom/omarchy-plugin-marketplace/main/registry.json")).json()) as any;
+  const listed = new Set<string>();
+  for (const s of reg.sources ?? []) {
+    const repo = String(s.repo ?? "").replace(/^https?:\/\/github\.com\//, "").replace(/\.git$/, "").toLowerCase();
+    if (repo.startsWith(`${src.owner.toLowerCase()}/`)) for (const id of Object.keys(s.plugins ?? {})) listed.add(id);
+  }
+  const built = await Bun.file(`${ROOT}site/data.json`).exists()
+    ? new Set(JSON.parse(await Bun.file(`${ROOT}site/data.json`).text()).plugins.filter((p: any) => p.listed).map((p: any) => p.id))
+    : new Set();
+  console.log(`  ${listed.size} of ${known.size} listed on the official marketplace`);
+  for (const id of listed) if (!built.has(id)) console.log(`  ${C.grn}★ newly listed:${C.r} ${id} — rebuild to show the badge`);
+  const unsubmitted = [...known.values()].filter((k: any) => k.status === "live" && !listed.has(k.id));
+  console.log(`  ${C.dim}${unsubmitted.length} live plugins not yet submitted${C.r}`);
+} catch {
+  console.log(`  ${C.red}registry unreachable${C.r}`);
+}
+
+if (APPLY && bumps.length) {
+  let raw = await Bun.file(DATA).text();
+  for (const b of bumps) {
+    const k = known.get(b.id) as any;
+    raw = raw.replace(
+      new RegExp(`("id":\\s*"${b.id.replace(/[.*+?^${}()|[\]\\]/g, "\\\\$&")}"[\\s\\S]{0,400}?"version":\\s*")${b.from}(")`),
+      `$1${b.to}$2`,
+    );
+    k.version = b.to;
+  }
+  await Bun.write(DATA, raw);
+  console.log(`\n${C.grn}✓ applied ${bumps.length} version bump(s) to data/plugins.json${C.r}`);
+} else if (bumps.length) {
+  console.log(`\n${C.dim}Run with --apply to write those version bumps in.${C.r}`);
+}
+
+console.log(`\n${issues.length ? `${C.yel}${issues.join(", ")}${C.r}` : `${C.grn}site matches disk${C.r}`}`);

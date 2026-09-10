@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 166 27" fill="none" stroke="#e6edf3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M5 8H9L11 10V16L9 18H5L3 16V10Z"/>
+<path d="M15 18V8H19L21 10V18M21 10L23 8H27V18"/>
+<path d="M39 18V8H33L31 10V16L33 18H39"/>
+<path d="M43 18V8H47L49 10"/>
+<path d="M61 8H55L53 10V16L55 18H61"/>
+<path d="M65 18V3M65 10L67 8H71L73 10V18"/>
+<path d="M77 8V16L79 18H85M85 8V22L83 24H77"/>
+<path d="M95 24V8H101L103 10V16L101 18H95"/>
+<path d="M107 3V16L109 18H111"/>
+<path d="M115 8V16L117 18H123V8"/>
+<path d="M135 8H129L127 10V16L129 18H135M135 8V22L133 24H127"/>
+<path d="M139 8V18M139 3V4"/>
+<path d="M143 18V8H149L151 10V18"/>
+<path d="M163 8H157L155 10V11L157 13H161L163 15V16L161 18H155"/>
+</svg>

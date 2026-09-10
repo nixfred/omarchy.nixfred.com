@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Omarchy Plugins by nixfred</title>
+<meta name="description" content="Twenty-nine plugins and a theme for the Omarchy desktop, built by Fred Nix. Bar widgets, a Mac bridge, workspace control and a suite of living system instruments.">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="data.json" as="fetch" crossorigin>
+<meta property="og:title" content="Omarchy Plugins by nixfred">
+<meta property="og:description" content="Twenty-nine plugins and a theme for the Omarchy desktop. Bar widgets, a Mac bridge, workspace control, and a suite of living system instruments.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://omarchy.nixfred.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- The bar is the hero. These are real widgets, animating, and each one scrolls to its plugin. -->
+<div class="omabar" id="omabar" role="navigation" aria-label="Live plugin bar"></div>
+<div class="bartip" id="bartip" role="tooltip" aria-hidden="true"></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">plugins for the omarchy desktop</div>
+    <!-- The genuine wordmark, copied from /usr/share/omarchy/logo.svg on this
+         machine. Never redrawn by hand. -->
+    <div class="lockup">
+      <span class="oma" id="oma-mark" role="img" aria-label="Omarchy"></span>
+      <span class="plugins">plugins</span>
+    </div>
+    <p class="lede">
+      Everything above this line is real. That bar is running the widgets, the way they run
+      on the machine that built them. Click one and it takes you to the plugin.
+    </p>
+    <p class="sub">
+      Built by <a href="https://github.com/nixfred" style="color:var(--fg-2);border-bottom:1px solid var(--line-2)">Fred Nix</a>.
+      Every plugin is public source. Marketplace listing status on each card is read straight
+      from the official registry, so nothing here is a claim you have to take on trust.
+    </p>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<section id="featured">
+  <div class="wrap">
+    <header>
+      <h2>Featured</h2>
+      <p>The three that define the rest. Two flagships and a family of six built on one idea.</p>
+    </header>
+    <div class="feat-grid" id="feat-grid"></div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="controls">
+    <input class="search" id="q" type="search" placeholder="Search plugins…" aria-label="Search plugins">
+    <div id="chips" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+  </div>
+</div>
+
+<main id="families"></main>
+
+<section id="themes">
+  <div class="wrap">
+    <hr class="rule" style="margin-bottom:44px">
+    <header>
+      <h2>Themes <span class="count" id="theme-count"></span></h2>
+      <p>One so far. The shape is here for the rest.</p>
+    </header>
+    <div class="grid" id="theme-grid"></div>
+  </div>
+</section>
+
+<section id="tools">
+  <div class="wrap">
+    <hr class="rule" style="margin-bottom:44px">
+    <header>
+      <h2>Tools around the desktop <span class="count" id="tool-count"></span></h2>
+      <p>Not bar plugins. The programs the plugins stand on, and the ones that rebuild the machine underneath them.</p>
+    </header>
+    <div class="slim" id="tool-grid"></div>
+  </div>
+</section>
+
+<section id="retired">
+  <div class="wrap">
+    <hr class="rule" style="margin-bottom:44px">
+    <header>
+      <h2>Retired <span class="count" id="retired-count"></span></h2>
+      <p>Things that were replaced. Left here on purpose, because a catalogue where nothing ever dies is not a catalogue.</p>
+    </header>
+    <div class="slim" id="retired-grid"></div>
+  </div>
+</section>
+
+<section id="activity">
+  <div class="wrap">
+    <hr class="rule" style="margin-bottom:44px">
+    <header>
+      <h2>Activity</h2>
+      <p id="heat-total" class="dim"></p>
+    </header>
+    <div class="heat" id="heat" aria-label="GitHub contribution heatmap"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap cols">
+    <div>
+      <p><strong style="color:var(--fg)">omarchy.nixfred.com</strong></p>
+      <p>Plugins for the Omarchy desktop, by Fred Nix. MIT unless a repo says otherwise.</p>
+      <p class="built" id="built"></p>
+    </div>
+    <div style="display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px;color:var(--fg-2)">
+      <a href="https://github.com/nixfred">GitHub</a>
+      <a href="https://plugins.omarchy.org/">Official marketplace</a>
+      <a href="https://omarchy.org">Omarchy</a>
+      <a href="https://nixfred.com">nixfred.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -129,6 +129,13 @@
     },
 
     {
+      "id": "nixfred.pr-hunter", "name": "PR Hunter", "family": "desk", "status": "live",
+      "repo": "nixfred/pr.hunter", "dir": "pr.hunter", "version": "1.1.0",
+      "tagline": "Open pull requests, and the workspace to deal with them.",
+      "description": "GitHub pull requests and issues for Herdr and your saved projects, in the bar. Opens the right workspace or terminal and hands the work to an agent that is already running.",
+      "accent": "#a78bfa"
+    },
+    {
       "id": "io.github.nixfred.watchtower", "name": "Watchtower", "family": "infra", "status": "live",
       "repo": "nixfred/omarchy-watchtower", "dir": "omarchy-watchtower", "version": "1.0.0",
       "tagline": "A quiet perimeter alarm that explains itself.",

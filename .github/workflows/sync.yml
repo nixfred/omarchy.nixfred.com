@@ -1,0 +1,63 @@
+name: Sync catalogue
+
+# Rebuilds site/data.json from live sources so the page keeps itself honest:
+#   - marketplace listing badges flip on their own when a plugin gets listed
+#   - star counts and the contribution heatmap stay current
+# Runs nightly, on every push, and on demand.
+
+on:
+  schedule:
+    - cron: "17 6 * * *"        # 06:17 UTC daily
+  push:
+    branches: [main]
+    paths:
+      - "data/plugins.json"
+      - "scripts/build.ts"
+      - "site/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Rebuild data.json
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bun scripts/build.ts
+
+      - name: Report what changed
+        run: |
+          echo "### Catalogue" >> "$GITHUB_STEP_SUMMARY"
+          jq -r '.stats | to_entries[] | "- \(.key): \(.value)"' site/data.json >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "### Listed on the official marketplace" >> "$GITHUB_STEP_SUMMARY"
+          jq -r '.plugins[] | select(.listed) | "- \(.name) — listed \(.listed_at // "date unknown")"' \
+            site/data.json >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit if the world moved
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # generated_at always changes; only commit when something real did.
+          if git diff --quiet -- site/data.json; then
+            echo "no change"; exit 0
+          fi
+          if [ -z "$(git diff -- site/data.json | grep '^[-+]' | grep -v generated_at | grep -v '^[-+][-+][-+]')" ]; then
+            echo "timestamp only, skipping"; git checkout -- site/data.json; exit 0
+          fi
+          git add site/data.json
+          git commit -m "chore: sync catalogue from GitHub and the official registry"
+          git push

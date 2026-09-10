@@ -1,0 +1,46 @@
+# SVG asset manifest
+
+- `glyph/nixfred-ram-pulse.svg` — Two memory banks inside the shared Pulse chip.
+- `glyph/nixfred-cpu-pulse.svg` — Processor die and central execution core inside the shared Pulse chip.
+- `glyph/nixfred-net-pulse.svg` — Opposed transmit and receive traces inside the shared Pulse chip.
+- `glyph/nixfred-disk-pulse.svg` — Storage platter and read/write arm inside the shared Pulse chip.
+- `glyph/pi-audio.svg` — Audio waveform inside the shared Pulse chip.
+- `glyph/pi-power.svg` — Charge bolt inside the shared Pulse chip.
+- `glyph/nixfred-blip.svg` — Message bubble connected to a second machine through a private gateway.
+- `glyph/nixfred-apple-notes.svg` — Folded note with writing lines and an append mark.
+- `glyph/nixfred-wisp.svg` — Phone conversation bubble with a continuous handset silhouette.
+- `glyph/io-github-nixfred-plonk.svg` — Workspace cells packed tightly in the direction of a closing-gap arrow.
+- `glyph/nixfred-rift.svg` — Bookmarked workspace with a reopen arrow.
+- `glyph/nixfred-workspace-names.svg` — Name tag above a pair of workspace cells.
+- `glyph/nixfred-menubar-overload.svg` — Magnified center bar item between smaller carousel items and scroll chevrons.
+- `glyph/nixfred-infomarchy.svg` — Wallpaper desk divided into agent activity and live telemetry panes.
+- `glyph/nixfred-burnbar.svg` — Consumption bars beneath a heat flame for AI spending.
+- `glyph/larry-status.svg` — Instrument-like agent face with an activity trace for its mouth.
+- `glyph/io-github-nixfred-watchtower.svg` — Perimeter shield with a listener scan and alarm indicator.
+- `glyph/io-github-nixfred-tailscale-host-monitor.svg` — Three host nodes joined into a monitored private network.
+- `glyph/pi-backup-monitor.svg` — Backup snapshot enclosed by a countdown and retry ring.
+- `glyph/nixfred-internet-latency.svg` — Outbound and return packets around a jitter trace.
+- `glyph/io-github-nixfred-local-intelligence.svg` — Local machine enclosure with an inference command prompt.
+- `glyph/nixfred-beatdeck.svg` — Playing record, spectrum bars, and a transport scrubber.
+- `glyph/io-github-nixfred-sonomarchy.svg` — Two speaker zones connected by an audio-routing trace.
+- `glyph/nixfred-mirror.svg` — Desktop screen casting toward a larger remote display.
+- `glyph/nixfred-pastey.svg` — Clipboard with remembered text and a second history sheet.
+- `glyph/pi-bluetooth.svg` — Bluetooth rune enclosed by two device-battery sonar arcs.
+- `glyph/nixfred-chronos.svg` — Clock dial with a day-progress rail and calendar-like upper ticks.
+- `glyph/lgse-sandman.svg` — Resting display beneath a crescent moon.
+- `glyph/jankeesvw-tesla.svg` — Electric car with a charge trace, headlights, and wheels.
+- `family/pulse.svg` — Living silicon section mark with an oscilloscope trace.
+- `family/bridge.svg` — Two private endpoints joined by a two-way bridge.
+- `family/workspace.svg` — Four ordered workspace regions.
+- `family/desk.svg` — Agent console and desk stand.
+- `family/infra.svg` — Linked infrastructure racks with health indicators.
+- `family/media.svg` — Playback signal radiating into output channels.
+- `family/system.svg` — Central system control surrounded by four peripheral connections.
+- `badge/listed.svg` — Circled check for a marketplace listing.
+- `badge/pending.svg` — Hourglass for a pending listing.
+- `badge/shelved.svg` — Paused work resting on a shelf.
+- `badge/fork.svg` — Version-control branch with source and fork nodes.
+- `wordmark.svg` — Original geometric lowercase “omarchy plugins” lettering drawn entirely as paths.
+- `favicon.svg` — Interlocking lowercase o/p monogram derived from the wordmark’s chamfered letterforms.
+- `MANIFEST.md` — Inventory and visual descriptions of all delivered files.
+- `glyph/nixfred-pr-hunter.svg` — Pull-request nodes and a return arrow connected to a workspace pane.
