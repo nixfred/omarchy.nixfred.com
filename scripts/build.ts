@@ -270,11 +270,31 @@ const out = {
   owner: src.owner,
   families,
   plugins,
-  themes: src.themes.map((t: any) => ({
-    ...t,
-    stars: repoStats.get(t.repo)?.stars ?? 0,
-    repo_url: `https://github.com/${t.repo}`,
-  })),
+  themes: src.themes.map((t: any) => {
+    // `omarchy theme set` wants the name the INSTALLER derived, not the title on
+    // the card. omarchy-theme-install builds it from the repo basename:
+    //   basename .git | sed -E 's/^omarchy-//; s/-theme$//' | tr A-Z a-z
+    // so nixfred/omarchy-2-haxorz-theme becomes `2-haxorz`, nothing like
+    // "2 Hackrz". Deriving it the same way is what keeps the copy box a command
+    // that actually runs. Mirrors /usr/bin/omarchy-theme-install line 32.
+    const themeName = t.repo
+      .split("/").pop()
+      .replace(/\.git$/, "")
+      .replace(/^omarchy-/, "")
+      .replace(/-theme$/, "")
+      .toLowerCase();
+    return {
+      ...t,
+      theme_name: themeName,
+      stars: repoStats.get(t.repo)?.stars ?? 0,
+      repo_url: `https://github.com/${t.repo}`,
+      // install CLONES AND APPLIES in one go - the installer ends by calling
+      // omarchy-theme-set itself, so there is no separate enable step. `set` is
+      // here for switching back to it later.
+      install: `omarchy theme install https://github.com/${t.repo}`,
+      set: `omarchy theme set ${themeName}`,
+    };
+  }),
   // Tools have no plugin id, so their screenshot slug comes from the repo name -
   // deterministic, and the same rule a person would guess when adding one.
   // A tool card carries the same repo record as a plugin card - pull requests by

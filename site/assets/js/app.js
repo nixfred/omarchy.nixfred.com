@@ -583,6 +583,13 @@
             <div class="foot" style="margin-top:15px">
               <a class="btn" href="${esc(t.repo_url)}" target="_blank" rel="noopener">${ICON.github} Source</a>
             </div>
+            <!-- Install clones AND applies - omarchy-theme-install ends by
+                 calling omarchy-theme-set, so there is no enable step to run.
+                 Set is the way back to it once you have wandered off. -->
+            <div class="cmds" style="margin-top:14px">
+              ${cmdBox("Install", t.install)}
+              ${cmdBox("Set", t.set)}
+            </div>
           </div>
         </article>`).join("") +
       `<div class="slot">room for the next theme</div><div class="slot">room for the next theme</div>`;
