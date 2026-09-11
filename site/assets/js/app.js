@@ -7,6 +7,21 @@
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /** Scroll a plugin's own card into view and flash its border. Clearing the
+      search and the family filter first is what makes this reliable: a card
+      filtered out of the grid has no element to scroll to. */
+  function jumpToCard(id, accent) {
+    if (!document.getElementById(`p-${id}`)) {
+      state.q = ""; state.fam = "all"; $("#q").value = ""; render();
+    }
+    requestAnimationFrame(() => {
+      const c = document.getElementById(`p-${id}`);
+      if (!c) return;
+      c.scrollIntoView({ block: "center", behavior: REDUCED ? "auto" : "smooth" });
+      if (accent) { c.style.borderColor = accent; setTimeout(() => (c.style.borderColor = ""), 1400); }
+    });
+  }
+
   const ICON = {
     github: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7 0-.7 0-.7 1.2.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>',
     copy: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>',
@@ -74,16 +89,7 @@
       if (w.type === "clock") inner = `<span class="lbl">--:--</span>`;
       n.innerHTML = inner;
 
-      n.addEventListener("click", () => {
-        const card = document.getElementById(`p-${p.id}`);
-        if (!card) return;
-        state.q = ""; state.fam = "all"; $("#q").value = ""; render();
-        requestAnimationFrame(() => {
-          document.getElementById(`p-${p.id}`)?.scrollIntoView({ block: "center" });
-          const c = document.getElementById(`p-${p.id}`);
-          if (c) { c.style.borderColor = p.accent; setTimeout(() => (c.style.borderColor = ""), 1400); }
-        });
-      });
+      n.addEventListener("click", () => jumpToCard(p.id, p.accent));
       const show = (e) => {
         tip.textContent = `${p.name} — ${p.tagline}`;
         tip.classList.add("on"); tip.setAttribute("aria-hidden", "false");
@@ -379,8 +385,12 @@
       const p = byId.get(id);
       if (!p) continue;
       rows.push({
-        href: p.repo_url || `#p-${p.id}`,
-        external: !!p.repo_url,
+        // The hero link goes to the plugin's CARD, not off to GitHub. The card
+        // is where the screenshot, the figures and the repo dropdown already
+        // live, so leaving the site was always the worse of the two.
+        card: p.id,
+        href: `#p-${p.id}`,
+        external: false,
         accent: p.accent,
         glyph: p.glyph,
         kicker: "flagship",
@@ -410,6 +420,7 @@
       const a = el("a", "hero-link");
       a.href = r.href;
       if (r.external) { a.target = "_blank"; a.rel = "noopener"; }
+      if (r.card) a.addEventListener("click", (e) => { e.preventDefault(); jumpToCard(r.card, r.accent); });
       a.style.setProperty("--ca", r.accent);
       a.innerHTML = `
         <span class="g">${ICON.plug}</span>
