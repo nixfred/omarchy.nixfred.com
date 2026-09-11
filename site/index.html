@@ -173,7 +173,11 @@
   </div>
 </footer>
 
-<div id="deadjs">
+<!-- style="display:none" INLINE, not only in the stylesheet. Its hidden state
+     must not depend on CSS arriving: a slow or failed stylesheet would
+     otherwise reveal an alarming message on a page that is working, which
+     is exactly what happened once. Inline beats a missing stylesheet. -->
+<div id="deadjs" style="display:none">
   <strong id="deadjs-title">This page did not finish loading.</strong>
   <span id="deadjs-msg"></span>
   <button type="button" id="deadjs-fix">Reload past the cache</button>
@@ -210,11 +214,13 @@
       title.textContent = t;
       msg.textContent = m;
       fix.style.display = showFix ? "" : "none";
+      box.style.display = "";      // release the inline hide
       box.classList.add("on");
     }
 
     var timer = setInterval(function () {
       if (window.__appReady) {           // recovered, or was never broken
+        box.style.display = "none";
         box.classList.remove("on");
         clearInterval(timer);
         return;
