@@ -344,11 +344,16 @@ section header p { color: var(--fg-3); margin: 9px 0 0; font-size: 14.5px; }
 
 .card .desc { color: var(--fg-2); font-size: 13.4px; line-height: 1.62; margin: 0 0 14px; flex: 1; }
 
+/* Panels are portrait. Shown whole they letterbox down to an unreadable
+   thumbnail, so the card shows the top of the panel instead - which is where
+   these plugins put their hero: the chip, the big number, the headline. */
 .shot {
   display: block; width: calc(100% + 36px); margin: 0 -18px 14px;
   border-block: 1px solid var(--line);
-  background: var(--bg-2);
-  aspect-ratio: 16 / 9; object-fit: cover; object-position: top center;
+  background: #070b11;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 13px; }
