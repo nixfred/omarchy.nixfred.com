@@ -669,7 +669,19 @@ section h2 { letter-spacing: 0.02em; font-weight: 700; }
 .card h3, .feat h3, .row b { letter-spacing: -0.01em; font-weight: 700; }
 
 /* The genuine OMARCHY wordmark, from /usr/share/omarchy/logo.svg. */
-.lockup { display: flex; align-items: flex-end; gap: 18px; flex-wrap: wrap; margin-bottom: 22px; }
+/* Stacked now, so the owner sits above the mark rather than beside it. Putting
+   "Nixfred's" on the same line would have it compete with the wordmark for the
+   same baseline; above, it reads as the possessive it is. */
+.lockup { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; margin-bottom: 22px; text-decoration: none; }
+.lockup .owner {
+  font: 700 clamp(15px, 2.2vw, 25px)/1 var(--mono);
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+  padding-left: 3px;   /* optically aligns with the wordmark's left stem */
+}
+.lockup:hover .owner { color: var(--accent); }
+.lockup .mark-row { display: flex; align-items: flex-end; gap: 18px; flex-wrap: wrap; }
 .lockup .oma { width: min(360px, 62vw); color: var(--fg); display: block; }
 .lockup .oma svg { width: 100%; height: auto; display: block; }
 .lockup .oma svg g { fill: currentColor; }

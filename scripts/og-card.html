@@ -41,6 +41,9 @@
     display: flex; align-items: center; gap: 14px; margin-bottom: 26px;
   }
   .kicker::before { content: ""; width: 40px; height: 1px; background: var(--line-2); }
+  /* The owner reads as a possessive above the wordmark, not as a strapline
+     beside it. Bigger and brighter than the old kicker for that reason. */
+  .kicker { font-size: 26px; font-weight: 700; letter-spacing: .16em; color: var(--fg-2); }
   .mark { width: 415px; color: var(--fg); display: block; }
   .mark svg { width: 100%; height: auto; display: block; }
   h1 {
@@ -73,7 +76,7 @@
 </head>
 <body>
   <div>
-    <div class="kicker">PLUGINS FOR THE OMARCHY DESKTOP</div>
+    <div class="kicker">NIXFRED’S</div>
     <div class="mark" id="mark"></div>
     <h1>PLUGINS</h1>
     <p>Bar widgets, a Mac bridge, workspace control and a suite of living system instruments.</p>
