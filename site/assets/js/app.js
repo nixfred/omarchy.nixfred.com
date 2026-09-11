@@ -15,6 +15,12 @@
 (() => {
   "use strict";
 
+  // Signals for the watchdog in index.html. It used to infer failure from "the
+  // page looks empty", which is not the same thing and made a slow load
+  // indistinguishable from a broken one. These say what actually happened.
+  window.__appLoaded = true;   // this file parsed and began running
+  window.__appReady = false;   // set true once the catalogue is on screen
+
   const $ = (s, r = document) => r.querySelector(s);
   const el = (t, c, h) => { const n = document.createElement(t); if (c) n.className = c; if (h != null) n.innerHTML = h; return n; };
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -665,8 +671,10 @@
       chrome();
       render();
       animateBar(buildBar());
+      window.__appReady = true;
     })
     .catch((e) => {
+      window.__appDataFailed = e.message;
       $("#families").innerHTML = `<div class="wrap"><div class="slot">Could not load data.json — ${esc(e.message)}</div></div>`;
     });
 })();

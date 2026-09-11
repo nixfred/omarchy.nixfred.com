@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T03:05:00.222Z",
+  "generated_at": "2026-09-11T05:16:53.055Z",
   "owner": "nixfred",
   "families": [
     {
@@ -28,14 +28,14 @@
       "blurb": "Everyday surfaces. Clipboard, clock, bluetooth, sleep, the car."
     },
     {
-      "id": "bridge",
-      "name": "The Mac Bridge",
-      "blurb": "Your phone and your Mac, in the Linux bar. The Mac is the gateway, this machine is the client, nothing is proxied through a stranger."
-    },
-    {
       "id": "infra",
       "name": "Infrastructure",
       "blurb": "The boring, load-bearing ones. Backups, exposed ports, latency, fleet health."
+    },
+    {
+      "id": "bridge",
+      "name": "The Mac Bridge",
+      "blurb": "Your phone and your Mac, in the Linux bar. The Mac is the gateway, this machine is the client, nothing is proxied through a stranger."
     }
   ],
   "plugins": [
@@ -572,6 +572,138 @@
       "clone": "git clone https://github.com/nixfred/Pastey.git"
     },
     {
+      "id": "nixfred.burnbar",
+      "name": "Burn Bar",
+      "family": "desk",
+      "status": "live",
+      "repo": "nixfred/burnbar",
+      "dir": "burnbar",
+      "version": "1.11.0",
+      "tagline": "A thermal heat map of what the AIs are costing you.",
+      "description": "Live thermal heat map of the AIs this machine actually uses, Claude, Codex, Grok, and local Ollama when a GPU is present, with weekly quota gauges and the share of tokens kept off frontier models.",
+      "accent": "#ff4d4d",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
+      "prs": [],
+      "issues": [],
+      "pushed": "2026-09-10T16:45:48Z",
+      "created": "2026-09-04T04:03:59Z",
+      "license": "MIT",
+      "language": "QML",
+      "topics": [],
+      "default_branch": "master",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 32
+        }
+      ],
+      "commits": 32,
+      "repo_url": "https://github.com/nixfred/burnbar",
+      "glyph": "assets/img/glyph/nixfred-burnbar.svg",
+      "shot": "assets/img/shot/nixfred-burnbar.png",
+      "listed": false,
+      "listed_at": null,
+      "listing_url": null,
+      "marketplace_category": null,
+      "marketplace_tags": [],
+      "install": "omarchy plugin install nixfred/burnbar",
+      "clone": "git clone https://github.com/nixfred/burnbar.git"
+    },
+    {
+      "id": "pi.backup-monitor",
+      "name": "Backup Sizzle",
+      "family": "infra",
+      "status": "live",
+      "repo": "nixfred/backup.omarchy",
+      "dir": "backup.omarchy",
+      "version": "3.0.0",
+      "tagline": "Restic, with a countdown ring and an outcome calendar.",
+      "description": "Restic backup with live B2 throughput, countdown ring, outcome calendar, anomaly notes, snapshot browser and run history.",
+      "accent": "#06d6a0",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
+      "prs": [],
+      "issues": [],
+      "pushed": "2026-09-06T20:45:49Z",
+      "created": "2026-09-04T04:03:59Z",
+      "license": null,
+      "language": "QML",
+      "topics": [],
+      "default_branch": "master",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 15
+        }
+      ],
+      "commits": 15,
+      "repo_url": "https://github.com/nixfred/backup.omarchy",
+      "glyph": "assets/img/glyph/pi-backup-monitor.svg",
+      "shot": "assets/img/shot/pi-backup-monitor.png",
+      "listed": false,
+      "listed_at": null,
+      "listing_url": null,
+      "marketplace_category": null,
+      "marketplace_tags": [],
+      "install": "omarchy plugin install nixfred/backup.omarchy",
+      "clone": "git clone https://github.com/nixfred/backup.omarchy.git"
+    },
+    {
+      "id": "nixfred.beatdeck",
+      "name": "Beatdeck",
+      "family": "media",
+      "status": "live",
+      "repo": "nixfred/beatdeck.omarchy",
+      "dir": "beatdeck.omarchy",
+      "version": "1.6.0",
+      "tagline": "A live spectrum that opens a media cockpit.",
+      "description": "Beatbar's live spectrum as the trigger for the Living Media Cockpit. Click for now playing, right click for the visuals.",
+      "accent": "#f72585",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
+      "prs": [],
+      "issues": [],
+      "pushed": "2026-09-10T13:59:58Z",
+      "created": "2026-09-04T04:03:58Z",
+      "license": null,
+      "language": "QML",
+      "topics": [],
+      "default_branch": "master",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 11
+        }
+      ],
+      "commits": 11,
+      "repo_url": "https://github.com/nixfred/beatdeck.omarchy",
+      "glyph": "assets/img/glyph/nixfred-beatdeck.svg",
+      "shot": "assets/img/shot/nixfred-beatdeck.png",
+      "listed": false,
+      "listed_at": null,
+      "listing_url": null,
+      "marketplace_category": null,
+      "marketplace_tags": [],
+      "install": "omarchy plugin install nixfred/beatdeck.omarchy",
+      "clone": "git clone https://github.com/nixfred/beatdeck.omarchy.git"
+    },
+    {
       "id": "pi.bluetooth",
       "name": "Halo Bluetooth",
       "family": "system",
@@ -948,8 +1080,8 @@
       "stars": 95,
       "forks": 12,
       "watchers": 1,
-      "open_prs": 14,
-      "open_issues": 2,
+      "open_prs": 8,
+      "open_issues": 1,
       "prs": [
         {
           "number": 25,
@@ -960,22 +1092,6 @@
           "url": "https://github.com/nixfred/infomarchy/pull/25"
         },
         {
-          "number": 24,
-          "title": "feat: recognize Antigravity and agy as an agent provider",
-          "author": "alinuxfan",
-          "created": "2026-09-10T18:29:07Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/24"
-        },
-        {
-          "number": 22,
-          "title": "feat: support animated image wallpapers and pause closed overlays",
-          "author": "TechLuddite",
-          "created": "2026-09-09T20:55:56Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/22"
-        },
-        {
           "number": 21,
           "title": "fix: contain session-card text and align desktop spacing",
           "author": "TechLuddite",
@@ -984,28 +1100,12 @@
           "url": "https://github.com/nixfred/infomarchy/pull/21"
         },
         {
-          "number": 20,
-          "title": "feat: add an optional MPRIS media controls card",
-          "author": "TechLuddite",
-          "created": "2026-09-09T20:54:26Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/20"
-        },
-        {
           "number": 19,
           "title": "feat: add an optional containers card with start and stop controls",
           "author": "TechLuddite",
           "created": "2026-09-09T20:53:24Z",
           "draft": false,
           "url": "https://github.com/nixfred/infomarchy/pull/19"
-        },
-        {
-          "number": 18,
-          "title": "feat: persist the LOCAL AI Ollama origin",
-          "author": "TechLuddite",
-          "created": "2026-09-09T20:52:09Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/18"
         },
         {
           "number": 17,
@@ -1022,22 +1122,6 @@
           "created": "2026-09-09T20:49:28Z",
           "draft": false,
           "url": "https://github.com/nixfred/infomarchy/pull/16"
-        },
-        {
-          "number": 15,
-          "title": "feat: add Pi sessions and fair recent-task selection",
-          "author": "TechLuddite",
-          "created": "2026-09-09T20:46:31Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/15"
-        },
-        {
-          "number": 14,
-          "title": "fix: harden observational collection and credential redaction",
-          "author": "TechLuddite",
-          "created": "2026-09-09T20:45:29Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/14"
         },
         {
           "number": 13,
@@ -1057,7 +1141,7 @@
         },
         {
           "number": 11,
-          "title": "feat: Hermes session history + fix live Hermes detection via python -m hermes_cli.main",
+          "title": "fix: recognize Hermes launched via python -m hermes_cli.main",
           "author": "reverb256",
           "created": "2026-09-08T07:59:11Z",
           "draft": false,
@@ -1071,16 +1155,9 @@
           "author": "TRIBUSeric",
           "created": "2026-09-10T22:22:14Z",
           "url": "https://github.com/nixfred/infomarchy/issues/26"
-        },
-        {
-          "number": 23,
-          "title": "feat: add Antigravity (agy) agent session tracking",
-          "author": "alinuxfan",
-          "created": "2026-09-10T18:29:03Z",
-          "url": "https://github.com/nixfred/infomarchy/issues/23"
         }
       ],
-      "pushed": "2026-09-11T02:53:11Z",
+      "pushed": "2026-09-11T03:25:59Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -1104,7 +1181,17 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 80
+          "commits": 89
+        },
+        {
+          "login": "TechLuddite",
+          "avatar": "https://avatars.githubusercontent.com/u/287875418?v=4",
+          "commits": 5
+        },
+        {
+          "login": "alinuxfan",
+          "avatar": "https://avatars.githubusercontent.com/u/2125148?v=4",
+          "commits": 1
         },
         {
           "login": "sooners0",
@@ -1112,7 +1199,7 @@
           "commits": 1
         }
       ],
-      "commits": 81,
+      "commits": 96,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "shot": "assets/img/shot/nixfred-infomarchy.png",
@@ -1395,120 +1482,6 @@
       "marketplace_tags": [],
       "install": null,
       "clone": null
-    },
-    {
-      "id": "nixfred.burnbar",
-      "name": "Burn Bar",
-      "family": "desk",
-      "status": "live",
-      "repo": "nixfred/burnbar",
-      "dir": "burnbar",
-      "version": "1.11.0",
-      "tagline": "A thermal heat map of what the AIs are costing you.",
-      "description": "Live thermal heat map of the AIs this machine actually uses, Claude, Codex, Grok, and local Ollama when a GPU is present, with weekly quota gauges and the share of tokens kept off frontier models.",
-      "accent": "#ff4d4d",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "open_prs": 0,
-      "open_issues": 0,
-      "prs": [],
-      "issues": [],
-      "pushed": null,
-      "created": null,
-      "license": null,
-      "language": null,
-      "topics": [],
-      "default_branch": "main",
-      "release": null,
-      "contributors": [],
-      "commits": 0,
-      "repo_url": "https://github.com/nixfred/burnbar",
-      "glyph": "assets/img/glyph/nixfred-burnbar.svg",
-      "shot": "assets/img/shot/nixfred-burnbar.png",
-      "listed": false,
-      "listed_at": null,
-      "listing_url": null,
-      "marketplace_category": null,
-      "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/burnbar",
-      "clone": "git clone https://github.com/nixfred/burnbar.git"
-    },
-    {
-      "id": "pi.backup-monitor",
-      "name": "Backup Sizzle",
-      "family": "infra",
-      "status": "live",
-      "repo": "nixfred/backup.omarchy",
-      "dir": "backup.omarchy",
-      "version": "3.0.0",
-      "tagline": "Restic, with a countdown ring and an outcome calendar.",
-      "description": "Restic backup with live B2 throughput, countdown ring, outcome calendar, anomaly notes, snapshot browser and run history.",
-      "accent": "#06d6a0",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "open_prs": 0,
-      "open_issues": 0,
-      "prs": [],
-      "issues": [],
-      "pushed": null,
-      "created": null,
-      "license": null,
-      "language": null,
-      "topics": [],
-      "default_branch": "main",
-      "release": null,
-      "contributors": [],
-      "commits": 0,
-      "repo_url": "https://github.com/nixfred/backup.omarchy",
-      "glyph": "assets/img/glyph/pi-backup-monitor.svg",
-      "shot": "assets/img/shot/pi-backup-monitor.png",
-      "listed": false,
-      "listed_at": null,
-      "listing_url": null,
-      "marketplace_category": null,
-      "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/backup.omarchy",
-      "clone": "git clone https://github.com/nixfred/backup.omarchy.git"
-    },
-    {
-      "id": "nixfred.beatdeck",
-      "name": "Beatdeck",
-      "family": "media",
-      "status": "live",
-      "repo": "nixfred/beatdeck.omarchy",
-      "dir": "beatdeck.omarchy",
-      "version": "1.6.0",
-      "tagline": "A live spectrum that opens a media cockpit.",
-      "description": "Beatbar's live spectrum as the trigger for the Living Media Cockpit. Click for now playing, right click for the visuals.",
-      "accent": "#f72585",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "open_prs": 0,
-      "open_issues": 0,
-      "prs": [],
-      "issues": [],
-      "pushed": null,
-      "created": null,
-      "license": null,
-      "language": null,
-      "topics": [],
-      "default_branch": "main",
-      "release": null,
-      "contributors": [],
-      "commits": 0,
-      "repo_url": "https://github.com/nixfred/beatdeck.omarchy",
-      "glyph": "assets/img/glyph/nixfred-beatdeck.svg",
-      "shot": "assets/img/shot/nixfred-beatdeck.png",
-      "listed": false,
-      "listed_at": null,
-      "listing_url": null,
-      "marketplace_category": null,
-      "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/beatdeck.omarchy",
-      "clone": "git clone https://github.com/nixfred/beatdeck.omarchy.git"
     }
   ],
   "themes": [
@@ -1786,7 +1759,7 @@
     }
   ],
   "heatmap": {
-    "total": 1942,
+    "total": 1951,
     "weeks": [
       [
         {
@@ -3486,14 +3459,14 @@
         },
         {
           "date": "2026-07-25",
-          "count": 29,
+          "count": 31,
           "level": 2
         }
       ],
       [
         {
           "date": "2026-07-26",
-          "count": 19,
+          "count": 17,
           "level": 1
         },
         {
@@ -3572,12 +3545,12 @@
         },
         {
           "date": "2026-08-10",
-          "count": 15,
+          "count": 16,
           "level": 1
         },
         {
           "date": "2026-08-11",
-          "count": 7,
+          "count": 6,
           "level": 1
         },
         {
@@ -3597,15 +3570,15 @@
         },
         {
           "date": "2026-08-15",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-08-16",
-          "count": 1,
-          "level": 1
+          "count": 0,
+          "level": 0
         },
         {
           "date": "2026-08-17",
@@ -3629,7 +3602,7 @@
         },
         {
           "date": "2026-08-21",
-          "count": 209,
+          "count": 213,
           "level": 4
         },
         {
@@ -3641,8 +3614,8 @@
       [
         {
           "date": "2026-08-23",
-          "count": 4,
-          "level": 1
+          "count": 0,
+          "level": 0
         },
         {
           "date": "2026-08-24",
@@ -3661,66 +3634,66 @@
         },
         {
           "date": "2026-08-27",
-          "count": 22,
+          "count": 25,
           "level": 1
         },
         {
           "date": "2026-08-28",
-          "count": 14,
+          "count": 16,
           "level": 1
         },
         {
           "date": "2026-08-29",
-          "count": 5,
-          "level": 1
+          "count": 0,
+          "level": 0
         }
       ],
       [
         {
           "date": "2026-08-30",
-          "count": 15,
+          "count": 16,
           "level": 1
         },
         {
           "date": "2026-08-31",
-          "count": 64,
+          "count": 63,
           "level": 3
         },
         {
           "date": "2026-09-01",
-          "count": 31,
+          "count": 34,
           "level": 2
         },
         {
           "date": "2026-09-02",
-          "count": 21,
+          "count": 18,
           "level": 1
         },
         {
           "date": "2026-09-03",
-          "count": 65,
+          "count": 68,
           "level": 3
         },
         {
           "date": "2026-09-04",
-          "count": 81,
+          "count": 79,
           "level": 4
         },
         {
           "date": "2026-09-05",
-          "count": 60,
+          "count": 62,
           "level": 3
         }
       ],
       [
         {
           "date": "2026-09-06",
-          "count": 52,
-          "level": 3
+          "count": 49,
+          "level": 2
         },
         {
           "date": "2026-09-07",
-          "count": 100,
+          "count": 101,
           "level": 4
         },
         {
@@ -3730,18 +3703,18 @@
         },
         {
           "date": "2026-09-09",
-          "count": 58,
+          "count": 59,
           "level": 3
         },
         {
           "date": "2026-09-10",
-          "count": 60,
+          "count": 66,
           "level": 3
         },
         {
           "date": "2026-09-11",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         }
       ]
     ]
