@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Omarchy Plugins by nixfred</title>
-<meta name="description" content="Thirty plugins and a theme for the Omarchy desktop, built by Fred Nix. Bar widgets, a Mac bridge, workspace control and a suite of living system instruments.">
+<meta name="description" content="Twenty-four plugins and a theme for the Omarchy desktop, built by Fred Nix. Bar widgets, a Mac bridge, workspace control and a suite of living system instruments.">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#06080b">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://omarchy.nixfred.com/">
 <meta property="og:site_name" content="omarchy.nixfred.com">
 <meta property="og:title" content="Omarchy Plugins by nixfred">
-<meta property="og:description" content="Thirty plugins and a theme for the Omarchy desktop. Bar widgets, a Mac bridge, workspace control, and a suite of living system instruments.">
+<meta property="og:description" content="Twenty-four plugins and a theme for the Omarchy desktop. Bar widgets, a Mac bridge, workspace control, and a suite of living system instruments.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://omarchy.nixfred.com/">
 <!-- Absolute, and 1200x630: unfurlers will not resolve a relative path, and a
@@ -28,12 +28,12 @@
 <meta name="twitter:site" content="@nixfred">
 <meta name="twitter:creator" content="@nixfred">
 <meta name="twitter:title" content="Omarchy Plugins by nixfred">
-<meta name="twitter:description" content="Thirty plugins and a theme for the Omarchy desktop. Bar widgets, a Mac bridge, workspace control, and a suite of living system instruments.">
+<meta name="twitter:description" content="Twenty-four plugins and a theme for the Omarchy desktop. Bar widgets, a Mac bridge, workspace control, and a suite of living system instruments.">
 <meta name="twitter:image" content="https://omarchy.nixfred.com/assets/img/og.png?v=44f1b307">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="assets/css/style.css?v=946fa97b">
+<link rel="stylesheet" href="assets/css/style.css?v=f21c9e95">
 </head>
 <body>
 
@@ -42,6 +42,18 @@
 <div class="omabar" id="omabar" role="navigation" aria-label="Widget preview bar"></div>
 <div class="bartip" id="bartip" role="tooltip" aria-hidden="true"></div>
 
+<!-- The off-site links, directly under the bar. They used to sit in the footer,
+     where nobody scrolls to find them. -->
+<nav class="topnav" aria-label="Elsewhere">
+  <div class="wrap">
+    <a href="https://github.com/nixfred" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://plugins.omarchy.org/" target="_blank" rel="noopener">Official marketplace</a>
+    <a href="https://omarchy.org" target="_blank" rel="noopener">Omarchy</a>
+    <a href="https://nixfred.com" target="_blank" rel="noopener">nixfred.com</a>
+    <a href="https://resume.nixfred.com" target="_blank" rel="noopener">resume.nixfred.com</a>
+  </div>
+</nav>
+
 <header class="hero">
   <div class="wrap hero-grid">
 
@@ -49,10 +61,10 @@
       <div class="eyebrow">plugins for the omarchy desktop</div>
       <!-- The genuine wordmark, copied from /usr/share/omarchy/logo.svg on this
            machine. Never redrawn by hand. -->
-      <div class="lockup">
+      <a class="lockup" href="/" aria-label="omarchy.nixfred.com, home">
         <span class="oma" id="oma-mark" role="img" aria-label="Omarchy"></span>
         <span class="plugins">plugins</span>
-      </div>
+      </a>
       <p class="lede">
         Explore interactive previews inspired by the widgets, then click through to each
         real plugin.
@@ -85,6 +97,18 @@
   </div>
 </section>
 
+<!-- Tools sit here, above the catalogue, not at the foot of the page. They are
+     the programs the plugins stand on, and at the bottom nobody ever saw them. -->
+<section id="tools">
+  <div class="wrap">
+    <header class="tools-head">
+      <h2>Tools around the desktop <span class="count" id="tool-count"></span></h2>
+      <p>Not bar plugins. The programs the plugins stand on, and the ones that carry a machine from one box to the next.</p>
+    </header>
+    <div class="feat-grid" id="tool-grid"></div>
+  </div>
+</section>
+
 <div class="wrap">
   <div class="controls">
     <input class="search" id="q" type="search" placeholder="Search plugins…" aria-label="Search plugins">
@@ -102,17 +126,6 @@
       <p>One so far. The shape is here for the rest.</p>
     </header>
     <div class="grid" id="theme-grid"></div>
-  </div>
-</section>
-
-<section id="tools">
-  <div class="wrap">
-    <hr class="rule" style="margin-bottom:44px">
-    <header>
-      <h2>Tools around the desktop <span class="count" id="tool-count"></span></h2>
-      <p>Not bar plugins. The programs the plugins stand on, and the ones that rebuild the machine underneath them.</p>
-    </header>
-    <div class="slim" id="tool-grid"></div>
   </div>
 </section>
 
@@ -145,15 +158,15 @@
       <p>Plugins for the Omarchy desktop, by Fred Nix. MIT unless a repo says otherwise.</p>
       <p class="built" id="built"></p>
     </div>
+    <!-- These links live in the top nav now. The footer keeps the two that are
+         about this page rather than elsewhere. -->
     <div style="display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px;color:var(--fg-2)">
-      <a href="https://github.com/nixfred">GitHub</a>
-      <a href="https://plugins.omarchy.org/">Official marketplace</a>
-      <a href="https://omarchy.org">Omarchy</a>
-      <a href="https://nixfred.com">nixfred.com</a>
+      <a href="https://github.com/nixfred/omarchy.nixfred.com" target="_blank" rel="noopener">Source of this page</a>
+      <a href="#top">Back to top</a>
     </div>
   </div>
 </footer>
 
-<script src="assets/js/app.js?v=8f9d406c"></script>
+<script src="assets/js/app.js?v=88710d5c"></script>
 </body>
 </html>

@@ -78,6 +78,32 @@ h1, h2, h3 { margin: 0; font-weight: 620; letter-spacing: -0.02em; line-height: 
 
 .omabar .spacer { flex: 1 1 auto; }
 
+/* Off-site links, pinned directly beneath the widget bar. They were in the
+   footer, which on a catalogue this long meant they were never seen. Sticky at
+   the bar's own height so the two read as one header however far you scroll. */
+.topnav {
+  position: sticky;
+  top: var(--bar-h);
+  z-index: 39;
+  background: rgba(8, 11, 16, 0.82);
+  backdrop-filter: blur(18px) saturate(150%);
+  border-bottom: 1px solid var(--line);
+}
+.topnav .wrap {
+  display: flex; align-items: center; gap: 22px;
+  height: 34px; overflow-x: auto; scrollbar-width: none;
+}
+.topnav .wrap::-webkit-scrollbar { display: none; }
+.topnav a {
+  flex: none;
+  font: 500 11.5px/1 var(--mono);
+  letter-spacing: 0.09em; text-transform: uppercase;
+  color: var(--fg-3);
+  text-decoration: none;
+  transition: color 0.16s;
+}
+.topnav a:hover { color: var(--accent); }
+
 .w {
   display: inline-flex;
   align-items: center;
@@ -507,6 +533,34 @@ footer p { color: var(--fg-3); font-size: 13px; margin: 0 0 6px; max-width: 46ch
   background: radial-gradient(circle, color-mix(in srgb, var(--ca) 22%, transparent), transparent 68%);
   pointer-events: none;
 }
+
+/* A tool is a featured card without a plugin's glyph, so its kicker carries the
+   top spacing the mark used to, and it takes a neutral accent rather than
+   borrowing a plugin's. */
+.feat.tool { --ca: #8b95a6; }
+.feat.tool .kicker { margin-bottom: 10px; }
+.feat.tool h3 { margin-bottom: 4px; }
+.feat.tool .d { flex: 1; }
+
+/* A tool's shot is a terminal or an app window, not a tall portrait panel, so
+   it is shown whole on a matte rather than cropped to its top. `cover` would
+   slice the right-hand half off a wide terminal frame, which is exactly where
+   the output is. */
+.feat.tool .shot {
+  height: auto;
+  aspect-ratio: auto;        /* the captures run from 6:1 to 16:9 */
+  object-fit: contain;
+  background: #0b0f16;
+}
+
+#tools { margin: 54px 0 8px; }
+.tools-head { margin-bottom: 22px; }
+
+/* Two across, not three. A tool's shot is a terminal, and terminal text is 9px
+   at native size: rendered into a 370px card it scales to nothing. Wider cards
+   put the capture back near 1:1, which is the only way this kind of screenshot
+   stays readable. */
+#tool-grid { grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); }
 
 .feat .kicker {
   font: 600 10.5px/1 var(--mono);

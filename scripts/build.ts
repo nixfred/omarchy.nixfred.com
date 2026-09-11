@@ -275,12 +275,22 @@ const out = {
     stars: repoStats.get(t.repo)?.stars ?? 0,
     repo_url: `https://github.com/${t.repo}`,
   })),
-  tools: src.tools.map((t: any) => ({
-    ...t,
-    stars: repoStats.get(t.repo)?.stars ?? 0,
-    repo_url: `https://github.com/${t.repo}`,
+  // Tools have no plugin id, so their screenshot slug comes from the repo name -
+  // deterministic, and the same rule a person would guess when adding one.
+  tools: src.tools.map((t: any) => {
+    const slug = t.repo.split("/").pop().replace(/\./g, "-");
+    return {
+      ...t,
+      slug,
+      stars: repoStats.get(t.repo)?.stars ?? 0,
+      repo_url: `https://github.com/${t.repo}`,
+      shot: haveShot.has(slug) ? `assets/img/shot/${slug}.png` : null,
+    };
+  }),
+  retired: src.retired.map((r: any) => ({
+    ...r,
+    repo_url: r.repo ? `https://github.com/${r.repo}` : null,
   })),
-  retired: src.retired,
   heatmap,
   stats: {
     plugins: plugins.length,
@@ -289,6 +299,7 @@ const out = {
     families: src.families.length,
     themes: src.themes.length,
     stars: plugins.reduce((n, p) => n + p.stars, 0),
+    tools: src.tools.length,
     with_shots: plugins.filter((p) => p.shot).length,
   },
 };

@@ -574,20 +574,30 @@
         </article>`).join("") +
       `<div class="slot">room for the next theme</div><div class="slot">room for the next theme</div>`;
 
-    // tools
+    // Tools. They were a row of text links at the foot of the page and nobody
+    // reached them, so they are full cards now, in the featured shape, directly
+    // under the flagships.
     $("#tool-count").textContent = DATA.tools.length;
     $("#tool-grid").innerHTML = DATA.tools.map((t) => `
-      <a class="row" href="${esc(t.repo_url)}" target="_blank" rel="noopener">
-        <div class="g"><b>${esc(t.name)}</b>${t.stars ? ` <span class="tag stars" style="border:0;padding:0">${ICON.star} ${t.stars}</span>` : ""}
-        <p>${esc(t.description)}</p></div>
-      </a>`).join("");
+      <article class="feat tool">
+        <div class="kicker">tool</div>
+        <h3>${esc(t.name)}</h3>
+        ${t.shot ? `<img class="shot" src="${esc(t.shot)}" alt="${esc(t.name)}" loading="lazy" decoding="async">` : ""}
+        <p class="d">${esc(t.description)}</p>
+        <div class="tags">${t.stars ? `<span class="tag stars">${ICON.star} ${t.stars}</span>` : ""}</div>
+        <div class="foot">
+          <a class="btn primary" href="${esc(t.repo_url)}" target="_blank" rel="noopener">${ICON.github} Source</a>
+        </div>
+      </article>`).join("");
 
     // retired
     $("#retired-count").textContent = DATA.retired.length;
-    $("#retired-grid").innerHTML = DATA.retired.map((r) => `
-      <div class="row" style="opacity:.66">
-        <div class="g"><b>${esc(r.name)}</b><p>${esc(r.reason)}</p></div>
-      </div>`).join("");
+    $("#retired-grid").innerHTML = DATA.retired.map((r) => {
+      const body = `<div class="g"><b>${esc(r.name)}</b><p>${esc(r.reason)}</p></div>`;
+      return r.repo_url
+        ? `<a class="row" style="opacity:.66" href="${esc(r.repo_url)}" target="_blank" rel="noopener">${body}</a>`
+        : `<div class="row" style="opacity:.66">${body}</div>`;
+    }).join("");
 
     // heatmap
     if (DATA.heatmap) {

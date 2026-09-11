@@ -194,12 +194,12 @@
   "tools": [
     { "name": "Omavoice",      "repo": "nixfred/omavoice",      "description": "Voice recorder with live whisper.cpp transcription for Omarchy. GTK4 and PipeWire." },
     { "name": "Imprint",       "repo": "nixfred/imprint",       "description": "Stamp one Omarchy machine onto another." },
-    { "name": "Remarchy",      "repo": "nixfred/remarchy",      "description": "Remake your Omarchy machine from a file. A declarative machine manifest you save, diff and apply." },
     { "name": "Clipsync",      "repo": "nixfred/clipsync",      "description": "One clipboard across Linux, macOS and iPhone. Copy anywhere, paste on Linux, text and photos." },
     { "name": "Swish",         "repo": "nixfred/swish",         "description": "macOS Cmd+Tab for Omarchy. Hold SUPER, tab through glass workspace cards with live preview." },
     { "name": "claude-on-mac", "repo": "nixfred/claude-on-mac", "description": "Teach Claude Code to use the Apple ecosystem on macOS. The bridge Blip and Apple Notes are built on." }
   ],
   "retired": [
-    { "name": "Flux Power", "repo": "nixfred/omarchy-flux-power-recovered", "reason": "Replaced by Power Pulse, which is the same idea finished. Repo archived 2026-09-09." }
+    { "name": "Flux Power", "repo": "nixfred/omarchy-flux-power-recovered", "reason": "Replaced by Power Pulse, which is the same idea finished. Repo archived 2026-09-09." },
+    { "name": "Remarchy", "repo": "nixfred/remarchy", "reason": "Remaking a machine from a declarative manifest. Imprint got there first by saving the machine you already have, so this stopped at a skeleton." }
   ]
 }
