@@ -2,7 +2,7 @@
   "$comment": "Hand-editable source of truth for omarchy.nixfred.com. scripts/build.ts merges this with live GitHub stars and the official marketplace registry.json to produce site/data.json. Never edit site/data.json by hand.",
   "owner": "nixfred",
   "families": [
-    { "id": "pulse",     "name": "The Pulse Suite",   "blurb": "Six siblings drawn as living silicon. One visual language for everything the machine is doing to itself." },
+    { "id": "pulse",     "name": "The Pulse Suite",   "blurb": "One visual language for what the machine is doing to itself. Pulse carries CPU, memory, storage and network in one icon; sound and battery keep their own." },
     { "id": "bridge",    "name": "The Mac Bridge",    "blurb": "Your phone and your Mac, in the Linux bar. The Mac is the gateway, this machine is the client, nothing is proxied through a stranger." },
     { "id": "workspace", "name": "Workspace Control", "blurb": "Hyprland workspaces that name themselves, pack themselves, and remember what belonged on them." },
     { "id": "desk",      "name": "The AI Desk",       "blurb": "What the agents on this machine are actually doing, and what they are costing." },
@@ -12,34 +12,14 @@
   ],
   "plugins": [
     {
-      "id": "nixfred.ram-pulse", "name": "RAM Pulse", "family": "pulse", "status": "live",
-      "repo": "nixfred/ram.plugin.omarchy", "dir": "ram.plugin.omarchy", "version": "1.5.0",
-      "tagline": "A living memory chip.",
-      "description": "A living memory chip: continuous history, RAM pressure, swap and zram insight, and focus-only RAM hoarders.",
-      "accent": "#7c5cff"
+      "id": "nixfred.pulse", "name": "Pulse", "family": "pulse", "status": "live", "flagship": true,
+      "repo": "nixfred/pulse", "dir": "pulse", "version": "1.0.0",
+      "tagline": "One icon showing whatever is holding the machine back.",
+      "description": "CPU, memory, storage and network merged into a single bar widget with one shared severity model. The icon follows the biggest constraint rather than a fixed metric, and each domain still opens the full dashboard the separate plugin had. Replaces CPU Pulse, RAM Pulse, Disk Pulse and Net Pulse.",
+      "accent": "#4aa8ff",
+      "supersedes": "CPU Pulse, RAM Pulse, Disk Pulse, Net Pulse"
     },
-    {
-      "id": "nixfred.cpu-pulse", "name": "CPU Pulse", "family": "pulse", "status": "live",
-      "repo": "nixfred/omacpu", "dir": "omacpu", "version": "1.3.1",
-      "tagline": "A living processor die.",
-      "description": "A living processor die: per-thread load, clocks, temperature, CPU pressure, seven-day history, and focus-only CPU hogs.",
-      "accent": "#ff6b4a"
-    },
-    {
-      "id": "nixfred.net-pulse", "name": "Net Pulse", "family": "pulse", "status": "live",
-      "repo": "nixfred/omanet.plugin.omarchy", "dir": "omanet.plugin.omarchy", "version": "1.5.0",
-      "tagline": "A living network chip.",
-      "description": "A living network chip: throughput, latency, Wi-Fi radio detail, interface settings, seven-day history, and focus-only top talkers.",
-      "accent": "#3ddc97"
-    },
-    {
-      "id": "nixfred.disk-pulse", "name": "Disk Pulse", "family": "pulse", "status": "live",
-      "repo": "nixfred/disk.pulse", "dir": "disk.pulse", "version": "1.0.1",
-      "tagline": "A living storage die.",
-      "description": "A living storage die: free space, read and write throughput, drive busy time, I/O pressure, drive temperature and SMART health, btrfs allocation, seven-day history, and focus-only disk hogs.",
-      "accent": "#4aa8ff"
-    },
-    {
+                    {
       "id": "pi.audio", "name": "Audio Pulse", "family": "pulse", "status": "live",
       "repo": "nixfred/audio.pulse.omarchy", "dir": "audio.pulse.omarchy", "version": "1.0.0",
       "tagline": "A living audio chip.",
@@ -200,6 +180,10 @@
     { "name": "claude-on-mac", "repo": "nixfred/claude-on-mac", "description": "Teach Claude Code to use the Apple ecosystem on macOS. The bridge Blip and Apple Notes are built on.", "install": "git clone https://github.com/nixfred/claude-on-mac.git ~/claude-on-mac" }
   ],
   "retired": [
+    { "name": "CPU Pulse", "repo": "nixfred/omacpu", "reason": "Merged into Pulse, which shows all four in one widget under a single severity model. The separate plugin still works; Pulse is where the work continues." },
+    { "name": "RAM Pulse", "repo": "nixfred/ram.plugin.omarchy", "reason": "Merged into Pulse, which shows all four in one widget under a single severity model. The separate plugin still works; Pulse is where the work continues." },
+    { "name": "Disk Pulse", "repo": "nixfred/disk.pulse", "reason": "Merged into Pulse, which shows all four in one widget under a single severity model. The separate plugin still works; Pulse is where the work continues." },
+    { "name": "Net Pulse", "repo": "nixfred/omanet.plugin.omarchy", "reason": "Merged into Pulse, which shows all four in one widget under a single severity model. The separate plugin still works; Pulse is where the work continues." },
     { "name": "Flux Power", "reason": "Replaced by Power Pulse, which is the same idea finished. Its own repo was folded in and made private, so there is nothing left to link to." },
     { "name": "Remarchy", "repo": "nixfred/remarchy", "reason": "Remaking a machine from a declarative manifest. Imprint got there first by saving the machine you already have, so this stopped at a skeleton." }
   ]

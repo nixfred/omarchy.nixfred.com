@@ -56,10 +56,9 @@
   // Widgets that live in the hero bar. type drives the animation.
   const BAR = [
     { id: "nixfred.workspace-names", type: "text", label: "3 · build" },
-    { id: "nixfred.cpu-pulse", type: "bars", n: 8, label: "cpu" },
-    { id: "nixfred.ram-pulse", type: "bars", n: 6, label: "ram" },
-    { id: "nixfred.disk-pulse", type: "ring", label: "ssd" },
-    { id: "nixfred.net-pulse", type: "spark", label: "net" },
+    // One widget, because that is the whole point of Pulse: the icon follows
+    // whatever is the biggest constraint rather than showing four fixed metrics.
+    { id: "nixfred.pulse", type: "bars", n: 8, label: "pulse" },
     { id: "spacer" },
     { id: "nixfred.beatdeck", type: "eq", n: 7 },
     { id: "pi.audio", type: "eq", n: 4, label: "62" },
@@ -409,7 +408,6 @@
       column beside the copy rather than leaving it empty. */
   function heroFeature() {
     const byId = new Map(DATA.plugins.map((p) => [p.id, p]));
-    const pulse = DATA.plugins.filter((p) => p.family === "pulse");
     const host = $("#hero-feature");
 
     const inlineSvg = (node, url) =>
@@ -419,7 +417,7 @@
 
     const rows = [];
 
-    for (const id of ["nixfred.infomarchy", "nixfred.blip"]) {
+    for (const id of ["nixfred.infomarchy", "nixfred.blip", "nixfred.pulse"]) {
       const p = byId.get(id);
       if (!p) continue;
       rows.push({
@@ -439,20 +437,6 @@
       });
     }
 
-    if (pulse.length) {
-      rows.push({
-        href: "#f-pulse",
-        external: false,
-        accent: "#4aa8ff",
-        glyph: "assets/img/family/pulse.svg",
-        kicker: "the family",
-        title: "The Pulse Suite",
-        meta: `×${pulse.length}`,
-        tagline: "One visual language for the whole machine.",
-        tags: `<span class="tag stars">${ICON.star} ${pulse.reduce((n, p) => n + p.stars, 0)}</span>` +
-              `<span class="tag">${pulse.map((p) => p.name.replace(/ Pulse$/, "")).join(" · ")}</span>`,
-      });
-    }
 
     for (const r of rows) {
       const a = el("a", "hero-link");
@@ -478,7 +462,6 @@
   function featured() {
     const byId = new Map(DATA.plugins.map((p) => [p.id, p]));
     const grid = $("#feat-grid");
-    const pulse = DATA.plugins.filter((p) => p.family === "pulse");
 
     const solo = (id, kicker) => {
       const p = byId.get(id);
@@ -505,47 +488,11 @@
       return n;
     };
 
-    const family = () => {
-      const n = el("article", "feat");
-      n.style.setProperty("--ca", "#4aa8ff");
-      const stars = pulse.reduce((a, p) => a + p.stars, 0);
-      n.innerHTML = `
-        <div class="kicker">the family</div>
-        <div class="mark" id="feat-pulse-mark">${ICON.plug}</div>
-        <h3>The Pulse Suite <span class="ver">${pulse.length}</span></h3>
-        <div class="tagline">One visual language for the whole machine.</div>
-        <!-- The family has no single panel to photograph, so its shot is a
-             contact sheet of all six, built by scripts/pulse-sheet.sh. Without
-             it this card sat a screenshot short of its two siblings and the
-             equal-height row opened a gap under it. -->
-        <img class="shot" src="assets/img/family/pulse-suite.png"
-             alt="The six Pulse panels: CPU, RAM, Disk, Net, Audio and Power"
-             loading="lazy" decoding="async">
+    // The Pulse family card was removed when Pulse itself shipped: a card
+    // advertising six siblings is wrong when four of them merged into one.
+    // Featured now carries three flagships.
 
-        <p class="d">RAM, CPU, Net, Disk, Audio and Power, drawn as six siblings of the same
-           living silicon. Each one is a chip die with continuous history, pressure, and the
-           processes actually responsible. Learn one and you have learned all six.</p>
-        <div class="siblings">${pulse.map((p) =>
-          `<a href="#p-${esc(p.id)}" title="${esc(p.name)}" style="color:${esc(p.accent)}" data-g="${esc(p.glyph)}">${ICON.plug}</a>`).join("")}</div>
-        <div class="tags">
-          <span class="tag stars">${ICON.star} ${stars}</span>
-          <span class="tag">${pulse.filter((p) => p.listed).length}/${pulse.length} listed</span>
-        </div>
-        <div class="foot"><a class="btn primary" href="#f-pulse">See all six</a></div>`;
-      // real glyphs, once fetched
-      for (const a of n.querySelectorAll("[data-g]")) {
-        fetch(a.dataset.g).then((r) => (r.ok ? r.text() : null)).then((svg) => {
-          if (svg && svg.trim().startsWith("<svg")) a.innerHTML = svg;
-        }).catch(() => {});
-      }
-      const mark = n.querySelector("#feat-pulse-mark");
-      fetch("assets/img/family/pulse.svg").then((r) => (r.ok ? r.text() : null)).then((svg) => {
-        if (svg && svg.trim().startsWith("<svg")) mark.innerHTML = svg;
-      }).catch(() => {});
-      return n;
-    };
-
-    for (const n of [solo("nixfred.infomarchy", "flagship"), solo("nixfred.blip", "flagship"), family()]) {
+    for (const n of [solo("nixfred.infomarchy", "flagship"), solo("nixfred.blip", "flagship"), solo("nixfred.pulse", "flagship")]) {
       if (n) grid.append(n);
     }
   }
