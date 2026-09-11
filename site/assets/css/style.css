@@ -356,6 +356,20 @@ section header p { color: var(--fg-3); margin: 9px 0 0; font-size: 14.5px; }
   object-position: top center;
 }
 
+/* The full-bleed above is tied to the CARD's 18px padding: the image grows by
+   twice that and is pulled back by it. A featured card is padded 26px, so it
+   needs its own numbers or the shot floats in an 8px gutter. */
+.feat .shot {
+  width: calc(100% + 52px); margin: 2px -26px 16px;
+  aspect-ratio: 16 / 9;
+}
+
+/* The whole card opens its own dropdown, so say so with the pointer - but not
+   over the dropdown's body, where the click deliberately does nothing and the
+   text is meant to be selectable. */
+.card, .feat { cursor: pointer; }
+.card .drop-body, .feat .drop-body { cursor: auto; }
+
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 13px; }
 .tag {
   display: inline-flex; align-items: center; gap: 5px;

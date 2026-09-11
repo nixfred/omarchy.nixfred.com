@@ -36,7 +36,6 @@
 
   // Widgets that live in the hero bar. type drives the animation.
   const BAR = [
-    { id: "larry.status", type: "dot", label: "larry" },
     { id: "nixfred.workspace-names", type: "text", label: "3 · build" },
     { id: "nixfred.cpu-pulse", type: "bars", n: 8, label: "cpu" },
     { id: "nixfred.ram-pulse", type: "bars", n: 6, label: "ram" },
@@ -264,6 +263,25 @@
     return t.join("");
   }
 
+  /** Make the whole card a hit target for its own DETAILS dropdown.
+   *
+   *  Two things this must not do. It must not swallow a click meant for
+   *  something else - the Source button, a pull-request link, a copy box, the
+   *  summary itself all handle their own clicks, and `closest()` is what lets
+   *  them through. And it must not fire inside the open dropdown, or reading
+   *  the repo record would close the thing you are reading, and selecting text
+   *  in there would be impossible.
+   */
+  function clickOpensDetails(node) {
+    const drop = node.querySelector("details.drop");
+    if (!drop) return;
+    node.addEventListener("click", (e) => {
+      if (e.target.closest("a, button, summary, input, .drop-body")) return;
+      if (!getSelection().isCollapsed) return;   // a drag that selected text
+      drop.open = !drop.open;
+    });
+  }
+
   function card(p) {
     const c = el("article", "card" + (p.status === "live" ? "" : " is-quiet"));
     c.id = `p-${p.id}`;
@@ -293,6 +311,7 @@
       if (svg && svg.trim().startsWith("<svg")) holder.innerHTML = svg;
     }).catch(() => {});
 
+    clickOpensDetails(c);
     return c;
   }
 
@@ -452,6 +471,7 @@
         <div class="mark" data-g="${esc(p.glyph)}">${ICON.plug}</div>
         <h3>${esc(p.name)}</h3>
         <div class="tagline">${esc(p.tagline)}</div>
+        ${p.shot ? `<img class="shot" src="${esc(p.shot)}" alt="${esc(p.name)} running in the Omarchy bar" loading="lazy" decoding="async">` : ""}
         <p class="d">${esc(p.description)}</p>
         <div class="tags">${statusTags(p)}</div>
         <div class="foot">
@@ -462,6 +482,7 @@
       fetch(p.glyph).then((r) => (r.ok ? r.text() : null)).then((svg) => {
         if (svg && svg.trim().startsWith("<svg")) n.querySelector(".mark").innerHTML = svg;
       }).catch(() => {});
+      clickOpensDetails(n);
       return n;
     };
 
@@ -474,6 +495,14 @@
         <div class="mark" id="feat-pulse-mark">${ICON.plug}</div>
         <h3>The Pulse Suite <span class="ver">${pulse.length}</span></h3>
         <div class="tagline">One visual language for the whole machine.</div>
+        <!-- The family has no single panel to photograph, so its shot is a
+             contact sheet of all six, built by scripts/pulse-sheet.sh. Without
+             it this card sat a screenshot short of its two siblings and the
+             equal-height row opened a gap under it. -->
+        <img class="shot" src="assets/img/family/pulse-suite.png"
+             alt="The six Pulse panels: CPU, RAM, Disk, Net, Audio and Power"
+             loading="lazy" decoding="async">
+
         <p class="d">RAM, CPU, Net, Disk, Audio and Power, drawn as six siblings of the same
            living silicon. Each one is a chip die with continuous history, pressure, and the
            processes actually responsible. Learn one and you have learned all six.</p>
