@@ -1,0 +1,27 @@
+name = "omarchy-data"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# Every three minutes, as asked. Worth knowing what that buys: stars and pull
+# requests move a few times a DAY, so most runs will find nothing changed. The
+# cost is one GraphQL query each, well inside GitHub's 5,000 points/hour, so the
+# waste is tolerable — but 15 minutes would be indistinguishable to a reader.
+[triggers]
+crons = ["*/3 * * * *"]
+
+# The route takes precedence over Pages for this one path, so /data.json is
+# served from KV while every other path still comes from the deployed site.
+[[routes]]
+pattern = "omarchy.nixfred.com/data.json"
+zone_name = "nixfred.com"
+
+[[kv_namespaces]]
+binding = "OMARCHY_DATA"
+id = "9b0331538da6407e9b8201f8a460bf1e"
+
+# GITHUB_TOKEN is a SECRET, never a var. Set it with:
+#   wrangler secret put GITHUB_TOKEN
+# Use a token with NO scopes at all — it only ever reads public repositories,
+# and a scopeless classic token still gets the full 5,000/hour authenticated
+# rate limit. Do not reuse the gh CLI's token: that one carries `repo` and
+# `workflow`, which would hand this Worker write access to every repository.
