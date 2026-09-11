@@ -199,7 +199,7 @@
     { "name": "claude-on-mac", "repo": "nixfred/claude-on-mac", "description": "Teach Claude Code to use the Apple ecosystem on macOS. The bridge Blip and Apple Notes are built on.", "install": "git clone https://github.com/nixfred/claude-on-mac.git ~/claude-on-mac" }
   ],
   "retired": [
-    { "name": "Flux Power", "repo": "nixfred/omarchy-flux-power-recovered", "reason": "Replaced by Power Pulse, which is the same idea finished. Repo archived 2026-09-09." },
+    { "name": "Flux Power", "reason": "Replaced by Power Pulse, which is the same idea finished. Its own repo was folded in and made private, so there is nothing left to link to." },
     { "name": "Remarchy", "repo": "nixfred/remarchy", "reason": "Remaking a machine from a declarative manifest. Imprint got there first by saving the machine you already have, so this stopped at a skeleton." }
   ]
 }

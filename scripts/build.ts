@@ -76,6 +76,7 @@ type RepoStat = {
   pushed: string | null;
   created: string | null;
   archived: boolean;
+  is_public: boolean;
   license: string | null;
   language: string | null;
   topics: string[];
@@ -125,6 +126,12 @@ await Promise.all(
       }));
 
     repoStats.set(r, {
+      // `gh` authenticates as Fred, so a PRIVATE repo answers this call in full
+      // and renders as a perfectly normal card - while every visitor gets a 404
+      // on its Source link, its install command and its clone. The build cannot
+      // see the difference unless it asks, so it asks. Three shipped that way
+      // before this check existed (2026-09-11).
+      is_public: j.visibility === "public" && !j.private,
       stars: j.stargazers_count ?? 0,
       forks: j.forks_count ?? 0,
       watchers: j.subscribers_count ?? 0,
@@ -150,6 +157,14 @@ await Promise.all(
   }),
 );
 console.error(`  got ${repoStats.size}/${repoNames.length}`);
+
+// A private repo is invisible to the build but a 404 to every visitor, so say so
+// here rather than let it ship looking healthy.
+const notPublic = [...repoStats.entries()].filter(([, v]) => !v.is_public).map(([r]) => r);
+if (notPublic.length) {
+  console.error(`  ⚠ ${notPublic.length} repo(s) are NOT PUBLIC — their Source link, install and clone will 404 for visitors:`);
+  for (const r of notPublic) console.error(`      ${r}`);
+}
 
 // ------------------------------------------------- official marketplace status
 
