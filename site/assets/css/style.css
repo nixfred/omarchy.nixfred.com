@@ -106,7 +106,14 @@ h1, h2, h3 { margin: 0; font-weight: 620; letter-spacing: -0.02em; line-height: 
 
 /* Shown only when app.js never ran. See the inline script at the foot of
    index.html for why this cannot be detected from inside app.js. */
-#deadjs {
+/* Hidden by DEFAULT, shown only by adding .on.
+   It used to rely on the `hidden` attribute, which is nothing more than
+   `[hidden] { display: none }` in the user-agent stylesheet — so this rule's own
+   `display: flex` outranked it and the banner was painted over a perfectly
+   healthy page for every visitor. Inverting it means showing is the explicit
+   act and no future display rule can turn it on by accident. */
+#deadjs { display: none; }
+#deadjs.on {
   position: fixed; inset: auto 16px 16px; z-index: 90;
   max-width: 620px; margin-inline: auto;
   display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px;
@@ -116,15 +123,15 @@ h1, h2, h3 { margin: 0; font-weight: 620; letter-spacing: -0.02em; line-height: 
   background: #12161d;
   font-size: 13.5px; line-height: 1.55;
 }
-#deadjs strong { color: var(--fg); flex-basis: 100%; }
-#deadjs span { color: var(--fg-2); flex: 1; min-width: 240px; }
-#deadjs button {
+#deadjs.on strong { color: var(--fg); flex-basis: 100%; }
+#deadjs.on span { color: var(--fg-2); flex: 1; min-width: 240px; }
+#deadjs.on button {
   flex: none; cursor: pointer;
   padding: 9px 15px; border: 1px solid var(--line-2); border-radius: 7px;
   background: rgba(74, 168, 255, 0.12); color: var(--accent);
   font: 500 12px/1 var(--mono); letter-spacing: 0.06em;
 }
-#deadjs button:hover { border-color: var(--accent); background: rgba(74, 168, 255, 0.2); }
+#deadjs.on button:hover { border-color: var(--accent); background: rgba(74, 168, 255, 0.2); }
 
 .w {
   display: inline-flex;
