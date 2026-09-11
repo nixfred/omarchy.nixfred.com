@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T02:23:30.585Z",
+  "generated_at": "2026-09-11T02:37:36.760Z",
   "owner": "nixfred",
   "families": [
     {
@@ -28,14 +28,14 @@
       "blurb": "Everyday surfaces. Clipboard, clock, bluetooth, sleep, the car."
     },
     {
-      "id": "bridge",
-      "name": "The Mac Bridge",
-      "blurb": "Your phone and your Mac, in the Linux bar. The Mac is the gateway, this machine is the client, nothing is proxied through a stranger."
-    },
-    {
       "id": "infra",
       "name": "Infrastructure",
       "blurb": "The boring, load-bearing ones. Backups, exposed ports, latency, fleet health."
+    },
+    {
+      "id": "bridge",
+      "name": "The Mac Bridge",
+      "blurb": "Your phone and your Mac, in the Linux bar. The Mac is the gateway, this machine is the client, nothing is proxied through a stranger."
     }
   ],
   "plugins": [
@@ -570,6 +570,138 @@
       "marketplace_tags": [],
       "install": "omarchy plugin install nixfred/Pastey",
       "clone": "git clone https://github.com/nixfred/Pastey.git"
+    },
+    {
+      "id": "nixfred.burnbar",
+      "name": "Burn Bar",
+      "family": "desk",
+      "status": "live",
+      "repo": "nixfred/burnbar",
+      "dir": "burnbar",
+      "version": "1.11.0",
+      "tagline": "A thermal heat map of what the AIs are costing you.",
+      "description": "Live thermal heat map of the AIs this machine actually uses, Claude, Codex, Grok, and local Ollama when a GPU is present, with weekly quota gauges and the share of tokens kept off frontier models.",
+      "accent": "#ff4d4d",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
+      "prs": [],
+      "issues": [],
+      "pushed": "2026-09-10T16:45:48Z",
+      "created": "2026-09-04T04:03:59Z",
+      "license": "MIT",
+      "language": "QML",
+      "topics": [],
+      "default_branch": "master",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 32
+        }
+      ],
+      "commits": 32,
+      "repo_url": "https://github.com/nixfred/burnbar",
+      "glyph": "assets/img/glyph/nixfred-burnbar.svg",
+      "shot": "assets/img/shot/nixfred-burnbar.png",
+      "listed": false,
+      "listed_at": null,
+      "listing_url": null,
+      "marketplace_category": null,
+      "marketplace_tags": [],
+      "install": "omarchy plugin install nixfred/burnbar",
+      "clone": "git clone https://github.com/nixfred/burnbar.git"
+    },
+    {
+      "id": "pi.backup-monitor",
+      "name": "Backup Sizzle",
+      "family": "infra",
+      "status": "live",
+      "repo": "nixfred/backup.omarchy",
+      "dir": "backup.omarchy",
+      "version": "3.0.0",
+      "tagline": "Restic, with a countdown ring and an outcome calendar.",
+      "description": "Restic backup with live B2 throughput, countdown ring, outcome calendar, anomaly notes, snapshot browser and run history.",
+      "accent": "#06d6a0",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
+      "prs": [],
+      "issues": [],
+      "pushed": "2026-09-06T20:45:49Z",
+      "created": "2026-09-04T04:03:59Z",
+      "license": null,
+      "language": "QML",
+      "topics": [],
+      "default_branch": "master",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 15
+        }
+      ],
+      "commits": 15,
+      "repo_url": "https://github.com/nixfred/backup.omarchy",
+      "glyph": "assets/img/glyph/pi-backup-monitor.svg",
+      "shot": "assets/img/shot/pi-backup-monitor.png",
+      "listed": false,
+      "listed_at": null,
+      "listing_url": null,
+      "marketplace_category": null,
+      "marketplace_tags": [],
+      "install": "omarchy plugin install nixfred/backup.omarchy",
+      "clone": "git clone https://github.com/nixfred/backup.omarchy.git"
+    },
+    {
+      "id": "nixfred.beatdeck",
+      "name": "Beatdeck",
+      "family": "media",
+      "status": "live",
+      "repo": "nixfred/beatdeck.omarchy",
+      "dir": "beatdeck.omarchy",
+      "version": "1.6.0",
+      "tagline": "A live spectrum that opens a media cockpit.",
+      "description": "Beatbar's live spectrum as the trigger for the Living Media Cockpit. Click for now playing, right click for the visuals.",
+      "accent": "#f72585",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_prs": 0,
+      "open_issues": 0,
+      "prs": [],
+      "issues": [],
+      "pushed": "2026-09-10T13:59:58Z",
+      "created": "2026-09-04T04:03:58Z",
+      "license": null,
+      "language": "QML",
+      "topics": [],
+      "default_branch": "master",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 11
+        }
+      ],
+      "commits": 11,
+      "repo_url": "https://github.com/nixfred/beatdeck.omarchy",
+      "glyph": "assets/img/glyph/nixfred-beatdeck.svg",
+      "shot": "assets/img/shot/nixfred-beatdeck.png",
+      "listed": false,
+      "listed_at": null,
+      "listing_url": null,
+      "marketplace_category": null,
+      "marketplace_tags": [],
+      "install": "omarchy plugin install nixfred/beatdeck.omarchy",
+      "clone": "git clone https://github.com/nixfred/beatdeck.omarchy.git"
     },
     {
       "id": "pi.bluetooth",
@@ -1395,120 +1527,6 @@
       "marketplace_tags": [],
       "install": null,
       "clone": null
-    },
-    {
-      "id": "nixfred.burnbar",
-      "name": "Burn Bar",
-      "family": "desk",
-      "status": "live",
-      "repo": "nixfred/burnbar",
-      "dir": "burnbar",
-      "version": "1.11.0",
-      "tagline": "A thermal heat map of what the AIs are costing you.",
-      "description": "Live thermal heat map of the AIs this machine actually uses, Claude, Codex, Grok, and local Ollama when a GPU is present, with weekly quota gauges and the share of tokens kept off frontier models.",
-      "accent": "#ff4d4d",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "open_prs": 0,
-      "open_issues": 0,
-      "prs": [],
-      "issues": [],
-      "pushed": null,
-      "created": null,
-      "license": null,
-      "language": null,
-      "topics": [],
-      "default_branch": "main",
-      "release": null,
-      "contributors": [],
-      "commits": 0,
-      "repo_url": "https://github.com/nixfred/burnbar",
-      "glyph": "assets/img/glyph/nixfred-burnbar.svg",
-      "shot": "assets/img/shot/nixfred-burnbar.png",
-      "listed": false,
-      "listed_at": null,
-      "listing_url": null,
-      "marketplace_category": null,
-      "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/burnbar",
-      "clone": "git clone https://github.com/nixfred/burnbar.git"
-    },
-    {
-      "id": "pi.backup-monitor",
-      "name": "Backup Sizzle",
-      "family": "infra",
-      "status": "live",
-      "repo": "nixfred/backup.omarchy",
-      "dir": "backup.omarchy",
-      "version": "3.0.0",
-      "tagline": "Restic, with a countdown ring and an outcome calendar.",
-      "description": "Restic backup with live B2 throughput, countdown ring, outcome calendar, anomaly notes, snapshot browser and run history.",
-      "accent": "#06d6a0",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "open_prs": 0,
-      "open_issues": 0,
-      "prs": [],
-      "issues": [],
-      "pushed": null,
-      "created": null,
-      "license": null,
-      "language": null,
-      "topics": [],
-      "default_branch": "main",
-      "release": null,
-      "contributors": [],
-      "commits": 0,
-      "repo_url": "https://github.com/nixfred/backup.omarchy",
-      "glyph": "assets/img/glyph/pi-backup-monitor.svg",
-      "shot": "assets/img/shot/pi-backup-monitor.png",
-      "listed": false,
-      "listed_at": null,
-      "listing_url": null,
-      "marketplace_category": null,
-      "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/backup.omarchy",
-      "clone": "git clone https://github.com/nixfred/backup.omarchy.git"
-    },
-    {
-      "id": "nixfred.beatdeck",
-      "name": "Beatdeck",
-      "family": "media",
-      "status": "live",
-      "repo": "nixfred/beatdeck.omarchy",
-      "dir": "beatdeck.omarchy",
-      "version": "1.6.0",
-      "tagline": "A live spectrum that opens a media cockpit.",
-      "description": "Beatbar's live spectrum as the trigger for the Living Media Cockpit. Click for now playing, right click for the visuals.",
-      "accent": "#f72585",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "open_prs": 0,
-      "open_issues": 0,
-      "prs": [],
-      "issues": [],
-      "pushed": null,
-      "created": null,
-      "license": null,
-      "language": null,
-      "topics": [],
-      "default_branch": "main",
-      "release": null,
-      "contributors": [],
-      "commits": 0,
-      "repo_url": "https://github.com/nixfred/beatdeck.omarchy",
-      "glyph": "assets/img/glyph/nixfred-beatdeck.svg",
-      "shot": "assets/img/shot/nixfred-beatdeck.png",
-      "listed": false,
-      "listed_at": null,
-      "listing_url": null,
-      "marketplace_category": null,
-      "marketplace_tags": [],
-      "install": "omarchy plugin install nixfred/beatdeck.omarchy",
-      "clone": "git clone https://github.com/nixfred/beatdeck.omarchy.git"
     }
   ],
   "themes": [
@@ -1528,45 +1546,243 @@
       "name": "Omavoice",
       "repo": "nixfred/omavoice",
       "description": "Voice recorder with live whisper.cpp transcription for Omarchy. GTK4 and PipeWire.",
+      "install": "git clone https://github.com/nixfred/omavoice.git && cd omavoice && makepkg -si",
       "slug": "omavoice",
       "stars": 13,
+      "forks": 0,
+      "watchers": 0,
+      "open_issues": 0,
+      "open_prs": 0,
+      "prs": [],
+      "issues": [],
+      "pushed": "2026-09-07T15:39:15Z",
+      "created": "2026-09-06T01:06:33Z",
+      "archived": false,
+      "license": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 22
+        }
+      ],
+      "commits": 22,
       "repo_url": "https://github.com/nixfred/omavoice",
+      "clone": "git clone https://github.com/nixfred/omavoice.git",
       "shot": "assets/img/shot/omavoice.png"
     },
     {
       "name": "Imprint",
       "repo": "nixfred/imprint",
       "description": "Stamp one Omarchy machine onto another.",
+      "install": "git clone https://github.com/nixfred/imprint.git && cd imprint && ./install.sh",
       "slug": "imprint",
       "stars": 40,
+      "forks": 4,
+      "watchers": 1,
+      "open_issues": 4,
+      "open_prs": 5,
+      "prs": [
+        {
+          "number": 9,
+          "title": "Handle missing binaries in run_ok",
+          "author": "drchp",
+          "created": "2026-09-10T00:06:05Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/imprint/pull/9"
+        },
+        {
+          "number": 8,
+          "title": "Restore shell.json the way Omarchy itself writes it",
+          "author": "markallisongit",
+          "created": "2026-09-08T06:27:16Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/imprint/pull/8"
+        },
+        {
+          "number": 6,
+          "title": "Keep what the submenu picked instead of losing it to a subshell",
+          "author": "markallisongit",
+          "created": "2026-09-08T05:41:47Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/imprint/pull/6"
+        },
+        {
+          "number": 5,
+          "title": "feat: opt-in age encryption for save and restore",
+          "author": "BigKelLearns",
+          "created": "2026-09-08T00:33:28Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/imprint/pull/5"
+        },
+        {
+          "number": 4,
+          "title": "fix: run_ok and collect_toolchains tolerate missing binaries",
+          "author": "BigKelLearns",
+          "created": "2026-09-08T00:29:31Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/imprint/pull/4"
+        }
+      ],
+      "issues": [
+        {
+          "number": 7,
+          "title": "shell.json never restores: `config-edit` is not an omarchy IPC target",
+          "author": "markallisongit",
+          "created": "2026-09-08T06:10:44Z",
+          "url": "https://github.com/nixfred/imprint/issues/7"
+        },
+        {
+          "number": 3,
+          "title": "imprint save --all crashes when cargo is not installed (collect_toolchains)",
+          "author": "BigKelLearns",
+          "created": "2026-09-08T00:22:51Z",
+          "url": "https://github.com/nixfred/imprint/issues/3"
+        },
+        {
+          "number": 2,
+          "title": "Submenu selections are silently discarded: `--select` never reaches the engine",
+          "author": "markallisongit",
+          "created": "2026-09-07T19:50:37Z",
+          "url": "https://github.com/nixfred/imprint/issues/2"
+        },
+        {
+          "number": 1,
+          "title": "How to identify dependencies when backing up",
+          "author": "markallisongit",
+          "created": "2026-09-07T18:58:06Z",
+          "url": "https://github.com/nixfred/imprint/issues/1"
+        }
+      ],
+      "pushed": "2026-09-10T13:29:24Z",
+      "created": "2026-09-06T17:40:13Z",
+      "archived": false,
+      "license": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 41
+        }
+      ],
+      "commits": 41,
       "repo_url": "https://github.com/nixfred/imprint",
+      "clone": "git clone https://github.com/nixfred/imprint.git",
       "shot": "assets/img/shot/imprint.png"
     },
     {
       "name": "Clipsync",
       "repo": "nixfred/clipsync",
       "description": "One clipboard across Linux, macOS and iPhone. Copy anywhere, paste on Linux, text and photos.",
+      "install": "git clone https://github.com/nixfred/clipsync && cd clipsync && ./install.sh",
       "slug": "clipsync",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_issues": 0,
+      "open_prs": 0,
+      "prs": [],
+      "issues": [],
+      "pushed": "2026-09-07T15:12:38Z",
+      "created": "2026-09-05T03:10:16Z",
+      "archived": false,
+      "license": "MIT",
+      "language": "Shell",
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 2
+        }
+      ],
+      "commits": 2,
       "repo_url": "https://github.com/nixfred/clipsync",
+      "clone": "git clone https://github.com/nixfred/clipsync.git",
       "shot": "assets/img/shot/clipsync.png"
     },
     {
       "name": "Swish",
       "repo": "nixfred/swish",
       "description": "macOS Cmd+Tab for Omarchy. Hold SUPER, tab through glass workspace cards with live preview.",
+      "install": "git clone https://github.com/nixfred/swish ~/Projects/swish && cd ~/Projects/swish && ./install.sh",
       "slug": "swish",
       "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "open_issues": 0,
+      "open_prs": 0,
+      "prs": [],
+      "issues": [],
+      "pushed": "2026-08-22T15:10:34Z",
+      "created": "2026-08-22T02:41:28Z",
+      "archived": false,
+      "license": "MIT",
+      "language": "Shell",
+      "default_branch": "main",
+      "release": null,
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 4
+        }
+      ],
+      "commits": 4,
       "repo_url": "https://github.com/nixfred/swish",
+      "clone": "git clone https://github.com/nixfred/swish.git",
       "shot": "assets/img/shot/swish.png"
     },
     {
       "name": "claude-on-mac",
       "repo": "nixfred/claude-on-mac",
       "description": "Teach Claude Code to use the Apple ecosystem on macOS. The bridge Blip and Apple Notes are built on.",
+      "install": "git clone https://github.com/nixfred/claude-on-mac.git ~/claude-on-mac",
       "slug": "claude-on-mac",
       "stars": 18,
+      "forks": 2,
+      "watchers": 0,
+      "open_issues": 0,
+      "open_prs": 0,
+      "prs": [],
+      "issues": [],
+      "pushed": "2026-09-07T17:52:51Z",
+      "created": "2026-04-20T02:16:04Z",
+      "archived": false,
+      "license": "MIT",
+      "language": "Python",
+      "default_branch": "main",
+      "release": {
+        "tag": "v1.2.2",
+        "published": "2026-04-20T14:01:16Z"
+      },
+      "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 22
+        },
+        {
+          "login": "marty0x",
+          "avatar": "https://avatars.githubusercontent.com/u/17337626?v=4",
+          "commits": 1
+        },
+        {
+          "login": "brianwhitman71-cell",
+          "avatar": "https://avatars.githubusercontent.com/u/267336100?v=4",
+          "commits": 1
+        }
+      ],
+      "commits": 24,
       "repo_url": "https://github.com/nixfred/claude-on-mac",
+      "clone": "git clone https://github.com/nixfred/claude-on-mac.git",
       "shot": "assets/img/shot/claude-on-mac.png"
     }
   ],
@@ -3285,14 +3501,14 @@
         },
         {
           "date": "2026-07-25",
-          "count": 29,
+          "count": 31,
           "level": 2
         }
       ],
       [
         {
           "date": "2026-07-26",
-          "count": 19,
+          "count": 17,
           "level": 1
         },
         {
@@ -3371,12 +3587,12 @@
         },
         {
           "date": "2026-08-10",
-          "count": 15,
+          "count": 16,
           "level": 1
         },
         {
           "date": "2026-08-11",
-          "count": 7,
+          "count": 6,
           "level": 1
         },
         {
@@ -3396,15 +3612,15 @@
         },
         {
           "date": "2026-08-15",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-08-16",
-          "count": 1,
-          "level": 1
+          "count": 0,
+          "level": 0
         },
         {
           "date": "2026-08-17",
@@ -3428,7 +3644,7 @@
         },
         {
           "date": "2026-08-21",
-          "count": 209,
+          "count": 213,
           "level": 4
         },
         {
@@ -3440,8 +3656,8 @@
       [
         {
           "date": "2026-08-23",
-          "count": 4,
-          "level": 1
+          "count": 0,
+          "level": 0
         },
         {
           "date": "2026-08-24",
@@ -3460,66 +3676,66 @@
         },
         {
           "date": "2026-08-27",
-          "count": 22,
+          "count": 25,
           "level": 1
         },
         {
           "date": "2026-08-28",
-          "count": 14,
+          "count": 16,
           "level": 1
         },
         {
           "date": "2026-08-29",
-          "count": 5,
-          "level": 1
+          "count": 0,
+          "level": 0
         }
       ],
       [
         {
           "date": "2026-08-30",
-          "count": 15,
+          "count": 16,
           "level": 1
         },
         {
           "date": "2026-08-31",
-          "count": 64,
+          "count": 63,
           "level": 3
         },
         {
           "date": "2026-09-01",
-          "count": 31,
+          "count": 34,
           "level": 2
         },
         {
           "date": "2026-09-02",
-          "count": 21,
+          "count": 18,
           "level": 1
         },
         {
           "date": "2026-09-03",
-          "count": 65,
+          "count": 68,
           "level": 3
         },
         {
           "date": "2026-09-04",
-          "count": 81,
+          "count": 79,
           "level": 4
         },
         {
           "date": "2026-09-05",
-          "count": 60,
+          "count": 62,
           "level": 3
         }
       ],
       [
         {
           "date": "2026-09-06",
-          "count": 52,
-          "level": 3
+          "count": 49,
+          "level": 2
         },
         {
           "date": "2026-09-07",
-          "count": 100,
+          "count": 101,
           "level": 4
         },
         {
@@ -3529,18 +3745,13 @@
         },
         {
           "date": "2026-09-09",
-          "count": 58,
+          "count": 59,
           "level": 3
         },
         {
           "date": "2026-09-10",
-          "count": 56,
+          "count": 54,
           "level": 3
-        },
-        {
-          "date": "2026-09-11",
-          "count": 0,
-          "level": 0
         }
       ]
     ]

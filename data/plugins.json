@@ -192,11 +192,11 @@
     }
   ],
   "tools": [
-    { "name": "Omavoice",      "repo": "nixfred/omavoice",      "description": "Voice recorder with live whisper.cpp transcription for Omarchy. GTK4 and PipeWire." },
-    { "name": "Imprint",       "repo": "nixfred/imprint",       "description": "Stamp one Omarchy machine onto another." },
-    { "name": "Clipsync",      "repo": "nixfred/clipsync",      "description": "One clipboard across Linux, macOS and iPhone. Copy anywhere, paste on Linux, text and photos." },
-    { "name": "Swish",         "repo": "nixfred/swish",         "description": "macOS Cmd+Tab for Omarchy. Hold SUPER, tab through glass workspace cards with live preview." },
-    { "name": "claude-on-mac", "repo": "nixfred/claude-on-mac", "description": "Teach Claude Code to use the Apple ecosystem on macOS. The bridge Blip and Apple Notes are built on." }
+    { "name": "Omavoice",      "repo": "nixfred/omavoice",      "description": "Voice recorder with live whisper.cpp transcription for Omarchy. GTK4 and PipeWire.", "install": "git clone https://github.com/nixfred/omavoice.git && cd omavoice && makepkg -si" },
+    { "name": "Imprint",       "repo": "nixfred/imprint",       "description": "Stamp one Omarchy machine onto another.", "install": "git clone https://github.com/nixfred/imprint.git && cd imprint && ./install.sh" },
+    { "name": "Clipsync",      "repo": "nixfred/clipsync",      "description": "One clipboard across Linux, macOS and iPhone. Copy anywhere, paste on Linux, text and photos.", "install": "git clone https://github.com/nixfred/clipsync && cd clipsync && ./install.sh" },
+    { "name": "Swish",         "repo": "nixfred/swish",         "description": "macOS Cmd+Tab for Omarchy. Hold SUPER, tab through glass workspace cards with live preview.", "install": "git clone https://github.com/nixfred/swish ~/Projects/swish && cd ~/Projects/swish && ./install.sh" },
+    { "name": "claude-on-mac", "repo": "nixfred/claude-on-mac", "description": "Teach Claude Code to use the Apple ecosystem on macOS. The bridge Blip and Apple Notes are built on.", "install": "git clone https://github.com/nixfred/claude-on-mac.git ~/claude-on-mac" }
   ],
   "retired": [
     { "name": "Flux Power", "repo": "nixfred/omarchy-flux-power-recovered", "reason": "Replaced by Power Pulse, which is the same idea finished. Repo archived 2026-09-09." },

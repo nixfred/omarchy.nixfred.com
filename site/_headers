@@ -9,6 +9,15 @@
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
+# The share card is the exception, and deliberately so. It is fetched by X,
+# Slack, iMessage and friends, and a crawler is the one client that must never
+# be handed a query string on an image URL - several of them drop or mangle it.
+# So og.png carries no ?v= stamp, which means it cannot rely on a new URL to
+# escape the year-long rule above. An hour is the trade: unfurlers re-fetch a
+# redrawn card soon enough, and browsers barely request this file at all.
+/assets/img/og.png
+  Cache-Control: public, max-age=3600, must-revalidate
+
 /
   Cache-Control: public, max-age=0, must-revalidate
 

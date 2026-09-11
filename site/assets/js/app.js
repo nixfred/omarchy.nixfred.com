@@ -578,17 +578,22 @@
     // reached them, so they are full cards now, in the featured shape, directly
     // under the flagships.
     $("#tool-count").textContent = DATA.tools.length;
-    $("#tool-grid").innerHTML = DATA.tools.map((t) => `
-      <article class="feat tool">
+    $("#tool-grid").innerHTML = "";
+    for (const t of DATA.tools) {
+      const n = el("article", "feat tool");
+      n.innerHTML = `
         <div class="kicker">tool</div>
         <h3>${esc(t.name)}</h3>
         ${t.shot ? `<img class="shot" src="${esc(t.shot)}" alt="${esc(t.name)}" loading="lazy" decoding="async">` : ""}
         <p class="d">${esc(t.description)}</p>
-        <div class="tags">${t.stars ? `<span class="tag stars">${ICON.star} ${t.stars}</span>` : ""}</div>
+        <div class="tags">${statusTags(t)}</div>
         <div class="foot">
           <a class="btn primary" href="${esc(t.repo_url)}" target="_blank" rel="noopener">${ICON.github} Source</a>
         </div>
-      </article>`).join("");
+        ${detailsBlock(t)}`;
+      clickOpensDetails(n);
+      $("#tool-grid").append(n);
+    }
 
     // retired
     $("#retired-count").textContent = DATA.retired.length;

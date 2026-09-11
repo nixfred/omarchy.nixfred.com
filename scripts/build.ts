@@ -277,13 +277,35 @@ const out = {
   })),
   // Tools have no plugin id, so their screenshot slug comes from the repo name -
   // deterministic, and the same rule a person would guess when adding one.
+  // A tool card carries the same repo record as a plugin card - pull requests by
+  // title, issues, contributor faces, the twelve figures - because a tool is a
+  // repo like any other and there was no reason it should show less. Only the
+  // install line differs: a tool is not an Omarchy plugin, so it gets the
+  // command its own README documents rather than `omarchy plugin install`.
   tools: src.tools.map((t: any) => {
     const slug = t.repo.split("/").pop().replace(/\./g, "-");
+    const stats = repoStats.get(t.repo);
     return {
       ...t,
       slug,
-      stars: repoStats.get(t.repo)?.stars ?? 0,
+      stars: stats?.stars ?? 0,
+      forks: stats?.forks ?? 0,
+      watchers: stats?.watchers ?? 0,
+      open_issues: stats?.open_issues ?? 0,
+      open_prs: stats?.open_prs ?? 0,
+      prs: stats?.prs ?? [],
+      issues: stats?.issues ?? [],
+      pushed: stats?.pushed ?? null,
+      created: stats?.created ?? null,
+      archived: !!stats?.archived,
+      license: stats?.license ?? null,
+      language: stats?.language ?? null,
+      default_branch: stats?.default_branch ?? "main",
+      release: stats?.release ?? null,
+      contributors: stats?.contributors ?? [],
+      commits: stats?.commits ?? 0,
       repo_url: `https://github.com/${t.repo}`,
+      clone: `git clone https://github.com/${t.repo}.git`,
       shot: haveShot.has(slug) ? `assets/img/shot/${slug}.png` : null,
     };
   }),
@@ -319,19 +341,21 @@ const stamp = async (file: string) => {
 
 const cssV = await stamp("assets/css/style.css");
 const jsV = await stamp("assets/js/app.js");
-// The share card needs it too, and for a harsher reason: X, Slack and iMessage
-// each keep their own copy of whatever og:image resolved to the first time
-// anyone posted the link. A redrawn card behind an unchanged URL never reaches
-// them. The stamp makes a new card a new URL.
-const ogV = await stamp("assets/img/og.png");
+// The share card deliberately does NOT get one. A stamp would bust Cloudflare's
+// edge cache, but that was never the cache that matters here: X, Slack and
+// iMessage key their copy on the PAGE url and store whatever image they fetched,
+// so no change to the image URL can reach them. Meanwhile a query string on an
+// og:image is a known way to lose an unfurler. Clean URL, short cache in
+// _headers, and re-share the page with a changed query to force a re-crawl.
 
 let html = await Bun.file(`${ROOT}site/index.html`).text();
 html = html
   .replace(/(assets\/css\/style\.css)(\?v=[a-f0-9]+)?/g, `$1?v=${cssV}`)
   .replace(/(assets\/js\/app\.js)(\?v=[a-f0-9]+)?/g, `$1?v=${jsV}`)
-  .replace(/(assets\/img\/og\.png)(\?v=[a-f0-9]+)?/g, `$1?v=${ogV}`);
+  // Strip any stamp a previous build left on the share card.
+  .replace(/(assets\/img\/og\.png)(\?v=[a-f0-9]+)?/g, "$1");
 await Bun.write(`${ROOT}site/index.html`, html);
-console.error(`  stamped css=${cssV} js=${jsV} og=${ogV}`);
+console.error(`  stamped css=${cssV} js=${jsV}`);
 console.error(
   `✓ site/data.json — ${out.stats.plugins} plugins, ${out.stats.listed} listed, ` +
     `${out.stats.stars} stars, ${out.stats.with_shots} screenshots`,

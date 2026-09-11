@@ -1,0 +1,27 @@
+# Everything here is public on purpose.
+#
+# This file exists mostly so /robots.txt stops resolving to the SPA fallback and
+# handing crawlers a page of HTML where they expect directives. Some unfurlers
+# treat that as a parse failure rather than "no rules".
+
+User-agent: *
+Allow: /
+
+# The ones that draw the link preview. Listed explicitly so there is never a
+# question about whether they are welcome.
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Slackbot-LinkExpanding
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+Sitemap: https://omarchy.nixfred.com/sitemap.xml
