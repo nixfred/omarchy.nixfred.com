@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T07:03:49.754Z",
+  "generated_at": "2026-09-11T11:17:26.548Z",
   "owner": "nixfred",
   "families": [
     {
@@ -1093,7 +1093,7 @@
       "tagline": "Your wallpaper becomes a live information desk.",
       "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven, on a SUPER+D overlay.",
       "accent": "#00e5ff",
-      "stars": 97,
+      "stars": 98,
       "forks": 12,
       "watchers": 1,
       "open_prs": 8,
@@ -1554,7 +1554,7 @@
       "description": "Stamp one Omarchy machine onto another.",
       "install": "git clone https://github.com/nixfred/imprint.git && cd imprint && ./install.sh",
       "slug": "imprint",
-      "stars": 40,
+      "stars": 41,
       "forks": 4,
       "watchers": 1,
       "open_issues": 4,
@@ -3740,7 +3740,7 @@
     "listed": 1,
     "families": 7,
     "themes": 1,
-    "stars": 274,
+    "stars": 275,
     "tools": 5,
     "with_shots": 18
   }
