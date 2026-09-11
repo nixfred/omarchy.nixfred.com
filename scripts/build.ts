@@ -308,13 +308,19 @@ const stamp = async (file: string) => {
 
 const cssV = await stamp("assets/css/style.css");
 const jsV = await stamp("assets/js/app.js");
+// The share card needs it too, and for a harsher reason: X, Slack and iMessage
+// each keep their own copy of whatever og:image resolved to the first time
+// anyone posted the link. A redrawn card behind an unchanged URL never reaches
+// them. The stamp makes a new card a new URL.
+const ogV = await stamp("assets/img/og.png");
 
 let html = await Bun.file(`${ROOT}site/index.html`).text();
 html = html
   .replace(/(assets\/css\/style\.css)(\?v=[a-f0-9]+)?/g, `$1?v=${cssV}`)
-  .replace(/(assets\/js\/app\.js)(\?v=[a-f0-9]+)?/g, `$1?v=${jsV}`);
+  .replace(/(assets\/js\/app\.js)(\?v=[a-f0-9]+)?/g, `$1?v=${jsV}`)
+  .replace(/(assets\/img\/og\.png)(\?v=[a-f0-9]+)?/g, `$1?v=${ogV}`);
 await Bun.write(`${ROOT}site/index.html`, html);
-console.error(`  stamped css=${cssV} js=${jsV}`);
+console.error(`  stamped css=${cssV} js=${jsV} og=${ogV}`);
 console.error(
   `✓ site/data.json — ${out.stats.plugins} plugins, ${out.stats.listed} listed, ` +
     `${out.stats.stars} stars, ${out.stats.with_shots} screenshots`,

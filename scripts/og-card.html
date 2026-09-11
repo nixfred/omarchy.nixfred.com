@@ -1,0 +1,93 @@
+<!doctype html>
+<!--
+  Source for site/assets/img/og.png, the link-preview card.
+
+  Render it (from the repo root, with the site served on :8899):
+    bun scripts/og.ts
+
+  It is a page rather than a drawing so it inherits the real tokens, the real
+  wordmark and three real panel screenshots. Keep it 1200x630 - that is what X,
+  Slack, Discord and iMessage all crop to.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
+<style>
+  :root {
+    --bg: #06080b; --bg-2: #0a0e14;
+    --line: rgba(255,255,255,.09); --line-2: rgba(255,255,255,.16);
+    --fg: #e8edf4; --fg-2: #9aa7b8; --fg-3: #64707f;
+    --accent: #4aa8ff;
+    /* The Omarchy chamfer: a two-step bevel on top-left and bottom-right. */
+    --chamfer: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    background:
+      radial-gradient(900px 500px at 88% -10%, rgba(74,168,255,.16), transparent 70%),
+      radial-gradient(700px 420px at 4% 108%, rgba(74,168,255,.08), transparent 70%),
+      var(--bg);
+    color: var(--fg);
+    font: 400 16px/1.5 "JetBrains Mono", ui-monospace, monospace;
+    display: grid; grid-template-columns: 1fr 430px; align-items: center;
+    gap: 54px; padding: 62px 64px;
+  }
+  .kicker {
+    color: var(--fg-3); letter-spacing: .26em; font-size: 15px; font-weight: 500;
+    display: flex; align-items: center; gap: 14px; margin-bottom: 26px;
+  }
+  .kicker::before { content: ""; width: 40px; height: 1px; background: var(--line-2); }
+  .mark { width: 415px; color: var(--fg); display: block; }
+  .mark svg { width: 100%; height: auto; display: block; }
+  h1 {
+    font-size: 54px; font-weight: 700; letter-spacing: .04em;
+    color: var(--accent); margin: 8px 0 20px;
+  }
+  p { color: var(--fg-2); font-size: 19px; line-height: 1.5; max-width: 28ch; }
+  .stats { display: flex; gap: 12px; margin-top: 26px; }
+  .stat {
+    clip-path: var(--chamfer); background: var(--bg-2);
+    border: 1px solid var(--line); padding: 12px 18px 11px; min-width: 96px;
+  }
+  .stat b { display: block; font-size: 27px; font-weight: 700; letter-spacing: .02em; }
+  .stat span { color: var(--fg-3); font-size: 12px; letter-spacing: .18em; }
+  /* In the flow, not absolute: pinning it to the bottom edge sat it on top of
+     the stat tiles as soon as the wordmark grew. */
+  .url { margin-top: 24px; color: var(--fg-3); font-size: 17px; letter-spacing: .12em; }
+  .url b { color: var(--accent); font-weight: 500; }
+  /* Three panels fanned like a hand of cards, cropped to their hero. */
+  .fan { position: relative; height: 520px; }
+  .fan img {
+    position: absolute; width: 300px; height: 350px; object-fit: cover; object-position: top center;
+    clip-path: var(--chamfer); border: 1px solid var(--line-2);
+    box-shadow: 0 28px 60px rgba(0,0,0,.6);
+  }
+  .fan img:nth-child(1) { top: 24px;  right: 226px; transform: rotate(-5deg); }
+  .fan img:nth-child(2) { top: 116px; right: 104px; transform: rotate(1.5deg); }
+  .fan img:nth-child(3) { top: 34px;  right: -18px; transform: rotate(7deg); }
+</style>
+</head>
+<body>
+  <div>
+    <div class="kicker">PLUGINS FOR THE OMARCHY DESKTOP</div>
+    <div class="mark" id="mark"></div>
+    <h1>PLUGINS</h1>
+    <p>Bar widgets, a Mac bridge, workspace control and a suite of living system instruments.</p>
+    <div class="stats">
+      <div class="stat"><b id="n-plugins">30</b><span>PLUGINS</span></div>
+      <div class="stat"><b id="n-stars">272</b><span>STARS</span></div>
+      <div class="stat"><b id="n-fam">7</b><span>FAMILIES</span></div>
+    </div>
+    <div class="url">omarchy<b>.nixfred.com</b></div>
+  </div>
+  <div class="fan">
+    <img src="../site/assets/img/shot/nixfred-cpu-pulse.png" alt="">
+    <img src="../site/assets/img/shot/nixfred-pr-hunter.png" alt="">
+    <img src="../site/assets/img/shot/nixfred-chronos.png" alt="">
+  </div>
+</body>
+</html>
