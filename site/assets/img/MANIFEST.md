@@ -44,3 +44,4 @@
 - `favicon.svg` — Interlocking lowercase o/p monogram derived from the wordmark’s chamfered letterforms.
 - `MANIFEST.md` — Inventory and visual descriptions of all delivered files.
 - `glyph/nixfred-pr-hunter.svg` — Pull-request nodes and a return arrow connected to a workspace pane.
+- `featured-banner.svg` — FEATURED lettering on Omarchy’s 15-unit grid, with the original A, top-left and bottom-right stepped chamfers, and blue spectrum and radar instruments on a dark ground.

@@ -1,0 +1,19 @@
+# Cloudflare Pages headers.
+#
+# Assets are requested with a ?v=<content hash> that scripts/build.ts rewrites
+# into index.html on every build, so they can be cached hard and for ever: a
+# changed file gets a new URL. The page itself and the data must revalidate,
+# otherwise a stale index.html keeps pointing at the old asset URLs and nobody
+# sees a deploy for four hours. That is exactly what happened on 2026-09-10.
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/data.json
+  Cache-Control: public, max-age=60, must-revalidate

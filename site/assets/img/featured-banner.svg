@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+  <title id="title">FEATURED</title>
+  <desc id="desc">Omarchy grid lettering beside a spectrum trace and radar instrument.</desc>
+  <path fill="#06080b" d="M0 0h1200v150H0z"/>
+  <!-- 15-unit grid, 45-unit stems, 240-unit caps, 30-unit ink gaps.
+       A is the original path, translated verbatim; R shares its source bowl.
+       Each corner cut runs in two 15-unit steps, top-left and bottom-right. -->
+  <g fill="#e8edf4" transform="translate(24 15) scale(.5)">
+    <path d="M0 30h15V15h15V0h105v30H45v75h75v30H45v75H30v15H15v15H0z"/>
+    <path transform="translate(165)" d="M0 30h15V15h15V0h105v30H45v75h75v30H45v60h90v15h-15v15h-15v15H0z"/>
+    <path transform="translate(-75 -15)" clip-rule="evenodd" d="m555 225h-15v15h-15v15h-15v-105.001l-44.998.001v105.002h-45.002v-105.002h-15v-30.001h15v-75h15.002v-14.997h15v-15.002h105zm-89.998-105.001h44.998v-74.997h-44.998z" fill-rule="evenodd"/>
+    <path transform="translate(510)" d="M0 30h15V15h15V0h105v45H90v165H75v15H60v15H45V45H0z"/>
+    <path transform="translate(675)" d="M0 30h15V15h15V0h15v210h45V0h45v210h-15v15h-15v15H0z"/>
+    <path transform="translate(840)" fill-rule="evenodd" d="M0 30h15V15h15V0h105v105h-15v15h-15v15H45v15h90v60h-15v15h-15v15H90v-60H45v60H0zM45 30v75h45V30z"/>
+    <path transform="translate(1005)" d="M0 30h15V15h15V0h105v30H45v75h75v30H45v60h90v15h-15v15h-15v15H0z"/>
+    <path transform="translate(1170)" fill-rule="evenodd" d="M0 0h135v210h-15v15h-15v15H0zM45 30v180h45V30z"/>
+  </g>
+  <g fill="none" stroke="#4aa8ff">
+    <path opacity=".16" d="M720 24h456M720 48h456M720 75h456M720 102h456M720 126h456M744 24v102M792 24v102M840 24v102M888 24v102M936 24v102M984 24v102M1032 24v102M1080 24v102M1128 24v102M1176 24v102"/>
+    <path opacity=".45" d="M720 36V24h24m408 0h24v12M720 114v12h24m408 0h24v-12M708 60v30"/>
+    <path opacity=".8" stroke-width="2" d="M732 93h33l12-12h12l9 9 15-36 15 48 18-72 18 63h18l12-18h21l12 12h24l12-12h27"/>
+    <path opacity=".4" d="M732 112h180l12-12h54l15-15h27M732 38h48l12 12h21M948 38h45l18 18h21"/>
+    <path opacity=".6" d="M744 126v-6m24 6v-3m24 3v-6m24 6v-3m24 3v-6m24 6v-3m24 3v-6m24 6v-3m24 3v-6m24 6v-3m24 3v-6"/>
+    <circle cx="1104" cy="75" r="45" opacity=".5"/>
+    <circle cx="1104" cy="75" r="30" opacity=".2"/>
+    <circle cx="1104" cy="75" r="15" opacity=".2"/>
+    <path opacity=".65" d="M1104 24v12m0 78v12m-51-51h12m78 0h12m-87-36 8 8m56 56 8 8m-72 0 8-8m56-56 8-8"/>
+    <path opacity=".85" stroke-width="2" d="m1104 75 30-30m-35 30h10m-5-5v10"/>
+    <path fill="#4aa8ff" fill-opacity=".06" stroke="none" d="M1104 75V30a45 45 0 0 1 32 13z"/>
+  </g>
+  <g fill="#4aa8ff">
+    <path d="M729 90h6v6h-6zM987 72h6v6h-6zM1131 42h6v6h-6z"/>
+    <path opacity=".5" d="M0 149h1200v1H0zM720 14h30v2h-30zM756 14h6v2h-6z"/>
+  </g>
+  <path fill="#c77dff" d="M1078 91h5v5h-5z"/>
+</svg>

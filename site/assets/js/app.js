@@ -210,11 +210,29 @@
          </div>`
       : "";
 
+    /** Every open pull request or issue, by title, not just a count. */
+    const queue = (heading, items, cls) => {
+      if (!items || !items.length) return "";
+      return `<div class="q">
+        <span class="who-h">${esc(heading)} <b>${items.length}</b></span>
+        <ul class="q-list">${items.map((q) => `
+          <li class="${cls}">
+            <a href="${esc(q.url)}" target="_blank" rel="noopener">
+              <span class="q-n">#${q.number}</span>
+              <span class="q-t">${esc(q.title)}${q.draft ? ' <em class="q-d">draft</em>' : ""}</span>
+              <span class="q-m">@${esc(q.author)} · ${esc(ago(q.created))}</span>
+            </a>
+          </li>`).join("")}</ul>
+      </div>`;
+    };
+
     return `<details class="drop">
       <summary><span>Details</span>${ICON.chev}</summary>
       <div class="drop-body">
         <div class="kv">${cells.map(([k, v, isText]) =>
           `<div class="kv-c"><b${isText ? ' class="t"' : ""}>${esc(String(v))}</b><span>${esc(k)}</span></div>`).join("")}</div>
+        ${queue("Open pull requests", p.prs, "pr")}
+        ${queue("Open issues", p.issues, "iss")}
         ${people}
         <div class="cmds">
           ${cmdBox("Install", p.install)}

@@ -913,3 +913,88 @@ section h2 { letter-spacing: 0.02em; font-weight: 700; }
   .cmd-row { flex-direction: column; align-items: stretch; gap: 4px; }
   .cmd-label { flex: none; }
 }
+
+/* ───────────────────────────────────────────────── open PRs and issues */
+
+.q { margin-bottom: 15px; }
+.q .who-h b { color: var(--fg); font-weight: 700; }
+
+.q-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1px; }
+.q-list li { background: var(--line); }
+.q-list a {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "n t" ". m";
+  column-gap: 8px;
+  padding: 8px 10px;
+  background: var(--bg-2);
+  transition: background 0.14s;
+  border-left: 2px solid transparent;
+}
+.q-list a:hover { background: #0d141d; border-left-color: var(--ca, var(--accent)); }
+
+.q-n {
+  grid-area: n;
+  font: 700 11px/1.45 var(--mono);
+  color: var(--fg-3);
+}
+.q-list li.pr .q-n { color: var(--ok); }
+.q-list li.iss .q-n { color: var(--warn); }
+
+.q-t {
+  grid-area: t;
+  font: 500 12px/1.45 var(--mono);
+  color: var(--fg);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.q-d {
+  font-style: normal;
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  border: 1px solid var(--line);
+  padding: 1px 4px;
+  margin-left: 4px;
+}
+.q-m {
+  grid-area: m;
+  font: 500 10px/1.5 var(--mono);
+  color: var(--fg-3);
+  margin-top: 1px;
+}
+
+/* ───────────────────────────────────────────────── the FEATURED banner */
+
+/* section headers are capped at 66ch for readable prose; the banner is a
+   graphic and needs the full column. The paragraph keeps the cap. */
+/* `section > .wrap > header` caps prose at 66ch and outranks a bare class,
+   so this has to match that specificity to let the graphic use the column. */
+section > .wrap > header.banner-head { margin-bottom: 26px; max-width: none; }
+.banner-head p { max-width: 66ch; }
+.banner {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin-bottom: 14px;
+}
+/* The banner carries the word visually; the heading stays for screen readers
+   and becomes visible if the SVG fails to load and removes itself. */
+.banner-head .sr-head {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.banner-head:not(:has(.banner)) .sr-head {
+  position: static;
+  width: auto; height: auto;
+  margin: 0;
+  clip-path: none;
+  font-size: clamp(21px, 2.6vw, 27px);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}

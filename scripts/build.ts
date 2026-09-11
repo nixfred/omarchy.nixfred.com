@@ -71,6 +71,8 @@ type RepoStat = {
   watchers: number;
   open_issues: number;      // issues only, pulls subtracted
   open_prs: number;
+  prs: { number: number; title: string; author: string; created: string; draft: boolean; url: string }[];
+  issues: { number: number; title: string; author: string; created: string; url: string }[];
   pushed: string | null;
   created: string | null;
   archived: boolean;
@@ -89,9 +91,10 @@ await Promise.all(
     // The repo record, its open pull requests, its contributors and its latest
     // release, in parallel. GitHub counts pulls inside open_issues_count, so the
     // pulls list is what makes an honest issue count possible.
-    const [j, pulls, contribs, rel] = await Promise.all([
+    const [j, pulls, issuesRaw, contribs, rel] = await Promise.all([
       ghJson(`repos/${r}`),
-      ghJson(`repos/${r}/pulls?state=open&per_page=100`),
+      ghJson(`repos/${r}/pulls?state=open&per_page=100&sort=created&direction=desc`),
+      ghJson(`repos/${r}/issues?state=open&per_page=100&sort=created&direction=desc`),
       ghJson(`repos/${r}/contributors?per_page=8&anon=0`),
       ghJson(`repos/${r}/releases/latest`),
     ]);
@@ -100,12 +103,35 @@ await Promise.all(
     const openPrs = Array.isArray(pulls) ? pulls.length : 0;
     const people = Array.isArray(contribs) ? contribs : [];
 
+    const prs = (Array.isArray(pulls) ? pulls : []).map((q: any) => ({
+      number: q.number,
+      title: q.title,
+      author: q.user?.login ?? "?",
+      created: q.created_at,
+      draft: !!q.draft,
+      url: q.html_url,
+    }));
+
+    // The issues endpoint returns pull requests too. Anything carrying a
+    // pull_request key is a PR wearing an issue's clothes; drop it.
+    const issues = (Array.isArray(issuesRaw) ? issuesRaw : [])
+      .filter((q: any) => !q.pull_request)
+      .map((q: any) => ({
+        number: q.number,
+        title: q.title,
+        author: q.user?.login ?? "?",
+        created: q.created_at,
+        url: q.html_url,
+      }));
+
     repoStats.set(r, {
       stars: j.stargazers_count ?? 0,
       forks: j.forks_count ?? 0,
       watchers: j.subscribers_count ?? 0,
-      open_issues: Math.max(0, (j.open_issues_count ?? 0) - openPrs),
+      open_issues: issues.length,
       open_prs: openPrs,
+      prs,
+      issues,
       pushed: j.pushed_at ?? null,
       created: j.created_at ?? null,
       archived: !!j.archived,
@@ -199,6 +225,8 @@ const plugins = src.plugins.map((p) => {
     watchers: stats?.watchers ?? 0,
     open_prs: stats?.open_prs ?? 0,
     open_issues: stats?.open_issues ?? 0,
+    prs: stats?.prs ?? [],
+    issues: stats?.issues ?? [],
     pushed: stats?.pushed ?? null,
     created: stats?.created ?? null,
     license: stats?.license ?? null,
@@ -266,6 +294,27 @@ const out = {
 };
 
 await Bun.write(`${ROOT}site/data.json`, JSON.stringify(out, null, 2));
+
+// ------------------------------------------------------------- cache busting
+//
+// Pages serves assets with a long max-age. Without a changing URL a browser
+// happily shows a four-hour-old app.js and the deploy looks like it never
+// happened. Stamp each asset reference with a hash of its own contents.
+
+const stamp = async (file: string) => {
+  const bytes = await Bun.file(`${ROOT}site/${file}`).arrayBuffer();
+  return Bun.hash(bytes).toString(16).slice(0, 8);
+};
+
+const cssV = await stamp("assets/css/style.css");
+const jsV = await stamp("assets/js/app.js");
+
+let html = await Bun.file(`${ROOT}site/index.html`).text();
+html = html
+  .replace(/(assets\/css\/style\.css)(\?v=[a-f0-9]+)?/g, `$1?v=${cssV}`)
+  .replace(/(assets\/js\/app\.js)(\?v=[a-f0-9]+)?/g, `$1?v=${jsV}`);
+await Bun.write(`${ROOT}site/index.html`, html);
+console.error(`  stamped css=${cssV} js=${jsV}`);
 console.error(
   `✓ site/data.json — ${out.stats.plugins} plugins, ${out.stats.listed} listed, ` +
     `${out.stats.stars} stars, ${out.stats.with_shots} screenshots`,
