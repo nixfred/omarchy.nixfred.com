@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11T18:38:08.735Z",
+  "generated_at": "2026-09-11T18:38:57.178Z",
   "owner": "nixfred",
   "families": [
     {
@@ -845,29 +845,8 @@
       "topics": [],
       "default_branch": "main",
       "release": null,
-      "contributors": [
-        {
-          "login": "nixfred",
-          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 17
-        },
-        {
-          "login": "Fileri",
-          "avatar": "https://avatars.githubusercontent.com/u/955867?v=4",
-          "commits": 3
-        },
-        {
-          "login": "ryuhzk",
-          "avatar": "https://avatars.githubusercontent.com/u/213640356?v=4",
-          "commits": 3
-        },
-        {
-          "login": "kanthi",
-          "avatar": "https://avatars.githubusercontent.com/u/1001550?v=4",
-          "commits": 1
-        }
-      ],
-      "commits": 24,
+      "contributors": [],
+      "commits": 0,
       "repo_url": "https://github.com/nixfred/omarchy-server-status",
       "glyph": "assets/img/glyph/io-github-nixfred-tailscale-host-monitor.svg",
       "shot": "assets/img/shot/io-github-nixfred-tailscale-host-monitor.png",
@@ -1606,7 +1585,7 @@
     }
   ],
   "heatmap": {
-    "total": 2050,
+    "total": 2051,
     "weeks": [
       [
         {
@@ -3306,14 +3285,14 @@
         },
         {
           "date": "2026-07-25",
-          "count": 30,
+          "count": 28,
           "level": 2
         }
       ],
       [
         {
           "date": "2026-07-26",
-          "count": 17,
+          "count": 19,
           "level": 1
         },
         {
@@ -3392,12 +3371,12 @@
         },
         {
           "date": "2026-08-10",
-          "count": 16,
+          "count": 15,
           "level": 1
         },
         {
           "date": "2026-08-11",
-          "count": 6,
+          "count": 7,
           "level": 1
         },
         {
@@ -3417,15 +3396,15 @@
         },
         {
           "date": "2026-08-15",
-          "count": 1,
-          "level": 1
+          "count": 0,
+          "level": 0
         }
       ],
       [
         {
           "date": "2026-08-16",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-08-17",
@@ -3449,7 +3428,7 @@
         },
         {
           "date": "2026-08-21",
-          "count": 213,
+          "count": 209,
           "level": 4
         },
         {
@@ -3461,8 +3440,8 @@
       [
         {
           "date": "2026-08-23",
-          "count": 0,
-          "level": 0
+          "count": 4,
+          "level": 1
         },
         {
           "date": "2026-08-24",
@@ -3481,66 +3460,66 @@
         },
         {
           "date": "2026-08-27",
-          "count": 25,
+          "count": 22,
           "level": 1
         },
         {
           "date": "2026-08-28",
-          "count": 16,
+          "count": 14,
           "level": 1
         },
         {
           "date": "2026-08-29",
-          "count": 0,
-          "level": 0
+          "count": 5,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-08-30",
-          "count": 16,
+          "count": 15,
           "level": 1
         },
         {
           "date": "2026-08-31",
-          "count": 63,
+          "count": 64,
           "level": 3
         },
         {
           "date": "2026-09-01",
-          "count": 34,
+          "count": 31,
           "level": 2
         },
         {
           "date": "2026-09-02",
-          "count": 18,
+          "count": 21,
           "level": 1
         },
         {
           "date": "2026-09-03",
-          "count": 75,
+          "count": 72,
           "level": 3
         },
         {
           "date": "2026-09-04",
-          "count": 94,
+          "count": 96,
           "level": 4
         },
         {
           "date": "2026-09-05",
-          "count": 70,
+          "count": 68,
           "level": 3
         }
       ],
       [
         {
           "date": "2026-09-06",
-          "count": 62,
+          "count": 65,
           "level": 3
         },
         {
           "date": "2026-09-07",
-          "count": 109,
+          "count": 108,
           "level": 4
         },
         {
@@ -3550,17 +3529,17 @@
         },
         {
           "date": "2026-09-09",
-          "count": 66,
+          "count": 65,
           "level": 3
         },
         {
           "date": "2026-09-10",
-          "count": 69,
+          "count": 71,
           "level": 3
         },
         {
           "date": "2026-09-11",
-          "count": 40,
+          "count": 41,
           "level": 2
         }
       ]
