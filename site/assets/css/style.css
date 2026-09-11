@@ -104,6 +104,28 @@ h1, h2, h3 { margin: 0; font-weight: 620; letter-spacing: -0.02em; line-height: 
 }
 .topnav a:hover { color: var(--accent); }
 
+/* Shown only when app.js never ran. See the inline script at the foot of
+   index.html for why this cannot be detected from inside app.js. */
+#deadjs {
+  position: fixed; inset: auto 16px 16px; z-index: 90;
+  max-width: 620px; margin-inline: auto;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px;
+  padding: 16px 18px;
+  clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+  border: 1px solid color-mix(in srgb, #ff6b6b 40%, var(--line));
+  background: #12161d;
+  font-size: 13.5px; line-height: 1.55;
+}
+#deadjs strong { color: var(--fg); flex-basis: 100%; }
+#deadjs span { color: var(--fg-2); flex: 1; min-width: 240px; }
+#deadjs button {
+  flex: none; cursor: pointer;
+  padding: 9px 15px; border: 1px solid var(--line-2); border-radius: 7px;
+  background: rgba(74, 168, 255, 0.12); color: var(--accent);
+  font: 500 12px/1 var(--mono); letter-spacing: 0.06em;
+}
+#deadjs button:hover { border-color: var(--accent); background: rgba(74, 168, 255, 0.2); }
+
 .w {
   display: inline-flex;
   align-items: center;

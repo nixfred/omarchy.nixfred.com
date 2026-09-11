@@ -1,4 +1,17 @@
-/* omarchy.nixfred.com — renders everything from data.json */
+/* omarchy.nixfred.com — renders everything from data.json
+ *
+ * Every heading on the page is static HTML and everything under it is built
+ * here. So when this file does not run, the page is a list of headings with
+ * nothing beneath them, which reads as a design rather than a fault. That
+ * happened on 2026-09-11: a browser had cached the SPA fallback HTML under this
+ * file's URL, back when a missing asset answered 200 with the index page, and
+ * `immutable` in _headers pinned it there through every reload.
+ *
+ * Three things now stop that: site/404.html makes a missing path a real 404,
+ * _headers no longer promises `immutable`, and index.html watches for this
+ * script having produced nothing and says so with a way out. That last guard
+ * has to live in the HTML — a file that fails to parse cannot report itself.
+ */
 (() => {
   "use strict";
 

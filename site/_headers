@@ -6,8 +6,15 @@
 # otherwise a stale index.html keeps pointing at the old asset URLs and nobody
 # sees a deploy for four hours. That is exactly what happened on 2026-09-10.
 
+# A year, but NOT `immutable`. The stamp means a changed file is a new URL, so
+# the long life still does its job — while dropping `immutable` leaves a way out
+# if a bad response ever lands here again. It did on 2026-09-11: a request for an
+# asset that had not deployed yet was answered with the index page (see 404.html
+# for why), and `immutable` then pinned that HTML under app.js's URL in a real
+# browser, for a year, surviving reloads. The page rendered its headings and
+# nothing else. Without `immutable` a reload revalidates and heals it.
 /assets/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=31536000
 
 # The share card is the exception, and deliberately so. It is fetched by X,
 # Slack, iMessage and friends, and a crawler is the one client that must never

@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="assets/css/style.css?v=f21c9e95">
+<link rel="stylesheet" href="assets/css/style.css?v=6ad879dc">
 </head>
 <body>
 
@@ -167,6 +167,33 @@
   </div>
 </footer>
 
-<script src="assets/js/app.js?v=3ab45ffe"></script>
+<div id="deadjs" hidden>
+  <strong>This page did not finish loading.</strong>
+  <span>Your browser is holding a bad cached copy of the site's script. Reloading past the cache fixes it.</span>
+  <button type="button" id="deadjs-fix">Reload past the cache</button>
+</div>
+
+<script src="assets/js/app.js?v=ffbc40c8" onerror="window.__appFailed = 'network'"></script>
+<script>
+  /* A blank page used to be indistinguishable from a design with a lot of
+     whitespace: every heading is static HTML, so the sections rendered while
+     everything JS-driven stayed empty and nothing said why.
+
+     app.js cannot report its own failure - if it fails to parse, none of it
+     runs, so no try/catch inside it can ever fire. The check has to live out
+     here: onerror above catches a load failure, and the timer below catches a
+     parse or runtime failure by looking for a side effect app.js must have
+     produced. Either way the reader gets told, and gets a button that reloads
+     with a fresh query so the cached copy is bypassed. */
+  setTimeout(function () {
+    var rendered = document.querySelector("#omabar .w") || document.querySelector("#feat-grid .feat");
+    if (rendered) return;
+    var box = document.getElementById("deadjs");
+    box.hidden = false;
+    document.getElementById("deadjs-fix").addEventListener("click", function () {
+      location.replace(location.pathname + "?reload=" + Date.now());
+    });
+  }, 6000);
+</script>
 </body>
 </html>

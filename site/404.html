@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Not here — omarchy.nixfred.com</title>
+<meta name="robots" content="noindex">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#06080b">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
+<!--
+  This file exists for a reason that has nothing to do with looking nice.
+
+  Cloudflare Pages decides between "serve index.html for anything unknown" and
+  "return a real 404" by whether a 404.html is present. Without one, EVERY
+  missing path answered 200 with a page of HTML - including missing assets. So a
+  request for an asset that had not deployed yet got HTML, and because _headers
+  caches /assets/* hard, that HTML was then pinned under the asset's URL. A
+  <script> tag pointing at it parses HTML as JavaScript, throws, and the page
+  renders its headings and nothing else. That happened for real on 2026-09-11.
+
+  A 404 is not cached the way a 200 is, and a script that 404s fails loudly.
+  Keep this file.
+-->
+<style>
+  :root {
+    --bg: #06080b; --fg: #e8edf4; --fg-2: #9aa7b8; --fg-3: #64707f;
+    --line: rgba(255,255,255,.09); --accent: #4aa8ff;
+    --chamfer: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    min-height: 100vh; display: grid; place-items: center; padding: 32px;
+    background:
+      radial-gradient(900px 500px at 80% -10%, rgba(74,168,255,.14), transparent 70%),
+      var(--bg);
+    color: var(--fg);
+    font: 400 15px/1.6 "JetBrains Mono", ui-monospace, monospace;
+  }
+  main { max-width: 620px; }
+  .code { font-size: 12px; letter-spacing: .26em; color: var(--fg-3); margin-bottom: 18px; }
+  h1 { font-size: clamp(30px, 6vw, 46px); font-weight: 700; letter-spacing: .02em; margin-bottom: 14px; }
+  p { color: var(--fg-2); margin-bottom: 14px; }
+  .hint { color: var(--fg-3); font-size: 13.5px; }
+  a.home {
+    display: inline-block; margin-top: 26px; padding: 11px 20px;
+    clip-path: var(--chamfer);
+    border: 1px solid var(--line); background: rgba(74,168,255,.1);
+    color: var(--accent); text-decoration: none;
+    font: 500 12.5px/1 "JetBrains Mono", ui-monospace, monospace;
+    letter-spacing: .12em; text-transform: uppercase;
+  }
+  a.home:hover { border-color: var(--accent); background: rgba(74,168,255,.18); }
+</style>
+</head>
+<body>
+<main>
+  <div class="code">404 · NOT FOUND</div>
+  <h1>That page is not here.</h1>
+  <p>The catalogue is one page. Plugins, tools, themes and the retired shelf all live on it.</p>
+  <p class="hint">If you followed a link to a specific plugin, its card is on the front page and the search box will find it.</p>
+  <a class="home" href="/">Back to the catalogue</a>
+</main>
+</body>
+</html>
