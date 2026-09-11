@@ -1,0 +1,77 @@
+#!/usr/bin/env bun
+/**
+ * Prove every plugin's Install copy box is a command that actually works.
+ *
+ *   bin/installcheck
+ *
+ * bin/linkcheck asks "does this URL resolve". This asks the harder question:
+ * "if someone pastes this, do they get the plugin". They are not the same
+ * guarantee, and the gap between them is where the real bugs live:
+ *
+ *   - `omarchy plugin install <repo>` reads manifest.json at the repo ROOT.
+ *     menu.bar.overload keeps its plugin in a subdirectory, so the templated
+ *     command cloned fine and installed nothing. Found 2026-09-11, after the
+ *     link check had passed the same repo as healthy.
+ *   - A repo can exist, be public, resolve, and still carry a manifest whose id
+ *     does not match the card.
+ *
+ * Every clone here is UNAUTHENTICATED on purpose. `gh` and a configured
+ * credential helper both authenticate as Fred, which is how three private repos
+ * shipped looking perfectly healthy.
+ */
+import { $ } from "bun";
+import { mkdtemp, rm } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+
+const ROOT = new URL("..", import.meta.url).pathname;
+const data = await Bun.file(`${ROOT}site/data.json`).json();
+
+const work = await mkdtemp(join(tmpdir(), "installcheck-"));
+const problems: string[] = [];
+let checked = 0;
+
+for (const p of data.plugins as any[]) {
+  if (!p.repo) continue;                      // unreleased, nothing to install
+  checked++;
+  const dir = join(work, p.id.replace(/\./g, "-"));
+
+  // A plugin that documents its own install is not expected to be root-shaped.
+  // Verify the repo clones; its own installer owns the rest.
+  const templated = p.install === `omarchy plugin install ${p.repo}`;
+
+  const cloned = await $`git -c credential.helper= clone --depth 1 -q https://github.com/${p.repo} ${dir}`
+    .env({ ...process.env, GIT_TERMINAL_PROMPT: "0" })
+    .quiet()
+    .then(() => true)
+    .catch(() => false);
+
+  if (!cloned) {
+    problems.push(`CLONE FAILED   ${p.id}  (${p.repo}) — private, renamed or gone`);
+    continue;
+  }
+  if (!templated) continue;                   // custom installer, clone was the test
+
+  const manifest = Bun.file(join(dir, "manifest.json"));
+  if (!(await manifest.exists())) {
+    problems.push(
+      `NO MANIFEST    ${p.id}  (${p.repo}) — \`omarchy plugin install\` needs manifest.json at the repo root`,
+    );
+    continue;
+  }
+  const id = (await manifest.json())?.id;
+  if (id !== p.id) problems.push(`ID MISMATCH    card=${p.id}  manifest=${id}  (${p.repo})`);
+}
+
+await rm(work, { recursive: true, force: true });
+
+if (checked === 0) {
+  console.error("✗ checked ZERO plugins — data.json is empty or the shape changed.");
+  process.exit(2);
+}
+if (problems.length) {
+  console.error(`\n✗ ${problems.length} of ${checked} plugin installs are broken:`);
+  for (const p of problems) console.error(`   ${p}`);
+  process.exit(1);
+}
+console.log(`✓ all ${checked} plugin installs clone clean with a matching manifest id`);

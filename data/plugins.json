@@ -93,6 +93,7 @@
     {
       "id": "nixfred.menubar-overload", "name": "MenuBar Overload", "family": "workspace", "status": "live",
       "repo": "nixfred/menu.bar.overload", "dir": "menu.bar.overload/nixfred.menubar-overload", "version": "0.9.0",
+      "install": "git clone https://github.com/nixfred/menu.bar.overload ~/Projects/menu.bar.overload && ~/Projects/menu.bar.overload/install.sh --use",
       "tagline": "Add as many plugins as you like.",
       "description": "The Omarchy bar with a dock-magnified carousel on each side. Add as many plugins as you like; roll through the ones that do not fit with the mouse wheel or a trackpad swipe, and each one pops out as it arrives.",
       "accent": "#ff9f1c"

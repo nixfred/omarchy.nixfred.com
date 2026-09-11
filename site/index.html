@@ -168,7 +168,10 @@
          about this page rather than elsewhere. -->
     <div style="display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px;color:var(--fg-2)">
       <a href="https://github.com/nixfred/omarchy.nixfred.com" target="_blank" rel="noopener">Source of this page</a>
-      <a href="#top">Back to top</a>
+      <!-- Not href="#top": no element has that id, so it relies on a browser
+         special case and lands under the sticky header. A real handler
+         scrolls to the actual top. -->
+      <a href="#" id="to-top">Back to top</a>
     </div>
   </div>
 </footer>
@@ -199,6 +202,11 @@
      and it reports what it actually observed. The check still has to live out
      here — a script that fails to parse never runs, so it can never report
      itself. */
+  document.getElementById("to-top")?.addEventListener("click", function (e) {
+    e.preventDefault();
+    scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  });
+
   (function () {
     var box = document.getElementById("deadjs");
     var title = document.getElementById("deadjs-title");

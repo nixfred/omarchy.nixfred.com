@@ -1,0 +1,79 @@
+#!/usr/bin/env bun
+/**
+ * Check every link the catalogue renders, the way an anonymous visitor sees it.
+ *
+ *   bin/linkcheck [url]          default https://omarchy.nixfred.com/
+ *
+ * Two things make this worth having as a file rather than a one-liner:
+ *
+ *  1. HALF THE LINKS ARE NOT IN THE HTML. Pull requests, issues and contributor
+ *     faces live inside collapsed <details>, so they have to be opened before
+ *     the hrefs exist. A curl of the page finds none of them.
+ *  2. ANONYMOUS IS THE POINT. `gh` authenticates as Fred, so a private repo
+ *     looks perfectly healthy to every tool on this machine while returning 404
+ *     to the world. Three shipped that way. Every request here is unauthenticated.
+ *
+ * It refuses to report success on an empty set. "0 links checked, all fine" is a
+ * vacuous truth, and it is exactly what this script printed the first time it
+ * was run after its own file went missing.
+ */
+import { chromium } from "playwright";
+
+const URL_UNDER_TEST = process.argv[2] ?? "https://omarchy.nixfred.com/";
+const UA = "Mozilla/5.0 (linkcheck; +https://omarchy.nixfred.com/)";
+
+const browser = await chromium.launch({ executablePath: "/usr/bin/chromium" });
+const page = await browser.newPage();
+await page.goto(URL_UNDER_TEST, { waitUntil: "domcontentloaded" });
+await page.waitForTimeout(4000);
+
+// Everything behind a dropdown counts too.
+await page.evaluate(() => document.querySelectorAll("details").forEach((d) => (d.open = true)));
+await page.waitForTimeout(1000);
+
+const hrefs: string[] = await page.evaluate(() =>
+  [...new Set([...document.querySelectorAll("a[href]")].map((a) => (a as HTMLAnchorElement).href))]
+    .filter((h) => /^https?:/.test(h)),
+);
+
+// Copy boxes are links in every sense that matters - people paste them - so the
+// repo they clone from gets checked as well.
+const cmdRepos: string[] = await page.evaluate(() =>
+  [...new Set([...document.querySelectorAll(".cmd-box code")]
+    .map((c) => c.textContent ?? "")
+    .map((t) => t.match(/github\.com\/([\w.-]+\/[\w.-]+?)(?:\.git)?(?:\s|$)/)?.[1])
+    .filter(Boolean) as string[])].map((r) => `https://github.com/${r}`),
+);
+await browser.close();
+
+const targets = [...new Set([...hrefs, ...cmdRepos])];
+
+if (targets.length === 0) {
+  console.error("✗ collected ZERO links — the page did not render, or the selector is wrong.");
+  console.error("  Refusing to report success on an empty set.");
+  process.exit(2);
+}
+
+console.log(`checking ${targets.length} links anonymously (${hrefs.length} rendered, ${cmdRepos.length} from copy boxes)…`);
+
+const broken: string[] = [];
+await Promise.all(
+  targets.map(async (u) => {
+    try {
+      // HEAD first; some hosts refuse it, so fall back to a ranged GET.
+      let r = await fetch(u, { method: "HEAD", redirect: "follow", headers: { "user-agent": UA } });
+      if (r.status === 405 || r.status === 501)
+        r = await fetch(u, { redirect: "follow", headers: { "user-agent": UA, range: "bytes=0-0" } });
+      if (r.status >= 400) broken.push(`${r.status}  ${u}`);
+    } catch (e) {
+      broken.push(`ERR  ${u}  ${(e as Error).message}`);
+    }
+  }),
+);
+
+if (broken.length) {
+  console.error(`\n✗ ${broken.length} BROKEN:`);
+  for (const b of broken.sort()) console.error(`   ${b}`);
+  process.exit(1);
+}
+console.log(`✓ all ${targets.length} reachable`);

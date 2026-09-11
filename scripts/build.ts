@@ -259,7 +259,11 @@ const plugins = src.plugins.map((p) => {
     listing_url: listing ? `${MARKETPLACE_PLUGIN_URL}${encodeURIComponent(p.id)}` : null,
     marketplace_category: listing?.category ?? null,
     marketplace_tags: listing?.tags ?? [],
-    install: p.repo ? `omarchy plugin install ${p.repo}` : null,
+    // `omarchy plugin install <repo>` assumes manifest.json at the repo ROOT.
+    // menu.bar.overload keeps its plugin in a subdirectory and ships its own
+    // install.sh, so the templated command clones fine and installs nothing.
+    // A plugin may therefore state its own line; the template is the default.
+    install: (p as any).install ?? (p.repo ? `omarchy plugin install ${p.repo}` : null),
     clone: p.repo ? `git clone https://github.com/${p.repo}.git` : null,
   };
 });
