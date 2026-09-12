@@ -1,0 +1,115 @@
+#!/usr/bin/env bash
+# Prove every copy box on the LIVE site, element by element.
+#
+#   bin/provecommands            (reads /tmp/claude-1000/boxes.json, see below)
+#
+# WHY THIS EXISTS AND bin/installcheck IS NOT ENOUGH: installcheck reads
+# site/data.json before a deploy. This reads what the deployed page actually
+# renders, including the copy boxes inside collapsed <details>, and it checks the
+# WHOLE CHAIN rather than the first link:
+#
+#   the URL  ->  the directory git creates  ->  the file you then run  ->  flags
+#
+# Every earlier check only ever looked at the URL. That is how
+# `omarchy plugin install nixfred/blip` passed for weeks: the repo was fine, the
+# argument shape was not.
+#
+# IT IS TESTED. Fed seven deliberate defects - a slug instead of a URL, a dead
+# repo, a `cd` into the wrong directory, a missing install.sh, a missing
+# PKGBUILD, a repo with no root manifest, and a shell syntax error - it reports
+# all seven with the right diagnosis. A check that has never failed is a check
+# nobody has tested.
+#
+# Populate boxes.json first with the scraper in the repo README, or any
+# equivalent: [{card,label,code,attr}] straight from the rendered DOM.
+set -uo pipefail
+WORK=$(mktemp -d); trap 'rm -rf "$WORK"' EXIT
+BOXES=/tmp/claude-1000/boxes.json
+PASS=0; FAIL=0
+declare -A CLONED
+
+fail() { printf '  ✗ %s\n     %s\n' "$1" "$2"; FAIL=$((FAIL+1)); }
+pass() { PASS=$((PASS+1)); }
+
+# clone once per repo, reuse
+# Called as dir=$(get "$u") — a SUBSHELL, so an associative-array cache set in
+# here never reaches the parent. The first version did that, re-cloned into a
+# path that already existed, and git refused the non-empty target: 29 false
+# "cannot clone" failures, every repo that appears in both a Clone and an
+# Install box. The directory on disk IS the cache.
+get() { local url="$1" key d
+  key=$(echo "$url" | tr -c 'a-zA-Z0-9' '_')
+  d="$WORK/$key"
+  if [ -d "$d/.git" ]; then echo "$d"; return 0; fi
+  rm -rf "$d"
+  GIT_TERMINAL_PROMPT=0 git -c credential.helper= clone --depth 1 -q "$url" "$d" 2>/dev/null || return 1
+  echo "$d"
+}
+
+while IFS=$'\t' read -r card label cmd; do
+  [ -z "$cmd" ] && continue
+
+  # 1. does a real shell parse it?
+  if ! bash -n <<<"$cmd" 2>/dev/null; then fail "$card / $label" "shell syntax error: $cmd"; continue; fi
+
+  # 2. every https URL in it must clone anonymously
+  urls=$(grep -oE 'https://github\.com/[A-Za-z0-9._-]+/[A-Za-z0-9._-]+' <<<"$cmd" | sort -u)
+  bad=0
+  for u in $urls; do
+    if ! dir=$(get "$u"); then fail "$card / $label" "cannot clone $u"; bad=1; break; fi
+  done
+  [ $bad -eq 1 ] && continue
+
+  # 3. `cd <name>` must match the directory git actually creates
+  #    (git strips a trailing .git; an explicit target path overrides it)
+  if grep -qE '(^|&&|;)\s*cd ' <<<"$cmd"; then
+    # `git clone URL [TARGET]` — but the next token is often `&&`, which the
+    # first version happily read as the target and then reported "git creates
+    # '&&'". Only a token that is not a shell operator is a target.
+    target=$(grep -oE 'git clone \S+( \S+)?' <<<"$cmd" | head -1 | awk '{t=$4} t=="&&"||t==";"||t=="||"{t=""} {print t}')
+    cdto=$(grep -oE '(^|&& )cd [^ &;]+' <<<"$cmd" | head -1 | awk '{print $NF}')
+    if [ -n "$target" ]; then expect="$target"; else
+      expect=$(basename "$(grep -oE 'https://github\.com/\S+' <<<"$cmd" | head -1)" .git); fi
+    [ "${cdto/#\~/$HOME}" = "${expect/#\~/$HOME}" ] || \
+      fail "$card / $label" "cd '$cdto' but git creates '$expect'"
+  fi
+
+  # 4. a script it runs must EXIST in the repo, and be executable
+  for s in $(grep -oE '(\./|/)[A-Za-z0-9._/-]*install\.sh' <<<"$cmd" | sort -u); do
+    f="$dir/$(basename "$s")"
+    [ -f "$f" ] || { fail "$card / $label" "$s is not in the repo"; continue 2; }
+    [ -x "$f" ] || { fail "$card / $label" "$s exists but is not executable"; continue 2; }
+  done
+
+  # 5. makepkg needs a PKGBUILD
+  if grep -q 'makepkg' <<<"$cmd" && [ ! -f "$dir/PKGBUILD" ]; then
+    fail "$card / $label" "makepkg but no PKGBUILD in the repo"; continue; fi
+
+  # 6. omarchy plugin add: argument must be a URL, repo must carry a root manifest
+  if grep -qE '^omarchy plugin (add|install) ' <<<"$cmd"; then
+    arg=$(awk '{print $4}' <<<"$cmd")
+    case "$arg" in https://*|git@*|ssh://*) ;; *) fail "$card / $label" "'$arg' is not a git URL; git clone will reject it"; continue;; esac
+    [ -f "$dir/manifest.json" ] || { fail "$card / $label" "no manifest.json at the repo root"; continue; }
+    grep -qE '"id"' "$dir/manifest.json" || { fail "$card / $label" "manifest.json has no id"; continue; }
+  fi
+
+  # 7. omarchy theme install: same raw-clone contract
+  if grep -qE '^omarchy theme install ' <<<"$cmd"; then
+    arg=$(awk '{print $4}' <<<"$cmd")
+    case "$arg" in https://*|git@*|ssh://*) ;; *) fail "$card / $label" "'$arg' is not a git URL"; continue;; esac
+  fi
+
+  # 8. omarchy theme set <name>: must equal the name the installer derives
+  if grep -qE '^omarchy theme set ' <<<"$cmd"; then
+    name=$(awk '{print $4}' <<<"$cmd")
+    src=$(grep -oE 'https://github\.com/\S+' <<<"$(jq -r --arg c "$card" '.[]|select(.card==$c and .label=="Install")|.code' "$BOXES")" | head -1)
+    derived=$(basename "$src" .git | sed -E 's/^omarchy-//; s/-theme$//' | tr '[:upper:]' '[:lower:]')
+    [ "$name" = "$derived" ] || fail "$card / $label" "set '$name' but the installer creates '$derived'"
+  fi
+
+  pass
+done < <(jq -r '.[] | "\(.card)\t\(.label)\t\(.code)"' "$BOXES" | sort -u)
+
+echo
+echo "  passed: $PASS   failed: $FAIL"
+[ $FAIL -eq 0 ] || exit 1
