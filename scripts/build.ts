@@ -259,11 +259,21 @@ const plugins = src.plugins.map((p) => {
     listing_url: listing ? `${MARKETPLACE_PLUGIN_URL}${encodeURIComponent(p.id)}` : null,
     marketplace_category: listing?.category ?? null,
     marketplace_tags: listing?.tags ?? [],
-    // `omarchy plugin install <repo>` assumes manifest.json at the repo ROOT.
-    // menu.bar.overload keeps its plugin in a subdirectory and ships its own
-    // install.sh, so the templated command clones fine and installs nothing.
-    // A plugin may therefore state its own line; the template is the default.
-    install: (p as any).install ?? (p.repo ? `omarchy plugin install ${p.repo}` : null),
+    // A GIT URL, not an owner/repo slug. /usr/bin/omarchy-plugin-add passes its
+    // argument STRAIGHT to `git clone -- "$url"` (line 120), so a slug produces
+    // `fatal: repository 'nixfred/blip' does not exist` — which is exactly the
+    // error Fred hit. The CLI's own help says [git-url] and its example is a
+    // full https URL. `omarchy-git-url-check` accepts the slug, because it only
+    // guards against option and transport injection, so nothing catches this
+    // until the clone fails in front of the user.
+    //
+    // --enable because installing a bar plugin and not turning it on is half a
+    // job; it is in the CLI's own documented example too.
+    //
+    // A plugin may still state its own line: menu.bar.overload keeps its plugin
+    // in a subdirectory and ships install.sh, so no `plugin add` form works.
+    install: (p as any).install
+      ?? (p.repo ? `omarchy plugin add https://github.com/${p.repo}.git --enable` : null),
     clone: p.repo ? `git clone https://github.com/${p.repo}.git` : null,
   };
 });

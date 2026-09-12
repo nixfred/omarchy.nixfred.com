@@ -1,23 +1,30 @@
 #!/usr/bin/env bun
 /**
- * Prove every plugin's Install copy box is a command that actually works.
+ * Prove every Install copy box is a command that actually works.
  *
  *   bin/installcheck
  *
- * bin/linkcheck asks "does this URL resolve". This asks the harder question:
- * "if someone pastes this, do they get the plugin". They are not the same
- * guarantee, and the gap between them is where the real bugs live:
+ * THE MISTAKE THIS SCRIPT USED TO MAKE, written down so it is not repeated:
+ * the first version checked that each repo cloned and carried manifest.json at
+ * its root. That was a PROXY I invented for "the command works", and it passed
+ * 20 of 20 while every single command on the site was broken. The cards said
+ * `omarchy plugin install nixfred/blip`, and /usr/bin/omarchy-plugin-add hands
+ * its argument straight to `git clone -- "$url"`, which answers
+ * `fatal: repository 'nixfred/blip' does not exist`. The CLI's own help says
+ * [git-url]; a slug is not a URL. `omarchy-git-url-check` accepts the slug too,
+ * because it only guards against option and transport injection, so nothing
+ * caught it before the user did.
  *
- *   - `omarchy plugin install <repo>` reads manifest.json at the repo ROOT.
- *     menu.bar.overload keeps its plugin in a subdirectory, so the templated
- *     command cloned fine and installed nothing. Found 2026-09-11, after the
- *     link check had passed the same repo as healthy.
- *   - A repo can exist, be public, resolve, and still carry a manifest whose id
- *     does not match the card.
+ * So this now tests the command's REAL contract, taken from the installer
+ * itself rather than from an assumption:
  *
- * Every clone here is UNAUTHENTICATED on purpose. `gh` and a configured
- * credential helper both authenticate as Fred, which is how three private repos
- * shipped looking perfectly healthy.
+ *   1. the argument parses as a git URL a person could clone, and
+ *   2. `git clone` of exactly that URL succeeds, UNAUTHENTICATED, and
+ *   3. what lands carries manifest.json at the root with the card's id,
+ *      which is what `omarchy plugin add` validates next.
+ *
+ * Unauthenticated on purpose: `gh` and a credential helper both authenticate as
+ * Fred, which is how three private repos once shipped looking healthy.
  */
 import { $ } from "bun";
 import { mkdtemp, rm } from "node:fs/promises";
@@ -27,40 +34,51 @@ import { join } from "node:path";
 const ROOT = new URL("..", import.meta.url).pathname;
 const data = await Bun.file(`${ROOT}site/data.json`).json();
 
+/** The form /usr/bin/omarchy-plugin-add documents and git can actually clone. */
+const ADD = /^omarchy plugin (add|install)\s+(\S+)(\s+.*)?$/;
+
 const work = await mkdtemp(join(tmpdir(), "installcheck-"));
 const problems: string[] = [];
 let checked = 0;
 
 for (const p of data.plugins as any[]) {
-  if (!p.repo) continue;                      // unreleased, nothing to install
+  if (!p.repo || !p.install) continue;
   checked++;
   const dir = join(work, p.id.replace(/\./g, "-"));
+  const m = p.install.match(ADD);
 
-  // A plugin that documents its own install is not expected to be root-shaped.
-  // Verify the repo clones; its own installer owns the rest.
-  const templated = p.install === `omarchy plugin install ${p.repo}`;
-
-  const cloned = await $`git -c credential.helper= clone --depth 1 -q https://github.com/${p.repo} ${dir}`
-    .env({ ...process.env, GIT_TERMINAL_PROMPT: "0" })
-    .quiet()
-    .then(() => true)
-    .catch(() => false);
-
-  if (!cloned) {
-    problems.push(`CLONE FAILED   ${p.id}  (${p.repo}) — private, renamed or gone`);
+  if (!m) {
+    // A plugin that documents its own installer. Its repo must still clone.
+    const url = p.install.match(/https:\/\/github\.com\/\S+/)?.[0];
+    if (!url) { problems.push(`NO URL         ${p.id} — custom install names no clonable URL`); continue; }
+    const ok = await clone(url, dir);
+    if (!ok) problems.push(`CLONE FAILED   ${p.id}  ${url}`);
     continue;
   }
-  if (!templated) continue;                   // custom installer, clone was the test
 
-  const manifest = Bun.file(join(dir, "manifest.json"));
-  if (!(await manifest.exists())) {
+  const arg = m[2];
+  if (!/^(https?:\/\/|git@|ssh:\/\/)/.test(arg)) {
     problems.push(
-      `NO MANIFEST    ${p.id}  (${p.repo}) — \`omarchy plugin install\` needs manifest.json at the repo root`,
+      `NOT A URL      ${p.id} — \`${arg}\` is passed straight to \`git clone\`, which will say ` +
+      `"repository '${arg}' does not exist". The CLI wants a git URL.`,
     );
     continue;
   }
+  if (!(await clone(arg, dir))) { problems.push(`CLONE FAILED   ${p.id}  ${arg}`); continue; }
+
+  const manifest = Bun.file(join(dir, "manifest.json"));
+  if (!(await manifest.exists())) {
+    problems.push(`NO MANIFEST    ${p.id}  ${arg} — omarchy plugin add validates manifest.json at the root`);
+    continue;
+  }
   const id = (await manifest.json())?.id;
-  if (id !== p.id) problems.push(`ID MISMATCH    card=${p.id}  manifest=${id}  (${p.repo})`);
+  if (id !== p.id) problems.push(`ID MISMATCH    card=${p.id}  manifest=${id}  ${arg}`);
+}
+
+async function clone(url: string, dir: string) {
+  return $`git -c credential.helper= clone --depth 1 -q ${url} ${dir}`
+    .env({ ...process.env, GIT_TERMINAL_PROMPT: "0" })
+    .quiet().then(() => true).catch(() => false);
 }
 
 await rm(work, { recursive: true, force: true });
@@ -70,8 +88,8 @@ if (checked === 0) {
   process.exit(2);
 }
 if (problems.length) {
-  console.error(`\n✗ ${problems.length} of ${checked} plugin installs are broken:`);
+  console.error(`\n✗ ${problems.length} of ${checked} install commands are broken:`);
   for (const p of problems) console.error(`   ${p}`);
   process.exit(1);
 }
-console.log(`✓ all ${checked} plugin installs clone clean with a matching manifest id`);
+console.log(`✓ all ${checked} install commands name a real git URL that clones with a matching manifest`);
