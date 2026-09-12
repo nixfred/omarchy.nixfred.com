@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T02:07:35.833Z",
+  "generated_at": "2026-09-12T10:42:48.623Z",
   "owner": "nixfred",
   "families": [
     {
@@ -52,14 +52,14 @@
       "description": "CPU, memory, storage and network merged into a single bar widget with one shared severity model. The icon follows the biggest constraint rather than a fixed metric, and each domain still opens the full dashboard the separate plugin had. Replaces CPU Pulse, RAM Pulse, Disk Pulse and Net Pulse.",
       "accent": "#4aa8ff",
       "supersedes": "CPU Pulse, RAM Pulse, Disk Pulse, Net Pulse",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-11T18:58:16Z",
+      "pushed": "2026-09-12T04:55:51Z",
       "created": "2026-09-11T16:49:33Z",
       "license": "MIT",
       "language": "QML",
@@ -78,10 +78,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 8
+          "commits": 10
         }
       ],
-      "commits": 8,
+      "commits": 10,
       "repo_url": "https://github.com/nixfred/pulse",
       "glyph": "assets/img/glyph/nixfred-pulse.svg",
       "shot": "assets/img/shot/nixfred-pulse.png",
@@ -444,7 +444,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-10T16:45:48Z",
+      "pushed": "2026-09-12T05:35:12Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -455,10 +455,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 32
+          "commits": 35
         }
       ],
-      "commits": 32,
+      "commits": 35,
       "repo_url": "https://github.com/nixfred/burnbar",
       "glyph": "assets/img/glyph/nixfred-burnbar.svg",
       "shot": "assets/img/shot/nixfred-burnbar.png",
@@ -532,7 +532,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-10T13:59:58Z",
+      "pushed": "2026-09-12T05:33:18Z",
       "created": "2026-09-04T04:03:58Z",
       "license": null,
       "language": "QML",
@@ -543,10 +543,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 11
+          "commits": 15
         }
       ],
-      "commits": 11,
+      "commits": 15,
       "repo_url": "https://github.com/nixfred/beatdeck.omarchy",
       "glyph": "assets/img/glyph/nixfred-beatdeck.svg",
       "shot": "assets/img/shot/nixfred-beatdeck.png",
@@ -679,7 +679,7 @@
       "tagline": "iMessage in the Omarchy bar.",
       "description": "iMessage in the Omarchy bar. Reads and sends through a Mac you own over a multiplexed SSH socket. iMessage is macOS-only, so this machine is a thin client and the Mac is the gateway. The bar badge counts every unread; desktop toasts fire only for handles on your allowlist, because chat.db is mostly bank alerts and 2FA codes.",
       "accent": "#0a84ff",
-      "stars": 141,
+      "stars": 147,
       "forks": 24,
       "watchers": 1,
       "open_prs": 3,
@@ -740,7 +740,7 @@
           "url": "https://github.com/nixfred/blip/issues/36"
         }
       ],
-      "pushed": "2026-09-10T22:55:01Z",
+      "pushed": "2026-09-12T03:39:43Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -761,7 +761,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 176
+          "commits": 179
         },
         {
           "login": "Fileri",
@@ -799,7 +799,7 @@
           "commits": 1
         }
       ],
-      "commits": 266,
+      "commits": 269,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "shot": "assets/img/shot/nixfred-blip.png",
@@ -915,15 +915,11 @@
       "repo_url": "https://github.com/nixfred/omarchy-internet-latency",
       "glyph": "assets/img/glyph/nixfred-internet-latency.svg",
       "shot": null,
-      "listed": true,
-      "listed_at": "2026-08-28T01:04:48.589Z",
-      "listing_url": "https://plugins.omarchy.org/plugin.html?id=nixfred.internet-latency",
-      "marketplace_category": "Widgets",
-      "marketplace_tags": [
-        "bar",
-        "quickshell",
-        "system"
-      ],
+      "listed": false,
+      "listed_at": null,
+      "listing_url": null,
+      "marketplace_category": null,
+      "marketplace_tags": [],
       "install": "omarchy plugin add https://github.com/nixfred/omarchy-internet-latency.git --enable",
       "clone": "git clone https://github.com/nixfred/omarchy-internet-latency.git"
     },
@@ -1614,7 +1610,7 @@
     }
   ],
   "heatmap": {
-    "total": 2056,
+    "total": 2073,
     "weeks": [
       [
         {
@@ -3568,13 +3564,13 @@
         },
         {
           "date": "2026-09-11",
-          "count": 46,
+          "count": 54,
           "level": 2
         },
         {
           "date": "2026-09-12",
-          "count": 0,
-          "level": 0
+          "count": 9,
+          "level": 1
         }
       ]
     ]
@@ -3582,10 +3578,10 @@
   "stats": {
     "plugins": 21,
     "live": 19,
-    "listed": 1,
+    "listed": 0,
     "families": 7,
     "themes": 1,
-    "stars": 273,
+    "stars": 280,
     "tools": 5,
     "with_shots": 15
   }
