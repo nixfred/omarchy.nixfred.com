@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Prove every copy box on the LIVE site, element by element.
 #
-#   bin/provecommands            (reads /tmp/claude-1000/boxes.json, see below)
+#   bin/provecommands [url]      scrapes the live page itself, then proves each box
 #
 # WHY THIS EXISTS AND bin/installcheck IS NOT ENOUGH: installcheck reads
 # site/data.json before a deploy. This reads what the deployed page actually
@@ -24,7 +24,11 @@
 # equivalent: [{card,label,code,attr}] straight from the rendered DOM.
 set -uo pipefail
 WORK=$(mktemp -d); trap 'rm -rf "$WORK"' EXIT
-BOXES=/tmp/claude-1000/boxes.json
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+BOXES="$WORK/boxes.json"
+# Scrape here rather than trust a file left in a scratchpad: that file vanished
+# twice, and the run on nothing printed "passed: 0 failed: 0" and exited 0.
+node "$ROOT/bin/grabboxes.mjs" "${1:-https://omarchy.nixfred.com/}" > "$BOXES" || { echo "  ✗ could not scrape copy boxes"; exit 2; }
 PASS=0; FAIL=0
 declare -A CLONED
 
@@ -112,4 +116,5 @@ done < <(jq -r '.[] | "\(.card)\t\(.label)\t\(.code)"' "$BOXES" | sort -u)
 
 echo
 echo "  passed: $PASS   failed: $FAIL"
+if [ $((PASS+FAIL)) -eq 0 ]; then echo "  ✗ checked ZERO boxes — refusing to call that a pass"; exit 2; fi
 [ $FAIL -eq 0 ] || exit 1
