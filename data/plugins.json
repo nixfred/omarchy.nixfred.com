@@ -12,6 +12,20 @@
   ],
   "plugins": [
     {
+      "id": "nixfred.omaguard", "name": "OmaGuard", "family": "infra", "status": "live",
+      "repo": "nixfred/omaguard", "dir": "omaguard.omarchy", "version": "1.3.0",
+      "tagline": "Knows what your desktop looked like when it was right.",
+      "description": "A shield in the bar that captures your Hyprland and Omarchy config on a timeline, tells you when something drifted from the state you accepted, and shows a precise before and after for putting one value back, as a preview, never an automatic write. Also saves and quick-switches whole bar layouts.",
+      "accent": "#e879a6"
+    },
+    {
+      "id": "nixfred.ram-speedtest", "name": "RAM Speed Test", "family": "pulse", "status": "live",
+      "repo": "nixfred/ram.speed.test", "dir": "ram.speed.test", "version": "2.0.0",
+      "tagline": "Memory read and write, on the speed test dials.",
+      "description": "Sustained multi-core memory copy and triad throughput, drawn on the same gauge cluster as Omarchy's built-in network and disk speed tests, with thread scaling, pressure checks and JSON reports. Summon it from the launcher or with omarchy-shell shell summon nixfred.ram-speedtest.",
+      "accent": "#6b8cff"
+    },
+    {
       "id": "nixfred.pulse", "name": "Pulse", "family": "pulse", "status": "live", "flagship": true,
       "repo": "nixfred/pulse", "dir": "pulse", "version": "1.0.0",
       "tagline": "One icon showing whatever is holding the machine back.",
@@ -19,7 +33,7 @@
       "accent": "#4aa8ff",
       "supersedes": "CPU Pulse, RAM Pulse, Disk Pulse, Net Pulse"
     },
-                    {
+    {
       "id": "pi.audio", "name": "Audio Pulse", "family": "pulse", "status": "live",
       "repo": "nixfred/audio.pulse.omarchy", "dir": "audio.pulse.omarchy", "version": "1.0.0",
       "tagline": "A living audio chip.",
@@ -173,6 +187,7 @@
     }
   ],
   "tools": [
+    { "name": "LightShow", "repo": "nixfred/lightshow", "description": "Keyboard RGB for MSI MysticLight laptops on Linux. A GTK4 app with 20 effects, live theme matching and day and night profiles. No vendor software, no Windows.", "install": "git clone https://github.com/nixfred/lightshow.git && cd lightshow && ./install.sh" },
     { "name": "Omavoice",      "repo": "nixfred/omavoice",      "description": "Voice recorder with live whisper.cpp transcription for Omarchy. GTK4 and PipeWire.", "install": "git clone https://github.com/nixfred/omavoice.git && cd omavoice && makepkg -si" },
     { "name": "Imprint",       "repo": "nixfred/imprint",       "description": "Stamp one Omarchy machine onto another.", "install": "git clone https://github.com/nixfred/imprint.git && cd imprint && ./install.sh" },
     { "name": "Clipsync",      "repo": "nixfred/clipsync",      "description": "One clipboard across Linux, macOS and iPhone. Copy anywhere, paste on Linux, text and photos.", "install": "git clone https://github.com/nixfred/clipsync && cd clipsync && ./install.sh" },

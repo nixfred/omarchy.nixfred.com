@@ -331,7 +331,11 @@ const out = {
   // repo like any other and there was no reason it should show less. Only the
   // install line differs: a tool is not an Omarchy plugin, so it gets the
   // command its own README documents rather than `omarchy plugin install`.
-  tools: src.tools.map((t: any) => {
+  // Tools follow the same newest-created-first rule as plugins (Fred's ordering
+  // rule). They used to keep hand-written order, so a new tool landed last.
+  tools: [...src.tools].sort((a: any, b: any) =>
+    (Date.parse(repoStats.get(b.repo)?.created ?? "1970") || 0) - (Date.parse(repoStats.get(a.repo)?.created ?? "1970") || 0),
+  ).map((t: any) => {
     const slug = t.repo.split("/").pop().replace(/\./g, "-");
     const stats = repoStats.get(t.repo);
     return {
