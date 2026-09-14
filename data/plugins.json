@@ -35,7 +35,7 @@
     },
     {
       "id": "nixfred.trackpad-pulse", "name": "Trackpad Pulse", "family": "pulse", "status": "live",
-      "repo": "nixfred/trackpad.pulse", "dir": "trackpad.pulse", "version": "1.5.0",
+      "repo": "nixfred/trackpad.pulse", "dir": "trackpad.pulse", "version": "1.6.0",
       "tagline": "Your trackpad, in motion.",
       "description": "A live trackpad on the bar that lights where your fingers are, and behind it every number the pad can give: touches, taps, gestures, palms, speed and distance on every clock, a heatmap, a week of history. A finger-speed map drawn under the acceleration curve with an optimizer that fits the curve to your hand and keeps watching. Hyprland gestures for three and four fingers with themes and backgrounds in the mix, and a weekly report that knows which hand you use. Built on David Fano's Trackpad Plus, kept whole.",
       "accent": "#b58cff"
