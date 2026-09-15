@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T15:04:00.408Z",
+  "generated_at": "2026-09-15T11:41:20.857Z",
   "owner": "nixfred",
   "families": [
     {
@@ -50,22 +50,31 @@
       "tagline": "Your trackpad, in motion.",
       "description": "A live trackpad on the bar that lights where your fingers are, and behind it every number the pad can give: touches, taps, gestures, palms, speed and distance on every clock, a heatmap, a week of history. A finger-speed map drawn under the acceleration curve with an optimizer that fits the curve to your hand and keeps watching. Hyprland gestures for three and four fingers with themes and backgrounds in the mix, and a weekly report that knows which hand you use. Built on David Fano's Trackpad Plus, kept whole.",
       "accent": "#b58cff",
-      "stars": 0,
-      "forks": 0,
+      "stars": 5,
+      "forks": 2,
       "watchers": 0,
-      "open_prs": 0,
+      "open_prs": 1,
       "open_issues": 0,
-      "prs": [],
+      "prs": [
+        {
+          "number": 2,
+          "title": "fix: detect the ThinkPad T480's synaptics-tm3471-001 touchpad",
+          "author": "RJPushPlay",
+          "created": "2026-09-15T00:20:12Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/trackpad.pulse/pull/2"
+        }
+      ],
       "issues": [],
-      "pushed": "2026-09-14T15:03:12Z",
+      "pushed": "2026-09-14T15:45:36Z",
       "created": "2026-09-14T03:48:41Z",
       "license": "NOASSERTION",
       "language": "Python",
       "topics": [],
       "default_branch": "main",
       "release": {
-        "tag": "v1.6.0",
-        "published": "2026-09-14T15:03:13Z"
+        "tag": "v1.7.0",
+        "published": "2026-09-14T15:45:44Z"
       },
       "contributors": [
         {
@@ -81,10 +90,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 9
+          "commits": 12
         }
       ],
-      "commits": 39,
+      "commits": 42,
       "repo_url": "https://github.com/nixfred/trackpad.pulse",
       "glyph": "assets/img/glyph/nixfred-trackpad-pulse.svg",
       "shot": "assets/img/shot/nixfred-trackpad-pulse.png",
@@ -107,12 +116,21 @@
       "tagline": "Knows what your desktop looked like when it was right.",
       "description": "A shield in the bar that captures your Hyprland and Omarchy config on a timeline, tells you when something drifted from the state you accepted, and shows a precise before and after for putting one value back, as a preview, never an automatic write. Also saves and quick-switches whole bar layouts.",
       "accent": "#e879a6",
-      "stars": 3,
-      "forks": 0,
+      "stars": 4,
+      "forks": 1,
       "watchers": 0,
-      "open_prs": 0,
+      "open_prs": 1,
       "open_issues": 0,
-      "prs": [],
+      "prs": [
+        {
+          "number": 1,
+          "title": "fix: watch stock overlay and Super clipboard",
+          "author": "HermeticOrmus",
+          "created": "2026-09-14T17:00:25Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/omaguard/pull/1"
+        }
+      ],
       "issues": [],
       "pushed": "2026-09-14T14:45:32Z",
       "created": "2026-09-12T19:05:04Z",
@@ -202,12 +220,28 @@
       "description": "CPU, memory, storage and network merged into a single bar widget with one shared severity model. The icon follows the biggest constraint rather than a fixed metric, and each domain still opens the full dashboard the separate plugin had. Replaces CPU Pulse, RAM Pulse, Disk Pulse and Net Pulse.",
       "accent": "#4aa8ff",
       "supersedes": "CPU Pulse, RAM Pulse, Disk Pulse, Net Pulse",
-      "stars": 4,
-      "forks": 1,
+      "stars": 5,
+      "forks": 2,
       "watchers": 0,
-      "open_prs": 1,
+      "open_prs": 3,
       "open_issues": 0,
       "prs": [
+        {
+          "number": 4,
+          "title": "fix: three ways install.py damaged a plugin directory it had just installed into",
+          "author": "dadofsambonzuki",
+          "created": "2026-09-15T09:14:47Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/pulse/pull/4"
+        },
+        {
+          "number": 3,
+          "title": "fix: the bar chips hung a slab over a transparent bar",
+          "author": "dadofsambonzuki",
+          "created": "2026-09-15T09:09:42Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/pulse/pull/3"
+        },
         {
           "number": 2,
           "title": "perf: don't build four dashboards before the panel opens",
@@ -370,7 +404,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-12T12:49:27Z",
+      "pushed": "2026-09-15T03:54:42Z",
       "created": "2026-09-06T18:19:26Z",
       "license": "MIT",
       "language": "QML",
@@ -381,10 +415,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 3
+          "commits": 5
         }
       ],
-      "commits": 3,
+      "commits": 5,
       "repo_url": "https://github.com/nixfred/audio.pulse.omarchy",
       "glyph": "assets/img/glyph/pi-audio.svg",
       "shot": "assets/img/shot/pi-audio.png",
@@ -780,7 +814,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-13T13:11:43Z",
+      "pushed": "2026-09-15T04:27:23Z",
       "created": "2026-09-04T02:29:07Z",
       "license": "MIT",
       "language": "Shell",
@@ -838,12 +872,28 @@
       "tagline": "iMessage in the Omarchy bar.",
       "description": "iMessage in the Omarchy bar. Reads and sends through a Mac you own over a multiplexed SSH socket. iMessage is macOS-only, so this machine is a thin client and the Mac is the gateway. The bar badge counts every unread; desktop toasts fire only for handles on your allowlist, because chat.db is mostly bank alerts and 2FA codes.",
       "accent": "#0a84ff",
-      "stars": 155,
+      "stars": 156,
       "forks": 28,
       "watchers": 1,
-      "open_prs": 10,
-      "open_issues": 5,
+      "open_prs": 12,
+      "open_issues": 6,
       "prs": [
+        {
+          "number": 87,
+          "title": "fix: keep the app on its workspace after idle",
+          "author": "jefehoser",
+          "created": "2026-09-15T05:41:24Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/blip/pull/87"
+        },
+        {
+          "number": 85,
+          "title": "Duplicate toasts on every extra monitor: the follower's watcher restarts itself ungated",
+          "author": "ianswope",
+          "created": "2026-09-14T20:05:59Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/blip/pull/85"
+        },
         {
           "number": 84,
           "title": "docs: \"tapbacks out is impossible\" is half wrong on macOS 26",
@@ -926,6 +976,13 @@
         }
       ],
       "issues": [
+        {
+          "number": 86,
+          "title": "Sent message shows twice when Linux and Mac are in different time zones (pending-send stamp vs chat.db ts)",
+          "author": "cjoh",
+          "created": "2026-09-15T00:50:57Z",
+          "url": "https://github.com/nixfred/blip/issues/86"
+        },
         {
           "number": 78,
           "title": "Deleting a message: does it need SIP off, and do you want it?",
@@ -1161,7 +1218,7 @@
       "tagline": "Your wallpaper becomes a live information desk.",
       "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven, on a SUPER+D overlay.",
       "accent": "#00e5ff",
-      "stars": 101,
+      "stars": 102,
       "forks": 12,
       "watchers": 1,
       "open_prs": 8,
@@ -1287,11 +1344,15 @@
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "shot": "assets/img/shot/nixfred-infomarchy.png",
-      "listed": false,
-      "listed_at": null,
-      "listing_url": null,
-      "marketplace_category": null,
-      "marketplace_tags": [],
+      "listed": true,
+      "listed_at": "2026-09-15T00:19:13.392Z",
+      "listing_url": "https://plugins.omarchy.org/plugin.html?id=nixfred.infomarchy",
+      "marketplace_category": "Desktop",
+      "marketplace_tags": [
+        "ai",
+        "quickshell",
+        "system"
+      ],
       "install": "omarchy plugin add https://github.com/nixfred/infomarchy.git --enable",
       "clone": "git clone https://github.com/nixfred/infomarchy.git"
     },
@@ -1597,7 +1658,7 @@
       "open_prs": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-13T13:24:13Z",
+      "pushed": "2026-09-15T04:09:28Z",
       "created": "2026-09-12T02:33:34Z",
       "archived": false,
       "license": "MIT",
@@ -1608,10 +1669,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 3
+          "commits": 5
         }
       ],
-      "commits": 3,
+      "commits": 5,
       "repo_url": "https://github.com/nixfred/lightshow",
       "clone": "git clone https://github.com/nixfred/lightshow.git",
       "shot": "assets/img/shot/lightshow.png"
@@ -1843,7 +1904,7 @@
     }
   ],
   "heatmap": {
-    "total": 2145,
+    "total": 2150,
     "weeks": [
       [
         {
@@ -3777,7 +3838,12 @@
         },
         {
           "date": "2026-09-14",
-          "count": 6,
+          "count": 10,
+          "level": 1
+        },
+        {
+          "date": "2026-09-15",
+          "count": 1,
           "level": 1
         }
       ]
@@ -3786,10 +3852,10 @@
   "stats": {
     "plugins": 24,
     "live": 22,
-    "listed": 1,
+    "listed": 2,
     "families": 7,
     "themes": 1,
-    "stars": 310,
+    "stars": 319,
     "tools": 6,
     "with_shots": 18
   }
