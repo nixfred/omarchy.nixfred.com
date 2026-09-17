@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T11:28:20.613Z",
+  "generated_at": "2026-09-17T11:37:55.868Z",
   "owner": "nixfred",
   "families": [
     {
@@ -50,7 +50,7 @@
       "tagline": "Your trackpad, in motion.",
       "description": "A live trackpad on the bar that lights where your fingers are, and behind it every number the pad can give: touches, taps, gestures, palms, speed and distance on every clock, a heatmap, a week of history. A finger-speed map drawn under the acceleration curve with an optimizer that fits the curve to your hand and keeps watching. Hyprland gestures for three and four fingers with themes and backgrounds in the mix, and a weekly report that knows which hand you use. Built on David Fano's Trackpad Plus, kept whole.",
       "accent": "#b58cff",
-      "stars": 6,
+      "stars": 7,
       "forks": 2,
       "watchers": 0,
       "open_prs": 1,
@@ -434,7 +434,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-12T14:00:24Z",
+      "pushed": "2026-09-16T13:34:40Z",
       "created": "2026-09-04T23:19:28Z",
       "license": "NOASSERTION",
       "language": "QML",
@@ -445,10 +445,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 15
+          "commits": 17
         }
       ],
-      "commits": 15,
+      "commits": 17,
       "repo_url": "https://github.com/nixfred/power-pulse",
       "glyph": "assets/img/glyph/pi-power.svg",
       "shot": "assets/img/shot/pi-power.png",
@@ -857,35 +857,35 @@
       "tagline": "iMessage in the Omarchy bar.",
       "description": "iMessage in the Omarchy bar. Reads and sends through a Mac you own over a multiplexed SSH socket. iMessage is macOS-only, so this machine is a thin client and the Mac is the gateway. The bar badge counts every unread; desktop toasts fire only for handles on your allowlist, because chat.db is mostly bank alerts and 2FA codes.",
       "accent": "#0a84ff",
-      "stars": 157,
-      "forks": 29,
+      "stars": 158,
+      "forks": 30,
       "watchers": 1,
       "open_prs": 7,
-      "open_issues": 6,
+      "open_issues": 5,
       "prs": [
         {
-          "number": 94,
-          "title": "Make quote-and-reply discoverable through message context menus",
-          "author": "jefehoser",
-          "created": "2026-09-16T05:28:21Z",
+          "number": 98,
+          "title": "perf: spend catch-up depth on the chat that needs it, not on every poll",
+          "author": "ianswope",
+          "created": "2026-09-16T23:59:42Z",
           "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/94"
+          "url": "https://github.com/nixfred/blip/pull/98"
         },
         {
-          "number": 93,
-          "title": "fix: Super+M can close unrelated windows titled Blip",
-          "author": "jefehoser",
-          "created": "2026-09-16T03:43:44Z",
+          "number": 97,
+          "title": "fix: the chat list never turns a blue DM green",
+          "author": "ianswope",
+          "created": "2026-09-16T23:46:16Z",
           "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/93"
+          "url": "https://github.com/nixfred/blip/pull/97"
         },
         {
-          "number": 92,
-          "title": "Offer security codes beside the focused field",
-          "author": "bbishdotdev",
-          "created": "2026-09-16T01:39:12Z",
+          "number": 96,
+          "title": "prefer_imessage=on keeps mixed 1:1s on iMessage",
+          "author": "bpiland",
+          "created": "2026-09-16T20:48:14Z",
           "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/92"
+          "url": "https://github.com/nixfred/blip/pull/96"
         },
         {
           "number": 91,
@@ -922,13 +922,6 @@
       ],
       "issues": [
         {
-          "number": 89,
-          "title": "Desktop catch-up notifications fire on wake for messages already read on another device (selectToasts ignores m.read)",
-          "author": "mwhuss",
-          "created": "2026-09-15T23:14:42Z",
-          "url": "https://github.com/nixfred/blip/issues/89"
-        },
-        {
           "number": 78,
           "title": "Deleting a message: does it need SIP off, and do you want it?",
           "author": "ianswope",
@@ -964,7 +957,7 @@
           "url": "https://github.com/nixfred/blip/issues/36"
         }
       ],
-      "pushed": "2026-09-15T22:20:01Z",
+      "pushed": "2026-09-16T23:27:17Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -985,7 +978,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 201
+          "commits": 209
         },
         {
           "login": "Fileri",
@@ -1005,7 +998,7 @@
         {
           "login": "ianswope",
           "avatar": "https://avatars.githubusercontent.com/u/175949710?v=4",
-          "commits": 9
+          "commits": 10
         },
         {
           "login": "adamgamble",
@@ -1018,12 +1011,12 @@
           "commits": 7
         },
         {
-          "login": "joshuaswarren",
-          "avatar": "https://avatars.githubusercontent.com/u/816217?v=4",
-          "commits": 2
+          "login": "bbishdotdev",
+          "avatar": "https://avatars.githubusercontent.com/u/5323528?v=4",
+          "commits": 5
         }
       ],
-      "commits": 305,
+      "commits": 317,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "shot": "assets/img/shot/nixfred-blip.png",
@@ -1054,7 +1047,7 @@
       "prs": [
         {
           "number": 2,
-          "title": "Collect Podman containers when Docker is not available",
+          "title": "feat: show Docker and Podman together, plus KVM/libvirt domains",
           "author": "kanthi",
           "created": "2026-09-09T06:16:52Z",
           "draft": false,
@@ -1164,11 +1157,43 @@
       "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven, on a SUPER+D overlay.",
       "accent": "#00e5ff",
       "stars": 104,
-      "forks": 14,
+      "forks": 17,
       "watchers": 1,
-      "open_prs": 9,
+      "open_prs": 13,
       "open_issues": 1,
       "prs": [
+        {
+          "number": 34,
+          "title": "feat: recognise Cursor sessions, from the IDE as well as the terminal",
+          "author": "jttraino",
+          "created": "2026-09-16T20:50:42Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/infomarchy/pull/34"
+        },
+        {
+          "number": 33,
+          "title": "feat: group agents by agent name",
+          "author": "jttraino",
+          "created": "2026-09-16T20:30:50Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/infomarchy/pull/33"
+        },
+        {
+          "number": 32,
+          "title": "Track Kimi Code sessions as a provider",
+          "author": "jaylfc",
+          "created": "2026-09-16T18:11:40Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/infomarchy/pull/32"
+        },
+        {
+          "number": 31,
+          "title": "Desk view keeps clear of reserved background-layer bands (e.g. hymission stage sidebar)",
+          "author": "jaylfc",
+          "created": "2026-09-16T18:00:44Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/infomarchy/pull/31"
+        },
         {
           "number": 30,
           "title": "feat: add Gitea activity alongside GitHub",
@@ -1705,7 +1730,7 @@
       "open_prs": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-07T15:39:15Z",
+      "pushed": "2026-09-16T23:24:06Z",
       "created": "2026-09-06T01:06:33Z",
       "archived": false,
       "license": "MIT",
@@ -1716,10 +1741,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 22
+          "commits": 26
         }
       ],
-      "commits": 22,
+      "commits": 26,
       "repo_url": "https://github.com/nixfred/omavoice",
       "clone": "git clone https://github.com/nixfred/omavoice.git",
       "shot": "assets/img/shot/omavoice.png"
@@ -1801,7 +1826,7 @@
       "open_prs": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-07T17:52:51Z",
+      "pushed": "2026-09-16T23:27:03Z",
       "created": "2026-04-20T02:16:04Z",
       "archived": false,
       "license": "MIT",
@@ -1815,7 +1840,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 22
+          "commits": 23
         },
         {
           "login": "marty0x",
@@ -1828,7 +1853,7 @@
           "commits": 1
         }
       ],
-      "commits": 24,
+      "commits": 25,
       "repo_url": "https://github.com/nixfred/claude-on-mac",
       "clone": "git clone https://github.com/nixfred/claude-on-mac.git",
       "shot": "assets/img/shot/claude-on-mac.png"
@@ -1872,7 +1897,7 @@
     }
   ],
   "heatmap": {
-    "total": 2212,
+    "total": 2227,
     "weeks": [
       [
         {
@@ -3816,6 +3841,11 @@
         },
         {
           "date": "2026-09-16",
+          "count": 15,
+          "level": 1
+        },
+        {
+          "date": "2026-09-17",
           "count": 0,
           "level": 0
         }
@@ -3828,7 +3858,7 @@
     "listed": 2,
     "families": 7,
     "themes": 1,
-    "stars": 326,
+    "stars": 328,
     "tools": 6,
     "with_shots": 18
   }
