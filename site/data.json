@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T11:37:55.868Z",
+  "generated_at": "2026-09-18T11:10:31.481Z",
   "owner": "nixfred",
   "families": [
     {
@@ -50,7 +50,7 @@
       "tagline": "Your trackpad, in motion.",
       "description": "A live trackpad on the bar that lights where your fingers are, and behind it every number the pad can give: touches, taps, gestures, palms, speed and distance on every clock, a heatmap, a week of history. A finger-speed map drawn under the acceleration curve with an optimizer that fits the curve to your hand and keeps watching. Hyprland gestures for three and four fingers with themes and backgrounds in the mix, and a weekly report that knows which hand you use. Built on David Fano's Trackpad Plus, kept whole.",
       "accent": "#b58cff",
-      "stars": 7,
+      "stars": 8,
       "forks": 2,
       "watchers": 0,
       "open_prs": 1,
@@ -119,20 +119,11 @@
       "stars": 4,
       "forks": 1,
       "watchers": 0,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 0,
-      "prs": [
-        {
-          "number": 1,
-          "title": "fix: watch stock overlay and Super clipboard",
-          "author": "HermeticOrmus",
-          "created": "2026-09-14T17:00:25Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/omaguard/pull/1"
-        }
-      ],
+      "prs": [],
       "issues": [],
-      "pushed": "2026-09-14T14:45:32Z",
+      "pushed": "2026-09-18T04:25:27Z",
       "created": "2026-09-12T19:05:04Z",
       "license": "MIT",
       "language": "Python",
@@ -144,9 +135,14 @@
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
           "commits": 8
+        },
+        {
+          "login": "HermeticOrmus",
+          "avatar": "https://avatars.githubusercontent.com/u/159970746?v=4",
+          "commits": 1
         }
       ],
-      "commits": 8,
+      "commits": 9,
       "repo_url": "https://github.com/nixfred/omaguard",
       "glyph": "assets/img/glyph/nixfred-omaguard.svg",
       "shot": "assets/img/shot/nixfred-omaguard.png",
@@ -282,23 +278,14 @@
       "tagline": "Open pull requests, and the workspace to deal with them.",
       "description": "GitHub pull requests and issues for Herdr and your saved projects, in the bar. Opens the right workspace or terminal and hands the work to an agent that is already running.",
       "accent": "#a78bfa",
-      "stars": 0,
-      "forks": 1,
+      "stars": 1,
+      "forks": 2,
       "watchers": 0,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 0,
-      "prs": [
-        {
-          "number": 1,
-          "title": "Let the panel's text fields take keyboard input",
-          "author": "shieldsworks",
-          "created": "2026-09-11T05:45:20Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/pr.hunter/pull/1"
-        }
-      ],
+      "prs": [],
       "issues": [],
-      "pushed": "2026-09-11T15:41:52Z",
+      "pushed": "2026-09-18T04:21:10Z",
       "created": "2026-09-10T02:16:48Z",
       "license": null,
       "language": "Python",
@@ -309,10 +296,15 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 7
+          "commits": 9
+        },
+        {
+          "login": "shieldsworks",
+          "avatar": "https://avatars.githubusercontent.com/u/92273925?v=4",
+          "commits": 1
         }
       ],
-      "commits": 7,
+      "commits": 10,
       "repo_url": "https://github.com/nixfred/pr.hunter",
       "glyph": "assets/img/glyph/nixfred-pr-hunter.svg",
       "shot": "assets/img/shot/nixfred-pr-hunter.png",
@@ -622,7 +614,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-13T14:15:10Z",
+      "pushed": "2026-09-18T05:28:57Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -633,10 +625,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 36
+          "commits": 38
         }
       ],
-      "commits": 36,
+      "commits": 38,
       "repo_url": "https://github.com/nixfred/burnbar",
       "glyph": "assets/img/glyph/nixfred-burnbar.svg",
       "shot": "assets/img/shot/nixfred-burnbar.png",
@@ -858,35 +850,11 @@
       "description": "iMessage in the Omarchy bar. Reads and sends through a Mac you own over a multiplexed SSH socket. iMessage is macOS-only, so this machine is a thin client and the Mac is the gateway. The bar badge counts every unread; desktop toasts fire only for handles on your allowlist, because chat.db is mostly bank alerts and 2FA codes.",
       "accent": "#0a84ff",
       "stars": 158,
-      "forks": 30,
+      "forks": 31,
       "watchers": 1,
-      "open_prs": 7,
+      "open_prs": 4,
       "open_issues": 5,
       "prs": [
-        {
-          "number": 98,
-          "title": "perf: spend catch-up depth on the chat that needs it, not on every poll",
-          "author": "ianswope",
-          "created": "2026-09-16T23:59:42Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/98"
-        },
-        {
-          "number": 97,
-          "title": "fix: the chat list never turns a blue DM green",
-          "author": "ianswope",
-          "created": "2026-09-16T23:46:16Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/97"
-        },
-        {
-          "number": 96,
-          "title": "prefer_imessage=on keeps mixed 1:1s on iMessage",
-          "author": "bpiland",
-          "created": "2026-09-16T20:48:14Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/96"
-        },
         {
           "number": 91,
           "title": "feat: save new contacts through the Mac bridge",
@@ -957,7 +925,7 @@
           "url": "https://github.com/nixfred/blip/issues/36"
         }
       ],
-      "pushed": "2026-09-16T23:27:17Z",
+      "pushed": "2026-09-18T04:50:00Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -978,7 +946,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 209
+          "commits": 218
         },
         {
           "login": "Fileri",
@@ -991,14 +959,14 @@
           "commits": 31
         },
         {
+          "login": "ianswope",
+          "avatar": "https://avatars.githubusercontent.com/u/175949710?v=4",
+          "commits": 13
+        },
+        {
           "login": "johanthoren",
           "avatar": "https://avatars.githubusercontent.com/u/7789670?v=4",
           "commits": 12
-        },
-        {
-          "login": "ianswope",
-          "avatar": "https://avatars.githubusercontent.com/u/175949710?v=4",
-          "commits": 10
         },
         {
           "login": "adamgamble",
@@ -1016,7 +984,7 @@
           "commits": 5
         }
       ],
-      "commits": 317,
+      "commits": 329,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "shot": "assets/img/shot/nixfred-blip.png",
@@ -1042,20 +1010,11 @@
       "stars": 22,
       "forks": 2,
       "watchers": 0,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 0,
-      "prs": [
-        {
-          "number": 2,
-          "title": "feat: show Docker and Podman together, plus KVM/libvirt domains",
-          "author": "kanthi",
-          "created": "2026-09-09T06:16:52Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/omarchy-server-status/pull/2"
-        }
-      ],
+      "prs": [],
       "issues": [],
-      "pushed": "2026-09-14T04:16:14Z",
+      "pushed": "2026-09-18T04:26:21Z",
       "created": "2026-08-23T03:09:01Z",
       "license": "MIT",
       "language": "QML",
@@ -1074,17 +1033,17 @@
           "commits": 3
         },
         {
-          "login": "ryuhzk",
-          "avatar": "https://avatars.githubusercontent.com/u/213640356?v=4",
+          "login": "kanthi",
+          "avatar": "https://avatars.githubusercontent.com/u/1001550?v=4",
           "commits": 3
         },
         {
-          "login": "kanthi",
-          "avatar": "https://avatars.githubusercontent.com/u/1001550?v=4",
-          "commits": 2
+          "login": "ryuhzk",
+          "avatar": "https://avatars.githubusercontent.com/u/213640356?v=4",
+          "commits": 3
         }
       ],
-      "commits": 27,
+      "commits": 28,
       "repo_url": "https://github.com/nixfred/omarchy-server-status",
       "glyph": "assets/img/glyph/io-github-nixfred-tailscale-host-monitor.svg",
       "shot": "assets/img/shot/io-github-nixfred-tailscale-host-monitor.png",
@@ -1156,60 +1115,12 @@
       "tagline": "Your wallpaper becomes a live information desk.",
       "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven, on a SUPER+D overlay.",
       "accent": "#00e5ff",
-      "stars": 104,
+      "stars": 106,
       "forks": 17,
       "watchers": 1,
-      "open_prs": 13,
+      "open_prs": 5,
       "open_issues": 1,
       "prs": [
-        {
-          "number": 34,
-          "title": "feat: recognise Cursor sessions, from the IDE as well as the terminal",
-          "author": "jttraino",
-          "created": "2026-09-16T20:50:42Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/34"
-        },
-        {
-          "number": 33,
-          "title": "feat: group agents by agent name",
-          "author": "jttraino",
-          "created": "2026-09-16T20:30:50Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/33"
-        },
-        {
-          "number": 32,
-          "title": "Track Kimi Code sessions as a provider",
-          "author": "jaylfc",
-          "created": "2026-09-16T18:11:40Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/32"
-        },
-        {
-          "number": 31,
-          "title": "Desk view keeps clear of reserved background-layer bands (e.g. hymission stage sidebar)",
-          "author": "jaylfc",
-          "created": "2026-09-16T18:00:44Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/31"
-        },
-        {
-          "number": 30,
-          "title": "feat: add Gitea activity alongside GitHub",
-          "author": "Tech0001",
-          "created": "2026-09-15T23:14:03Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/30"
-        },
-        {
-          "number": 27,
-          "title": "fix: remove accidentally committed node_modules symlink",
-          "author": "alinuxfan",
-          "created": "2026-09-11T22:12:25Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/27"
-        },
         {
           "number": 25,
           "title": "Add Web Mode with LAN, Tailscale and Manual HTTPS",
@@ -1249,22 +1160,6 @@
           "created": "2026-09-09T00:18:14Z",
           "draft": false,
           "url": "https://github.com/nixfred/infomarchy/pull/13"
-        },
-        {
-          "number": 12,
-          "title": "fix: let an operator switch off automatic topic refinement",
-          "author": "wulfkaal",
-          "created": "2026-09-08T22:01:32Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/12"
-        },
-        {
-          "number": 11,
-          "title": "fix: recognize Hermes launched via python -m hermes_cli.main",
-          "author": "reverb256",
-          "created": "2026-09-08T07:59:11Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/11"
         }
       ],
       "issues": [
@@ -1276,7 +1171,7 @@
           "url": "https://github.com/nixfred/infomarchy/issues/26"
         }
       ],
-      "pushed": "2026-09-15T22:37:37Z",
+      "pushed": "2026-09-18T04:32:47Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -1300,7 +1195,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 100
+          "commits": 103
         },
         {
           "login": "TechLuddite",
@@ -1308,32 +1203,37 @@
           "commits": 6
         },
         {
+          "login": "jttraino",
+          "avatar": "https://avatars.githubusercontent.com/u/92961429?v=4",
+          "commits": 4
+        },
+        {
           "login": "alinuxfan",
           "avatar": "https://avatars.githubusercontent.com/u/2125148?v=4",
-          "commits": 2
+          "commits": 3
         },
         {
           "login": "Tech0001",
           "avatar": "https://avatars.githubusercontent.com/u/52805157?v=4",
+          "commits": 3
+        },
+        {
+          "login": "reverb256",
+          "avatar": "https://avatars.githubusercontent.com/u/129622142?v=4",
+          "commits": 2
+        },
+        {
+          "login": "jaylfc",
+          "avatar": "https://avatars.githubusercontent.com/u/30096482?v=4",
           "commits": 2
         },
         {
           "login": "auggernaut",
           "avatar": "https://avatars.githubusercontent.com/u/1430391?v=4",
           "commits": 1
-        },
-        {
-          "login": "reverb256",
-          "avatar": "https://avatars.githubusercontent.com/u/129622142?v=4",
-          "commits": 1
-        },
-        {
-          "login": "sooners0",
-          "avatar": "https://avatars.githubusercontent.com/u/5647533?v=4",
-          "commits": 1
         }
       ],
-      "commits": 113,
+      "commits": 124,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "shot": "assets/img/shot/nixfred-infomarchy.png",
@@ -1676,7 +1576,7 @@
       "description": "Stamp one Omarchy machine onto another.",
       "install": "git clone https://github.com/nixfred/imprint.git && cd imprint && ./install.sh",
       "slug": "imprint",
-      "stars": 42,
+      "stars": 43,
       "forks": 4,
       "watchers": 1,
       "open_issues": 2,
@@ -1897,7 +1797,7 @@
     }
   ],
   "heatmap": {
-    "total": 2227,
+    "total": 2266,
     "weeks": [
       [
         {
@@ -3604,7 +3504,7 @@
       [
         {
           "date": "2026-08-02",
-          "count": 16,
+          "count": 15,
           "level": 1
         },
         {
@@ -3846,8 +3746,13 @@
         },
         {
           "date": "2026-09-17",
-          "count": 0,
-          "level": 0
+          "count": 15,
+          "level": 1
+        },
+        {
+          "date": "2026-09-18",
+          "count": 25,
+          "level": 2
         }
       ]
     ]
@@ -3858,7 +3763,7 @@
     "listed": 2,
     "families": 7,
     "themes": 1,
-    "stars": 328,
+    "stars": 332,
     "tools": 6,
     "with_shots": 18
   }
