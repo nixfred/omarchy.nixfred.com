@@ -143,6 +143,14 @@
       "accent": "#ef476f"
     },
     {
+      "id": "nixfred.lanarchy", "name": "LANarchy", "family": "infra", "status": "live",
+      "fork_of": "DonnieFi/OmarPlugs",
+      "repo": "nixfred/LANarchy", "dir": "OmarPlugs", "version": "1.1.0",
+      "tagline": "Your homelab, drawn as it actually is.",
+      "description": "Homelab topology map and health in the Omarchy bar: every machine and service, UniFi detail, and measured traffic on the links that carry it. Map, list and flow views, with hosts you curate sitting alongside the ones discovery finds. Hard-forked from Donnie Fiander's Lanarchy, which is credited throughout.",
+      "accent": "#a3e635"
+    },
+    {
       "id": "nixfred.beatdeck", "name": "Beatdeck", "family": "media", "status": "live",
       "repo": "nixfred/beatdeck.omarchy", "dir": "beatdeck.omarchy", "version": "1.6.0",
       "tagline": "A live spectrum that opens a media cockpit.",
