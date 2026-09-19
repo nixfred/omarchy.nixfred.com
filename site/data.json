@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T14:42:34.558Z",
+  "generated_at": "2026-09-19T10:55:06.826Z",
   "owner": "nixfred",
   "families": [
     {
@@ -110,15 +110,15 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-16T02:00:16Z",
+      "pushed": "2026-09-18T20:24:32Z",
       "created": "2026-09-14T03:48:41Z",
       "license": "NOASSERTION",
       "language": "Python",
       "topics": [],
       "default_branch": "main",
       "release": {
-        "tag": "v1.9.0",
-        "published": "2026-09-16T02:00:16Z"
+        "tag": "v1.9.1",
+        "published": "2026-09-18T20:24:37Z"
       },
       "contributors": [
         {
@@ -129,7 +129,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 16
+          "commits": 17
         },
         {
           "login": "davefano",
@@ -137,7 +137,7 @@
           "commits": 12
         }
       ],
-      "commits": 46,
+      "commits": 47,
       "repo_url": "https://github.com/nixfred/trackpad.pulse",
       "glyph": "assets/img/glyph/nixfred-trackpad-pulse.svg",
       "shot": "assets/img/shot/nixfred-trackpad-pulse.png",
@@ -261,11 +261,20 @@
       "accent": "#4aa8ff",
       "supersedes": "CPU Pulse, RAM Pulse, Disk Pulse, Net Pulse",
       "stars": 7,
-      "forks": 2,
+      "forks": 3,
       "watchers": 0,
-      "open_prs": 0,
+      "open_prs": 1,
       "open_issues": 0,
-      "prs": [],
+      "prs": [
+        {
+          "number": 5,
+          "title": "Bar modules with checkboxes: auto shows every checked module",
+          "author": "GreyforgeLabs",
+          "created": "2026-09-18T21:02:08Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/pulse/pull/5"
+        }
+      ],
       "issues": [],
       "pushed": "2026-09-16T01:54:52Z",
       "created": "2026-09-11T16:49:33Z",
@@ -658,7 +667,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-18T05:28:57Z",
+      "pushed": "2026-09-19T03:10:38Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -669,10 +678,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 38
+          "commits": 43
         }
       ],
-      "commits": 38,
+      "commits": 43,
       "repo_url": "https://github.com/nixfred/burnbar",
       "glyph": "assets/img/glyph/nixfred-burnbar.svg",
       "shot": "assets/img/shot/nixfred-burnbar.png",
@@ -897,8 +906,16 @@
       "forks": 31,
       "watchers": 1,
       "open_prs": 4,
-      "open_issues": 3,
+      "open_issues": 2,
       "prs": [
+        {
+          "number": 108,
+          "title": "fix: a read push counts the whole conversation, not one chat row",
+          "author": "ianswope",
+          "created": "2026-09-18T20:51:11Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/blip/pull/108"
+        },
         {
           "number": 103,
           "title": "fix: make read sync durable and add verified conversation actions",
@@ -906,14 +923,6 @@
           "created": "2026-09-18T12:57:20Z",
           "draft": false,
           "url": "https://github.com/nixfred/blip/pull/103"
-        },
-        {
-          "number": 91,
-          "title": "feat: save new contacts through the Mac bridge",
-          "author": "Kb2uka",
-          "created": "2026-09-16T00:39:09Z",
-          "draft": true,
-          "url": "https://github.com/nixfred/blip/pull/91"
         },
         {
           "number": 83,
@@ -941,13 +950,6 @@
           "url": "https://github.com/nixfred/blip/issues/78"
         },
         {
-          "number": 70,
-          "title": "Would you take a source-routing seam, so a second messenger can plug in?",
-          "author": "dreinecke",
-          "created": "2026-09-12T17:21:12Z",
-          "url": "https://github.com/nixfred/blip/issues/70"
-        },
-        {
           "number": 69,
           "title": "Outbound tapbacks do not need SIP off — the Accessibility line `imsg-read` already crossed reaches them. In scope?",
           "author": "Fileri",
@@ -955,7 +957,7 @@
           "url": "https://github.com/nixfred/blip/issues/69"
         }
       ],
-      "pushed": "2026-09-18T14:32:46Z",
+      "pushed": "2026-09-19T02:35:45Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -976,7 +978,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 219
+          "commits": 230
         },
         {
           "login": "Fileri",
@@ -986,12 +988,12 @@
         {
           "login": "jondkinney",
           "avatar": "https://avatars.githubusercontent.com/u/4521?v=4",
-          "commits": 31
+          "commits": 32
         },
         {
           "login": "ianswope",
           "avatar": "https://avatars.githubusercontent.com/u/175949710?v=4",
-          "commits": 13
+          "commits": 15
         },
         {
           "login": "johanthoren",
@@ -1014,7 +1016,7 @@
           "commits": 5
         }
       ],
-      "commits": 330,
+      "commits": 344,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "shot": "assets/img/shot/nixfred-blip.png",
@@ -1037,7 +1039,7 @@
       "tagline": "Your whole tailnet, from the bar.",
       "description": "Select nodes from your Tailscale network, track every device type, and collect deep Linux metrics over read-only SSH.",
       "accent": "#41b883",
-      "stars": 22,
+      "stars": 23,
       "forks": 2,
       "watchers": 0,
       "open_prs": 0,
@@ -1145,10 +1147,10 @@
       "tagline": "Your wallpaper becomes a live information desk.",
       "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven, on a SUPER+D overlay.",
       "accent": "#00e5ff",
-      "stars": 106,
-      "forks": 18,
+      "stars": 108,
+      "forks": 19,
       "watchers": 1,
-      "open_prs": 4,
+      "open_prs": 3,
       "open_issues": 1,
       "prs": [
         {
@@ -1158,14 +1160,6 @@
           "created": "2026-09-10T21:51:38Z",
           "draft": false,
           "url": "https://github.com/nixfred/infomarchy/pull/25"
-        },
-        {
-          "number": 19,
-          "title": "feat: add an optional containers card with start and stop controls",
-          "author": "TechLuddite",
-          "created": "2026-09-09T20:53:24Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/19"
         },
         {
           "number": 16,
@@ -1193,7 +1187,7 @@
           "url": "https://github.com/nixfred/infomarchy/issues/26"
         }
       ],
-      "pushed": "2026-09-18T14:30:55Z",
+      "pushed": "2026-09-19T02:46:17Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -1217,12 +1211,17 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 104
+          "commits": 112
+        },
+        {
+          "login": "eternal4430",
+          "avatar": "https://avatars.githubusercontent.com/u/211269045?v=4",
+          "commits": 8
         },
         {
           "login": "TechLuddite",
           "avatar": "https://avatars.githubusercontent.com/u/287875418?v=4",
-          "commits": 6
+          "commits": 7
         },
         {
           "login": "jttraino",
@@ -1235,6 +1234,11 @@
           "commits": 3
         },
         {
+          "login": "auggernaut",
+          "avatar": "https://avatars.githubusercontent.com/u/1430391?v=4",
+          "commits": 3
+        },
+        {
           "login": "Tech0001",
           "avatar": "https://avatars.githubusercontent.com/u/52805157?v=4",
           "commits": 3
@@ -1243,19 +1247,9 @@
           "login": "reverb256",
           "avatar": "https://avatars.githubusercontent.com/u/129622142?v=4",
           "commits": 2
-        },
-        {
-          "login": "jaylfc",
-          "avatar": "https://avatars.githubusercontent.com/u/30096482?v=4",
-          "commits": 2
-        },
-        {
-          "login": "auggernaut",
-          "avatar": "https://avatars.githubusercontent.com/u/1430391?v=4",
-          "commits": 1
         }
       ],
-      "commits": 125,
+      "commits": 142,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "shot": "assets/img/shot/nixfred-infomarchy.png",
@@ -1289,7 +1283,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-12T19:54:14Z",
+      "pushed": "2026-09-19T02:11:34Z",
       "created": "2026-08-22T04:33:59Z",
       "license": "MIT",
       "language": "QML",
@@ -1300,10 +1294,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 20
+          "commits": 21
         }
       ],
-      "commits": 20,
+      "commits": 21,
       "repo_url": "https://github.com/nixfred/workspace-names",
       "glyph": "assets/img/glyph/nixfred-workspace-names.svg",
       "shot": null,
@@ -1601,17 +1595,10 @@
       "stars": 43,
       "forks": 4,
       "watchers": 1,
-      "open_issues": 2,
+      "open_issues": 1,
       "open_prs": 0,
       "prs": [],
       "issues": [
-        {
-          "number": 7,
-          "title": "shell.json never restores: `config-edit` is not an omarchy IPC target",
-          "author": "markallisongit",
-          "created": "2026-09-08T06:10:44Z",
-          "url": "https://github.com/nixfred/imprint/issues/7"
-        },
         {
           "number": 1,
           "title": "How to identify dependencies when backing up",
@@ -1819,7 +1806,7 @@
     }
   ],
   "heatmap": {
-    "total": 2270,
+    "total": 2299,
     "weeks": [
       [
         {
@@ -3773,8 +3760,13 @@
         },
         {
           "date": "2026-09-18",
-          "count": 29,
-          "level": 2
+          "count": 55,
+          "level": 3
+        },
+        {
+          "date": "2026-09-19",
+          "count": 3,
+          "level": 1
         }
       ]
     ]
@@ -3785,7 +3777,7 @@
     "listed": 2,
     "families": 7,
     "themes": 1,
-    "stars": 331,
+    "stars": 334,
     "tools": 6,
     "with_shots": 19
   }
