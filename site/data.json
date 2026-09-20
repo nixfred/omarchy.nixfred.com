@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T10:55:06.826Z",
+  "generated_at": "2026-09-20T11:19:29.216Z",
   "owner": "nixfred",
   "families": [
     {
@@ -103,7 +103,7 @@
       "tagline": "Your trackpad, in motion.",
       "description": "A live trackpad on the bar that lights where your fingers are, and behind it every number the pad can give: touches, taps, gestures, palms, speed and distance on every clock, a heatmap, a week of history. A finger-speed map drawn under the acceleration curve with an optimizer that fits the curve to your hand and keeps watching. Hyprland gestures for three and four fingers with themes and backgrounds in the mix, and a weekly report that knows which hand you use. Built on David Fano's Trackpad Plus, kept whole.",
       "accent": "#b58cff",
-      "stars": 8,
+      "stars": 9,
       "forks": 2,
       "watchers": 0,
       "open_prs": 0,
@@ -260,23 +260,14 @@
       "description": "CPU, memory, storage and network merged into a single bar widget with one shared severity model. The icon follows the biggest constraint rather than a fixed metric, and each domain still opens the full dashboard the separate plugin had. Replaces CPU Pulse, RAM Pulse, Disk Pulse and Net Pulse.",
       "accent": "#4aa8ff",
       "supersedes": "CPU Pulse, RAM Pulse, Disk Pulse, Net Pulse",
-      "stars": 7,
-      "forks": 3,
+      "stars": 10,
+      "forks": 2,
       "watchers": 0,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 0,
-      "prs": [
-        {
-          "number": 5,
-          "title": "Bar modules with checkboxes: auto shows every checked module",
-          "author": "GreyforgeLabs",
-          "created": "2026-09-18T21:02:08Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/pulse/pull/5"
-        }
-      ],
+      "prs": [],
       "issues": [],
-      "pushed": "2026-09-16T01:54:52Z",
+      "pushed": "2026-09-19T19:24:23Z",
       "created": "2026-09-11T16:49:33Z",
       "license": "MIT",
       "language": "QML",
@@ -295,7 +286,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 20
+          "commits": 23
         },
         {
           "login": "dadofsambonzuki",
@@ -308,7 +299,7 @@
           "commits": 1
         }
       ],
-      "commits": 25,
+      "commits": 28,
       "repo_url": "https://github.com/nixfred/pulse",
       "glyph": "assets/img/glyph/nixfred-pulse.svg",
       "shot": "assets/img/shot/nixfred-pulse.png",
@@ -902,20 +893,12 @@
       "tagline": "iMessage in the Omarchy bar.",
       "description": "iMessage in the Omarchy bar. Reads and sends through a Mac you own over a multiplexed SSH socket. iMessage is macOS-only, so this machine is a thin client and the Mac is the gateway. The bar badge counts every unread; desktop toasts fire only for handles on your allowlist, because chat.db is mostly bank alerts and 2FA codes.",
       "accent": "#0a84ff",
-      "stars": 157,
-      "forks": 31,
+      "stars": 159,
+      "forks": 32,
       "watchers": 1,
-      "open_prs": 4,
+      "open_prs": 3,
       "open_issues": 2,
       "prs": [
-        {
-          "number": 108,
-          "title": "fix: a read push counts the whole conversation, not one chat row",
-          "author": "ianswope",
-          "created": "2026-09-18T20:51:11Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/108"
-        },
         {
           "number": 103,
           "title": "fix: make read sync durable and add verified conversation actions",
@@ -957,7 +940,7 @@
           "url": "https://github.com/nixfred/blip/issues/69"
         }
       ],
-      "pushed": "2026-09-19T02:35:45Z",
+      "pushed": "2026-09-20T10:40:12Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -978,7 +961,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 230
+          "commits": 235
         },
         {
           "login": "Fileri",
@@ -1016,7 +999,7 @@
           "commits": 5
         }
       ],
-      "commits": 344,
+      "commits": 349,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "shot": "assets/img/shot/nixfred-blip.png",
@@ -1147,12 +1130,20 @@
       "tagline": "Your wallpaper becomes a live information desk.",
       "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven, on a SUPER+D overlay.",
       "accent": "#00e5ff",
-      "stars": 108,
-      "forks": 19,
+      "stars": 114,
+      "forks": 20,
       "watchers": 1,
-      "open_prs": 3,
+      "open_prs": 4,
       "open_issues": 1,
       "prs": [
+        {
+          "number": 37,
+          "title": "FLEET sessions: which remote agent needs you, and one click to get there",
+          "author": "RidgetopAi",
+          "created": "2026-09-20T02:13:44Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/infomarchy/pull/37"
+        },
         {
           "number": 25,
           "title": "Add Web Mode with LAN, Tailscale and Manual HTTPS",
@@ -1187,7 +1178,7 @@
           "url": "https://github.com/nixfred/infomarchy/issues/26"
         }
       ],
-      "pushed": "2026-09-19T02:46:17Z",
+      "pushed": "2026-09-19T19:31:14Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -1211,7 +1202,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 112
+          "commits": 113
         },
         {
           "login": "eternal4430",
@@ -1249,7 +1240,7 @@
           "commits": 2
         }
       ],
-      "commits": 142,
+      "commits": 143,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "shot": "assets/img/shot/nixfred-infomarchy.png",
@@ -1806,45 +1797,8 @@
     }
   ],
   "heatmap": {
-    "total": 2299,
+    "total": 2340,
     "weeks": [
-      [
-        {
-          "date": "2025-09-14",
-          "count": 3,
-          "level": 1
-        },
-        {
-          "date": "2025-09-15",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-09-16",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-09-17",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-09-18",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-09-19",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-09-20",
-          "count": 0,
-          "level": 0
-        }
-      ],
       [
         {
           "date": "2025-09-21",
@@ -3765,7 +3719,14 @@
         },
         {
           "date": "2026-09-19",
-          "count": 3,
+          "count": 40,
+          "level": 2
+        }
+      ],
+      [
+        {
+          "date": "2026-09-20",
+          "count": 4,
           "level": 1
         }
       ]
@@ -3777,7 +3738,7 @@
     "listed": 2,
     "families": 7,
     "themes": 1,
-    "stars": 334,
+    "stars": 346,
     "tools": 6,
     "with_shots": 19
   }
