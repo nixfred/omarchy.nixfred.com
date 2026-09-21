@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T11:19:29.216Z",
+  "generated_at": "2026-09-21T12:43:56.105Z",
   "owner": "nixfred",
   "families": [
     {
@@ -260,7 +260,7 @@
       "description": "CPU, memory, storage and network merged into a single bar widget with one shared severity model. The icon follows the biggest constraint rather than a fixed metric, and each domain still opens the full dashboard the separate plugin had. Replaces CPU Pulse, RAM Pulse, Disk Pulse and Net Pulse.",
       "accent": "#4aa8ff",
       "supersedes": "CPU Pulse, RAM Pulse, Disk Pulse, Net Pulse",
-      "stars": 10,
+      "stars": 11,
       "forks": 2,
       "watchers": 0,
       "open_prs": 0,
@@ -329,7 +329,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-18T04:21:10Z",
+      "pushed": "2026-09-20T13:46:40Z",
       "created": "2026-09-10T02:16:48Z",
       "license": null,
       "language": "Python",
@@ -340,7 +340,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 9
+          "commits": 10
         },
         {
           "login": "shieldsworks",
@@ -348,7 +348,7 @@
           "commits": 1
         }
       ],
-      "commits": 10,
+      "commits": 11,
       "repo_url": "https://github.com/nixfred/pr.hunter",
       "glyph": "assets/img/glyph/nixfred-pr-hunter.svg",
       "shot": "assets/img/shot/nixfred-pr-hunter.png",
@@ -425,7 +425,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-15T03:54:42Z",
+      "pushed": "2026-09-20T21:46:19Z",
       "created": "2026-09-06T18:19:26Z",
       "license": "MIT",
       "language": "QML",
@@ -436,10 +436,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 5
+          "commits": 6
         }
       ],
-      "commits": 5,
+      "commits": 6,
       "repo_url": "https://github.com/nixfred/audio.pulse.omarchy",
       "glyph": "assets/img/glyph/pi-audio.svg",
       "shot": "assets/img/shot/pi-audio.png",
@@ -651,14 +651,23 @@
       "tagline": "A thermal heat map of what the AIs are costing you.",
       "description": "Live thermal heat map of the AIs this machine actually uses, Claude, Codex, Grok, and local Ollama when a GPU is present, with weekly quota gauges and the share of tokens kept off frontier models.",
       "accent": "#ff4d4d",
-      "stars": 1,
+      "stars": 5,
       "forks": 0,
       "watchers": 0,
-      "open_prs": 0,
+      "open_prs": 1,
       "open_issues": 0,
-      "prs": [],
+      "prs": [
+        {
+          "number": 1,
+          "title": "docs: 2.0 announcement post for X",
+          "author": "nixfred",
+          "created": "2026-09-20T18:54:17Z",
+          "draft": true,
+          "url": "https://github.com/nixfred/burnbar/pull/1"
+        }
+      ],
       "issues": [],
-      "pushed": "2026-09-19T03:10:38Z",
+      "pushed": "2026-09-20T19:57:14Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -669,10 +678,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 43
+          "commits": 54
         }
       ],
-      "commits": 43,
+      "commits": 54,
       "repo_url": "https://github.com/nixfred/burnbar",
       "glyph": "assets/img/glyph/nixfred-burnbar.svg",
       "shot": "assets/img/shot/nixfred-burnbar.png",
@@ -893,12 +902,20 @@
       "tagline": "iMessage in the Omarchy bar.",
       "description": "iMessage in the Omarchy bar. Reads and sends through a Mac you own over a multiplexed SSH socket. iMessage is macOS-only, so this machine is a thin client and the Mac is the gateway. The bar badge counts every unread; desktop toasts fire only for handles on your allowlist, because chat.db is mostly bank alerts and 2FA codes.",
       "accent": "#0a84ff",
-      "stars": 159,
+      "stars": 161,
       "forks": 32,
       "watchers": 1,
-      "open_prs": 3,
-      "open_issues": 2,
+      "open_prs": 4,
+      "open_issues": 3,
       "prs": [
+        {
+          "number": 111,
+          "title": "docs: CLAUDE.md deploy recipe and shim list match the code",
+          "author": "ianswope",
+          "created": "2026-09-20T17:22:21Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/blip/pull/111"
+        },
         {
           "number": 103,
           "title": "fix: make read sync durable and add verified conversation actions",
@@ -925,6 +942,13 @@
         }
       ],
       "issues": [
+        {
+          "number": 112,
+          "title": "Chrome never exposes autocomplete over AT-SPI, so the one-time-code path is dead there",
+          "author": "ianswope",
+          "created": "2026-09-20T17:33:28Z",
+          "url": "https://github.com/nixfred/blip/issues/112"
+        },
         {
           "number": 78,
           "title": "Deleting a message: does it need SIP off, and do you want it?",
@@ -1131,11 +1155,27 @@
       "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven, on a SUPER+D overlay.",
       "accent": "#00e5ff",
       "stars": 114,
-      "forks": 20,
+      "forks": 21,
       "watchers": 1,
-      "open_prs": 4,
+      "open_prs": 6,
       "open_issues": 1,
       "prs": [
+        {
+          "number": 39,
+          "title": "perf: event-driven refresh on top of the poll — watches built from HOME",
+          "author": "reverb256",
+          "created": "2026-09-20T21:40:00Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/infomarchy/pull/39"
+        },
+        {
+          "number": 38,
+          "title": "Pin the desk to one workspace, keeping the wallpaper on all of them",
+          "author": "shieldsworks",
+          "created": "2026-09-20T17:01:40Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/infomarchy/pull/38"
+        },
         {
           "number": 37,
           "title": "FLEET sessions: which remote agent needs you, and one click to get there",
@@ -1318,7 +1358,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-10T19:49:29Z",
+      "pushed": "2026-09-20T14:18:58Z",
       "created": "2026-08-22T02:11:38Z",
       "license": "MIT",
       "language": "Shell",
@@ -1332,10 +1372,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 45
+          "commits": 47
         }
       ],
-      "commits": 45,
+      "commits": 47,
       "repo_url": "https://github.com/nixfred/plonk",
       "glyph": "assets/img/glyph/io-github-nixfred-plonk.svg",
       "shot": null,
@@ -1797,7 +1837,7 @@
     }
   ],
   "heatmap": {
-    "total": 2340,
+    "total": 2363,
     "weeks": [
       [
         {
@@ -3719,15 +3759,20 @@
         },
         {
           "date": "2026-09-19",
-          "count": 40,
+          "count": 42,
           "level": 2
         }
       ],
       [
         {
           "date": "2026-09-20",
-          "count": 4,
-          "level": 1
+          "count": 28,
+          "level": 2
+        },
+        {
+          "date": "2026-09-21",
+          "count": 0,
+          "level": 0
         }
       ]
     ]
@@ -3738,7 +3783,7 @@
     "listed": 2,
     "families": 7,
     "themes": 1,
-    "stars": 346,
+    "stars": 353,
     "tools": 6,
     "with_shots": 19
   }
