@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T12:43:56.105Z",
+  "generated_at": "2026-09-22T11:34:16.377Z",
   "owner": "nixfred",
   "families": [
     {
@@ -651,7 +651,7 @@
       "tagline": "A thermal heat map of what the AIs are costing you.",
       "description": "Live thermal heat map of the AIs this machine actually uses, Claude, Codex, Grok, and local Ollama when a GPU is present, with weekly quota gauges and the share of tokens kept off frontier models.",
       "accent": "#ff4d4d",
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "watchers": 0,
       "open_prs": 1,
@@ -1154,12 +1154,20 @@
       "tagline": "Your wallpaper becomes a live information desk.",
       "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven, on a SUPER+D overlay.",
       "accent": "#00e5ff",
-      "stars": 114,
-      "forks": 21,
+      "stars": 113,
+      "forks": 22,
       "watchers": 1,
-      "open_prs": 6,
+      "open_prs": 7,
       "open_issues": 1,
       "prs": [
+        {
+          "number": 40,
+          "title": "fix: keep the desk clear of the bar on whichever edge it occupies",
+          "author": "dannyowelch",
+          "created": "2026-09-22T00:36:32Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/infomarchy/pull/40"
+        },
         {
           "number": 39,
           "title": "perf: event-driven refresh on top of the poll — watches built from HOME",
@@ -1837,7 +1845,7 @@
     }
   ],
   "heatmap": {
-    "total": 2363,
+    "total": 2380,
     "weeks": [
       [
         {
@@ -3554,7 +3562,7 @@
         },
         {
           "date": "2026-08-11",
-          "count": 7,
+          "count": 6,
           "level": 1
         },
         {
@@ -3771,8 +3779,13 @@
         },
         {
           "date": "2026-09-21",
-          "count": 0,
-          "level": 0
+          "count": 16,
+          "level": 1
+        },
+        {
+          "date": "2026-09-22",
+          "count": 2,
+          "level": 1
         }
       ]
     ]
