@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T11:34:16.377Z",
+  "generated_at": "2026-09-23T11:31:26.416Z",
   "owner": "nixfred",
   "families": [
     {
@@ -903,19 +903,11 @@
       "description": "iMessage in the Omarchy bar. Reads and sends through a Mac you own over a multiplexed SSH socket. iMessage is macOS-only, so this machine is a thin client and the Mac is the gateway. The bar badge counts every unread; desktop toasts fire only for handles on your allowlist, because chat.db is mostly bank alerts and 2FA codes.",
       "accent": "#0a84ff",
       "stars": 161,
-      "forks": 32,
+      "forks": 33,
       "watchers": 1,
-      "open_prs": 4,
+      "open_prs": 3,
       "open_issues": 3,
       "prs": [
-        {
-          "number": 111,
-          "title": "docs: CLAUDE.md deploy recipe and shim list match the code",
-          "author": "ianswope",
-          "created": "2026-09-20T17:22:21Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/111"
-        },
         {
           "number": 103,
           "title": "fix: make read sync durable and add verified conversation actions",
@@ -964,7 +956,7 @@
           "url": "https://github.com/nixfred/blip/issues/69"
         }
       ],
-      "pushed": "2026-09-20T10:40:12Z",
+      "pushed": "2026-09-22T14:06:43Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -985,7 +977,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 235
+          "commits": 237
         },
         {
           "login": "Fileri",
@@ -1000,7 +992,7 @@
         {
           "login": "ianswope",
           "avatar": "https://avatars.githubusercontent.com/u/175949710?v=4",
-          "commits": 15
+          "commits": 16
         },
         {
           "login": "johanthoren",
@@ -1023,7 +1015,7 @@
           "commits": 5
         }
       ],
-      "commits": 349,
+      "commits": 352,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "shot": "assets/img/shot/nixfred-blip.png",
@@ -1154,44 +1146,12 @@
       "tagline": "Your wallpaper becomes a live information desk.",
       "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven, on a SUPER+D overlay.",
       "accent": "#00e5ff",
-      "stars": 113,
+      "stars": 114,
       "forks": 22,
       "watchers": 1,
-      "open_prs": 7,
+      "open_prs": 3,
       "open_issues": 1,
       "prs": [
-        {
-          "number": 40,
-          "title": "fix: keep the desk clear of the bar on whichever edge it occupies",
-          "author": "dannyowelch",
-          "created": "2026-09-22T00:36:32Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/40"
-        },
-        {
-          "number": 39,
-          "title": "perf: event-driven refresh on top of the poll — watches built from HOME",
-          "author": "reverb256",
-          "created": "2026-09-20T21:40:00Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/39"
-        },
-        {
-          "number": 38,
-          "title": "Pin the desk to one workspace, keeping the wallpaper on all of them",
-          "author": "shieldsworks",
-          "created": "2026-09-20T17:01:40Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/38"
-        },
-        {
-          "number": 37,
-          "title": "FLEET sessions: which remote agent needs you, and one click to get there",
-          "author": "RidgetopAi",
-          "created": "2026-09-20T02:13:44Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/37"
-        },
         {
           "number": 25,
           "title": "Add Web Mode with LAN, Tailscale and Manual HTTPS",
@@ -1226,7 +1186,7 @@
           "url": "https://github.com/nixfred/infomarchy/issues/26"
         }
       ],
-      "pushed": "2026-09-19T19:31:14Z",
+      "pushed": "2026-09-22T14:01:58Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -1250,7 +1210,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 113
+          "commits": 119
         },
         {
           "login": "eternal4430",
@@ -1278,17 +1238,17 @@
           "commits": 3
         },
         {
-          "login": "Tech0001",
-          "avatar": "https://avatars.githubusercontent.com/u/52805157?v=4",
+          "login": "reverb256",
+          "avatar": "https://avatars.githubusercontent.com/u/129622142?v=4",
           "commits": 3
         },
         {
-          "login": "reverb256",
-          "avatar": "https://avatars.githubusercontent.com/u/129622142?v=4",
-          "commits": 2
+          "login": "Tech0001",
+          "avatar": "https://avatars.githubusercontent.com/u/52805157?v=4",
+          "commits": 3
         }
       ],
-      "commits": 143,
+      "commits": 150,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "shot": "assets/img/shot/nixfred-infomarchy.png",
@@ -1845,7 +1805,7 @@
     }
   ],
   "heatmap": {
-    "total": 2380,
+    "total": 2386,
     "weeks": [
       [
         {
@@ -3784,8 +3744,13 @@
         },
         {
           "date": "2026-09-22",
-          "count": 2,
+          "count": 8,
           "level": 1
+        },
+        {
+          "date": "2026-09-23",
+          "count": 0,
+          "level": 0
         }
       ]
     ]
@@ -3796,7 +3761,7 @@
     "listed": 2,
     "families": 7,
     "themes": 1,
-    "stars": 353,
+    "stars": 354,
     "tools": 6,
     "with_shots": 19
   }
