@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T11:41:37.050Z",
+  "generated_at": "2026-09-25T11:47:40.763Z",
   "owner": "nixfred",
   "families": [
     {
@@ -58,15 +58,15 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-23T18:43:27Z",
+      "pushed": "2026-09-24T20:01:45Z",
       "created": "2026-09-17T21:35:40Z",
       "license": "MIT",
       "language": "Python",
       "topics": [],
       "default_branch": "main",
       "release": {
-        "tag": "v1.2.0",
-        "published": "2026-09-23T18:41:04Z"
+        "tag": "v1.3.0",
+        "published": "2026-09-24T20:00:25Z"
       },
       "contributors": [
         {
@@ -77,10 +77,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 19
+          "commits": 24
         }
       ],
-      "commits": 77,
+      "commits": 82,
       "repo_url": "https://github.com/nixfred/LANarchy",
       "glyph": "assets/img/glyph/nixfred-lanarchy.svg",
       "shot": "assets/img/shot/nixfred-lanarchy.png",
@@ -1146,7 +1146,7 @@
       "tagline": "Your wallpaper becomes a live information desk.",
       "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven, on a SUPER+D overlay.",
       "accent": "#00e5ff",
-      "stars": 114,
+      "stars": 116,
       "forks": 22,
       "watchers": 1,
       "open_prs": 3,
@@ -1591,7 +1591,7 @@
       "description": "Stamp one Omarchy machine onto another.",
       "install": "git clone https://github.com/nixfred/imprint.git && cd imprint && ./install.sh",
       "slug": "imprint",
-      "stars": 43,
+      "stars": 44,
       "forks": 4,
       "watchers": 1,
       "open_issues": 1,
@@ -1805,7 +1805,7 @@
     }
   ],
   "heatmap": {
-    "total": 2393,
+    "total": 2419,
     "weeks": [
       [
         {
@@ -3549,8 +3549,8 @@
       [
         {
           "date": "2026-08-16",
-          "count": 1,
-          "level": 1
+          "count": 0,
+          "level": 0
         },
         {
           "date": "2026-08-17",
@@ -3574,7 +3574,7 @@
         },
         {
           "date": "2026-08-21",
-          "count": 209,
+          "count": 208,
           "level": 4
         },
         {
@@ -3754,8 +3754,13 @@
         },
         {
           "date": "2026-09-24",
-          "count": 0,
-          "level": 0
+          "count": 25,
+          "level": 2
+        },
+        {
+          "date": "2026-09-25",
+          "count": 3,
+          "level": 1
         }
       ]
     ]
@@ -3766,7 +3771,7 @@
     "listed": 2,
     "families": 7,
     "themes": 1,
-    "stars": 354,
+    "stars": 356,
     "tools": 6,
     "with_shots": 19
   }
