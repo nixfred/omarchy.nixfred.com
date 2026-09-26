@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T11:47:40.763Z",
+  "generated_at": "2026-09-26T11:21:23.144Z",
   "owner": "nixfred",
   "families": [
     {
@@ -104,40 +104,45 @@
       "description": "A live trackpad on the bar that lights where your fingers are, and behind it every number the pad can give: touches, taps, gestures, palms, speed and distance on every clock, a heatmap, a week of history. A finger-speed map drawn under the acceleration curve with an optimizer that fits the curve to your hand and keeps watching. Hyprland gestures for three and four fingers with themes and backgrounds in the mix, and a weekly report that knows which hand you use. Built on David Fano's Trackpad Plus, kept whole.",
       "accent": "#b58cff",
       "stars": 9,
-      "forks": 2,
+      "forks": 3,
       "watchers": 0,
       "open_prs": 0,
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-18T20:24:32Z",
+      "pushed": "2026-09-25T20:21:23Z",
       "created": "2026-09-14T03:48:41Z",
       "license": "NOASSERTION",
       "language": "Python",
       "topics": [],
       "default_branch": "main",
       "release": {
-        "tag": "v1.9.1",
-        "published": "2026-09-18T20:24:37Z"
+        "tag": "v1.9.2",
+        "published": "2026-09-25T20:20:08Z"
       },
       "contributors": [
+        {
+          "login": "nixfred",
+          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
+          "commits": 18
+        },
         {
           "login": "awkent01",
           "avatar": "https://avatars.githubusercontent.com/u/156821456?v=4",
           "commits": 18
         },
         {
-          "login": "nixfred",
-          "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 17
-        },
-        {
           "login": "davefano",
           "avatar": "https://avatars.githubusercontent.com/u/191385877?v=4",
           "commits": 12
+        },
+        {
+          "login": "ianswope",
+          "avatar": "https://avatars.githubusercontent.com/u/175949710?v=4",
+          "commits": 1
         }
       ],
-      "commits": 47,
+      "commits": 49,
       "repo_url": "https://github.com/nixfred/trackpad.pulse",
       "glyph": "assets/img/glyph/nixfred-trackpad-pulse.svg",
       "shot": "assets/img/shot/nixfred-trackpad-pulse.png",
@@ -652,7 +657,7 @@
       "description": "Live thermal heat map of the AIs this machine actually uses, Claude, Codex, Grok, and local Ollama when a GPU is present, with weekly quota gauges and the share of tokens kept off frontier models.",
       "accent": "#ff4d4d",
       "stars": 6,
-      "forks": 0,
+      "forks": 1,
       "watchers": 0,
       "open_prs": 1,
       "open_issues": 0,
@@ -667,7 +672,7 @@
         }
       ],
       "issues": [],
-      "pushed": "2026-09-20T19:57:14Z",
+      "pushed": "2026-09-26T00:47:47Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -678,10 +683,15 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 54
+          "commits": 56
+        },
+        {
+          "login": "ianswope",
+          "avatar": "https://avatars.githubusercontent.com/u/175949710?v=4",
+          "commits": 2
         }
       ],
-      "commits": 54,
+      "commits": 58,
       "repo_url": "https://github.com/nixfred/burnbar",
       "glyph": "assets/img/glyph/nixfred-burnbar.svg",
       "shot": "assets/img/shot/nixfred-burnbar.png",
@@ -902,8 +912,8 @@
       "tagline": "iMessage in the Omarchy bar.",
       "description": "iMessage in the Omarchy bar. Reads and sends through a Mac you own over a multiplexed SSH socket. iMessage is macOS-only, so this machine is a thin client and the Mac is the gateway. The bar badge counts every unread; desktop toasts fire only for handles on your allowlist, because chat.db is mostly bank alerts and 2FA codes.",
       "accent": "#0a84ff",
-      "stars": 161,
-      "forks": 34,
+      "stars": 162,
+      "forks": 35,
       "watchers": 1,
       "open_prs": 3,
       "open_issues": 3,
@@ -956,7 +966,7 @@
           "url": "https://github.com/nixfred/blip/issues/69"
         }
       ],
-      "pushed": "2026-09-24T03:15:58Z",
+      "pushed": "2026-09-26T11:11:37Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -977,7 +987,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 239
+          "commits": 249
         },
         {
           "login": "Fileri",
@@ -1015,7 +1025,7 @@
           "commits": 5
         }
       ],
-      "commits": 354,
+      "commits": 364,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "shot": "assets/img/shot/nixfred-blip.png",
@@ -1038,7 +1048,7 @@
       "tagline": "Your whole tailnet, from the bar.",
       "description": "Select nodes from your Tailscale network, track every device type, and collect deep Linux metrics over read-only SSH.",
       "accent": "#41b883",
-      "stars": 23,
+      "stars": 26,
       "forks": 2,
       "watchers": 0,
       "open_prs": 0,
@@ -1805,7 +1815,7 @@
     }
   ],
   "heatmap": {
-    "total": 2419,
+    "total": 2443,
     "weeks": [
       [
         {
@@ -2359,14 +2369,14 @@
         {
           "date": "2026-01-03",
           "count": 62,
-          "level": 3
+          "level": 4
         }
       ],
       [
         {
           "date": "2026-01-04",
           "count": 20,
-          "level": 1
+          "level": 2
         },
         {
           "date": "2026-01-05",
@@ -2460,7 +2470,7 @@
         {
           "date": "2026-01-22",
           "count": 22,
-          "level": 1
+          "level": 2
         },
         {
           "date": "2026-01-23",
@@ -2815,7 +2825,7 @@
         {
           "date": "2026-03-30",
           "count": 24,
-          "level": 1
+          "level": 2
         },
         {
           "date": "2026-03-31",
@@ -3316,7 +3326,7 @@
         {
           "date": "2026-07-03",
           "count": 62,
-          "level": 3
+          "level": 4
         },
         {
           "date": "2026-07-04",
@@ -3358,7 +3368,7 @@
         {
           "date": "2026-07-11",
           "count": 68,
-          "level": 3
+          "level": 4
         }
       ],
       [
@@ -3579,7 +3589,7 @@
         },
         {
           "date": "2026-08-22",
-          "count": 118,
+          "count": 114,
           "level": 4
         }
       ],
@@ -3607,7 +3617,7 @@
         {
           "date": "2026-08-27",
           "count": 22,
-          "level": 1
+          "level": 2
         },
         {
           "date": "2026-08-28",
@@ -3629,7 +3639,7 @@
         {
           "date": "2026-08-31",
           "count": 64,
-          "level": 3
+          "level": 4
         },
         {
           "date": "2026-09-01",
@@ -3639,7 +3649,7 @@
         {
           "date": "2026-09-02",
           "count": 21,
-          "level": 1
+          "level": 2
         },
         {
           "date": "2026-09-03",
@@ -3654,14 +3664,14 @@
         {
           "date": "2026-09-05",
           "count": 68,
-          "level": 3
+          "level": 4
         }
       ],
       [
         {
           "date": "2026-09-06",
           "count": 66,
-          "level": 3
+          "level": 4
         },
         {
           "date": "2026-09-07",
@@ -3671,17 +3681,17 @@
         {
           "date": "2026-09-08",
           "count": 66,
-          "level": 3
+          "level": 4
         },
         {
           "date": "2026-09-09",
           "count": 65,
-          "level": 3
+          "level": 4
         },
         {
           "date": "2026-09-10",
           "count": 71,
-          "level": 3
+          "level": 4
         },
         {
           "date": "2026-09-11",
@@ -3703,7 +3713,7 @@
         {
           "date": "2026-09-14",
           "count": 21,
-          "level": 1
+          "level": 2
         },
         {
           "date": "2026-09-15",
@@ -3728,7 +3738,7 @@
         {
           "date": "2026-09-19",
           "count": 42,
-          "level": 2
+          "level": 3
         }
       ],
       [
@@ -3759,7 +3769,12 @@
         },
         {
           "date": "2026-09-25",
-          "count": 3,
+          "count": 24,
+          "level": 2
+        },
+        {
+          "date": "2026-09-26",
+          "count": 7,
           "level": 1
         }
       ]
@@ -3771,7 +3786,7 @@
     "listed": 2,
     "families": 7,
     "themes": 1,
-    "stars": 356,
+    "stars": 360,
     "tools": 6,
     "with_shots": 19
   }
