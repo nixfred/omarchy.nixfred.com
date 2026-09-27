@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T11:21:23.144Z",
+  "generated_at": "2026-09-27T11:59:07.376Z",
   "owner": "nixfred",
   "families": [
     {
@@ -51,22 +51,22 @@
       "tagline": "Your homelab, drawn as it actually is.",
       "description": "Homelab topology map and health in the Omarchy bar: every machine and service, UniFi detail, and measured traffic on the links that carry it. Map, list and flow views, with hosts you curate sitting alongside the ones discovery finds. Hard-forked from Donnie Fiander's Lanarchy, which is credited throughout.",
       "accent": "#a3e635",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-24T20:01:45Z",
+      "pushed": "2026-09-26T22:04:00Z",
       "created": "2026-09-17T21:35:40Z",
       "license": "MIT",
       "language": "Python",
       "topics": [],
       "default_branch": "main",
       "release": {
-        "tag": "v1.3.0",
-        "published": "2026-09-24T20:00:25Z"
+        "tag": "v1.3.1",
+        "published": "2026-09-26T22:04:01Z"
       },
       "contributors": [
         {
@@ -77,10 +77,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 24
+          "commits": 25
         }
       ],
-      "commits": 82,
+      "commits": 83,
       "repo_url": "https://github.com/nixfred/LANarchy",
       "glyph": "assets/img/glyph/nixfred-lanarchy.svg",
       "shot": "assets/img/shot/nixfred-lanarchy.png",
@@ -103,7 +103,7 @@
       "tagline": "Your trackpad, in motion.",
       "description": "A live trackpad on the bar that lights where your fingers are, and behind it every number the pad can give: touches, taps, gestures, palms, speed and distance on every clock, a heatmap, a week of history. A finger-speed map drawn under the acceleration curve with an optimizer that fits the curve to your hand and keeps watching. Hyprland gestures for three and four fingers with themes and backgrounds in the mix, and a weekly report that knows which hand you use. Built on David Fano's Trackpad Plus, kept whole.",
       "accent": "#b58cff",
-      "stars": 9,
+      "stars": 10,
       "forks": 3,
       "watchers": 0,
       "open_prs": 0,
@@ -423,7 +423,7 @@
       "tagline": "A living audio chip.",
       "description": "A living audio chip: volume, mute, output picker and per-app mixer, drawn as a sibling of RAM Pulse, CPU Pulse and Net Pulse.",
       "accent": "#ffc857",
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -656,23 +656,14 @@
       "tagline": "A thermal heat map of what the AIs are costing you.",
       "description": "Live thermal heat map of the AIs this machine actually uses, Claude, Codex, Grok, and local Ollama when a GPU is present, with weekly quota gauges and the share of tokens kept off frontier models.",
       "accent": "#ff4d4d",
-      "stars": 6,
+      "stars": 9,
       "forks": 1,
       "watchers": 0,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 0,
-      "prs": [
-        {
-          "number": 1,
-          "title": "docs: 2.0 announcement post for X",
-          "author": "nixfred",
-          "created": "2026-09-20T18:54:17Z",
-          "draft": true,
-          "url": "https://github.com/nixfred/burnbar/pull/1"
-        }
-      ],
+      "prs": [],
       "issues": [],
-      "pushed": "2026-09-26T00:47:47Z",
+      "pushed": "2026-09-27T01:38:30Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -683,7 +674,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 56
+          "commits": 59
         },
         {
           "login": "ianswope",
@@ -691,7 +682,7 @@
           "commits": 2
         }
       ],
-      "commits": 58,
+      "commits": 61,
       "repo_url": "https://github.com/nixfred/burnbar",
       "glyph": "assets/img/glyph/nixfred-burnbar.svg",
       "shot": "assets/img/shot/nixfred-burnbar.png",
@@ -912,12 +903,28 @@
       "tagline": "iMessage in the Omarchy bar.",
       "description": "iMessage in the Omarchy bar. Reads and sends through a Mac you own over a multiplexed SSH socket. iMessage is macOS-only, so this machine is a thin client and the Mac is the gateway. The bar badge counts every unread; desktop toasts fire only for handles on your allowlist, because chat.db is mostly bank alerts and 2FA codes.",
       "accent": "#0a84ff",
-      "stars": 162,
+      "stars": 165,
       "forks": 35,
       "watchers": 1,
-      "open_prs": 3,
-      "open_issues": 3,
+      "open_prs": 5,
+      "open_issues": 4,
       "prs": [
+        {
+          "number": 117,
+          "title": "feat: tapbacks in the message menu, behind tapbacks=on (PR 2 of 2 for #69)",
+          "author": "Fileri",
+          "created": "2026-09-27T09:28:24Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/blip/pull/117"
+        },
+        {
+          "number": 116,
+          "title": "feat: imsg-react adds or removes one tapback, behind tapbacks=on (PR 1 of 2 for #69)",
+          "author": "Fileri",
+          "created": "2026-09-27T09:28:15Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/blip/pull/116"
+        },
         {
           "number": 103,
           "title": "fix: make read sync durable and add verified conversation actions",
@@ -945,6 +952,13 @@
       ],
       "issues": [
         {
+          "number": 118,
+          "title": "Up/Down in the compose field drops the selected bubble — should it?",
+          "author": "Fileri",
+          "created": "2026-09-27T09:46:03Z",
+          "url": "https://github.com/nixfred/blip/issues/118"
+        },
+        {
           "number": 112,
           "title": "Chrome never exposes autocomplete over AT-SPI, so the one-time-code path is dead there",
           "author": "ianswope",
@@ -966,7 +980,7 @@
           "url": "https://github.com/nixfred/blip/issues/69"
         }
       ],
-      "pushed": "2026-09-26T11:11:37Z",
+      "pushed": "2026-09-26T22:26:54Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -980,14 +994,14 @@
       ],
       "default_branch": "main",
       "release": {
-        "tag": "v2.5.0",
-        "published": "2026-09-13T14:14:45Z"
+        "tag": "v2.6.2",
+        "published": "2026-09-26T20:58:50Z"
       },
       "contributors": [
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 249
+          "commits": 258
         },
         {
           "login": "Fileri",
@@ -1025,7 +1039,7 @@
           "commits": 5
         }
       ],
-      "commits": 364,
+      "commits": 373,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "shot": "assets/img/shot/nixfred-blip.png",
@@ -1048,8 +1062,8 @@
       "tagline": "Your whole tailnet, from the bar.",
       "description": "Select nodes from your Tailscale network, track every device type, and collect deep Linux metrics over read-only SSH.",
       "accent": "#41b883",
-      "stars": 26,
-      "forks": 2,
+      "stars": 30,
+      "forks": 3,
       "watchers": 0,
       "open_prs": 0,
       "open_issues": 0,
@@ -1156,8 +1170,8 @@
       "tagline": "Your wallpaper becomes a live information desk.",
       "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven, on a SUPER+D overlay.",
       "accent": "#00e5ff",
-      "stars": 116,
-      "forks": 22,
+      "stars": 118,
+      "forks": 23,
       "watchers": 1,
       "open_prs": 3,
       "open_issues": 1,
@@ -1196,7 +1210,7 @@
           "url": "https://github.com/nixfred/infomarchy/issues/26"
         }
       ],
-      "pushed": "2026-09-22T14:01:58Z",
+      "pushed": "2026-09-26T21:38:50Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -1220,7 +1234,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 119
+          "commits": 120
         },
         {
           "login": "eternal4430",
@@ -1258,7 +1272,7 @@
           "commits": 3
         }
       ],
-      "commits": 150,
+      "commits": 151,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "shot": "assets/img/shot/nixfred-infomarchy.png",
@@ -1815,45 +1829,8 @@
     }
   ],
   "heatmap": {
-    "total": 2443,
+    "total": 2468,
     "weeks": [
-      [
-        {
-          "date": "2025-09-21",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-09-22",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-09-23",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-09-24",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-09-25",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-09-26",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-09-27",
-          "count": 1,
-          "level": 1
-        }
-      ],
       [
         {
           "date": "2025-09-28",
@@ -2369,14 +2346,14 @@
         {
           "date": "2026-01-03",
           "count": 62,
-          "level": 4
+          "level": 3
         }
       ],
       [
         {
           "date": "2026-01-04",
           "count": 20,
-          "level": 2
+          "level": 1
         },
         {
           "date": "2026-01-05",
@@ -2470,7 +2447,7 @@
         {
           "date": "2026-01-22",
           "count": 22,
-          "level": 2
+          "level": 1
         },
         {
           "date": "2026-01-23",
@@ -2825,7 +2802,7 @@
         {
           "date": "2026-03-30",
           "count": 24,
-          "level": 2
+          "level": 1
         },
         {
           "date": "2026-03-31",
@@ -3326,7 +3303,7 @@
         {
           "date": "2026-07-03",
           "count": 62,
-          "level": 4
+          "level": 3
         },
         {
           "date": "2026-07-04",
@@ -3368,7 +3345,7 @@
         {
           "date": "2026-07-11",
           "count": 68,
-          "level": 4
+          "level": 3
         }
       ],
       [
@@ -3589,15 +3566,15 @@
         },
         {
           "date": "2026-08-22",
-          "count": 114,
+          "count": 113,
           "level": 4
         }
       ],
       [
         {
           "date": "2026-08-23",
-          "count": 4,
-          "level": 1
+          "count": 0,
+          "level": 0
         },
         {
           "date": "2026-08-24",
@@ -3617,11 +3594,11 @@
         {
           "date": "2026-08-27",
           "count": 22,
-          "level": 2
+          "level": 1
         },
         {
           "date": "2026-08-28",
-          "count": 14,
+          "count": 12,
           "level": 1
         },
         {
@@ -3639,7 +3616,7 @@
         {
           "date": "2026-08-31",
           "count": 64,
-          "level": 4
+          "level": 3
         },
         {
           "date": "2026-09-01",
@@ -3649,7 +3626,7 @@
         {
           "date": "2026-09-02",
           "count": 21,
-          "level": 2
+          "level": 1
         },
         {
           "date": "2026-09-03",
@@ -3664,14 +3641,14 @@
         {
           "date": "2026-09-05",
           "count": 68,
-          "level": 4
+          "level": 3
         }
       ],
       [
         {
           "date": "2026-09-06",
           "count": 66,
-          "level": 4
+          "level": 3
         },
         {
           "date": "2026-09-07",
@@ -3681,17 +3658,17 @@
         {
           "date": "2026-09-08",
           "count": 66,
-          "level": 4
+          "level": 3
         },
         {
           "date": "2026-09-09",
           "count": 65,
-          "level": 4
+          "level": 3
         },
         {
           "date": "2026-09-10",
           "count": 71,
-          "level": 4
+          "level": 3
         },
         {
           "date": "2026-09-11",
@@ -3713,7 +3690,7 @@
         {
           "date": "2026-09-14",
           "count": 21,
-          "level": 2
+          "level": 1
         },
         {
           "date": "2026-09-15",
@@ -3738,13 +3715,13 @@
         {
           "date": "2026-09-19",
           "count": 42,
-          "level": 3
+          "level": 2
         }
       ],
       [
         {
           "date": "2026-09-20",
-          "count": 28,
+          "count": 30,
           "level": 2
         },
         {
@@ -3770,11 +3747,18 @@
         {
           "date": "2026-09-25",
           "count": 24,
-          "level": 2
+          "level": 1
         },
         {
           "date": "2026-09-26",
-          "count": 7,
+          "count": 33,
+          "level": 2
+        }
+      ],
+      [
+        {
+          "date": "2026-09-27",
+          "count": 4,
           "level": 1
         }
       ]
@@ -3786,7 +3770,7 @@
     "listed": 2,
     "families": 7,
     "themes": 1,
-    "stars": 360,
+    "stars": 375,
     "tools": 6,
     "with_shots": 19
   }
