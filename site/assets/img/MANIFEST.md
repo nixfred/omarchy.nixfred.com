@@ -45,3 +45,10 @@
 - `MANIFEST.md` — Inventory and visual descriptions of all delivered files.
 - `glyph/nixfred-pr-hunter.svg` — Pull-request nodes and a return arrow connected to a workspace pane.
 - `featured-banner.svg` — FEATURED lettering on Omarchy’s 15-unit grid, with the original A, top-left and bottom-right stepped chamfers, and blue spectrum and radar instruments on a dark ground.
+- `glyph/nixfred-shipyard.svg` — Ship's anchor rising from the waterline, for commits shipped.
+- `glyph/nixfred-hourglass.svg` — Hourglass with sand settling, for where the day's screen time went.
+- `glyph/nixfred-sentinel.svg` — Guard shield carrying a heartbeat trace for systemd and journal health.
+- `glyph/nixfred-dockyard.svg` — Container hull stacked with cargo boxes and a whale's tail.
+- `glyph/nixfred-pingboard.svg` — Two endpoints joined by a jittery latency trace.
+- `glyph/nixfred-tomato.svg` — Tomato with a stem and a clock hand, the pomodoro.
+- `glyph/nixfred-daylight.svg` — Sun arc rising over the horizon with rays.

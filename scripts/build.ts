@@ -243,7 +243,7 @@ const plugins = src.plugins.map((p) => {
     prs: stats?.prs ?? [],
     issues: stats?.issues ?? [],
     pushed: stats?.pushed ?? null,
-    created: stats?.created ?? null,
+    created: stats?.created ?? p.created ?? null,
     license: stats?.license ?? null,
     language: stats?.language ?? null,
     topics: stats?.topics ?? [],
