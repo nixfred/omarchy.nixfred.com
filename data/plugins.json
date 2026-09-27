@@ -71,50 +71,50 @@
       "accent": "#ffd60a"
     },
     {
-      "id": "nixfred.shipyard", "name": "Shipyard", "family": "system", "status": "unreleased", "surprise": true,
-      "repo": null, "dir": "surprise.plugin", "version": "1.0.0", "created": "2026-09-27T05:53:38Z",
+      "id": "nixfred.shipyard", "name": "Shipyard", "family": "system", "status": "live", "surprise": true,
+      "repo": "nixfred/shipyard", "dir": "surprise.plugin", "version": "1.0.0", "created": "2026-09-27T05:53:38Z",
       "tagline": "What shipped today.",
       "description": "Counts your commits across every local git repo and puts today's count and your day streak on the bar. The panel adds a 16-week heatmap, an hour-of-day histogram, top repos and a live commit feed. Read-only, local, no network.",
       "accent": "#4aa8ff"
     },
     {
-      "id": "nixfred.tomato", "name": "Tomato", "family": "desk", "status": "unreleased", "surprise": true,
-      "repo": null, "dir": "surprise7.plugin", "version": "1.0.0", "created": "2026-09-27T05:57:27Z",
+      "id": "nixfred.tomato", "name": "Tomato", "family": "desk", "status": "live", "surprise": true,
+      "repo": "nixfred/tomato.omarchy", "dir": "surprise7.plugin", "version": "1.0.0", "created": "2026-09-27T05:57:27Z",
       "tagline": "A pomodoro ring on the bar.",
       "description": "A pomodoro focus timer. A ring counts down the current phase; the panel holds presets, today's tomatoes, a 7-day chart, your streak and a session log.",
       "accent": "#ff6b5a"
     },
     {
-      "id": "nixfred.pingboard", "name": "Pingboard", "family": "infra", "status": "unreleased", "surprise": true,
-      "repo": null, "dir": "surprise6.plugin", "version": "1.0.0", "created": "2026-09-27T05:57:45Z",
+      "id": "nixfred.pingboard", "name": "Pingboard", "family": "infra", "status": "live", "surprise": true,
+      "repo": "nixfred/pingboard.omarchy", "dir": "surprise6.plugin", "version": "1.0.0", "created": "2026-09-27T05:57:45Z",
       "tagline": "Is it me, the ISP, or DNS?",
       "description": "Live latency, jitter and loss to your gateway, the internet, DNS and your tailnet hosts, with a verdict that says where the problem is: LAN, ISP, DNS or tailnet.",
       "accent": "#c77dff"
     },
     {
-      "id": "nixfred.daylight", "name": "Daylight", "family": "desk", "status": "unreleased", "surprise": true,
-      "repo": null, "dir": "surprise8.plugin", "version": "1.0.0", "created": "2026-09-27T05:59:52Z",
+      "id": "nixfred.daylight", "name": "Daylight", "family": "desk", "status": "live", "surprise": true,
+      "repo": "nixfred/daylight.omarchy", "dir": "surprise8.plugin", "version": "1.0.0", "created": "2026-09-27T05:59:52Z",
       "tagline": "Sun and moon, computed locally.",
       "description": "Sun and moon ephemeris for your spot on Earth, from the NOAA solar equations and Meeus lunar theory. Solar elevation curve, golden and blue hours, day length and moon phase. No network, python3 stdlib only.",
       "accent": "#ffb347"
     },
     {
-      "id": "nixfred.hourglass", "name": "Hourglass", "family": "desk", "status": "unreleased", "surprise": true,
-      "repo": null, "dir": "surprise2.plugin", "version": "1.0.0", "created": "2026-09-27T06:08:57Z",
+      "id": "nixfred.hourglass", "name": "Hourglass", "family": "desk", "status": "live", "surprise": true,
+      "repo": "nixfred/hourglass", "dir": "surprise2.plugin", "version": "1.0.0", "created": "2026-09-27T06:08:57Z",
       "tagline": "Where the day went.",
       "description": "Screen time for Omarchy. Tracks which app has focus, second by second, straight off the Hyprland socket, and shows a 24-hour focus timeline, focus runs, a 7-day chart and per-app totals.",
       "accent": "#7aa2f7"
     },
     {
-      "id": "nixfred.sentinel", "name": "Sentinel", "family": "system", "status": "unreleased", "surprise": true,
-      "repo": null, "dir": "surprise4.plugin", "version": "1.0.0", "created": "2026-09-27T06:10:35Z",
+      "id": "nixfred.sentinel", "name": "Sentinel", "family": "system", "status": "live", "surprise": true,
+      "repo": "nixfred/sentinel.omarchy", "dir": "surprise4.plugin", "version": "1.0.0", "created": "2026-09-27T06:10:35Z",
       "tagline": "Systemd and journal watchdog.",
       "description": "A shield on the bar goes green when no unit has failed, red with a count when one has, and amber on a journal error burst. The panel lists failed units with restart and logs, the next timers and the noisiest error sources.",
       "accent": "#e05d5d"
     },
     {
-      "id": "nixfred.dockyard", "name": "Dockyard", "family": "infra", "status": "unreleased", "surprise": true,
-      "repo": null, "dir": "surprise5.plugin", "version": "1.0.0", "created": "2026-09-27T06:11:21Z",
+      "id": "nixfred.dockyard", "name": "Dockyard", "family": "infra", "status": "live", "surprise": true,
+      "repo": "nixfred/dockyard.omarchy", "dir": "surprise5.plugin", "version": "1.0.0", "created": "2026-09-27T06:11:21Z",
       "tagline": "Docker, at a glance.",
       "description": "Docker containers cockpit. A whale and the running count on the bar; the panel lists every container with state, CPU, memory, ports and uptime, with start, stop and logs, plus disk use and reclaimable space.",
       "accent": "#2496ed"
