@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-29T12:48:40.620Z",
+  "generated_at": "2026-09-30T12:30:43.617Z",
   "owner": "nixfred",
   "families": [
     {
@@ -580,7 +580,7 @@
       "description": "CPU, memory, storage and network merged into a single bar widget with one shared severity model. The icon follows the biggest constraint rather than a fixed metric, and each domain still opens the full dashboard the separate plugin had. Replaces CPU Pulse, RAM Pulse, Disk Pulse and Net Pulse.",
       "accent": "#4aa8ff",
       "supersedes": "CPU Pulse, RAM Pulse, Disk Pulse, Net Pulse",
-      "stars": 11,
+      "stars": 10,
       "forks": 2,
       "watchers": 0,
       "open_prs": 0,
@@ -972,11 +972,19 @@
       "description": "Live thermal heat map of the AIs this machine actually uses, Claude, Codex, Grok, and local Ollama when a GPU is present, with weekly quota gauges and the share of tokens kept off frontier models.",
       "accent": "#ff4d4d",
       "stars": 10,
-      "forks": 2,
+      "forks": 3,
       "watchers": 0,
-      "open_prs": 2,
+      "open_prs": 3,
       "open_issues": 0,
       "prs": [
+        {
+          "number": 5,
+          "title": "Fix local AMD GPU telemetry",
+          "author": "aplaceforallmystuff",
+          "created": "2026-09-30T09:45:34Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/burnbar/pull/5"
+        },
         {
           "number": 4,
           "title": "feat: a Zcode lane, per-request usage from ~/.zcode/cli/rollout",
@@ -1236,19 +1244,11 @@
       "description": "iMessage in the Omarchy bar. Reads and sends through a Mac you own over a multiplexed SSH socket. iMessage is macOS-only, so this machine is a thin client and the Mac is the gateway. The bar badge counts every unread; desktop toasts fire only for handles on your allowlist, because chat.db is mostly bank alerts and 2FA codes.",
       "accent": "#0a84ff",
       "stars": 166,
-      "forks": 36,
+      "forks": 38,
       "watchers": 1,
-      "open_prs": 9,
-      "open_issues": 4,
+      "open_prs": 7,
+      "open_issues": 3,
       "prs": [
-        {
-          "number": 123,
-          "title": "fix: Up/Down in the compose field keep the selected bubble",
-          "author": "Fileri",
-          "created": "2026-09-27T17:39:02Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/123"
-        },
         {
           "number": 122,
           "title": "Add Pin and Hide Alerts to the conversation menu",
@@ -1272,14 +1272,6 @@
           "created": "2026-09-27T14:03:10Z",
           "draft": false,
           "url": "https://github.com/nixfred/blip/pull/120"
-        },
-        {
-          "number": 119,
-          "title": "docs: contact-review bullet names both exact-card operations on one line",
-          "author": "ianswope",
-          "created": "2026-09-27T13:07:24Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/119"
         },
         {
           "number": 117,
@@ -1316,13 +1308,6 @@
       ],
       "issues": [
         {
-          "number": 118,
-          "title": "Up/Down in the compose field drops the selected bubble — should it?",
-          "author": "Fileri",
-          "created": "2026-09-27T09:46:03Z",
-          "url": "https://github.com/nixfred/blip/issues/118"
-        },
-        {
           "number": 112,
           "title": "Chrome never exposes autocomplete over AT-SPI, so the one-time-code path is dead there",
           "author": "ianswope",
@@ -1344,7 +1329,7 @@
           "url": "https://github.com/nixfred/blip/issues/69"
         }
       ],
-      "pushed": "2026-09-27T21:28:06Z",
+      "pushed": "2026-09-30T12:30:33Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -1365,12 +1350,12 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 260
+          "commits": 266
         },
         {
           "login": "Fileri",
           "avatar": "https://avatars.githubusercontent.com/u/955867?v=4",
-          "commits": 36
+          "commits": 37
         },
         {
           "login": "jondkinney",
@@ -1380,7 +1365,7 @@
         {
           "login": "ianswope",
           "avatar": "https://avatars.githubusercontent.com/u/175949710?v=4",
-          "commits": 16
+          "commits": 17
         },
         {
           "login": "johanthoren",
@@ -1403,7 +1388,7 @@
           "commits": 5
         }
       ],
-      "commits": 375,
+      "commits": 383,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "shot": "assets/img/shot/nixfred-blip.png",
@@ -1544,9 +1529,9 @@
       "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven, on a SUPER+D overlay.",
       "accent": "#00e5ff",
       "stars": 121,
-      "forks": 23,
+      "forks": 22,
       "watchers": 1,
-      "open_prs": 3,
+      "open_prs": 2,
       "open_issues": 1,
       "prs": [
         {
@@ -1556,14 +1541,6 @@
           "created": "2026-09-10T21:51:38Z",
           "draft": false,
           "url": "https://github.com/nixfred/infomarchy/pull/25"
-        },
-        {
-          "number": 16,
-          "title": "feat: improve desktop usage collection, billing, and hard refresh",
-          "author": "TechLuddite",
-          "created": "2026-09-09T20:49:28Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/16"
         },
         {
           "number": 13,
@@ -1583,7 +1560,7 @@
           "url": "https://github.com/nixfred/infomarchy/issues/26"
         }
       ],
-      "pushed": "2026-09-26T21:38:50Z",
+      "pushed": "2026-09-30T12:30:01Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -1607,17 +1584,17 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 120
+          "commits": 121
+        },
+        {
+          "login": "TechLuddite",
+          "avatar": "https://avatars.githubusercontent.com/u/287875418?v=4",
+          "commits": 22
         },
         {
           "login": "eternal4430",
           "avatar": "https://avatars.githubusercontent.com/u/211269045?v=4",
           "commits": 8
-        },
-        {
-          "login": "TechLuddite",
-          "avatar": "https://avatars.githubusercontent.com/u/287875418?v=4",
-          "commits": 7
         },
         {
           "login": "jttraino",
@@ -1645,7 +1622,7 @@
           "commits": 3
         }
       ],
-      "commits": 151,
+      "commits": 167,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "shot": "assets/img/shot/nixfred-infomarchy.png",
@@ -1716,7 +1693,7 @@
       "tagline": "Workspaces close their own gaps.",
       "description": "Packs numeric Hyprland workspaces into 1 through N as gaps appear, preserving order, tiling, monitor placement, and focus.",
       "accent": "#9d7bff",
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -2202,7 +2179,7 @@
     }
   ],
   "heatmap": {
-    "total": 2501,
+    "total": 2509,
     "weeks": [
       [
         {
@@ -3988,12 +3965,12 @@
         },
         {
           "date": "2026-08-31",
-          "count": 63,
+          "count": 62,
           "level": 3
         },
         {
           "date": "2026-09-01",
-          "count": 31,
+          "count": 30,
           "level": 2
         },
         {
@@ -4141,7 +4118,12 @@
         },
         {
           "date": "2026-09-29",
-          "count": 1,
+          "count": 8,
+          "level": 1
+        },
+        {
+          "date": "2026-09-30",
+          "count": 3,
           "level": 1
         }
       ]
