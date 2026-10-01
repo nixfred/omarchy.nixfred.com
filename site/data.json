@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T12:30:43.617Z",
+  "generated_at": "2026-10-01T13:08:38.905Z",
   "owner": "nixfred",
   "families": [
     {
@@ -696,9 +696,17 @@
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
-      "open_issues": 0,
+      "open_issues": 1,
       "prs": [],
-      "issues": [],
+      "issues": [
+        {
+          "number": 1,
+          "title": "Issues with third-party widgets",
+          "author": "dixonge",
+          "created": "2026-10-01T12:21:25Z",
+          "url": "https://github.com/nixfred/menu.bar.overload/issues/1"
+        }
+      ],
       "pushed": "2026-09-09T15:57:37Z",
       "created": "2026-09-09T03:28:34Z",
       "license": null,
@@ -745,7 +753,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-20T21:46:19Z",
+      "pushed": "2026-09-30T14:26:00Z",
       "created": "2026-09-06T18:19:26Z",
       "license": "MIT",
       "language": "QML",
@@ -756,10 +764,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 6
+          "commits": 9
         }
       ],
-      "commits": 6,
+      "commits": 9,
       "repo_url": "https://github.com/nixfred/audio.pulse.omarchy",
       "glyph": "assets/img/glyph/pi-audio.svg",
       "shot": "assets/img/shot/pi-audio.png",
@@ -971,7 +979,7 @@
       "tagline": "A thermal heat map of what the AIs are costing you.",
       "description": "Live thermal heat map of the AIs this machine actually uses, Claude, Codex, Grok, and local Ollama when a GPU is present, with weekly quota gauges and the share of tokens kept off frontier models.",
       "accent": "#ff4d4d",
-      "stars": 10,
+      "stars": 11,
       "forks": 3,
       "watchers": 0,
       "open_prs": 3,
@@ -1243,7 +1251,7 @@
       "tagline": "iMessage in the Omarchy bar.",
       "description": "iMessage in the Omarchy bar. Reads and sends through a Mac you own over a multiplexed SSH socket. iMessage is macOS-only, so this machine is a thin client and the Mac is the gateway. The bar badge counts every unread; desktop toasts fire only for handles on your allowlist, because chat.db is mostly bank alerts and 2FA codes.",
       "accent": "#0a84ff",
-      "stars": 166,
+      "stars": 167,
       "forks": 38,
       "watchers": 1,
       "open_prs": 7,
@@ -1329,7 +1337,7 @@
           "url": "https://github.com/nixfred/blip/issues/69"
         }
       ],
-      "pushed": "2026-09-30T12:30:33Z",
+      "pushed": "2026-09-30T23:04:20Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -1350,7 +1358,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 266
+          "commits": 267
         },
         {
           "login": "Fileri",
@@ -1388,7 +1396,7 @@
           "commits": 5
         }
       ],
-      "commits": 383,
+      "commits": 384,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "shot": "assets/img/shot/nixfred-blip.png",
@@ -1531,26 +1539,9 @@
       "stars": 121,
       "forks": 22,
       "watchers": 1,
-      "open_prs": 2,
+      "open_prs": 0,
       "open_issues": 1,
-      "prs": [
-        {
-          "number": 25,
-          "title": "Add Web Mode with LAN, Tailscale and Manual HTTPS",
-          "author": "TechLuddite",
-          "created": "2026-09-10T21:51:38Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/25"
-        },
-        {
-          "number": 13,
-          "title": "feat: REMOTE — an optional roster file becomes a read-only card",
-          "author": "wulfkaal",
-          "created": "2026-09-09T00:18:14Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/13"
-        }
-      ],
+      "prs": [],
       "issues": [
         {
           "number": 26,
@@ -1560,7 +1551,7 @@
           "url": "https://github.com/nixfred/infomarchy/issues/26"
         }
       ],
-      "pushed": "2026-09-30T12:30:01Z",
+      "pushed": "2026-10-01T02:57:05Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -1584,12 +1575,12 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 121
+          "commits": 127
         },
         {
           "login": "TechLuddite",
           "avatar": "https://avatars.githubusercontent.com/u/287875418?v=4",
-          "commits": 22
+          "commits": 35
         },
         {
           "login": "eternal4430",
@@ -1622,7 +1613,7 @@
           "commits": 3
         }
       ],
-      "commits": 167,
+      "commits": 186,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "shot": "assets/img/shot/nixfred-infomarchy.png",
@@ -2179,7 +2170,7 @@
     }
   ],
   "heatmap": {
-    "total": 2509,
+    "total": 2525,
     "weeks": [
       [
         {
@@ -4118,13 +4109,18 @@
         },
         {
           "date": "2026-09-29",
-          "count": 8,
+          "count": 9,
           "level": 1
         },
         {
           "date": "2026-09-30",
-          "count": 3,
+          "count": 18,
           "level": 1
+        },
+        {
+          "date": "2026-10-01",
+          "count": 0,
+          "level": 0
         }
       ]
     ]
@@ -4135,7 +4131,7 @@
     "listed": 2,
     "families": 7,
     "themes": 1,
-    "stars": 380,
+    "stars": 382,
     "tools": 6,
     "with_shots": 26
   }
