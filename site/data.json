@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-01T13:08:38.905Z",
+  "generated_at": "2026-10-02T12:29:33.033Z",
   "owner": "nixfred",
   "families": [
     {
@@ -707,7 +707,7 @@
           "url": "https://github.com/nixfred/menu.bar.overload/issues/1"
         }
       ],
-      "pushed": "2026-09-09T15:57:37Z",
+      "pushed": "2026-10-02T01:27:31Z",
       "created": "2026-09-09T03:28:34Z",
       "license": null,
       "language": "QML",
@@ -721,10 +721,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 12
+          "commits": 13
         }
       ],
-      "commits": 12,
+      "commits": 13,
       "repo_url": "https://github.com/nixfred/menu.bar.overload",
       "glyph": "assets/img/glyph/nixfred-menubar-overload.svg",
       "shot": null,
@@ -1011,7 +1011,7 @@
         }
       ],
       "issues": [],
-      "pushed": "2026-09-27T01:38:30Z",
+      "pushed": "2026-10-02T03:33:55Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -1022,7 +1022,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 59
+          "commits": 60
         },
         {
           "login": "ianswope",
@@ -1030,7 +1030,7 @@
           "commits": 2
         }
       ],
-      "commits": 61,
+      "commits": 62,
       "repo_url": "https://github.com/nixfred/burnbar",
       "glyph": "assets/img/glyph/nixfred-burnbar.svg",
       "shot": "assets/img/shot/nixfred-burnbar.png",
@@ -1252,11 +1252,19 @@
       "description": "iMessage in the Omarchy bar. Reads and sends through a Mac you own over a multiplexed SSH socket. iMessage is macOS-only, so this machine is a thin client and the Mac is the gateway. The bar badge counts every unread; desktop toasts fire only for handles on your allowlist, because chat.db is mostly bank alerts and 2FA codes.",
       "accent": "#0a84ff",
       "stars": 167,
-      "forks": 38,
+      "forks": 39,
       "watchers": 1,
-      "open_prs": 7,
-      "open_issues": 3,
+      "open_prs": 6,
+      "open_issues": 4,
       "prs": [
+        {
+          "number": 126,
+          "title": "fix: preserve sender-aware self echoes in search",
+          "author": "GreyforgeLabs",
+          "created": "2026-10-02T06:55:36Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/blip/pull/126"
+        },
         {
           "number": 122,
           "title": "Add Pin and Hide Alerts to the conversation menu",
@@ -1264,22 +1272,6 @@
           "created": "2026-09-27T14:03:22Z",
           "draft": false,
           "url": "https://github.com/nixfred/blip/pull/122"
-        },
-        {
-          "number": 121,
-          "title": "Add Mark as Unread and Mark as Read to the conversation menu",
-          "author": "damonjanis",
-          "created": "2026-09-27T14:03:17Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/121"
-        },
-        {
-          "number": 120,
-          "title": "Sync read state through a durable, verified queue",
-          "author": "damonjanis",
-          "created": "2026-09-27T14:03:10Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/120"
         },
         {
           "number": 117,
@@ -1316,6 +1308,13 @@
       ],
       "issues": [
         {
+          "number": 125,
+          "title": "Read sync: per-poll snapshot cost, and blocking Mac calls inside the collector (follow-up to #120)",
+          "author": "nixfred",
+          "created": "2026-10-02T05:02:22Z",
+          "url": "https://github.com/nixfred/blip/issues/125"
+        },
+        {
           "number": 112,
           "title": "Chrome never exposes autocomplete over AT-SPI, so the one-time-code path is dead there",
           "author": "ianswope",
@@ -1337,7 +1336,7 @@
           "url": "https://github.com/nixfred/blip/issues/69"
         }
       ],
-      "pushed": "2026-09-30T23:04:20Z",
+      "pushed": "2026-10-02T06:37:21Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -1358,7 +1357,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 267
+          "commits": 272
         },
         {
           "login": "Fileri",
@@ -1381,6 +1380,11 @@
           "commits": 12
         },
         {
+          "login": "damonjanis",
+          "avatar": "https://avatars.githubusercontent.com/u/310342?v=4",
+          "commits": 8
+        },
+        {
           "login": "adamgamble",
           "avatar": "https://avatars.githubusercontent.com/u/237171?v=4",
           "commits": 7
@@ -1389,14 +1393,9 @@
           "login": "zachwilke",
           "avatar": "https://avatars.githubusercontent.com/u/45574453?v=4",
           "commits": 7
-        },
-        {
-          "login": "bbishdotdev",
-          "avatar": "https://avatars.githubusercontent.com/u/5323528?v=4",
-          "commits": 5
         }
       ],
-      "commits": 384,
+      "commits": 392,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "shot": "assets/img/shot/nixfred-blip.png",
@@ -1537,11 +1536,20 @@
       "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven, on a SUPER+D overlay.",
       "accent": "#00e5ff",
       "stars": 121,
-      "forks": 22,
+      "forks": 23,
       "watchers": 1,
-      "open_prs": 0,
+      "open_prs": 1,
       "open_issues": 1,
-      "prs": [],
+      "prs": [
+        {
+          "number": 41,
+          "title": "fix: retain disk mounts containing whitespace",
+          "author": "GreyforgeLabs",
+          "created": "2026-10-02T06:56:03Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/infomarchy/pull/41"
+        }
+      ],
       "issues": [
         {
           "number": 26,
@@ -1647,7 +1655,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-19T02:11:34Z",
+      "pushed": "2026-10-02T02:00:57Z",
       "created": "2026-08-22T04:33:59Z",
       "license": "MIT",
       "language": "QML",
@@ -1658,10 +1666,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 21
+          "commits": 22
         }
       ],
-      "commits": 21,
+      "commits": 22,
       "repo_url": "https://github.com/nixfred/workspace-names",
       "glyph": "assets/img/glyph/nixfred-workspace-names.svg",
       "shot": null,
@@ -1712,11 +1720,15 @@
       "repo_url": "https://github.com/nixfred/plonk",
       "glyph": "assets/img/glyph/io-github-nixfred-plonk.svg",
       "shot": null,
-      "listed": false,
-      "listed_at": null,
-      "listing_url": null,
-      "marketplace_category": null,
-      "marketplace_tags": [],
+      "listed": true,
+      "listed_at": "2026-10-02T06:11:55.514Z",
+      "listing_url": "https://plugins.omarchy.org/plugin.html?id=io.github.nixfred.plonk",
+      "marketplace_category": "Productivity",
+      "marketplace_tags": [
+        "workspaces",
+        "hyprland",
+        "quickshell"
+      ],
       "install": "omarchy plugin add https://github.com/nixfred/plonk.git --enable",
       "clone": "git clone https://github.com/nixfred/plonk.git"
     },
@@ -1957,11 +1969,20 @@
       "install": "git clone https://github.com/nixfred/imprint.git && cd imprint && ./install.sh",
       "slug": "imprint",
       "stars": 44,
-      "forks": 4,
+      "forks": 5,
       "watchers": 1,
       "open_issues": 1,
-      "open_prs": 0,
-      "prs": [],
+      "open_prs": 1,
+      "prs": [
+        {
+          "number": 10,
+          "title": "fix: complete short writes before replacing restored files",
+          "author": "GreyforgeLabs",
+          "created": "2026-10-02T06:56:00Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/imprint/pull/10"
+        }
+      ],
       "issues": [
         {
           "number": 1,
@@ -2170,7 +2191,7 @@
     }
   ],
   "heatmap": {
-    "total": 2525,
+    "total": 2550,
     "weeks": [
       [
         {
@@ -4082,7 +4103,7 @@
         },
         {
           "date": "2026-09-24",
-          "count": 25,
+          "count": 27,
           "level": 2
         },
         {
@@ -4119,8 +4140,13 @@
         },
         {
           "date": "2026-10-01",
-          "count": 0,
-          "level": 0
+          "count": 11,
+          "level": 1
+        },
+        {
+          "date": "2026-10-02",
+          "count": 12,
+          "level": 1
         }
       ]
     ]
@@ -4128,7 +4154,7 @@
   "stats": {
     "plugins": 32,
     "live": 30,
-    "listed": 2,
+    "listed": 3,
     "families": 7,
     "themes": 1,
     "stars": 382,
