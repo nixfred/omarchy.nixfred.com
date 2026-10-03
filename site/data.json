@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T12:29:33.033Z",
+  "generated_at": "2026-10-03T11:36:33.806Z",
   "owner": "nixfred",
   "families": [
     {
@@ -583,9 +583,18 @@
       "stars": 10,
       "forks": 2,
       "watchers": 0,
-      "open_prs": 0,
+      "open_prs": 1,
       "open_issues": 0,
-      "prs": [],
+      "prs": [
+        {
+          "number": 7,
+          "title": "fix: keep the last power profile when powerprofilesctl aborts on exit",
+          "author": "dadofsambonzuki",
+          "created": "2026-10-03T07:33:26Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/pulse/pull/7"
+        }
+      ],
       "issues": [],
       "pushed": "2026-09-19T19:24:23Z",
       "created": "2026-09-11T16:49:33Z",
@@ -881,7 +890,7 @@
       "description": "Clock and calendar with a pulse: a day-progress ring, shimmering year and life rails, a drawn moon phase, and a month grid that arrives on a stagger.",
       "accent": "#e0aaff",
       "stars": 1,
-      "forks": 0,
+      "forks": 1,
       "watchers": 0,
       "open_prs": 0,
       "open_issues": 0,
@@ -1011,7 +1020,7 @@
         }
       ],
       "issues": [],
-      "pushed": "2026-10-02T03:33:55Z",
+      "pushed": "2026-10-03T01:46:51Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -1022,7 +1031,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 60
+          "commits": 62
         },
         {
           "login": "ianswope",
@@ -1030,7 +1039,7 @@
           "commits": 2
         }
       ],
-      "commits": 62,
+      "commits": 64,
       "repo_url": "https://github.com/nixfred/burnbar",
       "glyph": "assets/img/glyph/nixfred-burnbar.svg",
       "shot": "assets/img/shot/nixfred-burnbar.png",
@@ -1254,16 +1263,16 @@
       "stars": 167,
       "forks": 39,
       "watchers": 1,
-      "open_prs": 6,
-      "open_issues": 4,
+      "open_prs": 4,
+      "open_issues": 3,
       "prs": [
         {
-          "number": 126,
-          "title": "fix: preserve sender-aware self echoes in search",
-          "author": "GreyforgeLabs",
-          "created": "2026-10-02T06:55:36Z",
+          "number": 127,
+          "title": "imsg-react: never press in the pass that scrolled; no retry; stray on every outcome",
+          "author": "Fileri",
+          "created": "2026-10-03T08:48:27Z",
           "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/126"
+          "url": "https://github.com/nixfred/blip/pull/127"
         },
         {
           "number": 122,
@@ -1272,22 +1281,6 @@
           "created": "2026-09-27T14:03:22Z",
           "draft": false,
           "url": "https://github.com/nixfred/blip/pull/122"
-        },
-        {
-          "number": 117,
-          "title": "feat: tapbacks in the message menu, behind tapbacks=on (PR 2 of 2 for #69)",
-          "author": "Fileri",
-          "created": "2026-09-27T09:28:24Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/117"
-        },
-        {
-          "number": 116,
-          "title": "feat: imsg-react adds or removes one tapback, behind tapbacks=on (PR 1 of 2 for #69)",
-          "author": "Fileri",
-          "created": "2026-09-27T09:28:15Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/116"
         },
         {
           "number": 83,
@@ -1327,16 +1320,9 @@
           "author": "ianswope",
           "created": "2026-09-13T22:06:02Z",
           "url": "https://github.com/nixfred/blip/issues/78"
-        },
-        {
-          "number": 69,
-          "title": "Outbound tapbacks do not need SIP off — the Accessibility line `imsg-read` already crossed reaches them. In scope?",
-          "author": "Fileri",
-          "created": "2026-09-11T05:52:28Z",
-          "url": "https://github.com/nixfred/blip/issues/69"
         }
       ],
-      "pushed": "2026-10-02T06:37:21Z",
+      "pushed": "2026-10-02T15:59:17Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -1357,12 +1343,12 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 272
+          "commits": 278
         },
         {
           "login": "Fileri",
           "avatar": "https://avatars.githubusercontent.com/u/955867?v=4",
-          "commits": 37
+          "commits": 42
         },
         {
           "login": "jondkinney",
@@ -1395,7 +1381,7 @@
           "commits": 7
         }
       ],
-      "commits": 392,
+      "commits": 403,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "shot": "assets/img/shot/nixfred-blip.png",
@@ -1744,7 +1730,7 @@
       "description": "Save the applications on a workspace as a named Rift and reopen them on demand or at login, straight from the Omarchy bar. No geometry is saved, so Hyprland keeps tiling.",
       "accent": "#c77dff",
       "stars": 1,
-      "forks": 0,
+      "forks": 1,
       "watchers": 0,
       "open_prs": 1,
       "open_issues": 11,
@@ -2191,7 +2177,7 @@
     }
   ],
   "heatmap": {
-    "total": 2550,
+    "total": 2564,
     "weeks": [
       [
         {
@@ -3987,7 +3973,7 @@
         },
         {
           "date": "2026-09-02",
-          "count": 21,
+          "count": 18,
           "level": 1
         },
         {
@@ -4145,8 +4131,13 @@
         },
         {
           "date": "2026-10-02",
-          "count": 12,
-          "level": 1
+          "count": 29,
+          "level": 2
+        },
+        {
+          "date": "2026-10-03",
+          "count": 0,
+          "level": 0
         }
       ]
     ]
