@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T11:36:33.806Z",
+  "generated_at": "2026-10-04T12:17:57.913Z",
   "owner": "nixfred",
   "families": [
     {
@@ -583,20 +583,11 @@
       "stars": 10,
       "forks": 2,
       "watchers": 0,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 0,
-      "prs": [
-        {
-          "number": 7,
-          "title": "fix: keep the last power profile when powerprofilesctl aborts on exit",
-          "author": "dadofsambonzuki",
-          "created": "2026-10-03T07:33:26Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/pulse/pull/7"
-        }
-      ],
+      "prs": [],
       "issues": [],
-      "pushed": "2026-09-19T19:24:23Z",
+      "pushed": "2026-10-04T04:48:56Z",
       "created": "2026-09-11T16:49:33Z",
       "license": "MIT",
       "language": "QML",
@@ -615,12 +606,12 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 23
+          "commits": 27
         },
         {
           "login": "dadofsambonzuki",
           "avatar": "https://avatars.githubusercontent.com/u/87125117?v=4",
-          "commits": 4
+          "commits": 5
         },
         {
           "login": "jbronssin",
@@ -628,7 +619,7 @@
           "commits": 1
         }
       ],
-      "commits": 28,
+      "commits": 33,
       "repo_url": "https://github.com/nixfred/pulse",
       "glyph": "assets/img/glyph/nixfred-pulse.svg",
       "shot": "assets/img/shot/nixfred-pulse.png",
@@ -991,36 +982,20 @@
       "stars": 11,
       "forks": 3,
       "watchers": 0,
-      "open_prs": 3,
+      "open_prs": 1,
       "open_issues": 0,
       "prs": [
         {
-          "number": 5,
-          "title": "Fix local AMD GPU telemetry",
-          "author": "aplaceforallmystuff",
-          "created": "2026-09-30T09:45:34Z",
+          "number": 7,
+          "title": "feat: surface Claude's 5-hour window when it is about to run out",
+          "author": "nixfred",
+          "created": "2026-10-04T06:50:24Z",
           "draft": false,
-          "url": "https://github.com/nixfred/burnbar/pull/5"
-        },
-        {
-          "number": 4,
-          "title": "feat: a Zcode lane, per-request usage from ~/.zcode/cli/rollout",
-          "author": "zicochaos",
-          "created": "2026-09-27T21:53:08Z",
-          "draft": true,
-          "url": "https://github.com/nixfred/burnbar/pull/4"
-        },
-        {
-          "number": 3,
-          "title": "feat: BURNBAR_EXTRA_HOMES, count usage burned on other machines",
-          "author": "zicochaos",
-          "created": "2026-09-27T20:59:34Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/burnbar/pull/3"
+          "url": "https://github.com/nixfred/burnbar/pull/7"
         }
       ],
       "issues": [],
-      "pushed": "2026-10-03T01:46:51Z",
+      "pushed": "2026-10-04T08:28:15Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -1031,15 +1006,25 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 62
+          "commits": 63
         },
         {
           "login": "ianswope",
           "avatar": "https://avatars.githubusercontent.com/u/175949710?v=4",
           "commits": 2
+        },
+        {
+          "login": "aplaceforallmystuff",
+          "avatar": "https://avatars.githubusercontent.com/u/4331738?v=4",
+          "commits": 1
+        },
+        {
+          "login": "zicochaos",
+          "avatar": "https://avatars.githubusercontent.com/u/23367003?v=4",
+          "commits": 1
         }
       ],
-      "commits": 64,
+      "commits": 67,
       "repo_url": "https://github.com/nixfred/burnbar",
       "glyph": "assets/img/glyph/nixfred-burnbar.svg",
       "shot": "assets/img/shot/nixfred-burnbar.png",
@@ -1260,11 +1245,11 @@
       "tagline": "iMessage in the Omarchy bar.",
       "description": "iMessage in the Omarchy bar. Reads and sends through a Mac you own over a multiplexed SSH socket. iMessage is macOS-only, so this machine is a thin client and the Mac is the gateway. The bar badge counts every unread; desktop toasts fire only for handles on your allowlist, because chat.db is mostly bank alerts and 2FA codes.",
       "accent": "#0a84ff",
-      "stars": 167,
+      "stars": 168,
       "forks": 39,
       "watchers": 1,
-      "open_prs": 4,
-      "open_issues": 3,
+      "open_prs": 3,
+      "open_issues": 5,
       "prs": [
         {
           "number": 127,
@@ -1289,17 +1274,23 @@
           "created": "2026-09-14T14:22:46Z",
           "draft": false,
           "url": "https://github.com/nixfred/blip/pull/83"
-        },
-        {
-          "number": 25,
-          "title": "Gated contact writes: edit, merge, clean up, delete, and undo",
-          "author": "jondkinney",
-          "created": "2026-09-04T02:35:56Z",
-          "draft": true,
-          "url": "https://github.com/nixfred/blip/pull/25"
         }
       ],
       "issues": [
+        {
+          "number": 130,
+          "title": "Invitation to share blip on GithubStarMate and help more people discover your work",
+          "author": "panda5683",
+          "created": "2026-10-04T10:04:30Z",
+          "url": "https://github.com/nixfred/blip/issues/130"
+        },
+        {
+          "number": 129,
+          "title": "Blip - SSH",
+          "author": "mikev1963",
+          "created": "2026-10-03T15:00:47Z",
+          "url": "https://github.com/nixfred/blip/issues/129"
+        },
         {
           "number": 125,
           "title": "Read sync: per-poll snapshot cost, and blocking Mac calls inside the collector (follow-up to #120)",
@@ -1322,7 +1313,7 @@
           "url": "https://github.com/nixfred/blip/issues/78"
         }
       ],
-      "pushed": "2026-10-02T15:59:17Z",
+      "pushed": "2026-10-04T04:39:39Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -1343,7 +1334,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 278
+          "commits": 279
         },
         {
           "login": "Fileri",
@@ -1381,7 +1372,7 @@
           "commits": 7
         }
       ],
-      "commits": 403,
+      "commits": 404,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "shot": "assets/img/shot/nixfred-blip.png",
@@ -1407,20 +1398,11 @@
       "stars": 30,
       "forks": 4,
       "watchers": 0,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 0,
-      "prs": [
-        {
-          "number": 3,
-          "title": "fix: resolve the bun runtime instead of assuming it is on the shell's PATH",
-          "author": "LinuxGamerUK",
-          "created": "2026-09-27T13:06:48Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/omarchy-server-status/pull/3"
-        }
-      ],
+      "prs": [],
       "issues": [],
-      "pushed": "2026-09-18T04:26:21Z",
+      "pushed": "2026-10-04T05:21:48Z",
       "created": "2026-08-23T03:09:01Z",
       "license": "MIT",
       "language": "QML",
@@ -1431,7 +1413,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 19
+          "commits": 21
         },
         {
           "login": "Fileri",
@@ -1449,7 +1431,7 @@
           "commits": 3
         }
       ],
-      "commits": 28,
+      "commits": 30,
       "repo_url": "https://github.com/nixfred/omarchy-server-status",
       "glyph": "assets/img/glyph/io-github-nixfred-tailscale-host-monitor.svg",
       "shot": "assets/img/shot/io-github-nixfred-tailscale-host-monitor.png",
@@ -1524,18 +1506,9 @@
       "stars": 121,
       "forks": 23,
       "watchers": 1,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 1,
-      "prs": [
-        {
-          "number": 41,
-          "title": "fix: retain disk mounts containing whitespace",
-          "author": "GreyforgeLabs",
-          "created": "2026-10-02T06:56:03Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/41"
-        }
-      ],
+      "prs": [],
       "issues": [
         {
           "number": 26,
@@ -1545,7 +1518,7 @@
           "url": "https://github.com/nixfred/infomarchy/issues/26"
         }
       ],
-      "pushed": "2026-10-01T02:57:05Z",
+      "pushed": "2026-10-04T04:50:01Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -1569,7 +1542,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 127
+          "commits": 129
         },
         {
           "login": "TechLuddite",
@@ -1607,7 +1580,7 @@
           "commits": 3
         }
       ],
-      "commits": 186,
+      "commits": 188,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "shot": "assets/img/shot/nixfred-infomarchy.png",
@@ -1958,17 +1931,8 @@
       "forks": 5,
       "watchers": 1,
       "open_issues": 1,
-      "open_prs": 1,
-      "prs": [
-        {
-          "number": 10,
-          "title": "fix: complete short writes before replacing restored files",
-          "author": "GreyforgeLabs",
-          "created": "2026-10-02T06:56:00Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/imprint/pull/10"
-        }
-      ],
+      "open_prs": 0,
+      "prs": [],
       "issues": [
         {
           "number": 1,
@@ -1978,7 +1942,7 @@
           "url": "https://github.com/nixfred/imprint/issues/1"
         }
       ],
-      "pushed": "2026-09-16T01:57:34Z",
+      "pushed": "2026-10-04T04:57:54Z",
       "created": "2026-09-06T17:40:13Z",
       "archived": false,
       "license": "MIT",
@@ -1989,10 +1953,15 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 45
+          "commits": 46
+        },
+        {
+          "login": "GreyforgeLabs",
+          "avatar": "https://avatars.githubusercontent.com/u/252855775?v=4",
+          "commits": 1
         }
       ],
-      "commits": 45,
+      "commits": 47,
       "repo_url": "https://github.com/nixfred/imprint",
       "clone": "git clone https://github.com/nixfred/imprint.git",
       "shot": "assets/img/shot/imprint.png"
@@ -2177,45 +2146,8 @@
     }
   ],
   "heatmap": {
-    "total": 2564,
+    "total": 2593,
     "weeks": [
-      [
-        {
-          "date": "2025-09-28",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-09-29",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-09-30",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-01",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-02",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-03",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-04",
-          "count": 0,
-          "level": 0
-        }
-      ],
       [
         {
           "date": "2025-10-05",
@@ -4099,7 +4031,7 @@
         },
         {
           "date": "2026-09-26",
-          "count": 33,
+          "count": 34,
           "level": 2
         }
       ],
@@ -4136,8 +4068,15 @@
         },
         {
           "date": "2026-10-03",
-          "count": 0,
-          "level": 0
+          "count": 14,
+          "level": 1
+        }
+      ],
+      [
+        {
+          "date": "2026-10-04",
+          "count": 14,
+          "level": 1
         }
       ]
     ]
@@ -4148,7 +4087,7 @@
     "listed": 3,
     "families": 7,
     "themes": 1,
-    "stars": 382,
+    "stars": 383,
     "tools": 6,
     "with_shots": 26
   }
