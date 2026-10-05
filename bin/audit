@@ -130,7 +130,7 @@ n = 0;
 for (const [id, k] of known) {
   if (onDisk.has(id)) continue;
   n++;
-  console.log(`  ${C.red}!${C.r} ${k.name.padEnd(24)} ${C.dim}expected ${k.dir}${C.r}`);
+  console.log(`  ${C.red}!${C.r} ${k.name.padEnd(24)} ${C.dim}expected ${k.dir ?? k.repo}${C.r}`);
 }
 if (!n) console.log(`  ${C.dim}none${C.r}`);
 

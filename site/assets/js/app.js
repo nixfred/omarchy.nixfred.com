@@ -213,7 +213,7 @@
       ["watching", p.watchers],
       ["open PRs", p.open_prs],
       ["open issues", p.open_issues],
-      ["commits", p.commits || "—"],
+      ["commits shown", p.commits || "—"],
       ["language", p.language || "—", true],
       ["licence", p.license || "—", true],
       ["release", p.release ? p.release.tag : "—", true],
@@ -224,7 +224,7 @@
 
     const people = (p.contributors || []).length
       ? `<div class="who">
-           <span class="who-h">${p.contributors.length} contributor${p.contributors.length === 1 ? "" : "s"}</span>
+           <span class="who-h">${p.contributors.length} contributor${p.contributors.length === 1 ? "" : "s"} shown</span>
            <div class="faces">${p.contributors.map((c) =>
              `<a href="https://github.com/${esc(c.login)}" target="_blank" rel="noopener"
                  title="${esc(c.login)} — ${c.commits} commit${c.commits === 1 ? "" : "s"}">
@@ -270,15 +270,24 @@
     if (p.listed) {
       const when = p.listed_at ? new Date(p.listed_at).toISOString().slice(0, 10) : "";
       t.push(`<a class="tag listed" href="${esc(p.listing_url)}" title="Listed on the official Omarchy marketplace${when ? ` on ${when}` : ""}">${ICON.check} listed</a>`);
-    } else if (p.status === "live") {
-      t.push(`<span class="tag pending" title="Not submitted to the official marketplace yet. This flips on its own when it is.">${ICON.dotm} not submitted</span>`);
+    } else if (p.listed === null) {
+      t.push(`<span class="tag pending">listing unknown</span>`);
+    } else if (p.listed === false) {
+      t.push(`<span class="tag pending" title="This repository was not found in the official registry at the last successful build.">${ICON.dotm} not listed</span>`);
     }
-    if (p.status === "developing") t.push(`<span class="tag developing" title="Still being built. Public source and installable, but expect rough edges and breaking changes before 1.0.">${ICON.dotm} developing</span>`);
+    if (p.status === "developing") t.push(`<span class="tag developing" title="Public source with development or beta status. Read the repository for current limits.">${ICON.dotm} developing</span>`);
     if (p.status === "shelved") t.push(`<span class="tag shelved">shelved</span>`);
     if (p.status === "unreleased") t.push(`<span class="tag unreleased">unreleased</span>`);
-    if (p.fork_of) t.push(`<span class="tag fork" title="A fork of ${esc(p.fork_of)}">fork</span>`);
+    if (p.fork_of) t.push(`<span class="tag fork" title="Public fork of ${esc(p.fork_of)}">fork</span>`);
+    if (p.archived) t.push(`<span class="tag shelved">archived</span>`);
     if (p.stars > 0) t.push(`<span class="tag stars">${ICON.star} ${p.stars}</span>`);
     return t.join("");
+  }
+
+  function creditLine(p) {
+    if (!p.credit_url) return "";
+    const label = p.credit || `Original project: ${p.fork_of}`;
+    return `<p class="credit"><a href="${esc(p.credit_url)}" target="_blank" rel="noopener">${esc(label)}</a></p>`;
   }
 
   /** Make the whole card a hit target for its own DETAILS dropdown.
@@ -319,6 +328,7 @@
       </div>
       ${p.shot ? `<img class="shot" src="${esc(p.shot)}" alt="${esc(p.name)} running in the Omarchy bar" loading="lazy" decoding="async">` : ""}
       <p class="desc">${esc(p.description)}</p>
+      ${creditLine(p)}
       <div class="tags">${statusTags(p)}</div>
       <div class="foot">${links.join("")}</div>
       ${detailsBlock(p)}`;
@@ -336,16 +346,17 @@
   // ─────────────────────────────────────────────────────── render
 
   function match(p) {
-    if (state.fam !== "all" && p.family !== state.fam) return false;
+    if (state.fam !== "all" && state.fam !== "listed" && p.family !== state.fam) return false;
     if (state.fam === "listed" && !p.listed) return false;
     const q = state.q.trim().toLowerCase();
     if (!q) return true;
-    return [p.name, p.tagline, p.description, p.id, p.family].join(" ").toLowerCase().includes(q);
+    return [p.name, p.tagline, p.description, p.id, p.family, p.repo, p.fork_of].join(" ").toLowerCase().includes(q);
   }
 
   function render() {
     const host = $("#families");
     host.textContent = "";
+    renderTools();
     let shown = 0;
 
     // Fred's rule: newest created first, even when filtered. Family grouping would
@@ -417,7 +428,7 @@
 
     const rows = [];
 
-    for (const id of ["nixfred.infomarchy", "nixfred.blip", "nixfred.pulse"]) {
+    for (const id of ["nixfred.doctor", "nixfred.infomarchy", "nixfred.blip", "nixfred.pulse"]) {
       const p = byId.get(id);
       if (!p) continue;
       rows.push({
@@ -475,6 +486,7 @@
         <div class="tagline">${esc(p.tagline)}</div>
         ${p.shot ? `<img class="shot" src="${esc(p.shot)}" alt="${esc(p.name)} running in the Omarchy bar" loading="lazy" decoding="async">` : ""}
         <p class="d">${esc(p.description)}</p>
+        ${creditLine(p)}
         <div class="tags">${statusTags(p)}</div>
         <div class="foot">
           ${p.repo_url ? `<a class="btn primary" href="${esc(p.repo_url)}" target="_blank" rel="noopener">${ICON.github} Source</a>` : ""}
@@ -490,11 +502,39 @@
 
     // The Pulse family card was removed when Pulse itself shipped: a card
     // advertising six siblings is wrong when four of them merged into one.
-    // Featured now carries three flagships.
+    // Featured carries the current public flagships.
 
-    for (const n of [solo("nixfred.infomarchy", "flagship"), solo("nixfred.blip", "flagship"), solo("nixfred.pulse", "flagship")]) {
+    for (const n of [solo("nixfred.doctor", "flagship"), solo("nixfred.infomarchy", "flagship"), solo("nixfred.blip", "flagship"), solo("nixfred.pulse", "flagship")]) {
       if (n) grid.append(n);
     }
+  }
+
+  function renderTools() {
+    // Tools. They were a row of text links at the foot of the page and nobody
+    // reached them, so they are full cards now, in the featured shape, directly
+    // under the flagships.
+    const q = state.q.trim().toLowerCase();
+    const items = DATA.tools.filter((t) => !q || [t.name, t.description, t.repo, t.fork_of].join(" ").toLowerCase().includes(q));
+    $("#tool-count").textContent = q ? `${items.length} / ${DATA.tools.length}` : DATA.tools.length;
+    $("#tool-grid").innerHTML = "";
+    for (const t of items) {
+      const n = el("article", "feat tool");
+      n.innerHTML = `
+        <div class="kicker">desktop app / tool</div>
+        <h3>${esc(t.name)}</h3>
+        ${t.shot ? `<img class="shot" src="${esc(t.shot)}" alt="${esc(t.name)}" loading="lazy" decoding="async">` : ""}
+        <p class="d">${esc(t.description)}</p>
+        ${creditLine(t)}
+        <div class="tags">${statusTags(t)}</div>
+        <div class="foot">
+          <a class="btn primary" href="${esc(t.repo_url)}" target="_blank" rel="noopener">${ICON.github} Source</a>
+        </div>
+        ${detailsBlock(t)}`;
+      n.id = `t-${t.slug}`;
+      clickOpensDetails(n);
+      $("#tool-grid").append(n);
+    }
+
   }
 
   function chrome() {
@@ -547,27 +587,6 @@
         </article>`).join("") +
       `<div class="slot">room for the next theme</div><div class="slot">room for the next theme</div>`;
 
-    // Tools. They were a row of text links at the foot of the page and nobody
-    // reached them, so they are full cards now, in the featured shape, directly
-    // under the flagships.
-    $("#tool-count").textContent = DATA.tools.length;
-    $("#tool-grid").innerHTML = "";
-    for (const t of DATA.tools) {
-      const n = el("article", "feat tool");
-      n.innerHTML = `
-        <div class="kicker">tool</div>
-        <h3>${esc(t.name)}</h3>
-        ${t.shot ? `<img class="shot" src="${esc(t.shot)}" alt="${esc(t.name)}" loading="lazy" decoding="async">` : ""}
-        <p class="d">${esc(t.description)}</p>
-        <div class="tags">${statusTags(t)}</div>
-        <div class="foot">
-          <a class="btn primary" href="${esc(t.repo_url)}" target="_blank" rel="noopener">${ICON.github} Source</a>
-        </div>
-        ${detailsBlock(t)}`;
-      clickOpensDetails(n);
-      $("#tool-grid").append(n);
-    }
-
     // retired
     $("#retired-count").textContent = DATA.retired.length;
     $("#retired-grid").innerHTML = DATA.retired.map((r) => {
@@ -579,14 +598,14 @@
 
     // heatmap
     if (DATA.heatmap) {
-      $("#heat-total").textContent = `${DATA.heatmap.total.toLocaleString()} contributions in the last year. The plugins above are what most of it went into.`;
+      $("#heat-total").textContent = `${DATA.heatmap.total.toLocaleString()} contributions in the last year. GitHub account activity; this total is not limited to Omarchy.`;
       $("#heat").innerHTML = DATA.heatmap.weeks.map((w) =>
         `<div class="wk">${w.map((d) => `<i data-l="${d.level}" title="${d.date}: ${d.count}"></i>`).join("")}</div>`).join("");
     } else {
       $("#activity").style.display = "none";
     }
 
-    $("#built").textContent = `generated ${new Date(DATA.generated_at).toISOString().slice(0, 16).replace("T", " ")} UTC · listing status read live from the official registry`;
+    $("#built").textContent = `generated ${new Date(DATA.generated_at).toISOString().slice(0, 16).replace("T", " ")} UTC · ${DATA.registry_checked ? "marketplace registry checked at build" : "marketplace status unavailable"}`;
   }
 
   // One listener for every copy box on the page, present and future, so cards

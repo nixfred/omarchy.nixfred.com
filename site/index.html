@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nixfred's Omarchy Plugins</title>
-<meta name="description" content="Twenty-four plugins and a theme for the Omarchy desktop, built by Fred Nix. Bar widgets, a Mac bridge, workspace control and a suite of living system instruments.">
+<meta name="description" content="Public Omarchy plugins, desktop apps, tools and a theme by Fred Nix, with credited community forks. Explore system diagnostics, workspace control, media and AI tools.">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#06080b">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://omarchy.nixfred.com/">
 <meta property="og:site_name" content="omarchy.nixfred.com">
 <meta property="og:title" content="Nixfred&#39;s Omarchy Plugins">
-<meta property="og:description" content="Twenty-four plugins and a theme for the Omarchy desktop. Bar widgets, a Mac bridge, workspace control, and a suite of living system instruments.">
+<meta property="og:description" content="Public Omarchy plugins, desktop apps, tools and a theme by Fred Nix, with credited community forks.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://omarchy.nixfred.com/">
 <!-- Absolute, and 1200x630: unfurlers will not resolve a relative path, and a
@@ -28,12 +28,12 @@
 <meta name="twitter:site" content="@nixfred">
 <meta name="twitter:creator" content="@nixfred">
 <meta name="twitter:title" content="Nixfred&#39;s Omarchy Plugins">
-<meta name="twitter:description" content="Twenty-four plugins and a theme for the Omarchy desktop. Bar widgets, a Mac bridge, workspace control, and a suite of living system instruments.">
+<meta name="twitter:description" content="Public Omarchy plugins, desktop apps, tools and a theme by Fred Nix, with credited community forks.">
 <meta name="twitter:image" content="https://omarchy.nixfred.com/assets/img/og.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="assets/css/style.css?v=ae481d93">
+<link rel="stylesheet" href="assets/css/style.css?v=fd44de2f">
 </head>
 <body>
 
@@ -47,6 +47,8 @@
 <nav class="topnav" aria-label="Elsewhere">
   <div class="wrap">
     <a href="https://github.com/nixfred" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://github.com/nixfred/nixfred/blob/main/PROJECTS.md" target="_blank" rel="noopener">All public projects</a>
+    <a href="https://github.com/nixfred/nixfred/blob/main/CONTRIBUTIONS.md" target="_blank" rel="noopener">Contributions</a>
     <a href="https://plugins.omarchy.org/" target="_blank" rel="noopener">Official marketplace</a>
     <a href="https://omarchy.org" target="_blank" rel="noopener">Omarchy</a>
     <a href="https://nixfred.com" target="_blank" rel="noopener">nixfred.com</a>
@@ -89,6 +91,13 @@
   </div>
 </header>
 
+<div class="wrap">
+  <div class="controls">
+    <input class="search" id="q" type="search" placeholder="Search plugins and tools…" aria-label="Search plugins and tools">
+    <div id="chips" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+  </div>
+</div>
+
 <section id="featured">
   <div class="wrap">
     <header class="banner-head">
@@ -97,7 +106,7 @@
       <img src="assets/img/featured-banner.svg" alt="" class="banner" aria-hidden="true"
            onerror="this.remove()">
       <h2 class="sr-head">Featured</h2>
-      <p>Two flagships and a family of six built on one idea.</p>
+      <p>System health, a live AI desk, iMessage and the Pulse suite.</p>
     </header>
     <div class="feat-grid" id="feat-grid"></div>
   </div>
@@ -109,18 +118,11 @@
   <div class="wrap">
     <header class="tools-head">
       <h2>Tools around the desktop <span class="count" id="tool-count"></span></h2>
-      <p>Not bar plugins. The programs the plugins stand on, and the ones that carry a machine from one box to the next.</p>
+      <p>Desktop apps, machine setup, hardware controls and public experiments. Community projects keep their original credits.</p>
     </header>
     <div class="feat-grid" id="tool-grid"></div>
   </div>
 </section>
-
-<div class="wrap">
-  <div class="controls">
-    <input class="search" id="q" type="search" placeholder="Search plugins…" aria-label="Search plugins">
-    <div id="chips" style="display:flex;flex-wrap:wrap;gap:8px"></div>
-  </div>
-</div>
 
 <main id="families"></main>
 
@@ -161,7 +163,7 @@
   <div class="wrap cols">
     <div>
       <p><strong style="color:var(--fg)">omarchy.nixfred.com</strong></p>
-      <p>Plugins for the Omarchy desktop, by Fred Nix. MIT unless a repo says otherwise.</p>
+      <p>Public Omarchy work by Fred Nix and credited contributors. Each repository carries its own license and installation requirements.</p>
       <p class="built" id="built"></p>
     </div>
     <!-- These links live in the top nav now. The footer keeps the two that are
@@ -186,7 +188,7 @@
   <button type="button" id="deadjs-fix">Reload past the cache</button>
 </div>
 
-<script src="assets/js/app.js?v=63e2925a" onerror="window.__appFailed = 'network'"></script>
+<script src="assets/js/app.js?v=75d6a688" onerror="window.__appFailed = 'network'"></script>
 <script>
   /* A watchdog, not a diagnosis.
 

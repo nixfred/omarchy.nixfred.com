@@ -22,7 +22,8 @@ type Plugin = {
   family: string;
   status: string;
   repo: string | null;
-  dir: string;
+  manifest_path?: string;
+  install?: string | null;
   version: string;
   tagline: string;
   description: string;
@@ -60,6 +61,7 @@ const repoNames = [
       ...src.plugins.map((p) => p.repo),
       ...src.themes.map((t: any) => t.repo),
       ...src.tools.map((t: any) => t.repo),
+      ...src.retired.map((t: any) => t.repo),
     ].filter(Boolean) as string[],
   ),
 ];
@@ -158,21 +160,34 @@ await Promise.all(
 );
 console.error(`  got ${repoStats.size}/${repoNames.length}`);
 
-// A private repo is invisible to the build but a 404 to every visitor, so say so
-// here rather than let it ship looking healthy.
-const notPublic = [...repoStats.entries()].filter(([, v]) => !v.is_public).map(([r]) => r);
-if (notPublic.length) {
-  console.error(`  ⚠ ${notPublic.length} repo(s) are NOT PUBLIC — their Source link, install and clone will 404 for visitors:`);
-  for (const r of notPublic) console.error(`      ${r}`);
-}
+// Refuse to publish unverified or private repositories. Authenticated GitHub
+// reads can see private work; the public catalogue must never include it.
+const invalidRepos = repoNames.filter((r) => !repoStats.get(r)?.is_public);
+if (invalidRepos.length) throw new Error(`Public visibility could not be verified: ${invalidRepos.join(", ")}`);
+if (src.plugins.some((p) => !p.repo)) throw new Error("Every plugin needs a verified public repository");
+if (new Set(src.plugins.map((p) => p.id)).size !== src.plugins.length) throw new Error("Duplicate plugin ids");
+
+// Versions refer to committed public manifests, never to an installed checkout.
+// Keep editorial descriptions in plugins.json; refresh the version every build.
+await Promise.all(src.plugins.map(async (p) => {
+  const path = p.manifest_path ?? "manifest.json";
+  const m = await ghJson(`repos/${p.repo}/contents/${path}?ref=${repoStats.get(p.repo!)!.default_branch}`);
+  if (!m?.content) throw new Error(`Public manifest unavailable: ${p.repo}/${path}`);
+  const manifest = JSON.parse(Buffer.from(m.content, "base64").toString("utf8"));
+  if (manifest.id !== p.id || !manifest.version) throw new Error(`Manifest identity/version mismatch: ${p.repo}`);
+  p.version = manifest.version;
+}));
 
 // ------------------------------------------------- official marketplace status
 
 console.error("→ fetching official marketplace registry…");
+let registryChecked = false;
 let listedRepos = new Map<string, { listedAt: string | null; ids: string[]; category: string | null; tags: string[] }>();
 try {
   const reg = (await (await fetch(REGISTRY_URL)).json()) as any;
-  for (const s of reg.sources ?? []) {
+  if (!Array.isArray(reg.sources)) throw new Error("Invalid registry sources");
+  registryChecked = true;
+  for (const s of reg.sources) {
     const repo = String(s.repo ?? "").replace(/^https?:\/\/github\.com\//, "").replace(/\.git$/, "");
     if (!repo.toLowerCase().startsWith(`${src.owner.toLowerCase()}/`)) continue;
     const ids = Object.keys(s.plugins ?? {});
@@ -187,6 +202,7 @@ try {
   console.error(`  ${listedRepos.size} of our repos are listed`);
 } catch (e) {
   console.error(`  ! registry fetch failed, listing status falls back to "unknown": ${e}`);
+  registryChecked = false;
   listedRepos = new Map();
 }
 
@@ -228,7 +244,10 @@ try {
 
 // ------------------------------------------------------------------- assemble
 
-const glyphFor = (id: string) => `assets/img/glyph/${id.replace(/\./g, "-")}.svg`;
+const glyphFor = (id: string, family: string) => {
+  const file = `assets/img/glyph/${id.replace(/\./g, "-")}.svg`;
+  return Bun.file(`${ROOT}site/${file}`).size ? file : `assets/img/family/${family}.svg`;
+};
 
 const plugins = src.plugins.map((p) => {
   const stats = p.repo ? repoStats.get(p.repo) : undefined;
@@ -252,11 +271,13 @@ const plugins = src.plugins.map((p) => {
     contributors: stats?.contributors ?? [],
     commits: stats?.commits ?? 0,
     repo_url: p.repo ? `https://github.com/${p.repo}` : null,
-    glyph: glyphFor(p.id),
+    glyph: glyphFor(p.id, p.family),
+    archived: !!stats?.archived,
+    version_source: `https://github.com/${p.repo}/blob/${stats?.default_branch ?? "main"}/${p.manifest_path ?? "manifest.json"}`,
     shot: haveShot.has(p.id.replace(/\./g, "-")) ? `assets/img/shot/${p.id.replace(/\./g, "-")}.png` : null,
-    listed: !!listing,
+    listed: registryChecked ? !!listing : null,
     listed_at: listing?.listedAt ?? null,
-    listing_url: listing ? `${MARKETPLACE_PLUGIN_URL}${encodeURIComponent(p.id)}` : null,
+    listing_url: listing ? `${MARKETPLACE_PLUGIN_URL}${encodeURIComponent(listing.ids.includes(p.id) ? p.id : listing.ids[0])}` : null,
     marketplace_category: listing?.category ?? null,
     marketplace_tags: listing?.tags ?? [],
     // A GIT URL, not an owner/repo slug. /usr/bin/omarchy-plugin-add passes its
@@ -272,8 +293,8 @@ const plugins = src.plugins.map((p) => {
     //
     // A plugin may still state its own line: menu.bar.overload keeps its plugin
     // in a subdirectory and ships install.sh, so no `plugin add` form works.
-    install: (p as any).install
-      ?? (p.repo ? `omarchy plugin add https://github.com/${p.repo}.git --enable` : null),
+    install: Object.hasOwn(p, "install") ? p.install
+      : `omarchy plugin add https://github.com/${p.repo}.git --enable`,
     clone: p.repo ? `git clone https://github.com/${p.repo}.git` : null,
   };
 });
@@ -296,6 +317,8 @@ const families = [...src.families].sort(
 
 const out = {
   generated_at: new Date().toISOString(),
+  verified_at: (src as any).verified_at,
+  registry_checked: registryChecked,
   owner: src.owner,
   families,
   plugins,
@@ -361,7 +384,7 @@ const out = {
       clone: `git clone https://github.com/${t.repo}.git`,
       shot: haveShot.has(slug) ? `assets/img/shot/${slug}.png` : null,
     };
-  }),
+  }).sort(newestFirst),
   retired: src.retired.map((r: any) => ({
     ...r,
     repo_url: r.repo ? `https://github.com/${r.repo}` : null,
