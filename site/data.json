@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T14:32:11.878Z",
+  "generated_at": "2026-10-06T13:16:11.666Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -128,7 +128,7 @@
         }
       ],
       "issues": [],
-      "pushed": "2026-10-05T05:26:59Z",
+      "pushed": "2026-10-05T18:05:41Z",
       "created": "2026-10-02T23:42:20Z",
       "license": "MIT",
       "language": "Python",
@@ -139,7 +139,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 12
+          "commits": 13
         },
         {
           "login": "gardnmi",
@@ -147,7 +147,7 @@
           "commits": 1
         }
       ],
-      "commits": 13,
+      "commits": 14,
       "repo_url": "https://github.com/nixfred/omarchy-doctor",
       "glyph": "assets/img/family/system.svg",
       "archived": false,
@@ -1190,7 +1190,7 @@
       "supersedes": "CPU Pulse, RAM Pulse, Disk Pulse, Net Pulse",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/pulse.git --enable",
-      "stars": 10,
+      "stars": 11,
       "forks": 2,
       "watchers": 0,
       "open_prs": 0,
@@ -2256,7 +2256,7 @@
       "accent": "#ff4d4d",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/burnbar.git --enable",
-      "stars": 11,
+      "stars": 12,
       "forks": 3,
       "watchers": 0,
       "open_prs": 1,
@@ -2272,7 +2272,7 @@
         }
       ],
       "issues": [],
-      "pushed": "2026-10-04T08:28:15Z",
+      "pushed": "2026-10-05T18:01:41Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -3325,7 +3325,7 @@
       "accent": "#00e5ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/infomarchy.git --enable",
-      "stars": 122,
+      "stars": 121,
       "forks": 23,
       "watchers": 1,
       "open_prs": 0,
@@ -3795,21 +3795,51 @@
       "open_prs": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-25T01:55:05Z",
+      "pushed": "2026-10-05T18:36:25Z",
       "created": "2026-09-24T21:06:32Z",
       "archived": false,
       "license": "MIT",
-      "language": null,
+      "language": "Rust",
       "default_branch": "main",
       "release": null,
       "contributors": [
         {
           "login": "jankeesvw",
           "avatar": "https://avatars.githubusercontent.com/u/167882?v=4",
-          "commits": 9
+          "commits": 41
+        },
+        {
+          "login": "gardnmi",
+          "avatar": "https://avatars.githubusercontent.com/u/7167260?v=4",
+          "commits": 2
+        },
+        {
+          "login": "JarenKempton",
+          "avatar": "https://avatars.githubusercontent.com/u/48076699?v=4",
+          "commits": 1
+        },
+        {
+          "login": "larshvidsten",
+          "avatar": "https://avatars.githubusercontent.com/u/87654204?v=4",
+          "commits": 1
+        },
+        {
+          "login": "Somnius",
+          "avatar": "https://avatars.githubusercontent.com/u/144157?v=4",
+          "commits": 1
+        },
+        {
+          "login": "lvkz",
+          "avatar": "https://avatars.githubusercontent.com/u/2721391?v=4",
+          "commits": 1
+        },
+        {
+          "login": "CanadaApollo6",
+          "avatar": "https://avatars.githubusercontent.com/u/54451475?v=4",
+          "commits": 1
         }
       ],
-      "commits": 9,
+      "commits": 48,
       "repo_url": "https://github.com/nixfred/omarchy-meeting-recorder",
       "clone": "git clone https://github.com/nixfred/omarchy-meeting-recorder.git",
       "shot": null
@@ -4212,7 +4242,7 @@
       "open_prs": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-28T21:14:58Z",
+      "pushed": "2026-10-05T18:30:32Z",
       "created": "2026-09-03T22:14:31Z",
       "archived": false,
       "license": "MIT",
@@ -4470,7 +4500,7 @@
     }
   ],
   "heatmap": {
-    "total": 2646,
+    "total": 2652,
     "weeks": [
       [
         {
@@ -5406,7 +5436,7 @@
         {
           "date": "2026-03-30",
           "count": 24,
-          "level": 1
+          "level": 2
         },
         {
           "date": "2026-03-31",
@@ -6239,7 +6269,7 @@
         },
         {
           "date": "2026-09-04",
-          "count": 97,
+          "count": 95,
           "level": 4
         },
         {
@@ -6351,7 +6381,7 @@
         {
           "date": "2026-09-25",
           "count": 24,
-          "level": 1
+          "level": 2
         },
         {
           "date": "2026-09-26",
@@ -6399,13 +6429,18 @@
       [
         {
           "date": "2026-10-04",
-          "count": 58,
+          "count": 59,
           "level": 3
         },
         {
           "date": "2026-10-05",
-          "count": 4,
+          "count": 11,
           "level": 1
+        },
+        {
+          "date": "2026-10-06",
+          "count": 0,
+          "level": 0
         }
       ]
     ]
@@ -6416,7 +6451,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 424,
+    "stars": 425,
     "tools": 18,
     "with_shots": 26
   }
