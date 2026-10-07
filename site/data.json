@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T13:16:11.666Z",
+  "generated_at": "2026-10-07T13:18:27.246Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -112,7 +112,7 @@
       "accent": "#4aa8ff",
       "install": "omarchy plugin add https://github.com/nixfred/omarchy-doctor.git --enable",
       "flagship": true,
-      "stars": 4,
+      "stars": 5,
       "forks": 2,
       "watchers": 0,
       "open_prs": 1,
@@ -128,7 +128,7 @@
         }
       ],
       "issues": [],
-      "pushed": "2026-10-05T18:05:41Z",
+      "pushed": "2026-10-06T22:26:53Z",
       "created": "2026-10-02T23:42:20Z",
       "license": "MIT",
       "language": "Python",
@@ -139,7 +139,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 13
+          "commits": 16
         },
         {
           "login": "gardnmi",
@@ -147,7 +147,7 @@
           "commits": 1
         }
       ],
-      "commits": 14,
+      "commits": 17,
       "repo_url": "https://github.com/nixfred/omarchy-doctor",
       "glyph": "assets/img/family/system.svg",
       "archived": false,
@@ -179,7 +179,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-04T21:45:35Z",
+      "pushed": "2026-10-06T15:40:16Z",
       "created": "2026-09-30T03:48:47Z",
       "license": null,
       "language": "Python",
@@ -197,7 +197,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 14
+          "commits": 15
         },
         {
           "login": "GreyforgeLabs",
@@ -205,7 +205,7 @@
           "commits": 1
         }
       ],
-      "commits": 15,
+      "commits": 16,
       "repo_url": "https://github.com/nixfred/lamplight",
       "glyph": "assets/img/family/system.svg",
       "archived": false,
@@ -2250,7 +2250,7 @@
       "family": "desk",
       "status": "live",
       "repo": "nixfred/burnbar",
-      "version": "2.2.4",
+      "version": "2.3.0",
       "tagline": "A thermal heat map of what the AIs are costing you.",
       "description": "Track Claude, Codex, Grok, Kimi and local Ollama usage in a thermal heat map, with subscription pacing, quota gauges and the share of tokens handled locally.",
       "accent": "#ff4d4d",
@@ -2259,20 +2259,11 @@
       "stars": 12,
       "forks": 3,
       "watchers": 0,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 0,
-      "prs": [
-        {
-          "number": 7,
-          "title": "feat: surface Claude's 5-hour window when it is about to run out",
-          "author": "nixfred",
-          "created": "2026-10-04T06:50:24Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/burnbar/pull/7"
-        }
-      ],
+      "prs": [],
       "issues": [],
-      "pushed": "2026-10-05T18:01:41Z",
+      "pushed": "2026-10-07T03:33:39Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -2283,7 +2274,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 63
+          "commits": 75
         },
         {
           "login": "ianswope",
@@ -2301,7 +2292,7 @@
           "commits": 1
         }
       ],
-      "commits": 67,
+      "commits": 79,
       "repo_url": "https://github.com/nixfred/burnbar",
       "glyph": "assets/img/glyph/nixfred-burnbar.svg",
       "archived": false,
@@ -2629,12 +2620,21 @@
       "accent": "#0a84ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/blip.git --enable",
-      "stars": 168,
+      "stars": 169,
       "forks": 40,
       "watchers": 1,
-      "open_prs": 0,
+      "open_prs": 1,
       "open_issues": 5,
-      "prs": [],
+      "prs": [
+        {
+          "number": 135,
+          "title": "docs: the deploy copy line installs icons/",
+          "author": "ianswope",
+          "created": "2026-10-07T04:15:44Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/blip/pull/135"
+        }
+      ],
       "issues": [
         {
           "number": 132,
@@ -2672,7 +2672,7 @@
           "url": "https://github.com/nixfred/blip/issues/78"
         }
       ],
-      "pushed": "2026-10-05T00:03:41Z",
+      "pushed": "2026-10-07T03:31:31Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -2693,7 +2693,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 288
+          "commits": 291
         },
         {
           "login": "Fileri",
@@ -2708,7 +2708,7 @@
         {
           "login": "ianswope",
           "avatar": "https://avatars.githubusercontent.com/u/175949710?v=4",
-          "commits": 17
+          "commits": 20
         },
         {
           "login": "johanthoren",
@@ -2731,7 +2731,7 @@
           "commits": 7
         }
       ],
-      "commits": 421,
+      "commits": 427,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "archived": false,
@@ -3098,7 +3098,7 @@
       "install": "omarchy plugin add https://github.com/nixfred/omarchy-server-status.git --enable",
       "fork_of": "ryuhzk/omarchy-server-status",
       "credit_url": "https://github.com/ryuhzk/omarchy-server-status",
-      "stars": 30,
+      "stars": 32,
       "forks": 4,
       "watchers": 0,
       "open_prs": 0,
@@ -3325,7 +3325,7 @@
       "accent": "#00e5ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/infomarchy.git --enable",
-      "stars": 121,
+      "stars": 123,
       "forks": 23,
       "watchers": 1,
       "open_prs": 0,
@@ -3958,7 +3958,7 @@
       "open_prs": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-21T21:02:28Z",
+      "pushed": "2026-10-07T03:42:03Z",
       "created": "2026-09-20T16:04:24Z",
       "archived": false,
       "license": "MIT",
@@ -4500,7 +4500,7 @@
     }
   ],
   "heatmap": {
-    "total": 2652,
+    "total": 2686,
     "weeks": [
       [
         {
@@ -6422,14 +6422,14 @@
         },
         {
           "date": "2026-10-03",
-          "count": 19,
+          "count": 20,
           "level": 1
         }
       ],
       [
         {
           "date": "2026-10-04",
-          "count": 59,
+          "count": 69,
           "level": 3
         },
         {
@@ -6439,8 +6439,13 @@
         },
         {
           "date": "2026-10-06",
-          "count": 0,
-          "level": 0
+          "count": 13,
+          "level": 1
+        },
+        {
+          "date": "2026-10-07",
+          "count": 10,
+          "level": 1
         }
       ]
     ]
@@ -6451,7 +6456,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 425,
+    "stars": 431,
     "tools": 18,
     "with_shots": 26
   }
