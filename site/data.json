@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T13:24:45.528Z",
+  "generated_at": "2026-10-09T13:12:47.048Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -105,7 +105,7 @@
       "family": "system",
       "status": "live",
       "repo": "nixfred/omarchy-doctor",
-      "version": "1.6.0",
+      "version": "2.0.0",
       "manifest_path": "manifest.json",
       "tagline": "Check, understand, verify.",
       "description": "Check system, storage, graphics, network, audio and shell health with bounded scans, live diagrams, evidence and seven-day local history. Ask my agent hands a selected finding to your chosen assistant; its report appears beside Doctor’s independent recheck.",
@@ -115,20 +115,11 @@
       "stars": 5,
       "forks": 2,
       "watchers": 0,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 0,
-      "prs": [
-        {
-          "number": 4,
-          "title": "fix: gpu check falls back to DRM power state when busy percent is absent (1.4.2)",
-          "author": "topbronson",
-          "created": "2026-10-05T04:31:19Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/omarchy-doctor/pull/4"
-        }
-      ],
+      "prs": [],
       "issues": [],
-      "pushed": "2026-10-06T22:26:53Z",
+      "pushed": "2026-10-08T16:42:45Z",
       "created": "2026-10-02T23:42:20Z",
       "license": "MIT",
       "language": "Python",
@@ -139,7 +130,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 16
+          "commits": 18
         },
         {
           "login": "gardnmi",
@@ -147,7 +138,7 @@
           "commits": 1
         }
       ],
-      "commits": 17,
+      "commits": 19,
       "repo_url": "https://github.com/nixfred/omarchy-doctor",
       "glyph": "assets/img/family/system.svg",
       "archived": false,
@@ -568,7 +559,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-08T11:39:00Z",
+      "pushed": "2026-10-08T22:33:04Z",
       "created": "2026-09-25T00:51:39Z",
       "license": "MIT",
       "language": null,
@@ -2250,7 +2241,7 @@
       "family": "desk",
       "status": "live",
       "repo": "nixfred/burnbar",
-      "version": "2.3.0",
+      "version": "2.3.1",
       "tagline": "A thermal heat map of what the AIs are costing you.",
       "description": "Track Claude, Codex, Grok, Kimi and local Ollama usage in a thermal heat map, with subscription pacing, quota gauges and the share of tokens handled locally.",
       "accent": "#ff4d4d",
@@ -2263,7 +2254,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-07T03:33:39Z",
+      "pushed": "2026-10-09T02:48:13Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -2274,7 +2265,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 75
+          "commits": 76
         },
         {
           "login": "ianswope",
@@ -2292,7 +2283,7 @@
           "commits": 1
         }
       ],
-      "commits": 79,
+      "commits": 80,
       "repo_url": "https://github.com/nixfred/burnbar",
       "glyph": "assets/img/glyph/nixfred-burnbar.svg",
       "archived": false,
@@ -2621,7 +2612,7 @@
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/blip.git --enable",
       "stars": 170,
-      "forks": 40,
+      "forks": 41,
       "watchers": 1,
       "open_prs": 0,
       "open_issues": 5,
@@ -3096,7 +3087,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-04T05:21:48Z",
+      "pushed": "2026-10-09T02:11:51Z",
       "created": "2026-08-23T03:09:01Z",
       "license": "MIT",
       "language": "QML",
@@ -3107,7 +3098,12 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 21
+          "commits": 23
+        },
+        {
+          "login": "ryuhzk",
+          "avatar": "https://avatars.githubusercontent.com/u/213640356?v=4",
+          "commits": 4
         },
         {
           "login": "Fileri",
@@ -3118,14 +3114,9 @@
           "login": "kanthi",
           "avatar": "https://avatars.githubusercontent.com/u/1001550?v=4",
           "commits": 3
-        },
-        {
-          "login": "ryuhzk",
-          "avatar": "https://avatars.githubusercontent.com/u/213640356?v=4",
-          "commits": 3
         }
       ],
-      "commits": 30,
+      "commits": 33,
       "repo_url": "https://github.com/nixfred/omarchy-server-status",
       "glyph": "assets/img/glyph/io-github-nixfred-tailscale-host-monitor.svg",
       "archived": false,
@@ -4292,7 +4283,7 @@
       "open_prs": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-05T00:23:32Z",
+      "pushed": "2026-10-08T19:09:53Z",
       "created": "2026-09-03T22:06:15Z",
       "archived": false,
       "license": "MIT",
@@ -4303,12 +4294,12 @@
         {
           "login": "thisisgm",
           "avatar": "https://avatars.githubusercontent.com/u/30683038?v=4",
-          "commits": 1576
+          "commits": 2711
         },
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 30
+          "commits": 34
         },
         {
           "login": "joewinke",
@@ -4321,27 +4312,27 @@
           "commits": 5
         },
         {
-          "login": "smillunchick",
-          "avatar": "https://avatars.githubusercontent.com/u/69169231?v=4",
+          "login": "shawnyeager",
+          "avatar": "https://avatars.githubusercontent.com/u/980297?v=4",
+          "commits": 5
+        },
+        {
+          "login": "alextakitani",
+          "avatar": "https://avatars.githubusercontent.com/u/105376?v=4",
           "commits": 3
         },
         {
-          "login": "schotime",
-          "avatar": "https://avatars.githubusercontent.com/u/202923?v=4",
-          "commits": 2
+          "login": "GreyforgeLabs",
+          "avatar": "https://avatars.githubusercontent.com/u/252855775?v=4",
+          "commits": 3
         },
         {
-          "login": "gladimdim",
-          "avatar": "https://avatars.githubusercontent.com/u/448179?v=4",
-          "commits": 2
-        },
-        {
-          "login": "sandmor",
-          "avatar": "https://avatars.githubusercontent.com/u/58484439?v=4",
-          "commits": 2
+          "login": "smillunchick",
+          "avatar": "https://avatars.githubusercontent.com/u/69169231?v=4",
+          "commits": 3
         }
       ],
-      "commits": 1626,
+      "commits": 2770,
       "repo_url": "https://github.com/nixfred/flea",
       "clone": "git clone https://github.com/nixfred/flea.git",
       "shot": null
@@ -4491,7 +4482,7 @@
     }
   ],
   "heatmap": {
-    "total": 2704,
+    "total": 2707,
     "weeks": [
       [
         {
@@ -6260,7 +6251,7 @@
         },
         {
           "date": "2026-09-04",
-          "count": 92,
+          "count": 91,
           "level": 4
         },
         {
@@ -6421,7 +6412,7 @@
         {
           "date": "2026-10-04",
           "count": 69,
-          "level": 3
+          "level": 4
         },
         {
           "date": "2026-10-05",
@@ -6440,8 +6431,13 @@
         },
         {
           "date": "2026-10-08",
-          "count": 4,
+          "count": 8,
           "level": 1
+        },
+        {
+          "date": "2026-10-09",
+          "count": 0,
+          "level": 0
         }
       ]
     ]
