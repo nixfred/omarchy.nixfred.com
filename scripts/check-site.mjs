@@ -44,14 +44,34 @@ try {
       assert.match(await c.locator('.fork-banner').innerText(),new RegExp(f.fork_of.split('/')[0],'i'),`${f.name}: banner names the original author`);
     }
     assert.ok(await page.locator('[id="p-nixfred.glide"] .credit').count());
+    // WHERE the results land matters as much as how many there are. The controls sit above the Featured block, and
+    // the catalogue used to start ~6,000px below them, so a working filter looked broken. Measure the distance from
+    // the search box to the first VISIBLE result card, and require Featured to step aside while filtering.
+    const gap=()=>page.evaluate(()=>{const q=document.querySelector('#q').getBoundingClientRect();
+      const r=[...document.querySelectorAll('#tool-grid article, #families article.card, #families .slot')].find(e=>e.offsetParent!==null);
+      return r?r.getBoundingClientRect().top-q.bottom:null;});
+    const featuredShown=()=>page.locator('#featured').isVisible();
+    assert.equal(await featuredShown(),true,'Featured is shown when nothing is filtered');
     await page.locator('#chips [data-fam="alpha"]').click();
     assert.equal(await page.locator('#families article.card').count(),alpha.length,'the ALPHA chip lists exactly the alpha plugins');
+    assert.equal(await page.locator('#tool-grid article').count(),data.tools.filter(t=>t.status==='alpha').length,'the ALPHA chip lists the alpha tools too');
+    assert.equal(await featuredShown(),false,'Featured steps aside while a chip is active');
+    assert.ok((await gap())<700,`ALPHA chip: first result is ${await gap()}px below the search box`);
     await page.locator('#chips [data-fam="workspace"]').click();
     assert.equal(await page.locator('#families article.card').count(),data.plugins.filter(p=>p.family==='workspace').length);
+    assert.equal(await page.locator('#tools').isVisible(),false,'a family chip hides tools, which have no family');
+    assert.ok((await gap())<700,`family chip: first result is ${await gap()}px below the search box`);
     await page.locator('#chips [data-fam="all"]').click();
+    assert.equal(await featuredShown(),true,'Featured returns on All');
+    assert.equal(await page.locator('#tools').isVisible(),true,'Tools return on All');
     await page.locator('#q').fill('flea');
     assert.equal(await page.locator('#tool-grid article').count(),1);
     assert.match(await page.locator('#tool-grid h3').innerText(),/Flea/);
+    assert.equal(await featuredShown(),false,'Featured steps aside while searching');
+    assert.ok((await gap())<700,`search: first result is ${await gap()}px below the search box`);
+    await page.locator('#q').fill('zzzqqq');
+    assert.match(await page.locator('#families').innerText(),/Nothing matches/,'a query with no hits says so');
+    assert.equal(await page.locator('#tools').isVisible(),false,'Tools hide when nothing matches');
     await page.locator('#q').fill('doctor');
     assert.ok(await page.locator('#families article.card').count()>=1);
     const card=page.locator('[id="p-nixfred.doctor"]');

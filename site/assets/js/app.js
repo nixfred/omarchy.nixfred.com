@@ -374,7 +374,12 @@
   function render() {
     const host = $("#families");
     host.textContent = "";
-    renderTools();
+    // The controls sit above the Featured block, and the catalogue used to start ~6,000px below them, so
+    // typing or clicking a chip looked like it did nothing. While filtering, hide Featured so the results
+    // appear directly under the controls.
+    const filtering = !!(state.q.trim() || state.fam !== "all");
+    $("#featured").style.display = filtering ? "none" : "";
+    const toolHits = renderTools();
     let shown = 0;
 
     // Fred's rule: newest created first, even when filtered. Family grouping would
@@ -395,7 +400,7 @@
       s.append(wrap);
       host.append(s);
       shown = items.length;
-      if (!shown) host.innerHTML = `<div class="wrap"><div class="slot">Nothing matches “${esc(state.q)}”.</div></div>`;
+      if (!shown) host.innerHTML = `<div class="wrap"><div class="slot">${toolHits ? `No plugins match${state.q.trim() ? ` “${esc(state.q)}”` : ""}; the tools above do.` : `Nothing matches${state.q.trim() ? ` “${esc(state.q)}”` : ""}.`}</div></div>`;
       for (const b of $("#chips").children) b.setAttribute("aria-pressed", String(b.dataset.fam === state.fam));
       return;
     }
@@ -532,8 +537,14 @@
     // reached them, so they are full cards now, in the featured shape, directly
     // under the flagships.
     const q = state.q.trim().toLowerCase();
-    const items = DATA.tools.filter((t) => !q || [t.name, t.description, t.repo, t.fork_of].join(" ").toLowerCase().includes(q));
-    $("#tool-count").textContent = q ? `${items.length} / ${DATA.tools.length}` : DATA.tools.length;
+    // Chips filter tools too. ALPHA keeps the alpha tools; a family chip hides them (tools have no family).
+    const items = DATA.tools.filter((t) => {
+      if (state.fam === "alpha" && t.status !== "alpha") return false;
+      if (state.fam !== "all" && state.fam !== "alpha") return false;
+      return !q || [t.name, t.description, t.repo, t.fork_of].join(" ").toLowerCase().includes(q);
+    });
+    $("#tools").style.display = items.length ? "" : "none";
+    $("#tool-count").textContent = items.length === DATA.tools.length ? DATA.tools.length : `${items.length} / ${DATA.tools.length}`;
     $("#tool-grid").innerHTML = "";
     for (const t of items) {
       const n = el("article", "feat tool" + (t.alpha_big ? " alpha-big" : "") + (t.fork_of ? " is-fork" : ""));
@@ -553,7 +564,7 @@
       clickOpensDetails(n);
       $("#tool-grid").append(n);
     }
-
+    return items.length;
   }
 
   function chrome() {
