@@ -395,6 +395,7 @@ section header p { color: var(--fg-3); margin: 9px 0 0; font-size: 14.5px; }
 .card .hd { min-width: 0; flex: 1; }
 .card h3 { font-size: 16px; display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
 .ver, .card .ver { font: 500 10.5px var(--mono); color: var(--fg-3); padding: 2px 5px; border: 1px solid var(--line); border-radius: 4px; }
+.ver.alpha, .card .ver.alpha { color: #ffb020; border-color: rgba(255, 176, 32, 0.5); background: color-mix(in srgb, #ffb020 12%, transparent); font-weight: 700; letter-spacing: 0.09em; margin-left: 2px; }
 .card .tagline { color: color-mix(in srgb, var(--ca) 70%, var(--fg-2)); font-size: 13px; margin-top: 3px; }
 
 .card .desc { color: var(--fg-2); font-size: 13.4px; line-height: 1.62; margin: 0 0 14px; flex: 1; }
@@ -440,6 +441,7 @@ section header p { color: var(--fg-3); margin: 9px 0 0; font-size: 14.5px; }
 .tag.fork { color: var(--warn); border-color: color-mix(in srgb, var(--warn) 30%, transparent); }
 .tag.developing { color: #5ad1e6; border-color: rgba(90, 209, 230, 0.32); background: color-mix(in srgb, #5ad1e6 8%, transparent); border-style: dashed; }
 .tag.shelved, .tag.unreleased { color: #ff8fa3; border-color: rgba(255, 143, 163, 0.3); }
+.tag.alpha { color: #ffb020; border-color: rgba(255, 176, 32, 0.5); background: color-mix(in srgb, #ffb020 12%, transparent); font-weight: 700; letter-spacing: 0.09em; }
 .tag.stars { color: var(--fg-2); }
 
 .card .foot { display: flex; align-items: center; gap: 7px; }

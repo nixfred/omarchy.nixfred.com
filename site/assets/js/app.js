@@ -275,6 +275,7 @@
     } else if (p.listed === false) {
       t.push(`<span class="tag pending" title="This repository was not found in the official registry at the last successful build.">${ICON.dotm} not listed</span>`);
     }
+    if (p.status === "alpha") t.push(`<span class="tag alpha" title="New on this site and early software. Expect rough edges and change.">ALPHA</span>`);
     if (p.status === "developing") t.push(`<span class="tag developing" title="Public source with development or beta status. Read the repository for current limits.">${ICON.dotm} developing</span>`);
     if (p.status === "shelved") t.push(`<span class="tag shelved">shelved</span>`);
     if (p.status === "unreleased") t.push(`<span class="tag unreleased">unreleased</span>`);
@@ -310,7 +311,7 @@
   }
 
   function card(p) {
-    const c = el("article", "card" + (p.status === "live" ? "" : " is-quiet"));
+    const c = el("article", "card" + (p.status === "live" || p.status === "alpha" ? "" : " is-quiet"));
     c.id = `p-${p.id}`;
     c.style.setProperty("--ca", p.accent);
 
@@ -322,7 +323,7 @@
       <div class="top">
         <div class="glyph" data-glyph="${esc(p.glyph)}">${ICON.plug}</div>
         <div class="hd">
-          <h3>${esc(p.name)} <span class="ver">v${esc(p.version)}</span></h3>
+          <h3>${esc(p.name)} <span class="ver">v${esc(p.version)}</span>${p.status === "alpha" ? ' <span class="ver alpha">ALPHA</span>' : ""}</h3>
           <div class="tagline">${esc(p.tagline)}</div>
         </div>
       </div>
@@ -350,7 +351,7 @@
     if (state.fam === "listed" && !p.listed) return false;
     const q = state.q.trim().toLowerCase();
     if (!q) return true;
-    return [p.name, p.tagline, p.description, p.id, p.family, p.repo, p.fork_of].join(" ").toLowerCase().includes(q);
+    return [p.name, p.tagline, p.description, p.id, p.family, p.repo, p.fork_of, p.status].join(" ").toLowerCase().includes(q);
   }
 
   function render() {

@@ -18,8 +18,17 @@ try {
     const data=await page.evaluate(async()=>await (await fetch('data.json')).json());
     assert.equal(await page.locator('#families article.card').count(),data.plugins.length);
     assert.equal(await page.locator('#tool-grid article').count(),data.tools.length);
-    assert.ok(data.plugins.some(p=>p.id==='nixfred.doctor'&&p.version==='1.6.0'));
-    assert.equal((await page.locator('[id="p-nixfred.doctor"] h3').innerText()).replace(/\s+/g,' '),'Omarchy Doctor v1.6.0');
+    const doctor=data.plugins.find(p=>p.id==='nixfred.doctor');
+    assert.ok(doctor&&doctor.version,'Omarchy Doctor missing from data.json');
+    assert.equal((await page.locator('[id="p-nixfred.doctor"] h3').innerText()).replace(/\s+/g,' '),`Omarchy Doctor v${doctor.version}`);
+    const alpha=data.plugins.filter(p=>p.status==='alpha');
+    for(const p of alpha){
+      const c=page.locator(`[id="p-${p.id}"]`);
+      assert.equal(await c.locator('.tag.alpha').count(),1,`${p.name}: ALPHA tag`);
+      assert.equal(await c.locator('.ver.alpha').count(),1,`${p.name}: ALPHA badge`);
+      assert.ok(!(await c.getAttribute('class')).includes('is-quiet'),`${p.name}: alpha card is dimmed`);
+    }
+    assert.equal(await page.locator('#families .tag.alpha').count(),alpha.length);
     assert.ok(await page.locator('[id="p-nixfred.glide"] .credit').count());
     await page.locator('#chips [data-fam="workspace"]').click();
     assert.equal(await page.locator('#families article.card').count(),data.plugins.filter(p=>p.family==='workspace').length);
@@ -36,6 +45,8 @@ try {
     await install.click();
     assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),command);
     assert.equal(command,'omarchy plugin add https://github.com/nixfred/omarchy-doctor.git --enable');
+    await page.locator('#q').fill('alpha');
+    assert.equal(await page.locator('#families article.card').count(),alpha.length,'search "alpha" should list exactly the alpha cards');
     await page.locator('#q').fill('');
     assert.equal(await page.locator('#families article.card').count(),data.plugins.length);
     const overflow=await page.evaluate(()=>({body:document.documentElement.scrollWidth,width:innerWidth}));
