@@ -1034,6 +1034,58 @@
       "status": "alpha",
       "version": "0.0.0",
       "manifest_path": "manifest.json"
+    },
+    {
+      "id": "nixfred.larrylamp",
+      "name": "Larry Lamp",
+      "family": "desk",
+      "repo": "nixfred/larrylamp.omarchy",
+      "accent": "#fbbf24",
+      "tagline": "Larry's lamp, in your bar.",
+      "description": "A ring lit in the lamp's real LED colour, an amber count when a Claude Code session needs you, and a panel with every session, Larry's last words, an ask-Larry box and lamp controls. The lamp follows your Omarchy theme.",
+      "status": "alpha",
+      "version": "0.0.0",
+      "manifest_path": "manifest.json"
+    },
+    {
+      "id": "io.github.nixfred.watchtower",
+      "name": "Watchtower",
+      "family": "infra",
+      "repo": "nixfred/omarchy-watchtower",
+      "accent": "#ffb703",
+      "tagline": "A quiet perimeter alarm that explains itself.",
+      "description": "A quiet perimeter alarm that explains exposed listeners with process, service, container, firewall and network-scope context.",
+      "status": "alpha",
+      "version": "0.0.0",
+      "manifest_path": "manifest.json"
+    },
+    {
+      "id": "larry.status",
+      "name": "Larry Status",
+      "family": "desk",
+      "repo": "nixfred/larry.status",
+      "accent": "#7dd3fc",
+      "tagline": "A face in the bar that reacts to your agents.",
+      "description": "Larry's face in the bar, alive. It reacts to the Claude Code and Codex agents running on this host: asleep, idle, thinking, working, needs you, speaking, alert. The panel is Agents on Deck, with service health, fleet state and one-click actions.",
+      "status": "alpha",
+      "version": "0.0.0",
+      "manifest_path": "manifest.json"
+    },
+    {
+      "id": "nixfred.ringer",
+      "name": "Ringer",
+      "family": "bridge",
+      "repo": "nixfred/ringer",
+      "accent": "#34c759",
+      "manifest_path": "plugin/manifest.json",
+      "alpha_big": true,
+      "tagline": "Your iPhone on the Omarchy bar.",
+      "description": "Click to open the iPhone's screen as a window you can tap, type and swipe on, with a Calls tab for the dialer, recents and missed calls. Remote control goes through a Mac running the engine, so the phone must share that Mac's Wi-Fi. Assembled from five iPhone plugins by other authors, kept in the repo under their own licences.",
+      "credit": "Built from five iPhone plugins by other authors. See the NOTICE.",
+      "credit_url": "https://github.com/nixfred/ringer/blob/main/NOTICE",
+      "status": "alpha",
+      "version": "0.0.0",
+      "install": null
     }
   ],
   "themes": [
@@ -1173,6 +1225,30 @@
       "install": null,
       "fork_of": "kunchenguid/firstmate",
       "credit_url": "https://github.com/kunchenguid/firstmate"
+    },
+    {
+      "name": "MOBS",
+      "repo": "nixfred/mobs",
+      "status": "alpha",
+      "alpha_big": true,
+      "install": null,
+      "description": "OBS Studio and Monologue in one Omarchy-native recorder, built on libobs. Screen, webcam and mic capture with pause, a live preview, and an editor to trim and cut a take. Both upstreams are vendored with their full history so updates can still be pulled.",
+      "credit": "Built on OBS Studio (GPLv2) and Monologue (MIT).",
+      "credit_url": "https://github.com/nixfred/mobs/blob/main/NOTICE"
+    },
+    {
+      "name": "Status Lights",
+      "repo": "nixfred/herdr-attention-spaces",
+      "status": "alpha",
+      "install": "herdr plugin install nixfred/herdr-attention-spaces",
+      "description": "A herdr plugin that sorts projects in status-light order: attention first, then just finished, working, idle and no agent. It reads the workspace and agent lists and moves the whole list in one call. For herdr, the agent terminal multiplexer."
+    },
+    {
+      "name": "Orrery",
+      "repo": "nixfred/screensaver.nixfred.omarchy",
+      "status": "alpha",
+      "install": "git clone https://github.com/nixfred/screensaver.nixfred.omarchy.git && cd screensaver.nixfred.omarchy && ./install.sh",
+      "description": "The nixfred site fleet as an orbital model, a screensaver for the Omarchy idle screen. Every site in a public registry is a body in it, and a pre-written Larry narrates. Reversible with ./uninstall.sh."
     }
   ],
   "retired": [

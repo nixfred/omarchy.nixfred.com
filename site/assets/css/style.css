@@ -444,6 +444,21 @@ section header p { color: var(--fg-3); margin: 9px 0 0; font-size: 14.5px; }
 .tag.alpha { color: #ffb020; border-color: rgba(255, 176, 32, 0.5); background: color-mix(in srgb, #ffb020 12%, transparent); font-weight: 700; letter-spacing: 0.09em; }
 .tag.stars { color: var(--fg-2); }
 
+/* BIG ALPHA: a hazard-stripe strip pulled flush to the card's top edge, and an amber frame. The negative
+   margins undo the card's own padding (18px) or the featured card's (26px), the same trick .shot uses. */
+.alpha-banner {
+  display: flex; align-items: center; gap: 14px;
+  margin: -18px -18px 16px; padding: 9px 18px;
+  background: repeating-linear-gradient(135deg, #ffb020 0 14px, #e69a00 14px 28px);
+  color: #1a1100; font: 500 12px var(--mono); letter-spacing: 0.02em;
+}
+.alpha-banner b { font-weight: 800; font-size: 20px; letter-spacing: 0.22em; line-height: 1; }
+.feat .alpha-banner { margin: -26px -26px 20px; padding: 10px 26px; }
+.card.alpha-big, .feat.alpha-big {
+  border-color: rgba(255, 176, 32, 0.65);
+  box-shadow: 0 0 0 1px rgba(255, 176, 32, 0.28), 0 0 30px rgba(255, 176, 32, 0.14);
+}
+
 .card .foot { display: flex; align-items: center; gap: 7px; }
 
 .btn {

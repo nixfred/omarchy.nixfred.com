@@ -265,6 +265,13 @@
     </details>`;
   }
 
+  /** The loud version of ALPHA, for the two projects that are furthest from finished. */
+  function alphaBanner(p) {
+    return p.alpha_big
+      ? '<div class="alpha-banner" role="note"><b>ALPHA</b><span>early software: expect rough edges and breaking changes</span></div>'
+      : "";
+  }
+
   function statusTags(p) {
     const t = [];
     if (p.listed) {
@@ -311,7 +318,7 @@
   }
 
   function card(p) {
-    const c = el("article", "card" + (p.status === "live" || p.status === "alpha" ? "" : " is-quiet"));
+    const c = el("article", "card" + (p.status === "live" || p.status === "alpha" ? "" : " is-quiet") + (p.alpha_big ? " alpha-big" : ""));
     c.id = `p-${p.id}`;
     c.style.setProperty("--ca", p.accent);
 
@@ -320,6 +327,7 @@
     if (p.listing_url) links.push(`<a class="btn primary" href="${esc(p.listing_url)}" target="_blank" rel="noopener">${ICON.store} Marketplace</a>`);
 
     c.innerHTML = `
+      ${alphaBanner(p)}
       <div class="top">
         <div class="glyph" data-glyph="${esc(p.glyph)}">${ICON.plug}</div>
         <div class="hd">
@@ -347,7 +355,8 @@
   // ─────────────────────────────────────────────────────── render
 
   function match(p) {
-    if (state.fam !== "all" && state.fam !== "listed" && p.family !== state.fam) return false;
+    if (state.fam !== "all" && state.fam !== "listed" && state.fam !== "alpha" && p.family !== state.fam) return false;
+    if (state.fam === "alpha" && p.status !== "alpha") return false;
     if (state.fam === "listed" && !p.listed) return false;
     const q = state.q.trim().toLowerCase();
     if (!q) return true;
@@ -369,7 +378,7 @@
       const wrap = el("div", "wrap");
       const label = state.fam === "all"
         ? `Results for “${esc(state.q)}”`
-        : esc(DATA.families.find((f) => f.id === state.fam)?.name ?? state.fam);
+        : state.fam === "alpha" ? "ALPHA: new and early" : esc(DATA.families.find((f) => f.id === state.fam)?.name ?? state.fam);
       wrap.innerHTML = `<header><h2>${label} <span class="count">${items.length}</span></h2>
         <p>Newest first.</p></header>`;
       const grid = el("div", "grid");
@@ -519,10 +528,11 @@
     $("#tool-count").textContent = q ? `${items.length} / ${DATA.tools.length}` : DATA.tools.length;
     $("#tool-grid").innerHTML = "";
     for (const t of items) {
-      const n = el("article", "feat tool");
+      const n = el("article", "feat tool" + (t.alpha_big ? " alpha-big" : ""));
       n.innerHTML = `
+        ${alphaBanner(t)}
         <div class="kicker">desktop app / tool</div>
-        <h3>${esc(t.name)}</h3>
+        <h3>${esc(t.name)}${t.status === "alpha" ? ' <span class="ver alpha">ALPHA</span>' : ""}</h3>
         ${t.shot ? `<img class="shot" src="${esc(t.shot)}" alt="${esc(t.name)}" loading="lazy" decoding="async">` : ""}
         <p class="d">${esc(t.description)}</p>
         ${creditLine(t)}
@@ -555,6 +565,7 @@
       chips.append(b);
     };
     mk("all", "All", DATA.plugins.length);
+    mk("alpha", "ALPHA", DATA.plugins.filter((p) => p.status === "alpha").length);
     for (const f of DATA.families) mk(f.id, f.name.replace(/^The /, ""), DATA.plugins.filter((p) => p.family === f.id).length);
 
     $("#q").addEventListener("input", (e) => { state.q = e.target.value; render(); });

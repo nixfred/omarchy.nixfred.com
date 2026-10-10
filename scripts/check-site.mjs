@@ -29,7 +29,14 @@ try {
       assert.ok(!(await c.getAttribute('class')).includes('is-quiet'),`${p.name}: alpha card is dimmed`);
     }
     assert.equal(await page.locator('#families .tag.alpha').count(),alpha.length);
+    const bigs=[...data.plugins,...data.tools].filter(x=>x.alpha_big);
+    assert.ok(bigs.length>=2,'Ringer and MOBS should be flagged alpha_big');
+    assert.equal(await page.locator('.alpha-banner').count(),bigs.length,'one BIG ALPHA banner per alpha_big project');
+    assert.equal(await page.locator('#tool-grid .tag.alpha').count(),data.tools.filter(t=>t.status==='alpha').length,'alpha tag on every alpha tool');
+    assert.ok(!JSON.stringify(data).toLowerCase().includes('clarity'),'Clarity must never appear on the site');
     assert.ok(await page.locator('[id="p-nixfred.glide"] .credit').count());
+    await page.locator('#chips [data-fam="alpha"]').click();
+    assert.equal(await page.locator('#families article.card').count(),alpha.length,'the ALPHA chip lists exactly the alpha plugins');
     await page.locator('#chips [data-fam="workspace"]').click();
     assert.equal(await page.locator('#families article.card').count(),data.plugins.filter(p=>p.family==='workspace').length);
     await page.locator('#chips [data-fam="all"]').click();
