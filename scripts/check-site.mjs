@@ -34,6 +34,15 @@ try {
     assert.equal(await page.locator('.alpha-banner').count(),bigs.length,'one BIG ALPHA banner per alpha_big project');
     assert.equal(await page.locator('#tool-grid .tag.alpha').count(),data.tools.filter(t=>t.status==='alpha').length,'alpha tag on every alpha tool');
     assert.ok(!JSON.stringify(data).toLowerCase().includes('clarity'),'Clarity must never appear on the site');
+    const forks=[...data.plugins,...data.tools].filter(x=>x.fork_of);
+    assert.ok(forks.length>=30,'expected the fork entries');
+    assert.equal(await page.locator('.fork-banner').count(),forks.length,'one FORK banner per fork, none on originals');
+    for(const f of forks){
+      const c=f.id?page.locator(`[id="p-${f.id}"]`):page.locator(`[id="t-${f.slug}"]`);
+      assert.equal(await c.locator('.fork-banner').count(),1,`${f.name}: FORK banner`);
+      assert.equal(await c.locator('.fork-banner a').first().getAttribute('href'),f.credit_url||`https://github.com/${f.fork_of}`,`${f.name}: banner links the original`);
+      assert.match(await c.locator('.fork-banner').innerText(),new RegExp(f.fork_of.split('/')[0],'i'),`${f.name}: banner names the original author`);
+    }
     assert.ok(await page.locator('[id="p-nixfred.glide"] .credit').count());
     await page.locator('#chips [data-fam="alpha"]').click();
     assert.equal(await page.locator('#families article.card').count(),alpha.length,'the ALPHA chip lists exactly the alpha plugins');

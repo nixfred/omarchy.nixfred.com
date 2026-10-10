@@ -454,6 +454,21 @@ section header p { color: var(--fg-3); margin: 9px 0 0; font-size: 14.5px; }
 }
 .alpha-banner b { font-weight: 800; font-size: 20px; letter-spacing: 0.22em; line-height: 1; }
 .feat .alpha-banner { margin: -26px -26px 20px; padding: 10px 26px; }
+/* FORK: solid blue, so it cannot be mistaken for the amber ALPHA strip or for an original project. */
+.fork-banner {
+  display: flex; align-items: center; gap: 14px;
+  margin: -18px -18px 16px; padding: 9px 18px;
+  background: #0d3b66; color: #d6ebff; border-bottom: 2px solid #4aa8ff;
+  font: 500 12px var(--mono); line-height: 1.45;
+}
+.fork-banner b { font-weight: 800; font-size: 20px; letter-spacing: 0.22em; line-height: 1; color: #ffffff; }
+.fork-banner a { color: #ffffff; text-decoration: underline; text-underline-offset: 2px; word-break: break-word; }
+.fork-banner strong { color: #ffffff; font-weight: 700; }
+.feat .fork-banner { margin: -26px -26px 20px; padding: 10px 26px; }
+.alpha-banner + .fork-banner { margin-top: -16px; }
+.feat .alpha-banner + .fork-banner { margin-top: -20px; }
+.card.is-fork, .feat.is-fork { border-color: rgba(74, 168, 255, 0.55); box-shadow: 0 0 0 1px rgba(74, 168, 255, 0.2); }
+
 .card.alpha-big, .feat.alpha-big {
   border-color: rgba(255, 176, 32, 0.65);
   box-shadow: 0 0 0 1px rgba(255, 176, 32, 0.28), 0 0 30px rgba(255, 176, 32, 0.14);

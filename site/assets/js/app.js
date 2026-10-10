@@ -272,6 +272,14 @@
       : "";
   }
 
+  /** Forks must never read as Fred's own work: a loud strip that names and links the original author. */
+  function forkBanner(p) {
+    if (!p.fork_of) return "";
+    const url = p.credit_url || `https://github.com/${p.fork_of}`;
+    const owner = p.fork_of.split("/")[0];
+    return `<div class="fork-banner" role="note"><b>FORK</b><span>of <a href="${esc(url)}" target="_blank" rel="noopener">${esc(p.fork_of)}</a>. Original work by <strong>${esc(owner)}</strong>, not by nixfred.</span></div>`;
+  }
+
   function statusTags(p) {
     const t = [];
     if (p.listed) {
@@ -318,7 +326,7 @@
   }
 
   function card(p) {
-    const c = el("article", "card" + (p.status === "live" || p.status === "alpha" ? "" : " is-quiet") + (p.alpha_big ? " alpha-big" : ""));
+    const c = el("article", "card" + (p.status === "live" || p.status === "alpha" ? "" : " is-quiet") + (p.alpha_big ? " alpha-big" : "") + (p.fork_of ? " is-fork" : ""));
     c.id = `p-${p.id}`;
     c.style.setProperty("--ca", p.accent);
 
@@ -327,7 +335,7 @@
     if (p.listing_url) links.push(`<a class="btn primary" href="${esc(p.listing_url)}" target="_blank" rel="noopener">${ICON.store} Marketplace</a>`);
 
     c.innerHTML = `
-      ${alphaBanner(p)}
+      ${alphaBanner(p)}${forkBanner(p)}
       <div class="top">
         <div class="glyph" data-glyph="${esc(p.glyph)}">${ICON.plug}</div>
         <div class="hd">
@@ -528,9 +536,9 @@
     $("#tool-count").textContent = q ? `${items.length} / ${DATA.tools.length}` : DATA.tools.length;
     $("#tool-grid").innerHTML = "";
     for (const t of items) {
-      const n = el("article", "feat tool" + (t.alpha_big ? " alpha-big" : ""));
+      const n = el("article", "feat tool" + (t.alpha_big ? " alpha-big" : "") + (t.fork_of ? " is-fork" : ""));
       n.innerHTML = `
-        ${alphaBanner(t)}
+        ${alphaBanner(t)}${forkBanner(t)}
         <div class="kicker">desktop app / tool</div>
         <h3>${esc(t.name)}${t.status === "alpha" ? ' <span class="ver alpha">ALPHA</span>' : ""}</h3>
         ${t.shot ? `<img class="shot" src="${esc(t.shot)}" alt="${esc(t.name)}" loading="lazy" decoding="async">` : ""}
