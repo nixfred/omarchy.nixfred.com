@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-10T12:27:49.398Z",
+  "generated_at": "2026-10-11T12:45:16.638Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -52,7 +52,7 @@
       "fork_of": "omacom/gliff",
       "credit_url": "https://github.com/omacom/gliff",
       "status": "alpha",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "manifest_path": "manifest.json",
       "stars": 0,
       "forks": 0,
@@ -61,7 +61,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-10T11:40:29Z",
+      "pushed": "2026-10-11T04:05:26Z",
       "created": "2026-10-10T05:48:15Z",
       "license": "MIT",
       "language": "Rust",
@@ -82,7 +82,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 6
+          "commits": 9
         },
         {
           "login": "flavorjones",
@@ -90,7 +90,7 @@
           "commits": 2
         }
       ],
-      "commits": 190,
+      "commits": 193,
       "repo_url": "https://github.com/nixfred/gliff",
       "glyph": "assets/img/glyph/nixfred-gliff.svg",
       "archived": false,
@@ -1706,7 +1706,7 @@
       "supersedes": "CPU Pulse, RAM Pulse, Disk Pulse, Net Pulse",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/pulse.git --enable",
-      "stars": 11,
+      "stars": 12,
       "forks": 2,
       "watchers": 0,
       "open_prs": 0,
@@ -2603,7 +2603,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-10T11:07:20Z",
+      "pushed": "2026-10-10T18:32:19Z",
       "created": "2026-09-04T18:36:25Z",
       "license": "MIT",
       "language": "QML",
@@ -3182,12 +3182,21 @@
       "accent": "#0a84ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/blip.git --enable",
-      "stars": 171,
+      "stars": 173,
       "forks": 41,
       "watchers": 1,
-      "open_prs": 0,
+      "open_prs": 1,
       "open_issues": 5,
-      "prs": [],
+      "prs": [
+        {
+          "number": 140,
+          "title": "fix: survive the host's ssh agent and the bar's PATH",
+          "author": "jzetterman",
+          "created": "2026-10-10T12:58:31Z",
+          "draft": true,
+          "url": "https://github.com/nixfred/blip/pull/140"
+        }
+      ],
       "issues": [
         {
           "number": 132,
@@ -4295,7 +4304,7 @@
       "open_prs": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-10T11:26:08Z",
+      "pushed": "2026-10-11T04:38:14Z",
       "created": "2026-10-09T19:08:56Z",
       "archived": false,
       "license": "GPL-2.0",
@@ -4943,7 +4952,7 @@
       "open_prs": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-07T15:12:38Z",
+      "pushed": "2026-10-10T18:26:26Z",
       "created": "2026-09-05T03:10:16Z",
       "archived": false,
       "license": "MIT",
@@ -4954,10 +4963,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 2
+          "commits": 3
         }
       ],
-      "commits": 2,
+      "commits": 3,
       "repo_url": "https://github.com/nixfred/clipsync",
       "clone": "git clone https://github.com/nixfred/clipsync.git",
       "shot": "assets/img/shot/clipsync.png"
@@ -5236,45 +5245,8 @@
     }
   ],
   "heatmap": {
-    "total": 2891,
+    "total": 2912,
     "weeks": [
-      [
-        {
-          "date": "2025-10-05",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-06",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-07",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-08",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-09",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-10",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-11",
-          "count": 0,
-          "level": 0
-        }
-      ],
       [
         {
           "date": "2025-10-12",
@@ -7158,7 +7130,7 @@
         },
         {
           "date": "2026-10-03",
-          "count": 20,
+          "count": 21,
           "level": 1
         }
       ],
@@ -7195,8 +7167,15 @@
         },
         {
           "date": "2026-10-10",
-          "count": 42,
-          "level": 2
+          "count": 59,
+          "level": 3
+        }
+      ],
+      [
+        {
+          "date": "2026-10-11",
+          "count": 3,
+          "level": 1
         }
       ]
     ]
@@ -7207,7 +7186,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 437,
+    "stars": 440,
     "tools": 21,
     "with_shots": 28
   }
