@@ -1249,6 +1249,13 @@
       "status": "alpha",
       "install": "git clone https://github.com/nixfred/screensaver.nixfred.omarchy.git && cd screensaver.nixfred.omarchy && ./install.sh",
       "description": "The nixfred site fleet as an orbital model, a screensaver for the Omarchy idle screen. Every site in a public registry is a body in it, and a pre-written Larry narrates. Reversible with ./uninstall.sh."
+    },
+    {
+      "name": "Shepr",
+      "repo": "nixfred/shepr",
+      "status": "alpha",
+      "install": "git clone https://github.com/nixfred/shepr && cd shepr   # then follow Use it in the README",
+      "description": "An iPhone home-screen app for herdr, the agent terminal multiplexer. It shows which agent sessions, on which machines, are waiting on you: tap one, read it, answer it. Every send is previewed and confirmed first and nothing is ever approved automatically. Plain Python and a web page over your tailnet, with no app store and no build step."
     }
   ],
   "retired": [
