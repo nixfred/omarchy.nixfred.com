@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T04:44:51.393Z",
+  "generated_at": "2026-10-12T15:17:47.006Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -534,7 +534,7 @@
       "install": "omarchy plugin add https://github.com/nixfred/dayflow-linux.git --enable",
       "fork_of": "duketopceo/dayflow-linux",
       "credit_url": "https://github.com/duketopceo/dayflow-linux",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -591,8 +591,8 @@
       "accent": "#4aa8ff",
       "install": "omarchy plugin add https://github.com/nixfred/omarchy-doctor.git --enable",
       "flagship": true,
-      "stars": 6,
-      "forks": 2,
+      "stars": 11,
+      "forks": 4,
       "watchers": 0,
       "open_prs": 0,
       "open_issues": 0,
@@ -795,7 +795,7 @@
       "accent": "#e05d5d",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/sentinel.omarchy.git --enable",
-      "stars": 2,
+      "stars": 3,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -1261,7 +1261,7 @@
       "install": "omarchy plugin add https://github.com/nixfred/omarchy-port-doctor.git --enable",
       "fork_of": "Kb2uka/omarchy-port-doctor",
       "credit_url": "https://github.com/Kb2uka/omarchy-port-doctor",
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -1482,7 +1482,7 @@
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/LANarchy.git --enable",
       "credit_url": "https://github.com/DonnieFi/OmarPlugs",
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -1706,7 +1706,7 @@
       "supersedes": "CPU Pulse, RAM Pulse, Disk Pulse, Net Pulse",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/pulse.git --enable",
-      "stars": 12,
+      "stars": 13,
       "forks": 2,
       "watchers": 0,
       "open_prs": 0,
@@ -2011,7 +2011,7 @@
       "install": "omarchy plugin add https://github.com/nixfred/OmarchyIPTV.git --enable",
       "fork_of": "sam-blakeman/OmarchyIPTV",
       "credit_url": "https://github.com/sam-blakeman/OmarchyIPTV",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -4304,7 +4304,7 @@
       "open_prs": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-11T04:38:14Z",
+      "pushed": "2026-10-12T14:29:10Z",
       "created": "2026-10-09T19:08:56Z",
       "archived": false,
       "license": "GPL-2.0",
@@ -4365,14 +4365,14 @@
       "install": "git clone https://github.com/nixfred/shepr && cd shepr   # then follow Use it in the README",
       "description": "An iPhone home-screen app for herdr, the agent terminal multiplexer. It shows which agent sessions, on which machines, are waiting on you: tap one, read it, answer it. Every send is previewed and confirmed first and nothing is ever approved automatically. Plain Python and a web page over your tailnet, with no app store and no build step.",
       "slug": "shepr",
-      "stars": 7,
+      "stars": 9,
       "forks": 1,
       "watchers": 0,
       "open_issues": 0,
       "open_prs": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-12T04:42:40Z",
+      "pushed": "2026-10-12T05:25:14Z",
       "created": "2026-10-09T03:09:47Z",
       "archived": false,
       "license": "MIT",
@@ -4383,7 +4383,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 40
+          "commits": 42
         },
         {
           "login": "jordanpartridge",
@@ -4391,7 +4391,7 @@
           "commits": 3
         }
       ],
-      "commits": 43,
+      "commits": 45,
       "repo_url": "https://github.com/nixfred/shepr",
       "clone": "git clone https://github.com/nixfred/shepr.git",
       "shot": null
@@ -4634,7 +4634,7 @@
       "install": null,
       "status": "developing",
       "slug": "autocorrect-omarchy",
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
       "watchers": 0,
       "open_issues": 0,
@@ -5283,7 +5283,7 @@
     }
   ],
   "heatmap": {
-    "total": 2921,
+    "total": 2942,
     "weeks": [
       [
         {
@@ -7027,7 +7027,7 @@
       [
         {
           "date": "2026-09-06",
-          "count": 68,
+          "count": 67,
           "level": 3
         },
         {
@@ -7195,12 +7195,12 @@
         },
         {
           "date": "2026-10-08",
-          "count": 22,
+          "count": 25,
           "level": 1
         },
         {
           "date": "2026-10-09",
-          "count": 101,
+          "count": 102,
           "level": 4
         },
         {
@@ -7217,7 +7217,7 @@
         },
         {
           "date": "2026-10-12",
-          "count": 3,
+          "count": 21,
           "level": 1
         }
       ]
@@ -7229,7 +7229,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 441,
+    "stars": 452,
     "tools": 22,
     "with_shots": 28
   }
