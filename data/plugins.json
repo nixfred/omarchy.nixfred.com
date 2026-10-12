@@ -507,10 +507,10 @@
       "family": "system",
       "status": "live",
       "repo": "nixfred/omarchy-doctor",
-      "version": "1.6.0",
+      "version": "2.0.0",
       "manifest_path": "manifest.json",
-      "tagline": "Check, understand, verify.",
-      "description": "Check system, storage, graphics, network, audio and shell health with bounded scans, live diagrams, evidence and seven-day local history. Ask my agent hands a selected finding to your chosen assistant; its report appears beside Doctor’s independent recheck.",
+      "tagline": "Is my computer OK?",
+      "description": "A medical cross on your bar that answers one question. Green means there is nothing you need to do. Yellow means take a look. Red means fix it soon. 8 plain checks, one screen, and a Fix it for me button that hands the problem to your own coding agent.",
       "accent": "#4aa8ff",
       "install": "omarchy plugin add https://github.com/nixfred/omarchy-doctor.git --enable",
       "flagship": true
