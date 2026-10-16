@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T06:40:36.489Z",
+  "generated_at": "2026-10-16T06:40:30.673Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -706,7 +706,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-10T06:17:06Z",
+      "pushed": "2026-10-15T09:48:00Z",
       "created": "2026-09-28T02:58:29Z",
       "license": "MIT",
       "language": "QML",
@@ -717,10 +717,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 1
+          "commits": 6
         }
       ],
-      "commits": 1,
+      "commits": 6,
       "repo_url": "https://github.com/nixfred/larrylamp.omarchy",
       "glyph": "assets/img/family/desk.svg",
       "archived": false,
@@ -2818,12 +2818,20 @@
       "accent": "#ff4d4d",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/burnbar.git --enable",
-      "stars": 12,
-      "forks": 4,
+      "stars": 13,
+      "forks": 5,
       "watchers": 0,
-      "open_prs": 1,
+      "open_prs": 2,
       "open_issues": 0,
       "prs": [
+        {
+          "number": 9,
+          "title": "fix: Grok Bot's weekly usage shows on the Grok card",
+          "author": "ianswope",
+          "created": "2026-10-15T12:54:57Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/burnbar/pull/9"
+        },
         {
           "number": 8,
           "title": "feat: pace flames, one icon-sized flame per pace state, as an opt-in look",
@@ -3194,18 +3202,9 @@
       "stars": 176,
       "forks": 41,
       "watchers": 1,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 5,
-      "prs": [
-        {
-          "number": 140,
-          "title": "fix: survive the host's ssh agent and the bar's PATH",
-          "author": "jzetterman",
-          "created": "2026-10-10T12:58:31Z",
-          "draft": true,
-          "url": "https://github.com/nixfred/blip/pull/140"
-        }
-      ],
+      "prs": [],
       "issues": [
         {
           "number": 132,
@@ -3243,7 +3242,7 @@
           "url": "https://github.com/nixfred/blip/issues/78"
         }
       ],
-      "pushed": "2026-10-13T18:25:18Z",
+      "pushed": "2026-10-15T16:36:18Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -3264,7 +3263,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 308
+          "commits": 312
         },
         {
           "login": "Fileri",
@@ -3302,7 +3301,7 @@
           "commits": 7
         }
       ],
-      "commits": 449,
+      "commits": 453,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "archived": false,
@@ -4890,7 +4889,7 @@
       "description": "Stamp one Omarchy machine onto another.",
       "install": "git clone https://github.com/nixfred/imprint.git && cd imprint && ./install.sh",
       "slug": "imprint",
-      "stars": 44,
+      "stars": 45,
       "forks": 5,
       "watchers": 1,
       "open_issues": 1,
@@ -5300,7 +5299,7 @@
     }
   ],
   "heatmap": {
-    "total": 3001,
+    "total": 3012,
     "weeks": [
       [
         {
@@ -7148,7 +7147,7 @@
         },
         {
           "date": "2026-09-26",
-          "count": 36,
+          "count": 35,
           "level": 2
         }
       ],
@@ -7249,6 +7248,11 @@
         },
         {
           "date": "2026-10-15",
+          "count": 12,
+          "level": 1
+        },
+        {
+          "date": "2026-10-16",
           "count": 0,
           "level": 0
         }
@@ -7261,7 +7265,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 457,
+    "stars": 458,
     "tools": 22,
     "with_shots": 28
   }
