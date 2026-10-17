@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T06:40:30.673Z",
+  "generated_at": "2026-10-17T06:36:16.362Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -1777,7 +1777,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-20T13:46:40Z",
+      "pushed": "2026-10-17T05:28:54Z",
       "created": "2026-09-10T02:16:48Z",
       "license": null,
       "language": "Python",
@@ -2509,7 +2509,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-13T14:24:57Z",
+      "pushed": "2026-10-17T05:28:52Z",
       "created": "2026-09-04T21:48:56Z",
       "license": "MIT",
       "language": "Python",
@@ -2821,7 +2821,7 @@
       "stars": 13,
       "forks": 5,
       "watchers": 0,
-      "open_prs": 2,
+      "open_prs": 1,
       "open_issues": 0,
       "prs": [
         {
@@ -2831,18 +2831,10 @@
           "created": "2026-10-15T12:54:57Z",
           "draft": false,
           "url": "https://github.com/nixfred/burnbar/pull/9"
-        },
-        {
-          "number": 8,
-          "title": "feat: pace flames, one icon-sized flame per pace state, as an opt-in look",
-          "author": "parker-brown-family",
-          "created": "2026-10-14T18:51:28Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/burnbar/pull/8"
         }
       ],
       "issues": [],
-      "pushed": "2026-10-13T23:53:24Z",
+      "pushed": "2026-10-16T08:21:13Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -2866,12 +2858,17 @@
           "commits": 1
         },
         {
+          "login": "parker-brown-family",
+          "avatar": "https://avatars.githubusercontent.com/u/267364116?v=4",
+          "commits": 1
+        },
+        {
           "login": "zicochaos",
           "avatar": "https://avatars.githubusercontent.com/u/23367003?v=4",
           "commits": 1
         }
       ],
-      "commits": 82,
+      "commits": 83,
       "repo_url": "https://github.com/nixfred/burnbar",
       "glyph": "assets/img/glyph/nixfred-burnbar.svg",
       "archived": false,
@@ -3045,7 +3042,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-13T18:35:15Z",
+      "pushed": "2026-10-17T05:28:50Z",
       "created": "2026-09-04T02:29:07Z",
       "license": "MIT",
       "language": "Shell",
@@ -3200,12 +3197,35 @@
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/blip.git --enable",
       "stars": 176,
-      "forks": 41,
+      "forks": 42,
       "watchers": 1,
-      "open_prs": 0,
-      "open_issues": 5,
-      "prs": [],
+      "open_prs": 1,
+      "open_issues": 7,
+      "prs": [
+        {
+          "number": 145,
+          "title": "blip-setup: read SSH_CONNECTION in a fish-safe way",
+          "author": "jaredmoody",
+          "created": "2026-10-16T19:41:28Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/blip/pull/145"
+        }
+      ],
       "issues": [
+        {
+          "number": 144,
+          "title": "blip-setup aborts before key enrolment when the Mac's login shell is fish",
+          "author": "jaredmoody",
+          "created": "2026-10-16T19:41:15Z",
+          "url": "https://github.com/nixfred/blip/issues/144"
+        },
+        {
+          "number": 143,
+          "title": "Security-code toast never fires for alphanumeric SMS senders (isGroupChat treats 'msverify' as a group)",
+          "author": "edmooredop",
+          "created": "2026-10-16T19:04:33Z",
+          "url": "https://github.com/nixfred/blip/issues/143"
+        },
         {
           "number": 132,
           "title": "macOS 27: Pin is not in the Conversation menu, and Hide Alerts can't be verified (plistlib fails on upiExpiryDate)",
@@ -3956,7 +3976,7 @@
           "url": "https://github.com/nixfred/infomarchy/issues/26"
         }
       ],
-      "pushed": "2026-10-13T18:28:25Z",
+      "pushed": "2026-10-17T05:28:49Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -4240,7 +4260,7 @@
           "url": "https://github.com/nixfred/rift/issues/16"
         }
       ],
-      "pushed": "2026-09-07T17:56:15Z",
+      "pushed": "2026-10-17T05:28:47Z",
       "created": "2026-08-21T23:52:08Z",
       "license": "MIT",
       "language": "Python",
@@ -5299,7 +5319,7 @@
     }
   ],
   "heatmap": {
-    "total": 3012,
+    "total": 3009,
     "weeks": [
       [
         {
@@ -7154,7 +7174,7 @@
       [
         {
           "date": "2026-09-27",
-          "count": 36,
+          "count": 33,
           "level": 2
         },
         {
@@ -7253,6 +7273,11 @@
         },
         {
           "date": "2026-10-16",
+          "count": 0,
+          "level": 0
+        },
+        {
+          "date": "2026-10-17",
           "count": 0,
           "level": 0
         }
