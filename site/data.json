@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T06:36:16.362Z",
+  "generated_at": "2026-10-18T06:36:24.807Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -2818,7 +2818,7 @@
       "accent": "#ff4d4d",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/burnbar.git --enable",
-      "stars": 13,
+      "stars": 14,
       "forks": 5,
       "watchers": 0,
       "open_prs": 1,
@@ -5319,45 +5319,8 @@
     }
   ],
   "heatmap": {
-    "total": 3009,
+    "total": 3008,
     "weeks": [
-      [
-        {
-          "date": "2025-10-12",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-13",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-14",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-15",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-16",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-17",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-18",
-          "count": 0,
-          "level": 0
-        }
-      ],
       [
         {
           "date": "2025-10-19",
@@ -7174,7 +7137,7 @@
       [
         {
           "date": "2026-09-27",
-          "count": 33,
+          "count": 32,
           "level": 2
         },
         {
@@ -7281,6 +7244,13 @@
           "count": 0,
           "level": 0
         }
+      ],
+      [
+        {
+          "date": "2026-10-18",
+          "count": 0,
+          "level": 0
+        }
       ]
     ]
   },
@@ -7290,7 +7260,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 458,
+    "stars": 459,
     "tools": 22,
     "with_shots": 28
   }
