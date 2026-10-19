@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T06:36:24.807Z",
+  "generated_at": "2026-10-19T06:52:04.950Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -1208,7 +1208,7 @@
       "install": "omarchy plugin add https://github.com/nixfred/omarchy-elgato-control.git --enable",
       "fork_of": "amitcpatel/omarchy-elgato-control",
       "credit_url": "https://github.com/amitcpatel/omarchy-elgato-control",
-      "stars": 1,
+      "stars": 2,
       "forks": 1,
       "watchers": 0,
       "open_prs": 0,
@@ -4107,7 +4107,7 @@
       "family": "workspace",
       "status": "live",
       "repo": "nixfred/plonk",
-      "version": "1.2.7",
+      "version": "1.4.0",
       "tagline": "Workspaces close their own gaps.",
       "description": "Packs numeric Hyprland workspaces into 1…N as gaps appear, preserving order, tiling, monitor placement, and focus.",
       "accent": "#9d7bff",
@@ -4120,7 +4120,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-28T21:05:23Z",
+      "pushed": "2026-10-19T02:58:46Z",
       "created": "2026-08-22T02:11:38Z",
       "license": "MIT",
       "language": "Shell",
@@ -4134,10 +4134,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 48
+          "commits": 50
         }
       ],
-      "commits": 48,
+      "commits": 50,
       "repo_url": "https://github.com/nixfred/plonk",
       "glyph": "assets/img/glyph/io-github-nixfred-plonk.svg",
       "archived": false,
@@ -4987,7 +4987,7 @@
       "description": "Voice recorder with live whisper.cpp transcription for Omarchy. GTK4 and PipeWire.",
       "install": "git clone https://github.com/nixfred/omavoice.git && cd omavoice && makepkg -si",
       "slug": "omavoice",
-      "stars": 14,
+      "stars": 15,
       "forks": 0,
       "watchers": 0,
       "open_issues": 0,
@@ -5319,7 +5319,7 @@
     }
   ],
   "heatmap": {
-    "total": 3008,
+    "total": 3011,
     "weeks": [
       [
         {
@@ -7137,7 +7137,7 @@
       [
         {
           "date": "2026-09-27",
-          "count": 32,
+          "count": 31,
           "level": 2
         },
         {
@@ -7248,8 +7248,13 @@
       [
         {
           "date": "2026-10-18",
-          "count": 0,
-          "level": 0
+          "count": 3,
+          "level": 1
+        },
+        {
+          "date": "2026-10-19",
+          "count": 1,
+          "level": 1
         }
       ]
     ]
@@ -7260,7 +7265,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 459,
+    "stars": 460,
     "tools": 22,
     "with_shots": 28
   }
