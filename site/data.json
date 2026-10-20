@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T06:52:04.950Z",
+  "generated_at": "2026-10-20T06:40:00.804Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -446,7 +446,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-06T13:56:24Z",
+      "pushed": "2026-10-19T15:10:48Z",
       "created": "2026-10-05T23:20:06Z",
       "license": "MIT",
       "language": "Python",
@@ -457,10 +457,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 5
+          "commits": 6
         }
       ],
-      "commits": 5,
+      "commits": 6,
       "repo_url": "https://github.com/nixfred/omarchy-mycelium",
       "glyph": "assets/img/glyph/nixfred-mycelium.svg",
       "archived": false,
@@ -492,7 +492,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-13T18:30:51Z",
+      "pushed": "2026-10-19T15:12:17Z",
       "created": "2026-10-05T15:51:52Z",
       "license": "MIT",
       "language": "Python",
@@ -503,10 +503,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 10
+          "commits": 11
         }
       ],
-      "commits": 10,
+      "commits": 11,
       "repo_url": "https://github.com/nixfred/omarchy-districts",
       "glyph": "assets/img/glyph/nixfred-districts.svg",
       "archived": false,
@@ -598,7 +598,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-08T16:42:45Z",
+      "pushed": "2026-10-19T15:10:41Z",
       "created": "2026-10-02T23:42:20Z",
       "license": "MIT",
       "language": "Python",
@@ -609,7 +609,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 18
+          "commits": 19
         },
         {
           "login": "gardnmi",
@@ -617,7 +617,7 @@
           "commits": 1
         }
       ],
-      "commits": 19,
+      "commits": 20,
       "repo_url": "https://github.com/nixfred/omarchy-doctor",
       "glyph": "assets/img/family/system.svg",
       "archived": false,
@@ -649,7 +649,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-14T22:21:17Z",
+      "pushed": "2026-10-19T15:10:46Z",
       "created": "2026-09-30T03:48:47Z",
       "license": null,
       "language": "Python",
@@ -667,7 +667,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 20
+          "commits": 21
         },
         {
           "login": "GreyforgeLabs",
@@ -675,7 +675,7 @@
           "commits": 1
         }
       ],
-      "commits": 21,
+      "commits": 22,
       "repo_url": "https://github.com/nixfred/lamplight",
       "glyph": "assets/img/family/system.svg",
       "archived": false,
@@ -706,7 +706,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-15T09:48:00Z",
+      "pushed": "2026-10-19T15:12:10Z",
       "created": "2026-09-28T02:58:29Z",
       "license": "MIT",
       "language": "QML",
@@ -717,10 +717,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 6
+          "commits": 7
         }
       ],
-      "commits": 6,
+      "commits": 7,
       "repo_url": "https://github.com/nixfred/larrylamp.omarchy",
       "glyph": "assets/img/family/desk.svg",
       "archived": false,
@@ -755,7 +755,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-27T06:11:25Z",
+      "pushed": "2026-10-19T15:10:40Z",
       "license": "MIT",
       "language": "QML",
       "topics": [],
@@ -765,10 +765,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 1
+          "commits": 2
         }
       ],
-      "commits": 1,
+      "commits": 2,
       "repo_url": "https://github.com/nixfred/dockyard.omarchy",
       "glyph": "assets/img/glyph/nixfred-dockyard.svg",
       "archived": false,
@@ -802,7 +802,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-27T06:10:38Z",
+      "pushed": "2026-10-19T15:10:57Z",
       "license": "MIT",
       "language": "QML",
       "topics": [],
@@ -812,10 +812,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 1
+          "commits": 2
         }
       ],
-      "commits": 1,
+      "commits": 2,
       "repo_url": "https://github.com/nixfred/sentinel.omarchy",
       "glyph": "assets/img/glyph/nixfred-sentinel.svg",
       "archived": false,
@@ -849,7 +849,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-10T11:14:40Z",
+      "pushed": "2026-10-19T15:10:44Z",
       "license": "MIT",
       "language": "QML",
       "topics": [],
@@ -859,10 +859,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 3
+          "commits": 4
         }
       ],
-      "commits": 3,
+      "commits": 4,
       "repo_url": "https://github.com/nixfred/hourglass",
       "glyph": "assets/img/glyph/nixfred-hourglass.svg",
       "archived": false,
@@ -896,7 +896,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-27T05:59:55Z",
+      "pushed": "2026-10-19T15:10:38Z",
       "license": "MIT",
       "language": "QML",
       "topics": [],
@@ -906,10 +906,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 1
+          "commits": 2
         }
       ],
-      "commits": 1,
+      "commits": 2,
       "repo_url": "https://github.com/nixfred/daylight.omarchy",
       "glyph": "assets/img/glyph/nixfred-daylight.svg",
       "archived": false,
@@ -943,7 +943,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-27T06:01:43Z",
+      "pushed": "2026-10-19T15:10:51Z",
       "license": "MIT",
       "language": "QML",
       "topics": [],
@@ -953,10 +953,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 2
+          "commits": 3
         }
       ],
-      "commits": 2,
+      "commits": 3,
       "repo_url": "https://github.com/nixfred/pingboard.omarchy",
       "glyph": "assets/img/glyph/nixfred-pingboard.svg",
       "archived": false,
@@ -990,7 +990,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-27T06:03:55Z",
+      "pushed": "2026-10-19T15:11:00Z",
       "license": "MIT",
       "language": "QML",
       "topics": [],
@@ -1000,10 +1000,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 3
+          "commits": 4
         }
       ],
-      "commits": 3,
+      "commits": 4,
       "repo_url": "https://github.com/nixfred/tomato.omarchy",
       "glyph": "assets/img/glyph/nixfred-tomato.svg",
       "archived": false,
@@ -1037,7 +1037,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-27T21:16:01Z",
+      "pushed": "2026-10-19T15:10:58Z",
       "license": "MIT",
       "language": "QML",
       "topics": [],
@@ -1047,10 +1047,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 1
+          "commits": 2
         }
       ],
-      "commits": 1,
+      "commits": 2,
       "repo_url": "https://github.com/nixfred/shipyard",
       "glyph": "assets/img/glyph/nixfred-shipyard.svg",
       "archived": false,
@@ -1329,7 +1329,7 @@
           "url": "https://github.com/nixfred/Glide/issues/1"
         }
       ],
-      "pushed": "2026-10-04T22:11:40Z",
+      "pushed": "2026-10-19T15:10:42Z",
       "created": "2026-09-20T00:39:20Z",
       "license": "NOASSERTION",
       "language": "Rust",
@@ -1347,10 +1347,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 21
+          "commits": 22
         }
       ],
-      "commits": 21,
+      "commits": 22,
       "repo_url": "https://github.com/nixfred/Glide",
       "glyph": "assets/img/family/workspace.svg",
       "archived": false,
@@ -1382,7 +1382,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-13T18:24:57Z",
+      "pushed": "2026-10-19T07:20:36Z",
       "created": "2026-09-19T19:39:04Z",
       "license": "MIT",
       "language": "Python",
@@ -1399,10 +1399,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 16
+          "commits": 17
         }
       ],
-      "commits": 16,
+      "commits": 17,
       "repo_url": "https://github.com/nixfred/beam",
       "glyph": "assets/img/family/media.svg",
       "archived": false,
@@ -1489,7 +1489,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-13T18:31:49Z",
+      "pushed": "2026-10-19T07:20:34Z",
       "created": "2026-09-17T21:35:40Z",
       "license": "MIT",
       "language": "Python",
@@ -1508,10 +1508,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 25
+          "commits": 26
         }
       ],
-      "commits": 83,
+      "commits": 84,
       "repo_url": "https://github.com/nixfred/LANarchy",
       "glyph": "assets/img/glyph/nixfred-lanarchy.svg",
       "archived": false,
@@ -1545,7 +1545,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-13T18:35:17Z",
+      "pushed": "2026-10-19T15:11:01Z",
       "created": "2026-09-14T03:48:41Z",
       "license": "NOASSERTION",
       "language": "Python",
@@ -1559,7 +1559,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 18
+          "commits": 19
         },
         {
           "login": "awkent01",
@@ -1577,7 +1577,7 @@
           "commits": 1
         }
       ],
-      "commits": 49,
+      "commits": 50,
       "repo_url": "https://github.com/nixfred/trackpad.pulse",
       "glyph": "assets/img/glyph/nixfred-trackpad-pulse.svg",
       "archived": false,
@@ -1609,7 +1609,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-18T04:25:27Z",
+      "pushed": "2026-10-19T15:12:12Z",
       "created": "2026-09-12T19:05:04Z",
       "license": "MIT",
       "language": "Python",
@@ -1620,7 +1620,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 8
+          "commits": 9
         },
         {
           "login": "HermeticOrmus",
@@ -1628,7 +1628,7 @@
           "commits": 1
         }
       ],
-      "commits": 9,
+      "commits": 10,
       "repo_url": "https://github.com/nixfred/omaguard",
       "glyph": "assets/img/family/infra.svg",
       "archived": false,
@@ -1706,14 +1706,39 @@
       "supersedes": "CPU Pulse, RAM Pulse, Disk Pulse, Net Pulse",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/pulse.git --enable",
-      "stars": 14,
-      "forks": 2,
+      "stars": 15,
+      "forks": 3,
       "watchers": 0,
-      "open_prs": 0,
-      "open_issues": 0,
-      "prs": [],
-      "issues": [],
-      "pushed": "2026-10-04T21:46:03Z",
+      "open_prs": 2,
+      "open_issues": 1,
+      "prs": [
+        {
+          "number": 10,
+          "title": "fix(bar): fit the bar icon to a left or right bar",
+          "author": "diogochaves",
+          "created": "2026-10-20T02:04:11Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/pulse/pull/10"
+        },
+        {
+          "number": 9,
+          "title": "fix(cpu): read AMD's k10temp sensor for the package temperature",
+          "author": "diogochaves",
+          "created": "2026-10-20T02:04:09Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/pulse/pull/9"
+        }
+      ],
+      "issues": [
+        {
+          "number": 11,
+          "title": "GPU collector keeps the NVIDIA card open: does a hybrid laptop's dGPU still power down?",
+          "author": "diogochaves",
+          "created": "2026-10-20T02:43:53Z",
+          "url": "https://github.com/nixfred/pulse/issues/11"
+        }
+      ],
+      "pushed": "2026-10-19T15:10:54Z",
       "created": "2026-09-11T16:49:33Z",
       "license": "MIT",
       "language": "QML",
@@ -1732,7 +1757,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 28
+          "commits": 29
         },
         {
           "login": "dadofsambonzuki",
@@ -1745,7 +1770,7 @@
           "commits": 1
         }
       ],
-      "commits": 34,
+      "commits": 35,
       "repo_url": "https://github.com/nixfred/pulse",
       "glyph": "assets/img/family/pulse.svg",
       "archived": false,
@@ -1777,7 +1802,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-17T05:28:54Z",
+      "pushed": "2026-10-19T15:10:52Z",
       "created": "2026-09-10T02:16:48Z",
       "license": null,
       "language": "Python",
@@ -1788,7 +1813,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 10
+          "commits": 11
         },
         {
           "login": "shieldsworks",
@@ -1796,7 +1821,7 @@
           "commits": 1
         }
       ],
-      "commits": 11,
+      "commits": 12,
       "repo_url": "https://github.com/nixfred/pr.hunter",
       "glyph": "assets/img/glyph/nixfred-pr-hunter.svg",
       "archived": false,
@@ -1967,7 +1992,7 @@
           "url": "https://github.com/nixfred/menu.bar.overload/issues/1"
         }
       ],
-      "pushed": "2026-10-13T18:29:25Z",
+      "pushed": "2026-10-19T07:20:32Z",
       "created": "2026-09-09T03:28:34Z",
       "license": null,
       "language": "QML",
@@ -1981,10 +2006,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 13
+          "commits": 14
         }
       ],
-      "commits": 13,
+      "commits": 14,
       "repo_url": "https://github.com/nixfred/menu.bar.overload",
       "glyph": "assets/img/glyph/nixfred-menubar-overload.svg",
       "archived": false,
@@ -2416,7 +2441,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-30T14:26:00Z",
+      "pushed": "2026-10-19T15:11:05Z",
       "created": "2026-09-06T18:19:26Z",
       "license": "MIT",
       "language": "QML",
@@ -2427,10 +2452,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 9
+          "commits": 10
         }
       ],
-      "commits": 9,
+      "commits": 10,
       "repo_url": "https://github.com/nixfred/audio.pulse.omarchy",
       "glyph": "assets/img/glyph/pi-audio.svg",
       "archived": false,
@@ -2463,7 +2488,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-16T13:34:40Z",
+      "pushed": "2026-10-19T15:11:10Z",
       "created": "2026-09-04T23:19:28Z",
       "license": "NOASSERTION",
       "language": "QML",
@@ -2474,10 +2499,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 17
+          "commits": 18
         }
       ],
-      "commits": 17,
+      "commits": 18,
       "repo_url": "https://github.com/nixfred/power-pulse",
       "glyph": "assets/img/glyph/pi-power.svg",
       "archived": false,
@@ -2676,7 +2701,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-11T23:19:31Z",
+      "pushed": "2026-10-19T15:10:37Z",
       "created": "2026-09-04T14:19:34Z",
       "license": "NOASSERTION",
       "language": "QML",
@@ -2687,10 +2712,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 3
+          "commits": 4
         }
       ],
-      "commits": 3,
+      "commits": 4,
       "repo_url": "https://github.com/nixfred/omarchy-chronos",
       "glyph": "assets/img/glyph/nixfred-chronos.svg",
       "archived": false,
@@ -2722,7 +2747,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-09T17:28:49Z",
+      "pushed": "2026-10-19T15:10:49Z",
       "created": "2026-09-04T04:04:01Z",
       "license": "MIT",
       "language": "QML",
@@ -2744,10 +2769,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 12
+          "commits": 13
         }
       ],
-      "commits": 12,
+      "commits": 13,
       "repo_url": "https://github.com/nixfred/Pastey",
       "glyph": "assets/img/glyph/nixfred-pastey.svg",
       "archived": false,
@@ -2821,20 +2846,11 @@
       "stars": 14,
       "forks": 5,
       "watchers": 0,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 0,
-      "prs": [
-        {
-          "number": 9,
-          "title": "fix: Grok Bot's weekly usage shows on the Grok card",
-          "author": "ianswope",
-          "created": "2026-10-15T12:54:57Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/burnbar/pull/9"
-        }
-      ],
+      "prs": [],
       "issues": [],
-      "pushed": "2026-10-16T08:21:13Z",
+      "pushed": "2026-10-19T15:12:09Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -2845,12 +2861,12 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 78
+          "commits": 79
         },
         {
           "login": "ianswope",
           "avatar": "https://avatars.githubusercontent.com/u/175949710?v=4",
-          "commits": 2
+          "commits": 3
         },
         {
           "login": "aplaceforallmystuff",
@@ -2868,7 +2884,7 @@
           "commits": 1
         }
       ],
-      "commits": 83,
+      "commits": 85,
       "repo_url": "https://github.com/nixfred/burnbar",
       "glyph": "assets/img/glyph/nixfred-burnbar.svg",
       "archived": false,
@@ -2900,7 +2916,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-12T02:01:00Z",
+      "pushed": "2026-10-19T15:11:07Z",
       "created": "2026-09-04T04:03:59Z",
       "license": null,
       "language": "QML",
@@ -2911,10 +2927,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 16
+          "commits": 17
         }
       ],
-      "commits": 16,
+      "commits": 17,
       "repo_url": "https://github.com/nixfred/backup.omarchy",
       "glyph": "assets/img/glyph/pi-backup-monitor.svg",
       "archived": false,
@@ -2948,7 +2964,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-13T04:01:41Z",
+      "pushed": "2026-10-19T15:10:35Z",
       "created": "2026-09-04T04:03:58Z",
       "license": null,
       "language": "QML",
@@ -2959,10 +2975,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 17
+          "commits": 18
         }
       ],
-      "commits": 17,
+      "commits": 18,
       "repo_url": "https://github.com/nixfred/beatdeck.omarchy",
       "glyph": "assets/img/glyph/nixfred-beatdeck.svg",
       "archived": false,
@@ -2994,7 +3010,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-04T03:47:04Z",
+      "pushed": "2026-10-19T15:11:09Z",
       "created": "2026-09-04T03:46:55Z",
       "license": "MIT",
       "language": "QML",
@@ -3005,10 +3021,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 4
+          "commits": 5
         }
       ],
-      "commits": 4,
+      "commits": 5,
       "repo_url": "https://github.com/nixfred/omarchy-halo-bluetooth",
       "glyph": "assets/img/glyph/pi-bluetooth.svg",
       "archived": false,
@@ -3197,11 +3213,19 @@
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/blip.git --enable",
       "stars": 176,
-      "forks": 42,
+      "forks": 43,
       "watchers": 1,
-      "open_prs": 1,
+      "open_prs": 2,
       "open_issues": 7,
       "prs": [
+        {
+          "number": 146,
+          "title": "feat(ui): right-click a photo to open, copy or save it",
+          "author": "coltonfitzgerald",
+          "created": "2026-10-20T00:27:32Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/blip/pull/146"
+        },
         {
           "number": 145,
           "title": "blip-setup: read SSH_CONNECTION in a fish-safe way",
@@ -3262,7 +3286,7 @@
           "url": "https://github.com/nixfred/blip/issues/78"
         }
       ],
-      "pushed": "2026-10-15T16:36:18Z",
+      "pushed": "2026-10-19T15:12:15Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -3283,7 +3307,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 312
+          "commits": 313
         },
         {
           "login": "Fileri",
@@ -3321,7 +3345,7 @@
           "commits": 7
         }
       ],
-      "commits": 453,
+      "commits": 454,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "archived": false,
@@ -3741,7 +3765,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-09T02:11:51Z",
+      "pushed": "2026-10-19T15:10:33Z",
       "created": "2026-08-23T03:09:01Z",
       "license": "MIT",
       "language": "QML",
@@ -3752,7 +3776,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 23
+          "commits": 24
         },
         {
           "login": "ryuhzk",
@@ -3770,7 +3794,7 @@
           "commits": 3
         }
       ],
-      "commits": 33,
+      "commits": 34,
       "repo_url": "https://github.com/nixfred/omarchy-server-status",
       "glyph": "assets/img/glyph/io-github-nixfred-tailscale-host-monitor.svg",
       "archived": false,
@@ -3976,7 +4000,7 @@
           "url": "https://github.com/nixfred/infomarchy/issues/26"
         }
       ],
-      "pushed": "2026-10-17T05:28:49Z",
+      "pushed": "2026-10-19T15:10:45Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -4000,7 +4024,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 139
+          "commits": 140
         },
         {
           "login": "TechLuddite",
@@ -4038,7 +4062,7 @@
           "commits": 3
         }
       ],
-      "commits": 198,
+      "commits": 199,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "archived": false,
@@ -4074,7 +4098,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-04T22:31:08Z",
+      "pushed": "2026-10-19T15:11:03Z",
       "created": "2026-08-22T04:33:59Z",
       "license": "MIT",
       "language": "QML",
@@ -4085,10 +4109,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 24
+          "commits": 25
         }
       ],
-      "commits": 24,
+      "commits": 25,
       "repo_url": "https://github.com/nixfred/workspace-names",
       "glyph": "assets/img/glyph/nixfred-workspace-names.svg",
       "archived": false,
@@ -5319,7 +5343,7 @@
     }
   ],
   "heatmap": {
-    "total": 3011,
+    "total": 3041,
     "weeks": [
       [
         {
@@ -7253,8 +7277,13 @@
         },
         {
           "date": "2026-10-19",
-          "count": 1,
-          "level": 1
+          "count": 31,
+          "level": 2
+        },
+        {
+          "date": "2026-10-20",
+          "count": 0,
+          "level": 0
         }
       ]
     ]
@@ -7265,7 +7294,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 460,
+    "stars": 461,
     "tools": 22,
     "with_shots": 28
   }
