@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T06:40:00.804Z",
+  "generated_at": "2026-10-21T06:40:45.793Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -1992,7 +1992,7 @@
           "url": "https://github.com/nixfred/menu.bar.overload/issues/1"
         }
       ],
-      "pushed": "2026-10-19T07:20:32Z",
+      "pushed": "2026-10-20T20:19:12Z",
       "created": "2026-09-09T03:28:34Z",
       "license": null,
       "language": "QML",
@@ -2006,10 +2006,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 14
+          "commits": 15
         }
       ],
-      "commits": 14,
+      "commits": 15,
       "repo_url": "https://github.com/nixfred/menu.bar.overload",
       "glyph": "assets/img/glyph/nixfred-menubar-overload.svg",
       "archived": false,
@@ -3213,11 +3213,19 @@
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/blip.git --enable",
       "stars": 176,
-      "forks": 43,
+      "forks": 44,
       "watchers": 1,
-      "open_prs": 2,
+      "open_prs": 3,
       "open_issues": 7,
       "prs": [
+        {
+          "number": 147,
+          "title": "Don't let a unified SMS chat row turn an iMessage DM green",
+          "author": "brightball",
+          "created": "2026-10-20T22:59:09Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/blip/pull/147"
+        },
         {
           "number": 146,
           "title": "feat(ui): right-click a photo to open, copy or save it",
@@ -3985,7 +3993,7 @@
       "accent": "#00e5ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/infomarchy.git --enable",
-      "stars": 123,
+      "stars": 124,
       "forks": 24,
       "watchers": 1,
       "open_prs": 0,
@@ -5343,7 +5351,7 @@
     }
   ],
   "heatmap": {
-    "total": 3041,
+    "total": 3047,
     "weeks": [
       [
         {
@@ -7161,7 +7169,7 @@
       [
         {
           "date": "2026-09-27",
-          "count": 31,
+          "count": 29,
           "level": 2
         },
         {
@@ -7282,6 +7290,11 @@
         },
         {
           "date": "2026-10-20",
+          "count": 8,
+          "level": 1
+        },
+        {
+          "date": "2026-10-21",
           "count": 0,
           "level": 0
         }
@@ -7294,7 +7307,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 461,
+    "stars": 462,
     "tools": 22,
     "with_shots": 28
   }
