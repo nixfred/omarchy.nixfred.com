@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T06:40:40.097Z",
+  "generated_at": "2026-10-24T06:36:54.155Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -1820,7 +1820,7 @@
       "accent": "#a78bfa",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/pr.hunter.git --enable",
-      "stars": 1,
+      "stars": 0,
       "forks": 2,
       "watchers": 0,
       "open_prs": 0,
@@ -4432,10 +4432,17 @@
       "stars": 14,
       "forks": 1,
       "watchers": 0,
-      "open_issues": 1,
+      "open_issues": 2,
       "open_prs": 0,
       "prs": [],
       "issues": [
+        {
+          "number": 5,
+          "title": "Fails to boot on Omarchy if tailscale is turned off",
+          "author": "bendangelo",
+          "created": "2026-10-23T15:59:31Z",
+          "url": "https://github.com/nixfred/shepr/issues/5"
+        },
         {
           "number": 4,
           "title": "Agents in named herdr sessions are not shown (only the default session)",
@@ -5355,7 +5362,7 @@
     }
   ],
   "heatmap": {
-    "total": 3049,
+    "total": 3050,
     "weeks": [
       [
         {
@@ -7178,7 +7185,7 @@
         },
         {
           "date": "2026-09-28",
-          "count": 11,
+          "count": 10,
           "level": 1
         },
         {
@@ -7309,6 +7316,11 @@
         },
         {
           "date": "2026-10-23",
+          "count": 2,
+          "level": 1
+        },
+        {
+          "date": "2026-10-24",
           "count": 0,
           "level": 0
         }
@@ -7321,7 +7333,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 463,
+    "stars": 462,
     "tools": 22,
     "with_shots": 28
   }
