@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T06:37:25.478Z",
+  "generated_at": "2026-10-26T06:52:49.628Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -668,7 +668,7 @@
       "accent": "#4aa8ff",
       "install": "omarchy plugin add https://github.com/nixfred/lamplight && ~/.config/omarchy/plugins/nixfred.lamplight/install.sh",
       "stars": 0,
-      "forks": 1,
+      "forks": 0,
       "watchers": 0,
       "open_prs": 0,
       "open_issues": 0,
@@ -3247,7 +3247,7 @@
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/blip.git --enable",
       "stars": 177,
-      "forks": 45,
+      "forks": 44,
       "watchers": 1,
       "open_prs": 1,
       "open_issues": 5,
@@ -3997,8 +3997,8 @@
       "accent": "#00e5ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/infomarchy.git --enable",
-      "stars": 125,
-      "forks": 24,
+      "stars": 130,
+      "forks": 23,
       "watchers": 1,
       "open_prs": 0,
       "open_issues": 1,
@@ -4012,7 +4012,7 @@
           "url": "https://github.com/nixfred/infomarchy/issues/26"
         }
       ],
-      "pushed": "2026-10-19T15:10:45Z",
+      "pushed": "2026-10-25T23:03:31Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -4036,7 +4036,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 140
+          "commits": 143
         },
         {
           "login": "TechLuddite",
@@ -4074,7 +4074,7 @@
           "commits": 3
         }
       ],
-      "commits": 199,
+      "commits": 202,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "archived": false,
@@ -4953,7 +4953,7 @@
       "install": "git clone https://github.com/nixfred/imprint.git && cd imprint && ./install.sh",
       "slug": "imprint",
       "stars": 45,
-      "forks": 5,
+      "forks": 4,
       "watchers": 1,
       "open_issues": 1,
       "open_prs": 0,
@@ -5362,7 +5362,7 @@
     }
   ],
   "heatmap": {
-    "total": 3052,
+    "total": 3055,
     "weeks": [
       [
         {
@@ -7291,6 +7291,11 @@
       [
         {
           "date": "2026-10-25",
+          "count": 3,
+          "level": 1
+        },
+        {
+          "date": "2026-10-26",
           "count": 0,
           "level": 0
         }
@@ -7303,7 +7308,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 464,
+    "stars": 469,
     "tools": 22,
     "with_shots": 28
   }
