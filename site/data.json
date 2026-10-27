@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T06:52:49.628Z",
+  "generated_at": "2026-10-27T06:42:30.781Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -731,7 +731,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-19T15:12:10Z",
+      "pushed": "2026-10-27T01:10:14Z",
       "created": "2026-09-28T02:58:29Z",
       "license": "MIT",
       "language": "QML",
@@ -742,10 +742,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 7
+          "commits": 8
         }
       ],
-      "commits": 7,
+      "commits": 8,
       "repo_url": "https://github.com/nixfred/larrylamp.omarchy",
       "glyph": "assets/img/family/desk.svg",
       "archived": false,
@@ -1820,7 +1820,7 @@
       "accent": "#a78bfa",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/pr.hunter.git --enable",
-      "stars": 0,
+      "stars": 1,
       "forks": 2,
       "watchers": 0,
       "open_prs": 0,
@@ -3997,13 +3997,20 @@
       "accent": "#00e5ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/infomarchy.git --enable",
-      "stars": 130,
-      "forks": 23,
+      "stars": 132,
+      "forks": 24,
       "watchers": 1,
       "open_prs": 0,
-      "open_issues": 1,
+      "open_issues": 2,
       "prs": [],
       "issues": [
+        {
+          "number": 43,
+          "title": "Opt-in wallpaper passthrough so another background plugin can show through",
+          "author": "afoxybouquet",
+          "created": "2026-10-26T15:04:15Z",
+          "url": "https://github.com/nixfred/infomarchy/issues/43"
+        },
         {
           "number": 26,
           "title": "Add Muse",
@@ -5362,7 +5369,7 @@
     }
   ],
   "heatmap": {
-    "total": 3055,
+    "total": 3056,
     "weeks": [
       [
         {
@@ -7296,6 +7303,11 @@
         },
         {
           "date": "2026-10-26",
+          "count": 1,
+          "level": 1
+        },
+        {
+          "date": "2026-10-27",
           "count": 0,
           "level": 0
         }
@@ -7308,7 +7320,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 469,
+    "stars": 472,
     "tools": 22,
     "with_shots": 28
   }
