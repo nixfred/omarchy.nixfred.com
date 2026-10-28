@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T06:42:30.781Z",
+  "generated_at": "2026-10-28T06:30:55.242Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -594,26 +594,9 @@
       "stars": 12,
       "forks": 5,
       "watchers": 0,
-      "open_prs": 2,
+      "open_prs": 0,
       "open_issues": 1,
-      "prs": [
-        {
-          "number": 6,
-          "title": "feat: choosable bar icon style (outline, badge, signal)",
-          "author": "dakai",
-          "created": "2026-10-22T03:35:46Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/omarchy-doctor/pull/6"
-        },
-        {
-          "number": 5,
-          "title": "fix: find the battery by sysfs type, not the BAT* name",
-          "author": "martythedev-tech",
-          "created": "2026-10-21T14:57:53Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/omarchy-doctor/pull/5"
-        }
-      ],
+      "prs": [],
       "issues": [
         {
           "number": 7,
@@ -623,7 +606,7 @@
           "url": "https://github.com/nixfred/omarchy-doctor/issues/7"
         }
       ],
-      "pushed": "2026-10-19T15:10:41Z",
+      "pushed": "2026-10-27T13:27:07Z",
       "created": "2026-10-02T23:42:20Z",
       "license": "MIT",
       "language": "Python",
@@ -637,12 +620,22 @@
           "commits": 19
         },
         {
+          "login": "martythedev-tech",
+          "avatar": "https://avatars.githubusercontent.com/u/258486174?v=4",
+          "commits": 1
+        },
+        {
           "login": "gardnmi",
           "avatar": "https://avatars.githubusercontent.com/u/7167260?v=4",
           "commits": 1
+        },
+        {
+          "login": "dakai",
+          "avatar": "https://avatars.githubusercontent.com/u/1525214?v=4",
+          "commits": 1
         }
       ],
-      "commits": 20,
+      "commits": 22,
       "repo_url": "https://github.com/nixfred/omarchy-doctor",
       "glyph": "assets/img/family/system.svg",
       "archived": false,
@@ -1734,26 +1727,9 @@
       "stars": 16,
       "forks": 3,
       "watchers": 0,
-      "open_prs": 2,
+      "open_prs": 0,
       "open_issues": 1,
-      "prs": [
-        {
-          "number": 10,
-          "title": "fix(bar): fit the bar icon to a left or right bar",
-          "author": "diogochaves",
-          "created": "2026-10-20T02:04:11Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/pulse/pull/10"
-        },
-        {
-          "number": 9,
-          "title": "fix(cpu): read AMD's k10temp sensor for the package temperature",
-          "author": "diogochaves",
-          "created": "2026-10-20T02:04:09Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/pulse/pull/9"
-        }
-      ],
+      "prs": [],
       "issues": [
         {
           "number": 11,
@@ -1763,7 +1739,7 @@
           "url": "https://github.com/nixfred/pulse/issues/11"
         }
       ],
-      "pushed": "2026-10-19T15:10:54Z",
+      "pushed": "2026-10-27T13:27:05Z",
       "created": "2026-09-11T16:49:33Z",
       "license": "MIT",
       "language": "QML",
@@ -1790,12 +1766,17 @@
           "commits": 5
         },
         {
+          "login": "diogochaves",
+          "avatar": "https://avatars.githubusercontent.com/u/6130?v=4",
+          "commits": 2
+        },
+        {
           "login": "jbronssin",
           "avatar": "https://avatars.githubusercontent.com/u/65334819?v=4",
           "commits": 1
         }
       ],
-      "commits": 35,
+      "commits": 37,
       "repo_url": "https://github.com/nixfred/pulse",
       "glyph": "assets/img/family/pulse.svg",
       "archived": false,
@@ -2507,22 +2488,13 @@
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/power-pulse.git --enable",
       "stars": 1,
-      "forks": 1,
+      "forks": 0,
       "watchers": 0,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 0,
-      "prs": [
-        {
-          "number": 1,
-          "title": "fix: find the charge limit on batteries not named BAT*",
-          "author": "martythedev-tech",
-          "created": "2026-10-21T14:55:48Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/power-pulse/pull/1"
-        }
-      ],
+      "prs": [],
       "issues": [],
-      "pushed": "2026-10-19T15:11:10Z",
+      "pushed": "2026-10-27T13:26:54Z",
       "created": "2026-09-04T23:19:28Z",
       "license": "NOASSERTION",
       "language": "QML",
@@ -2534,9 +2506,14 @@
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
           "commits": 18
+        },
+        {
+          "login": "martythedev-tech",
+          "avatar": "https://avatars.githubusercontent.com/u/258486174?v=4",
+          "commits": 1
         }
       ],
-      "commits": 18,
+      "commits": 19,
       "repo_url": "https://github.com/nixfred/power-pulse",
       "glyph": "assets/img/glyph/pi-power.svg",
       "archived": false,
@@ -2884,7 +2861,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-19T15:12:09Z",
+      "pushed": "2026-10-28T04:01:02Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -2895,7 +2872,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 79
+          "commits": 80
         },
         {
           "login": "ianswope",
@@ -2918,7 +2895,7 @@
           "commits": 1
         }
       ],
-      "commits": 85,
+      "commits": 86,
       "repo_url": "https://github.com/nixfred/burnbar",
       "glyph": "assets/img/glyph/nixfred-burnbar.svg",
       "archived": false,
@@ -3246,7 +3223,7 @@
       "accent": "#0a84ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/blip.git --enable",
-      "stars": 177,
+      "stars": 176,
       "forks": 44,
       "watchers": 1,
       "open_prs": 1,
@@ -3298,7 +3275,7 @@
           "url": "https://github.com/nixfred/blip/issues/78"
         }
       ],
-      "pushed": "2026-10-24T21:02:05Z",
+      "pushed": "2026-10-28T02:58:30Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -3319,7 +3296,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 319
+          "commits": 321
         },
         {
           "login": "Fileri",
@@ -3357,7 +3334,7 @@
           "commits": 7
         }
       ],
-      "commits": 460,
+      "commits": 462,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "archived": false,
@@ -4019,7 +3996,7 @@
           "url": "https://github.com/nixfred/infomarchy/issues/26"
         }
       ],
-      "pushed": "2026-10-25T23:03:31Z",
+      "pushed": "2026-10-27T14:54:06Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -4043,7 +4020,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 143
+          "commits": 144
         },
         {
           "login": "TechLuddite",
@@ -4081,7 +4058,7 @@
           "commits": 3
         }
       ],
-      "commits": 202,
+      "commits": 203,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "archived": false,
@@ -4959,7 +4936,7 @@
       "description": "Stamp one Omarchy machine onto another.",
       "install": "git clone https://github.com/nixfred/imprint.git && cd imprint && ./install.sh",
       "slug": "imprint",
-      "stars": 45,
+      "stars": 46,
       "forks": 4,
       "watchers": 1,
       "open_issues": 1,
@@ -5369,7 +5346,7 @@
     }
   ],
   "heatmap": {
-    "total": 3056,
+    "total": 3067,
     "weeks": [
       [
         {
@@ -7165,7 +7142,7 @@
         },
         {
           "date": "2026-09-30",
-          "count": 18,
+          "count": 17,
           "level": 1
         },
         {
@@ -7308,8 +7285,13 @@
         },
         {
           "date": "2026-10-27",
-          "count": 0,
-          "level": 0
+          "count": 5,
+          "level": 1
+        },
+        {
+          "date": "2026-10-28",
+          "count": 7,
+          "level": 1
         }
       ]
     ]
@@ -7320,7 +7302,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 472,
+    "stars": 471,
     "tools": 22,
     "with_shots": 28
   }
