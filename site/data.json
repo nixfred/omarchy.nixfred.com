@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T06:30:55.242Z",
+  "generated_at": "2026-10-29T06:31:02.620Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -592,12 +592,28 @@
       "install": "omarchy plugin add https://github.com/nixfred/omarchy-doctor.git --enable",
       "flagship": true,
       "stars": 12,
-      "forks": 5,
+      "forks": 6,
       "watchers": 0,
-      "open_prs": 0,
-      "open_issues": 1,
-      "prs": [],
+      "open_prs": 1,
+      "open_issues": 2,
+      "prs": [
+        {
+          "number": 9,
+          "title": "feat: a ninth check, disk encryption — warn when a LUKS disk has only one unlock passphrase",
+          "author": "mudiam",
+          "created": "2026-10-29T02:14:38Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/omarchy-doctor/pull/9"
+        }
+      ],
       "issues": [
+        {
+          "number": 8,
+          "title": "Idea: a disk-encryption check — warn when a LUKS disk has only one unlock passphrase",
+          "author": "mudiam",
+          "created": "2026-10-29T01:54:51Z",
+          "url": "https://github.com/nixfred/omarchy-doctor/issues/8"
+        },
         {
           "number": 7,
           "title": "Idea: a post-update check for fixes that apply to this machine",
@@ -3230,12 +3246,12 @@
       "open_issues": 5,
       "prs": [
         {
-          "number": 146,
-          "title": "feat(ui): right-click a photo to open, copy or save it",
-          "author": "coltonfitzgerald",
-          "created": "2026-10-20T00:27:32Z",
+          "number": 149,
+          "title": "fix(bridge): Hide Alerts on macOS 27 is read from the DND list, and Show Alerts uses the toggle (#132)",
+          "author": "ianswope",
+          "created": "2026-10-28T17:22:30Z",
           "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/146"
+          "url": "https://github.com/nixfred/blip/pull/149"
         }
       ],
       "issues": [
@@ -3275,7 +3291,7 @@
           "url": "https://github.com/nixfred/blip/issues/78"
         }
       ],
-      "pushed": "2026-10-28T02:58:30Z",
+      "pushed": "2026-10-28T15:24:11Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -3296,7 +3312,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 321
+          "commits": 328
         },
         {
           "login": "Fileri",
@@ -3334,7 +3350,7 @@
           "commits": 7
         }
       ],
-      "commits": 462,
+      "commits": 469,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "archived": false,
@@ -5346,7 +5362,7 @@
     }
   ],
   "heatmap": {
-    "total": 3067,
+    "total": 3283,
     "weeks": [
       [
         {
@@ -7142,7 +7158,7 @@
         },
         {
           "date": "2026-09-30",
-          "count": 17,
+          "count": 15,
           "level": 1
         },
         {
@@ -7275,22 +7291,27 @@
       [
         {
           "date": "2026-10-25",
-          "count": 3,
+          "count": 17,
           "level": 1
         },
         {
           "date": "2026-10-26",
-          "count": 1,
-          "level": 1
+          "count": 88,
+          "level": 4
         },
         {
           "date": "2026-10-27",
-          "count": 5,
+          "count": 26,
           "level": 1
         },
         {
           "date": "2026-10-28",
-          "count": 7,
+          "count": 100,
+          "level": 4
+        },
+        {
+          "date": "2026-10-29",
+          "count": 3,
           "level": 1
         }
       ]
