@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T06:30:50.146Z",
+  "generated_at": "2026-10-31T06:24:01.307Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -592,21 +592,26 @@
       "install": "omarchy plugin add https://github.com/nixfred/omarchy-doctor.git --enable",
       "flagship": true,
       "stars": 12,
-      "forks": 6,
+      "forks": 7,
       "watchers": 0,
-      "open_prs": 1,
-      "open_issues": 2,
-      "prs": [
-        {
-          "number": 9,
-          "title": "feat: a ninth check, disk encryption — warn when a LUKS disk has only one unlock passphrase",
-          "author": "mudiam",
-          "created": "2026-10-29T02:14:38Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/omarchy-doctor/pull/9"
-        }
-      ],
+      "open_prs": 0,
+      "open_issues": 4,
+      "prs": [],
       "issues": [
+        {
+          "number": 11,
+          "title": "Package integrity counts \"Permission denied\" as missing files, and skips pacman's singular \"1 missing file\"",
+          "author": "mubeda",
+          "created": "2026-10-30T20:19:03Z",
+          "url": "https://github.com/nixfred/omarchy-doctor/issues/11"
+        },
+        {
+          "number": 10,
+          "title": "gpu check is always \"unknown\" on Intel-only machines (i915/xe)",
+          "author": "mubeda",
+          "created": "2026-10-30T19:55:49Z",
+          "url": "https://github.com/nixfred/omarchy-doctor/issues/10"
+        },
         {
           "number": 8,
           "title": "Idea: a disk-encryption check — warn when a LUKS disk has only one unlock passphrase",
@@ -622,7 +627,7 @@
           "url": "https://github.com/nixfred/omarchy-doctor/issues/7"
         }
       ],
-      "pushed": "2026-10-27T13:27:07Z",
+      "pushed": "2026-10-30T13:00:28Z",
       "created": "2026-10-02T23:42:20Z",
       "license": "MIT",
       "language": "Python",
@@ -634,6 +639,11 @@
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
           "commits": 19
+        },
+        {
+          "login": "mudiam",
+          "avatar": "https://avatars.githubusercontent.com/u/1075464?v=4",
+          "commits": 1
         },
         {
           "login": "martythedev-tech",
@@ -651,7 +661,7 @@
           "commits": 1
         }
       ],
-      "commits": 22,
+      "commits": 23,
       "repo_url": "https://github.com/nixfred/omarchy-doctor",
       "glyph": "assets/img/family/system.svg",
       "archived": false,
@@ -3990,7 +4000,7 @@
       "accent": "#00e5ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/infomarchy.git --enable",
-      "stars": 132,
+      "stars": 133,
       "forks": 24,
       "watchers": 1,
       "open_prs": 0,
@@ -5290,11 +5300,20 @@
       "install": "git clone https://github.com/nixfred/claude-on-mac.git ~/claude-on-mac",
       "slug": "claude-on-mac",
       "stars": 18,
-      "forks": 3,
+      "forks": 4,
       "watchers": 0,
       "open_issues": 0,
-      "open_prs": 0,
-      "prs": [],
+      "open_prs": 1,
+      "prs": [
+        {
+          "number": 6,
+          "title": "docs(remote-ssh): the lid-closed case needs more than idle-sleep settings",
+          "author": "keepmacawake",
+          "created": "2026-10-30T19:28:16Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/claude-on-mac/pull/6"
+        }
+      ],
       "issues": [],
       "pushed": "2026-09-16T23:27:03Z",
       "created": "2026-04-20T02:16:04Z",
@@ -5362,7 +5381,7 @@
     }
   ],
   "heatmap": {
-    "total": 3315,
+    "total": 3353,
     "weeks": [
       [
         {
@@ -7316,8 +7335,13 @@
         },
         {
           "date": "2026-10-30",
-          "count": 0,
-          "level": 0
+          "count": 35,
+          "level": 2
+        },
+        {
+          "date": "2026-10-31",
+          "count": 3,
+          "level": 1
         }
       ]
     ]
@@ -7328,7 +7352,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 471,
+    "stars": 472,
     "tools": 22,
     "with_shots": 28
   }
