@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T06:24:01.307Z",
+  "generated_at": "2026-11-01T06:25:06.762Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -1373,7 +1373,7 @@
           "url": "https://github.com/nixfred/Glide/issues/1"
         }
       ],
-      "pushed": "2026-10-19T15:10:42Z",
+      "pushed": "2026-10-31T17:44:33Z",
       "created": "2026-09-20T00:39:20Z",
       "license": "NOASSERTION",
       "language": "Rust",
@@ -1765,7 +1765,7 @@
           "url": "https://github.com/nixfred/pulse/issues/11"
         }
       ],
-      "pushed": "2026-10-27T13:27:05Z",
+      "pushed": "2026-10-31T23:38:09Z",
       "created": "2026-09-11T16:49:33Z",
       "license": "MIT",
       "language": "QML",
@@ -1784,7 +1784,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 29
+          "commits": 30
         },
         {
           "login": "dadofsambonzuki",
@@ -1802,7 +1802,7 @@
           "commits": 1
         }
       ],
-      "commits": 37,
+      "commits": 38,
       "repo_url": "https://github.com/nixfred/pulse",
       "glyph": "assets/img/family/pulse.svg",
       "archived": false,
@@ -2024,7 +2024,7 @@
           "url": "https://github.com/nixfred/menu.bar.overload/issues/1"
         }
       ],
-      "pushed": "2026-10-20T20:19:12Z",
+      "pushed": "2026-10-31T17:36:03Z",
       "created": "2026-09-09T03:28:34Z",
       "license": null,
       "language": "QML",
@@ -3249,21 +3249,12 @@
       "accent": "#0a84ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/blip.git --enable",
-      "stars": 176,
+      "stars": 187,
       "forks": 44,
       "watchers": 1,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 5,
-      "prs": [
-        {
-          "number": 149,
-          "title": "fix(bridge): Hide Alerts on macOS 27 is read from the DND list, and Show Alerts uses the toggle (#132)",
-          "author": "ianswope",
-          "created": "2026-10-28T17:22:30Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/149"
-        }
-      ],
+      "prs": [],
       "issues": [
         {
           "number": 132,
@@ -3301,7 +3292,7 @@
           "url": "https://github.com/nixfred/blip/issues/78"
         }
       ],
-      "pushed": "2026-10-28T15:24:11Z",
+      "pushed": "2026-10-31T07:12:01Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -3337,7 +3328,7 @@
         {
           "login": "ianswope",
           "avatar": "https://avatars.githubusercontent.com/u/175949710?v=4",
-          "commits": 25
+          "commits": 26
         },
         {
           "login": "johanthoren",
@@ -3360,7 +3351,7 @@
           "commits": 7
         }
       ],
-      "commits": 469,
+      "commits": 470,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "archived": false,
@@ -4000,12 +3991,29 @@
       "accent": "#00e5ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/infomarchy.git --enable",
-      "stars": 133,
+      "stars": 134,
       "forks": 24,
       "watchers": 1,
-      "open_prs": 0,
+      "open_prs": 2,
       "open_issues": 2,
-      "prs": [],
+      "prs": [
+        {
+          "number": 45,
+          "title": "fix: SUPER+D overlay respects the bar's exclusive zone",
+          "author": "afoxybouquet",
+          "created": "2026-10-31T17:50:17Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/infomarchy/pull/45"
+        },
+        {
+          "number": 44,
+          "title": "feat: opt-in wallpaperPassthrough for plugins that draw their own wallpaper",
+          "author": "afoxybouquet",
+          "created": "2026-10-31T17:50:14Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/infomarchy/pull/44"
+        }
+      ],
       "issues": [
         {
           "number": 43,
@@ -4862,11 +4870,28 @@
       "credit_url": "https://gitlab.com/CalcProgrammer1/OpenRGB",
       "slug": "lightshow",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "watchers": 0,
       "open_issues": 0,
-      "open_prs": 0,
-      "prs": [],
+      "open_prs": 2,
+      "prs": [
+        {
+          "number": 2,
+          "title": "Opt-in custom colour picker: per-effect colours on a colour wheel, toggle with the theme",
+          "author": "th3r00t",
+          "created": "2026-10-31T23:27:17Z",
+          "draft": true,
+          "url": "https://github.com/nixfred/lightshow/pull/2"
+        },
+        {
+          "number": 1,
+          "title": "kbd: support the multi-byte zone mask on MysticLight 1462:1603 (Vector 16 HX)",
+          "author": "th3r00t",
+          "created": "2026-10-31T22:57:12Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/lightshow/pull/1"
+        }
+      ],
       "issues": [],
       "pushed": "2026-09-16T01:46:07Z",
       "created": "2026-09-12T02:33:34Z",
@@ -5299,23 +5324,22 @@
       "description": "Apple ecosystem tools for Claude Code on macOS, including Messages, Mail, Calendar and Notes, with per-message consent for sending.",
       "install": "git clone https://github.com/nixfred/claude-on-mac.git ~/claude-on-mac",
       "slug": "claude-on-mac",
-      "stars": 18,
+      "stars": 19,
       "forks": 4,
       "watchers": 0,
-      "open_issues": 0,
-      "open_prs": 1,
-      "prs": [
+      "open_issues": 1,
+      "open_prs": 0,
+      "prs": [],
+      "issues": [
         {
-          "number": 6,
-          "title": "docs(remote-ssh): the lid-closed case needs more than idle-sleep settings",
-          "author": "keepmacawake",
-          "created": "2026-10-30T19:28:16Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/claude-on-mac/pull/6"
+          "number": 7,
+          "title": "mail-send reply --to-search picks by mailbox order, not the most recent match, and the dry run never shows which message it will answer",
+          "author": "mattabate",
+          "created": "2026-10-31T08:11:47Z",
+          "url": "https://github.com/nixfred/claude-on-mac/issues/7"
         }
       ],
-      "issues": [],
-      "pushed": "2026-09-16T23:27:03Z",
+      "pushed": "2026-10-31T17:33:14Z",
       "created": "2026-04-20T02:16:04Z",
       "archived": false,
       "license": "MIT",
@@ -5329,7 +5353,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 23
+          "commits": 25
         },
         {
           "login": "marty0x",
@@ -5340,9 +5364,14 @@
           "login": "brianwhitman71-cell",
           "avatar": "https://avatars.githubusercontent.com/u/267336100?v=4",
           "commits": 1
+        },
+        {
+          "login": "keepmacawake",
+          "avatar": "https://avatars.githubusercontent.com/u/350217547?v=4",
+          "commits": 1
         }
       ],
-      "commits": 25,
+      "commits": 28,
       "repo_url": "https://github.com/nixfred/claude-on-mac",
       "clone": "git clone https://github.com/nixfred/claude-on-mac.git",
       "shot": "assets/img/shot/claude-on-mac.png"
@@ -5381,45 +5410,8 @@
     }
   ],
   "heatmap": {
-    "total": 3353,
+    "total": 3412,
     "weeks": [
-      [
-        {
-          "date": "2025-10-26",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-27",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-28",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-29",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-30",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-10-31",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-11-01",
-          "count": 0,
-          "level": 0
-        }
-      ],
       [
         {
           "date": "2025-11-02",
@@ -7187,7 +7179,7 @@
         },
         {
           "date": "2026-10-02",
-          "count": 29,
+          "count": 28,
           "level": 2
         },
         {
@@ -7340,7 +7332,14 @@
         },
         {
           "date": "2026-10-31",
-          "count": 3,
+          "count": 57,
+          "level": 3
+        }
+      ],
+      [
+        {
+          "date": "2026-11-01",
+          "count": 6,
           "level": 1
         }
       ]
@@ -7352,7 +7351,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 472,
+    "stars": 484,
     "tools": 22,
     "with_shots": 28
   }
