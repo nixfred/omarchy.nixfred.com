@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T06:34:13.942Z",
+  "generated_at": "2026-11-03T06:26:57.141Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -594,9 +594,18 @@
       "stars": 12,
       "forks": 7,
       "watchers": 0,
-      "open_prs": 0,
+      "open_prs": 1,
       "open_issues": 4,
-      "prs": [],
+      "prs": [
+        {
+          "number": 12,
+          "title": "fix: restore autoCheck so background scans run again, qualify Color for Qt 6.12",
+          "author": "martythedev-tech",
+          "created": "2026-11-02T16:59:09Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/omarchy-doctor/pull/12"
+        }
+      ],
       "issues": [
         {
           "number": 11,
@@ -1259,7 +1268,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-21T16:17:40Z",
+      "pushed": "2026-11-02T22:36:26Z",
       "created": "2026-09-22T13:54:06Z",
       "license": "MIT",
       "language": "Python",
@@ -1270,7 +1279,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 8
+          "commits": 9
         },
         {
           "login": "amitcpatel",
@@ -1278,7 +1287,7 @@
           "commits": 7
         }
       ],
-      "commits": 15,
+      "commits": 16,
       "repo_url": "https://github.com/nixfred/omarchy-elgato-control",
       "glyph": "assets/img/family/system.svg",
       "archived": false,
@@ -2009,7 +2018,7 @@
       "description": "The Omarchy bar with a carousel on each side. Add as many plugins as you like; roll through the ones that do not fit with the mouse wheel or a trackpad swipe, and each one pops out as it arrives.",
       "accent": "#ff9f1c",
       "manifest_path": "nixfred.menubar-overload/manifest.json",
-      "stars": 4,
+      "stars": 3,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -2466,7 +2475,7 @@
       "accent": "#ffc857",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/audio.pulse.omarchy.git --enable",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -2513,7 +2522,7 @@
       "supersedes": "Flux Power",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/power-pulse.git --enable",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -2731,7 +2740,7 @@
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/omarchy-chronos.git --enable",
       "credit_url": "https://github.com/omacom/omarchy",
-      "stars": 1,
+      "stars": 0,
       "forks": 1,
       "watchers": 0,
       "open_prs": 0,
@@ -2777,7 +2786,7 @@
       "accent": "#adb5bd",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/Pastey.git --enable",
-      "stars": 8,
+      "stars": 7,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -2880,14 +2889,14 @@
       "accent": "#ff4d4d",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/burnbar.git --enable",
-      "stars": 14,
+      "stars": 13,
       "forks": 5,
       "watchers": 0,
       "open_prs": 0,
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-10-28T04:01:02Z",
+      "pushed": "2026-11-03T05:54:10Z",
       "created": "2026-09-04T04:03:59Z",
       "license": "MIT",
       "language": "QML",
@@ -2898,7 +2907,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 80
+          "commits": 86
         },
         {
           "login": "ianswope",
@@ -2921,7 +2930,7 @@
           "commits": 1
         }
       ],
-      "commits": 86,
+      "commits": 92,
       "repo_url": "https://github.com/nixfred/burnbar",
       "glyph": "assets/img/glyph/nixfred-burnbar.svg",
       "archived": false,
@@ -2946,7 +2955,7 @@
       "accent": "#06d6a0",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/backup.omarchy.git --enable",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -3249,7 +3258,7 @@
       "accent": "#0a84ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/blip.git --enable",
-      "stars": 193,
+      "stars": 192,
       "forks": 44,
       "watchers": 1,
       "open_prs": 0,
@@ -3764,7 +3773,7 @@
       "install": "omarchy plugin add https://github.com/nixfred/omarchy-server-status.git --enable",
       "fork_of": "ryuhzk/omarchy-server-status",
       "credit_url": "https://github.com/ryuhzk/omarchy-server-status",
-      "stars": 33,
+      "stars": 32,
       "forks": 4,
       "watchers": 0,
       "open_prs": 0,
@@ -3829,7 +3838,7 @@
       "accent": "#ef476f",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/omarchy-internet-latency.git --enable",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -3994,17 +4003,9 @@
       "stars": 134,
       "forks": 24,
       "watchers": 1,
-      "open_prs": 2,
+      "open_prs": 1,
       "open_issues": 2,
       "prs": [
-        {
-          "number": 45,
-          "title": "fix: SUPER+D overlay respects the bar's exclusive zone",
-          "author": "afoxybouquet",
-          "created": "2026-10-31T17:50:17Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/45"
-        },
         {
           "number": 44,
           "title": "feat: opt-in wallpaperPassthrough for plugins that draw their own wallpaper",
@@ -4030,7 +4031,7 @@
           "url": "https://github.com/nixfred/infomarchy/issues/26"
         }
       ],
-      "pushed": "2026-10-27T14:54:06Z",
+      "pushed": "2026-11-02T13:40:56Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -4054,7 +4055,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 144
+          "commits": 145
         },
         {
           "login": "TechLuddite",
@@ -4092,7 +4093,7 @@
           "commits": 3
         }
       ],
-      "commits": 203,
+      "commits": 204,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "archived": false,
@@ -4121,7 +4122,7 @@
       "accent": "#68d8d6",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/workspace-names.git --enable",
-      "stars": 3,
+      "stars": 2,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -4167,7 +4168,7 @@
       "accent": "#9d7bff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/plonk.git --enable",
-      "stars": 2,
+      "stars": 1,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -4220,7 +4221,7 @@
       "accent": "#c77dff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/rift.git --enable",
-      "stars": 2,
+      "stars": 1,
       "forks": 1,
       "watchers": 0,
       "open_prs": 1,
@@ -4987,7 +4988,7 @@
       "description": "Stamp one Omarchy machine onto another.",
       "install": "git clone https://github.com/nixfred/imprint.git && cd imprint && ./install.sh",
       "slug": "imprint",
-      "stars": 46,
+      "stars": 45,
       "forks": 4,
       "watchers": 1,
       "open_issues": 1,
@@ -5065,7 +5066,7 @@
       "description": "Voice recorder with live whisper.cpp transcription for Omarchy. GTK4 and PipeWire.",
       "install": "git clone https://github.com/nixfred/omavoice.git && cd omavoice && makepkg -si",
       "slug": "omavoice",
-      "stars": 15,
+      "stars": 14,
       "forks": 0,
       "watchers": 0,
       "open_issues": 0,
@@ -5328,8 +5329,17 @@
       "forks": 4,
       "watchers": 0,
       "open_issues": 1,
-      "open_prs": 0,
-      "prs": [],
+      "open_prs": 1,
+      "prs": [
+        {
+          "number": 9,
+          "title": "docs: caffeinate -s keeps a closed MacBook reachable on power",
+          "author": "keepmacawake",
+          "created": "2026-11-02T13:25:48Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/claude-on-mac/pull/9"
+        }
+      ],
       "issues": [
         {
           "number": 7,
@@ -5410,7 +5420,7 @@
     }
   ],
   "heatmap": {
-    "total": 3474,
+    "total": 3495,
     "weeks": [
       [
         {
@@ -7191,7 +7201,7 @@
       [
         {
           "date": "2026-10-04",
-          "count": 69,
+          "count": 68,
           "level": 3
         },
         {
@@ -7344,7 +7354,12 @@
         },
         {
           "date": "2026-11-02",
-          "count": 5,
+          "count": 26,
+          "level": 1
+        },
+        {
+          "date": "2026-11-03",
+          "count": 1,
           "level": 1
         }
       ]
@@ -7356,7 +7371,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 490,
+    "stars": 477,
     "tools": 22,
     "with_shots": 28
   }
