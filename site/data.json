@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-03T06:26:57.141Z",
+  "generated_at": "2026-11-04T06:27:39.777Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -594,18 +594,9 @@
       "stars": 12,
       "forks": 7,
       "watchers": 0,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 4,
-      "prs": [
-        {
-          "number": 12,
-          "title": "fix: restore autoCheck so background scans run again, qualify Color for Qt 6.12",
-          "author": "martythedev-tech",
-          "created": "2026-11-02T16:59:09Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/omarchy-doctor/pull/12"
-        }
-      ],
+      "prs": [],
       "issues": [
         {
           "number": 11,
@@ -636,7 +627,7 @@
           "url": "https://github.com/nixfred/omarchy-doctor/issues/7"
         }
       ],
-      "pushed": "2026-10-30T13:00:28Z",
+      "pushed": "2026-11-03T14:21:52Z",
       "created": "2026-10-02T23:42:20Z",
       "license": "MIT",
       "language": "Python",
@@ -650,13 +641,13 @@
           "commits": 19
         },
         {
-          "login": "mudiam",
-          "avatar": "https://avatars.githubusercontent.com/u/1075464?v=4",
-          "commits": 1
-        },
-        {
           "login": "martythedev-tech",
           "avatar": "https://avatars.githubusercontent.com/u/258486174?v=4",
+          "commits": 2
+        },
+        {
+          "login": "mudiam",
+          "avatar": "https://avatars.githubusercontent.com/u/1075464?v=4",
           "commits": 1
         },
         {
@@ -670,7 +661,7 @@
           "commits": 1
         }
       ],
-      "commits": 23,
+      "commits": 24,
       "repo_url": "https://github.com/nixfred/omarchy-doctor",
       "glyph": "assets/img/family/system.svg",
       "archived": false,
@@ -3301,7 +3292,7 @@
           "url": "https://github.com/nixfred/blip/issues/78"
         }
       ],
-      "pushed": "2026-10-31T07:12:01Z",
+      "pushed": "2026-11-04T05:55:54Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -3322,7 +3313,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 328
+          "commits": 329
         },
         {
           "login": "Fileri",
@@ -3360,7 +3351,7 @@
           "commits": 7
         }
       ],
-      "commits": 470,
+      "commits": 471,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "archived": false,
@@ -4000,7 +3991,7 @@
       "accent": "#00e5ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/infomarchy.git --enable",
-      "stars": 134,
+      "stars": 135,
       "forks": 24,
       "watchers": 1,
       "open_prs": 1,
@@ -4031,7 +4022,7 @@
           "url": "https://github.com/nixfred/infomarchy/issues/26"
         }
       ],
-      "pushed": "2026-11-02T13:40:56Z",
+      "pushed": "2026-11-04T06:06:06Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -4055,7 +4046,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 145
+          "commits": 147
         },
         {
           "login": "TechLuddite",
@@ -4093,7 +4084,7 @@
           "commits": 3
         }
       ],
-      "commits": 204,
+      "commits": 206,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "archived": false,
@@ -4470,18 +4461,18 @@
           "url": "https://github.com/nixfred/shepr/issues/4"
         }
       ],
-      "pushed": "2026-10-14T18:16:12Z",
+      "pushed": "2026-11-04T06:27:32Z",
       "created": "2026-10-09T03:09:47Z",
       "archived": false,
       "license": "MIT",
-      "language": "JavaScript",
+      "language": "Python",
       "default_branch": "main",
       "release": null,
       "contributors": [
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 59
+          "commits": 64
         },
         {
           "login": "jordanpartridge",
@@ -4489,7 +4480,7 @@
           "commits": 3
         }
       ],
-      "commits": 62,
+      "commits": 67,
       "repo_url": "https://github.com/nixfred/shepr",
       "clone": "git clone https://github.com/nixfred/shepr.git",
       "shot": null
@@ -5326,20 +5317,11 @@
       "install": "git clone https://github.com/nixfred/claude-on-mac.git ~/claude-on-mac",
       "slug": "claude-on-mac",
       "stars": 19,
-      "forks": 4,
+      "forks": 3,
       "watchers": 0,
       "open_issues": 1,
-      "open_prs": 1,
-      "prs": [
-        {
-          "number": 9,
-          "title": "docs: caffeinate -s keeps a closed MacBook reachable on power",
-          "author": "keepmacawake",
-          "created": "2026-11-02T13:25:48Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/claude-on-mac/pull/9"
-        }
-      ],
+      "open_prs": 0,
+      "prs": [],
       "issues": [
         {
           "number": 7,
@@ -5374,14 +5356,9 @@
           "login": "brianwhitman71-cell",
           "avatar": "https://avatars.githubusercontent.com/u/267336100?v=4",
           "commits": 1
-        },
-        {
-          "login": "keepmacawake",
-          "avatar": "https://avatars.githubusercontent.com/u/350217547?v=4",
-          "commits": 1
         }
       ],
-      "commits": 28,
+      "commits": 27,
       "repo_url": "https://github.com/nixfred/claude-on-mac",
       "clone": "git clone https://github.com/nixfred/claude-on-mac.git",
       "shot": "assets/img/shot/claude-on-mac.png"
@@ -5420,7 +5397,7 @@
     }
   ],
   "heatmap": {
-    "total": 3495,
+    "total": 3503,
     "weeks": [
       [
         {
@@ -7201,12 +7178,12 @@
       [
         {
           "date": "2026-10-04",
-          "count": 68,
+          "count": 66,
           "level": 3
         },
         {
           "date": "2026-10-05",
-          "count": 11,
+          "count": 10,
           "level": 1
         },
         {
@@ -7359,7 +7336,12 @@
         },
         {
           "date": "2026-11-03",
-          "count": 1,
+          "count": 5,
+          "level": 1
+        },
+        {
+          "date": "2026-11-04",
+          "count": 7,
           "level": 1
         }
       ]
@@ -7371,7 +7353,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 477,
+    "stars": 478,
     "tools": 22,
     "with_shots": 28
   }
