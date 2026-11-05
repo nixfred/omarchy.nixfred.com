@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T06:27:39.777Z",
+  "generated_at": "2026-11-05T06:27:31.649Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -591,7 +591,7 @@
       "accent": "#4aa8ff",
       "install": "omarchy plugin add https://github.com/nixfred/omarchy-doctor.git --enable",
       "flagship": true,
-      "stars": 12,
+      "stars": 13,
       "forks": 7,
       "watchers": 0,
       "open_prs": 0,
@@ -2009,7 +2009,7 @@
       "description": "The Omarchy bar with a carousel on each side. Add as many plugins as you like; roll through the ones that do not fit with the mouse wheel or a trackpad swipe, and each one pops out as it arrives.",
       "accent": "#ff9f1c",
       "manifest_path": "nixfred.menubar-overload/manifest.json",
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "watchers": 0,
       "open_prs": 0,
@@ -3249,12 +3249,29 @@
       "accent": "#0a84ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/blip.git --enable",
-      "stars": 192,
-      "forks": 44,
+      "stars": 193,
+      "forks": 45,
       "watchers": 1,
-      "open_prs": 0,
+      "open_prs": 2,
       "open_issues": 5,
-      "prs": [],
+      "prs": [
+        {
+          "number": 151,
+          "title": "Don't let the chat list turn a green DM back to iMessage",
+          "author": "dimagrigorchuk",
+          "created": "2026-11-04T17:52:36Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/blip/pull/151"
+        },
+        {
+          "number": 150,
+          "title": "fix(bridge): Pin and Unpin on macOS 27 use the sidebar's actions (#132)",
+          "author": "ianswope",
+          "created": "2026-11-04T15:31:29Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/blip/pull/150"
+        }
+      ],
       "issues": [
         {
           "number": 132,
@@ -3292,7 +3309,7 @@
           "url": "https://github.com/nixfred/blip/issues/78"
         }
       ],
-      "pushed": "2026-11-04T05:55:54Z",
+      "pushed": "2026-11-04T23:44:26Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -3313,7 +3330,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 329
+          "commits": 330
         },
         {
           "login": "Fileri",
@@ -3351,7 +3368,7 @@
           "commits": 7
         }
       ],
-      "commits": 471,
+      "commits": 472,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "archived": false,
@@ -4461,7 +4478,7 @@
           "url": "https://github.com/nixfred/shepr/issues/4"
         }
       ],
-      "pushed": "2026-11-04T06:27:32Z",
+      "pushed": "2026-11-04T06:54:46Z",
       "created": "2026-10-09T03:09:47Z",
       "archived": false,
       "license": "MIT",
@@ -4472,15 +4489,15 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 64
+          "commits": 65
         },
         {
-          "login": "jordanpartridge",
+          "login": "shadetheory",
           "avatar": "https://avatars.githubusercontent.com/u/9040417?v=4",
           "commits": 3
         }
       ],
-      "commits": 67,
+      "commits": 68,
       "repo_url": "https://github.com/nixfred/shepr",
       "clone": "git clone https://github.com/nixfred/shepr.git",
       "shot": null
@@ -5397,7 +5414,7 @@
     }
   ],
   "heatmap": {
-    "total": 3503,
+    "total": 3514,
     "weeks": [
       [
         {
@@ -7183,7 +7200,7 @@
         },
         {
           "date": "2026-10-05",
-          "count": 10,
+          "count": 9,
           "level": 1
         },
         {
@@ -7203,7 +7220,7 @@
         },
         {
           "date": "2026-10-09",
-          "count": 102,
+          "count": 101,
           "level": 4
         },
         {
@@ -7341,7 +7358,12 @@
         },
         {
           "date": "2026-11-04",
-          "count": 7,
+          "count": 17,
+          "level": 1
+        },
+        {
+          "date": "2026-11-05",
+          "count": 3,
           "level": 1
         }
       ]
@@ -7353,7 +7375,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 478,
+    "stars": 481,
     "tools": 22,
     "with_shots": 28
   }
