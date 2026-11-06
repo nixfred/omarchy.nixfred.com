@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-05T06:27:31.649Z",
+  "generated_at": "2026-11-06T06:28:08.408Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -594,9 +594,26 @@
       "stars": 13,
       "forks": 7,
       "watchers": 0,
-      "open_prs": 0,
+      "open_prs": 2,
       "open_issues": 4,
-      "prs": [],
+      "prs": [
+        {
+          "number": 14,
+          "title": "fix: judge ACPI thermal zones by their own trip ladder, not a flat 85°C",
+          "author": "dakai",
+          "created": "2026-11-05T06:56:28Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/omarchy-doctor/pull/14"
+        },
+        {
+          "number": 13,
+          "title": "fix: fit and centre the bar icon instead of drawing it from the canvas corner",
+          "author": "dakai",
+          "created": "2026-11-05T06:56:19Z",
+          "draft": false,
+          "url": "https://github.com/nixfred/omarchy-doctor/pull/13"
+        }
+      ],
       "issues": [
         {
           "number": 11,
@@ -3249,8 +3266,8 @@
       "accent": "#0a84ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/blip.git --enable",
-      "stars": 193,
-      "forks": 45,
+      "stars": 196,
+      "forks": 47,
       "watchers": 1,
       "open_prs": 2,
       "open_issues": 5,
@@ -4012,7 +4029,7 @@
       "forks": 24,
       "watchers": 1,
       "open_prs": 1,
-      "open_issues": 2,
+      "open_issues": 3,
       "prs": [
         {
           "number": 44,
@@ -4024,6 +4041,13 @@
         }
       ],
       "issues": [
+        {
+          "number": 46,
+          "title": "Add a compact/overlay-only mode for the module strip on small screens",
+          "author": "maku",
+          "created": "2026-11-05T17:05:24Z",
+          "url": "https://github.com/nixfred/infomarchy/issues/46"
+        },
         {
           "number": 43,
           "title": "Opt-in wallpaper passthrough so another background plugin can show through",
@@ -4478,7 +4502,7 @@
           "url": "https://github.com/nixfred/shepr/issues/4"
         }
       ],
-      "pushed": "2026-11-04T06:54:46Z",
+      "pushed": "2026-11-06T04:47:14Z",
       "created": "2026-10-09T03:09:47Z",
       "archived": false,
       "license": "MIT",
@@ -4489,7 +4513,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 65
+          "commits": 66
         },
         {
           "login": "shadetheory",
@@ -4497,7 +4521,7 @@
           "commits": 3
         }
       ],
-      "commits": 68,
+      "commits": 69,
       "repo_url": "https://github.com/nixfred/shepr",
       "clone": "git clone https://github.com/nixfred/shepr.git",
       "shot": null
@@ -5414,7 +5438,7 @@
     }
   ],
   "heatmap": {
-    "total": 3514,
+    "total": 3508,
     "weeks": [
       [
         {
@@ -7220,7 +7244,7 @@
         },
         {
           "date": "2026-10-09",
-          "count": 101,
+          "count": 94,
           "level": 4
         },
         {
@@ -7363,8 +7387,13 @@
         },
         {
           "date": "2026-11-05",
-          "count": 3,
+          "count": 4,
           "level": 1
+        },
+        {
+          "date": "2026-11-06",
+          "count": 0,
+          "level": 0
         }
       ]
     ]
@@ -7375,7 +7404,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 481,
+    "stars": 484,
     "tools": 22,
     "with_shots": 28
   }
