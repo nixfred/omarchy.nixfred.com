@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T06:28:08.408Z",
+  "generated_at": "2026-11-14T23:36:05.636Z",
   "verified_at": "2026-10-05",
   "registry_checked": true,
   "owner": "nixfred",
@@ -591,60 +591,14 @@
       "accent": "#4aa8ff",
       "install": "omarchy plugin add https://github.com/nixfred/omarchy-doctor.git --enable",
       "flagship": true,
-      "stars": 13,
+      "stars": 14,
       "forks": 7,
       "watchers": 0,
-      "open_prs": 2,
-      "open_issues": 4,
-      "prs": [
-        {
-          "number": 14,
-          "title": "fix: judge ACPI thermal zones by their own trip ladder, not a flat 85°C",
-          "author": "dakai",
-          "created": "2026-11-05T06:56:28Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/omarchy-doctor/pull/14"
-        },
-        {
-          "number": 13,
-          "title": "fix: fit and centre the bar icon instead of drawing it from the canvas corner",
-          "author": "dakai",
-          "created": "2026-11-05T06:56:19Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/omarchy-doctor/pull/13"
-        }
-      ],
-      "issues": [
-        {
-          "number": 11,
-          "title": "Package integrity counts \"Permission denied\" as missing files, and skips pacman's singular \"1 missing file\"",
-          "author": "mubeda",
-          "created": "2026-10-30T20:19:03Z",
-          "url": "https://github.com/nixfred/omarchy-doctor/issues/11"
-        },
-        {
-          "number": 10,
-          "title": "gpu check is always \"unknown\" on Intel-only machines (i915/xe)",
-          "author": "mubeda",
-          "created": "2026-10-30T19:55:49Z",
-          "url": "https://github.com/nixfred/omarchy-doctor/issues/10"
-        },
-        {
-          "number": 8,
-          "title": "Idea: a disk-encryption check — warn when a LUKS disk has only one unlock passphrase",
-          "author": "mudiam",
-          "created": "2026-10-29T01:54:51Z",
-          "url": "https://github.com/nixfred/omarchy-doctor/issues/8"
-        },
-        {
-          "number": 7,
-          "title": "Idea: a post-update check for fixes that apply to this machine",
-          "author": "mudiam",
-          "created": "2026-10-22T19:52:24Z",
-          "url": "https://github.com/nixfred/omarchy-doctor/issues/7"
-        }
-      ],
-      "pushed": "2026-11-03T14:21:52Z",
+      "open_prs": 0,
+      "open_issues": 0,
+      "prs": [],
+      "issues": [],
+      "pushed": "2026-11-14T20:40:30Z",
       "created": "2026-10-02T23:42:20Z",
       "license": "MIT",
       "language": "Python",
@@ -655,7 +609,12 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 19
+          "commits": 20
+        },
+        {
+          "login": "dakai",
+          "avatar": "https://avatars.githubusercontent.com/u/1525214?v=4",
+          "commits": 3
         },
         {
           "login": "martythedev-tech",
@@ -671,14 +630,9 @@
           "login": "gardnmi",
           "avatar": "https://avatars.githubusercontent.com/u/7167260?v=4",
           "commits": 1
-        },
-        {
-          "login": "dakai",
-          "avatar": "https://avatars.githubusercontent.com/u/1525214?v=4",
-          "commits": 1
         }
       ],
-      "commits": 24,
+      "commits": 27,
       "repo_url": "https://github.com/nixfred/omarchy-doctor",
       "glyph": "assets/img/family/system.svg",
       "archived": false,
@@ -1276,7 +1230,7 @@
       "open_issues": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-11-02T22:36:26Z",
+      "pushed": "2026-11-12T15:23:11Z",
       "created": "2026-09-22T13:54:06Z",
       "license": "MIT",
       "language": "Python",
@@ -1287,7 +1241,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 9
+          "commits": 11
         },
         {
           "login": "amitcpatel",
@@ -1295,7 +1249,7 @@
           "commits": 7
         }
       ],
-      "commits": 16,
+      "commits": 18,
       "repo_url": "https://github.com/nixfred/omarchy-elgato-control",
       "glyph": "assets/img/family/system.svg",
       "archived": false,
@@ -1390,7 +1344,7 @@
           "url": "https://github.com/nixfred/Glide/issues/1"
         }
       ],
-      "pushed": "2026-10-31T17:44:33Z",
+      "pushed": "2026-11-14T22:50:34Z",
       "created": "2026-09-20T00:39:20Z",
       "license": "NOASSERTION",
       "language": "Rust",
@@ -1408,10 +1362,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 22
+          "commits": 25
         }
       ],
-      "commits": 22,
+      "commits": 25,
       "repo_url": "https://github.com/nixfred/Glide",
       "glyph": "assets/img/family/workspace.svg",
       "archived": false,
@@ -1771,18 +1725,10 @@
       "forks": 3,
       "watchers": 0,
       "open_prs": 0,
-      "open_issues": 1,
+      "open_issues": 0,
       "prs": [],
-      "issues": [
-        {
-          "number": 11,
-          "title": "GPU collector keeps the NVIDIA card open: does a hybrid laptop's dGPU still power down?",
-          "author": "diogochaves",
-          "created": "2026-10-20T02:43:53Z",
-          "url": "https://github.com/nixfred/pulse/issues/11"
-        }
-      ],
-      "pushed": "2026-10-31T23:38:09Z",
+      "issues": [],
+      "pushed": "2026-11-14T20:41:37Z",
       "created": "2026-09-11T16:49:33Z",
       "license": "MIT",
       "language": "QML",
@@ -1801,7 +1747,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 30
+          "commits": 31
         },
         {
           "login": "dadofsambonzuki",
@@ -1819,7 +1765,7 @@
           "commits": 1
         }
       ],
-      "commits": 38,
+      "commits": 39,
       "repo_url": "https://github.com/nixfred/pulse",
       "glyph": "assets/img/family/pulse.svg",
       "archived": false,
@@ -2041,7 +1987,7 @@
           "url": "https://github.com/nixfred/menu.bar.overload/issues/1"
         }
       ],
-      "pushed": "2026-10-31T17:36:03Z",
+      "pushed": "2026-11-14T22:50:59Z",
       "created": "2026-09-09T03:28:34Z",
       "license": null,
       "language": "QML",
@@ -2055,10 +2001,10 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 15
+          "commits": 17
         }
       ],
-      "commits": 15,
+      "commits": 17,
       "repo_url": "https://github.com/nixfred/menu.bar.overload",
       "glyph": "assets/img/glyph/nixfred-menubar-overload.svg",
       "archived": false,
@@ -3266,36 +3212,36 @@
       "accent": "#0a84ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/blip.git --enable",
-      "stars": 196,
-      "forks": 47,
+      "stars": 198,
+      "forks": 53,
       "watchers": 1,
       "open_prs": 2,
       "open_issues": 5,
       "prs": [
         {
-          "number": 151,
-          "title": "Don't let the chat list turn a green DM back to iMessage",
-          "author": "dimagrigorchuk",
-          "created": "2026-11-04T17:52:36Z",
+          "number": 167,
+          "title": "Preserve failed bulk reads with bounded per-chat retries",
+          "author": "curtisc",
+          "created": "2026-11-13T19:05:47Z",
           "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/151"
+          "url": "https://github.com/nixfred/blip/pull/167"
         },
         {
-          "number": 150,
-          "title": "fix(bridge): Pin and Unpin on macOS 27 use the sidebar's actions (#132)",
-          "author": "ianswope",
-          "created": "2026-11-04T15:31:29Z",
+          "number": 165,
+          "title": "Send a DM on what its own messages say, not the Mac's chat label",
+          "author": "jasona",
+          "created": "2026-11-13T14:46:04Z",
           "draft": false,
-          "url": "https://github.com/nixfred/blip/pull/150"
+          "url": "https://github.com/nixfred/blip/pull/165"
         }
       ],
       "issues": [
         {
-          "number": 132,
-          "title": "macOS 27: Pin is not in the Conversation menu, and Hide Alerts can't be verified (plistlib fails on upiExpiryDate)",
-          "author": "ianswope",
-          "created": "2026-10-05T11:47:34Z",
-          "url": "https://github.com/nixfred/blip/issues/132"
+          "number": 166,
+          "title": "Failed Mark All as Read discards read intent under thread sync",
+          "author": "curtisc",
+          "created": "2026-11-13T18:51:26Z",
+          "url": "https://github.com/nixfred/blip/issues/166"
         },
         {
           "number": 129,
@@ -3326,7 +3272,7 @@
           "url": "https://github.com/nixfred/blip/issues/78"
         }
       ],
-      "pushed": "2026-11-04T23:44:26Z",
+      "pushed": "2026-11-14T23:21:43Z",
       "created": "2026-08-31T02:09:27Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -3347,7 +3293,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 330
+          "commits": 373
         },
         {
           "login": "Fileri",
@@ -3362,7 +3308,12 @@
         {
           "login": "ianswope",
           "avatar": "https://avatars.githubusercontent.com/u/175949710?v=4",
-          "commits": 26
+          "commits": 28
+        },
+        {
+          "login": "marcus",
+          "avatar": "https://avatars.githubusercontent.com/u/3090?v=4",
+          "commits": 18
         },
         {
           "login": "johanthoren",
@@ -3378,14 +3329,9 @@
           "login": "zachwilke",
           "avatar": "https://avatars.githubusercontent.com/u/45574453?v=4",
           "commits": 11
-        },
-        {
-          "login": "adamgamble",
-          "avatar": "https://avatars.githubusercontent.com/u/237171?v=4",
-          "commits": 7
         }
       ],
-      "commits": 472,
+      "commits": 528,
       "repo_url": "https://github.com/nixfred/blip",
       "glyph": "assets/img/glyph/nixfred-blip.svg",
       "archived": false,
@@ -3799,7 +3745,7 @@
       "fork_of": "ryuhzk/omarchy-server-status",
       "credit_url": "https://github.com/ryuhzk/omarchy-server-status",
       "stars": 32,
-      "forks": 4,
+      "forks": 3,
       "watchers": 0,
       "open_prs": 0,
       "open_issues": 0,
@@ -4019,51 +3965,20 @@
       "status": "live",
       "flagship": true,
       "repo": "nixfred/infomarchy",
-      "version": "1.4.1",
+      "version": "1.5.2",
       "tagline": "Your wallpaper becomes a live information desk.",
       "description": "A live, clickable wallpaper desk for AI sessions, proactive next-action alerts, repository health, Ollama controls, activity, usage limits, and machine telemetry. Theme-driven. SUPER+D overlay. Optional Web Mode.",
       "accent": "#00e5ff",
       "manifest_path": "manifest.json",
       "install": "omarchy plugin add https://github.com/nixfred/infomarchy.git --enable",
-      "stars": 135,
-      "forks": 24,
+      "stars": 137,
+      "forks": 25,
       "watchers": 1,
-      "open_prs": 1,
-      "open_issues": 3,
-      "prs": [
-        {
-          "number": 44,
-          "title": "feat: opt-in wallpaperPassthrough for plugins that draw their own wallpaper",
-          "author": "afoxybouquet",
-          "created": "2026-10-31T17:50:14Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/infomarchy/pull/44"
-        }
-      ],
-      "issues": [
-        {
-          "number": 46,
-          "title": "Add a compact/overlay-only mode for the module strip on small screens",
-          "author": "maku",
-          "created": "2026-11-05T17:05:24Z",
-          "url": "https://github.com/nixfred/infomarchy/issues/46"
-        },
-        {
-          "number": 43,
-          "title": "Opt-in wallpaper passthrough so another background plugin can show through",
-          "author": "afoxybouquet",
-          "created": "2026-10-26T15:04:15Z",
-          "url": "https://github.com/nixfred/infomarchy/issues/43"
-        },
-        {
-          "number": 26,
-          "title": "Add Muse",
-          "author": "TRIBUSeric",
-          "created": "2026-09-10T22:22:14Z",
-          "url": "https://github.com/nixfred/infomarchy/issues/26"
-        }
-      ],
-      "pushed": "2026-11-04T06:06:06Z",
+      "open_prs": 0,
+      "open_issues": 0,
+      "prs": [],
+      "issues": [],
+      "pushed": "2026-11-12T14:37:44Z",
       "created": "2026-08-22T05:40:19Z",
       "license": "MIT",
       "language": "TypeScript",
@@ -4087,7 +4002,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 147
+          "commits": 162
         },
         {
           "login": "TechLuddite",
@@ -4100,8 +4015,18 @@
           "commits": 8
         },
         {
+          "login": "brentkearney",
+          "avatar": "https://avatars.githubusercontent.com/u/1550934?v=4",
+          "commits": 6
+        },
+        {
           "login": "jttraino",
           "avatar": "https://avatars.githubusercontent.com/u/92961429?v=4",
+          "commits": 4
+        },
+        {
+          "login": "reverb256",
+          "avatar": "https://avatars.githubusercontent.com/u/129622142?v=4",
           "commits": 4
         },
         {
@@ -4113,19 +4038,9 @@
           "login": "auggernaut",
           "avatar": "https://avatars.githubusercontent.com/u/1430391?v=4",
           "commits": 3
-        },
-        {
-          "login": "reverb256",
-          "avatar": "https://avatars.githubusercontent.com/u/129622142?v=4",
-          "commits": 3
-        },
-        {
-          "login": "Tech0001",
-          "avatar": "https://avatars.githubusercontent.com/u/52805157?v=4",
-          "commits": 3
         }
       ],
-      "commits": 206,
+      "commits": 225,
       "repo_url": "https://github.com/nixfred/infomarchy",
       "glyph": "assets/img/glyph/nixfred-infomarchy.svg",
       "archived": false,
@@ -4256,18 +4171,9 @@
       "stars": 1,
       "forks": 1,
       "watchers": 0,
-      "open_prs": 1,
+      "open_prs": 0,
       "open_issues": 11,
-      "prs": [
-        {
-          "number": 70,
-          "title": "feat: name workspaces when opening Rifts",
-          "author": "nixfred",
-          "created": "2026-08-23T01:41:21Z",
-          "draft": true,
-          "url": "https://github.com/nixfred/rift/pull/70"
-        }
-      ],
+      "prs": [],
       "issues": [
         {
           "number": 34,
@@ -4480,29 +4386,14 @@
       "install": "git clone https://github.com/nixfred/shepr && cd shepr   # then follow Use it in the README",
       "description": "An iPhone home-screen app for herdr, the agent terminal multiplexer. It shows which agent sessions, on which machines, are waiting on you: tap one, read it, answer it. Every send is previewed and confirmed first and nothing is ever approved automatically. Plain Python and a web page over your tailnet, with no app store and no build step.",
       "slug": "shepr",
-      "stars": 14,
+      "stars": 15,
       "forks": 1,
       "watchers": 0,
-      "open_issues": 2,
+      "open_issues": 0,
       "open_prs": 0,
       "prs": [],
-      "issues": [
-        {
-          "number": 5,
-          "title": "Fails to boot on Omarchy if tailscale is turned off",
-          "author": "bendangelo",
-          "created": "2026-10-23T15:59:31Z",
-          "url": "https://github.com/nixfred/shepr/issues/5"
-        },
-        {
-          "number": 4,
-          "title": "Agents in named herdr sessions are not shown (only the default session)",
-          "author": "skovuri41",
-          "created": "2026-10-13T21:48:18Z",
-          "url": "https://github.com/nixfred/shepr/issues/4"
-        }
-      ],
-      "pushed": "2026-11-06T04:47:14Z",
+      "issues": [],
+      "pushed": "2026-11-14T20:51:23Z",
       "created": "2026-10-09T03:09:47Z",
       "archived": false,
       "license": "MIT",
@@ -4513,7 +4404,7 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 66
+          "commits": 70
         },
         {
           "login": "shadetheory",
@@ -4521,7 +4412,7 @@
           "commits": 3
         }
       ],
-      "commits": 69,
+      "commits": 73,
       "repo_url": "https://github.com/nixfred/shepr",
       "clone": "git clone https://github.com/nixfred/shepr.git",
       "shot": null
@@ -4906,27 +4797,10 @@
       "forks": 1,
       "watchers": 0,
       "open_issues": 0,
-      "open_prs": 2,
-      "prs": [
-        {
-          "number": 2,
-          "title": "Opt-in custom colour picker: per-effect colours on a colour wheel, toggle with the theme",
-          "author": "th3r00t",
-          "created": "2026-10-31T23:27:17Z",
-          "draft": true,
-          "url": "https://github.com/nixfred/lightshow/pull/2"
-        },
-        {
-          "number": 1,
-          "title": "kbd: support the multi-byte zone mask on MysticLight 1462:1603 (Vector 16 HX)",
-          "author": "th3r00t",
-          "created": "2026-10-31T22:57:12Z",
-          "draft": false,
-          "url": "https://github.com/nixfred/lightshow/pull/1"
-        }
-      ],
+      "open_prs": 0,
+      "prs": [],
       "issues": [],
-      "pushed": "2026-09-16T01:46:07Z",
+      "pushed": "2026-11-14T20:31:14Z",
       "created": "2026-09-12T02:33:34Z",
       "archived": false,
       "license": "MIT",
@@ -4937,10 +4811,15 @@
         {
           "login": "nixfred",
           "avatar": "https://avatars.githubusercontent.com/u/15384894?v=4",
-          "commits": 31
+          "commits": 33
+        },
+        {
+          "login": "th3r00t",
+          "avatar": "https://avatars.githubusercontent.com/u/5428538?v=4",
+          "commits": 1
         }
       ],
-      "commits": 31,
+      "commits": 34,
       "repo_url": "https://github.com/nixfred/lightshow",
       "clone": "git clone https://github.com/nixfred/lightshow.git",
       "shot": "assets/img/shot/lightshow.png"
@@ -5105,7 +4984,7 @@
       "open_prs": 0,
       "prs": [],
       "issues": [],
-      "pushed": "2026-09-16T23:24:06Z",
+      "pushed": "2026-11-08T16:37:17Z",
       "created": "2026-09-06T01:06:33Z",
       "archived": false,
       "license": "MIT",
@@ -5438,45 +5317,8 @@
     }
   ],
   "heatmap": {
-    "total": 3508,
+    "total": 26604,
     "weeks": [
-      [
-        {
-          "date": "2025-11-02",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-11-03",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-11-04",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-11-05",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-11-06",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-11-07",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2025-11-08",
-          "count": 0,
-          "level": 0
-        }
-      ],
       [
         {
           "date": "2025-11-09",
@@ -5522,8 +5364,8 @@
         },
         {
           "date": "2025-11-17",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2025-11-18",
@@ -5569,8 +5411,8 @@
         },
         {
           "date": "2025-11-26",
-          "count": 0,
-          "level": 0
+          "count": 5,
+          "level": 1
         },
         {
           "date": "2025-11-27",
@@ -5579,8 +5421,8 @@
         },
         {
           "date": "2025-11-28",
-          "count": 0,
-          "level": 0
+          "count": 5,
+          "level": 1
         },
         {
           "date": "2025-11-29",
@@ -5591,13 +5433,13 @@
       [
         {
           "date": "2025-11-30",
-          "count": 0,
-          "level": 0
+          "count": 7,
+          "level": 1
         },
         {
           "date": "2025-12-01",
-          "count": 0,
-          "level": 0
+          "count": 2,
+          "level": 1
         },
         {
           "date": "2025-12-02",
@@ -5653,40 +5495,40 @@
         },
         {
           "date": "2025-12-12",
-          "count": 0,
-          "level": 0
+          "count": 25,
+          "level": 1
         },
         {
           "date": "2025-12-13",
-          "count": 0,
-          "level": 0
+          "count": 119,
+          "level": 1
         }
       ],
       [
         {
           "date": "2025-12-14",
-          "count": 0,
-          "level": 0
+          "count": 166,
+          "level": 2
         },
         {
           "date": "2025-12-15",
-          "count": 0,
-          "level": 0
+          "count": 205,
+          "level": 2
         },
         {
           "date": "2025-12-16",
-          "count": 0,
-          "level": 0
+          "count": 79,
+          "level": 1
         },
         {
           "date": "2025-12-17",
-          "count": 0,
-          "level": 0
+          "count": 126,
+          "level": 1
         },
         {
           "date": "2025-12-18",
-          "count": 0,
-          "level": 0
+          "count": 25,
+          "level": 1
         },
         {
           "date": "2025-12-19",
@@ -5702,23 +5544,23 @@
       [
         {
           "date": "2025-12-21",
-          "count": 0,
-          "level": 0
+          "count": 30,
+          "level": 1
         },
         {
           "date": "2025-12-22",
-          "count": 0,
-          "level": 0
+          "count": 172,
+          "level": 2
         },
         {
           "date": "2025-12-23",
-          "count": 0,
-          "level": 0
+          "count": 22,
+          "level": 1
         },
         {
           "date": "2025-12-24",
-          "count": 0,
-          "level": 0
+          "count": 9,
+          "level": 1
         },
         {
           "date": "2025-12-25",
@@ -5732,14 +5574,14 @@
         },
         {
           "date": "2025-12-27",
-          "count": 2,
+          "count": 5,
           "level": 1
         }
       ],
       [
         {
           "date": "2025-12-28",
-          "count": 4,
+          "count": 13,
           "level": 1
         },
         {
@@ -5754,178 +5596,178 @@
         },
         {
           "date": "2025-12-31",
-          "count": 0,
-          "level": 0
+          "count": 3,
+          "level": 1
         },
         {
           "date": "2026-01-01",
-          "count": 3,
+          "count": 10,
           "level": 1
         },
         {
           "date": "2026-01-02",
           "count": 114,
-          "level": 4
+          "level": 1
         },
         {
           "date": "2026-01-03",
-          "count": 62,
-          "level": 3
+          "count": 72,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-01-04",
-          "count": 20,
+          "count": 73,
           "level": 1
         },
         {
           "date": "2026-01-05",
-          "count": 0,
-          "level": 0
+          "count": 98,
+          "level": 1
         },
         {
           "date": "2026-01-06",
-          "count": 0,
-          "level": 0
+          "count": 214,
+          "level": 2
         },
         {
           "date": "2026-01-07",
-          "count": 2,
+          "count": 44,
           "level": 1
         },
         {
           "date": "2026-01-08",
-          "count": 0,
-          "level": 0
+          "count": 24,
+          "level": 1
         },
         {
           "date": "2026-01-09",
-          "count": 0,
-          "level": 0
+          "count": 74,
+          "level": 1
         },
         {
           "date": "2026-01-10",
-          "count": 0,
-          "level": 0
+          "count": 89,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-01-11",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2026-01-12",
-          "count": 1,
+          "count": 68,
           "level": 1
         },
         {
+          "date": "2026-01-12",
+          "count": 350,
+          "level": 3
+        },
+        {
           "date": "2026-01-13",
-          "count": 0,
-          "level": 0
+          "count": 244,
+          "level": 2
         },
         {
           "date": "2026-01-14",
-          "count": 0,
-          "level": 0
+          "count": 165,
+          "level": 2
         },
         {
           "date": "2026-01-15",
-          "count": 0,
-          "level": 0
+          "count": 66,
+          "level": 1
         },
         {
           "date": "2026-01-16",
-          "count": 0,
-          "level": 0
+          "count": 119,
+          "level": 1
         },
         {
           "date": "2026-01-17",
-          "count": 0,
-          "level": 0
+          "count": 53,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-01-18",
-          "count": 0,
-          "level": 0
+          "count": 6,
+          "level": 1
         },
         {
           "date": "2026-01-19",
-          "count": 0,
-          "level": 0
+          "count": 18,
+          "level": 1
         },
         {
           "date": "2026-01-20",
-          "count": 0,
-          "level": 0
+          "count": 23,
+          "level": 1
         },
         {
           "date": "2026-01-21",
-          "count": 1,
+          "count": 16,
           "level": 1
         },
         {
           "date": "2026-01-22",
-          "count": 22,
+          "count": 90,
           "level": 1
         },
         {
           "date": "2026-01-23",
-          "count": 12,
+          "count": 106,
           "level": 1
         },
         {
           "date": "2026-01-24",
-          "count": 2,
+          "count": 120,
           "level": 1
         }
       ],
       [
         {
           "date": "2026-01-25",
-          "count": 1,
-          "level": 1
+          "count": 272,
+          "level": 2
         },
         {
           "date": "2026-01-26",
-          "count": 0,
-          "level": 0
+          "count": 123,
+          "level": 1
         },
         {
           "date": "2026-01-27",
-          "count": 0,
-          "level": 0
+          "count": 112,
+          "level": 1
         },
         {
           "date": "2026-01-28",
-          "count": 0,
-          "level": 0
+          "count": 195,
+          "level": 2
         },
         {
           "date": "2026-01-29",
-          "count": 0,
-          "level": 0
+          "count": 148,
+          "level": 2
         },
         {
           "date": "2026-01-30",
-          "count": 0,
-          "level": 0
+          "count": 16,
+          "level": 1
         },
         {
           "date": "2026-01-31",
-          "count": 10,
+          "count": 51,
           "level": 1
         }
       ],
       [
         {
           "date": "2026-02-01",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-02-02",
@@ -5934,8 +5776,8 @@
         },
         {
           "date": "2026-02-03",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-02-04",
@@ -5949,30 +5791,30 @@
         },
         {
           "date": "2026-02-06",
-          "count": 0,
-          "level": 0
+          "count": 55,
+          "level": 1
         },
         {
           "date": "2026-02-07",
-          "count": 0,
-          "level": 0
+          "count": 7,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-02-08",
-          "count": 1,
+          "count": 5,
           "level": 1
         },
         {
           "date": "2026-02-09",
-          "count": 0,
-          "level": 0
+          "count": 146,
+          "level": 2
         },
         {
           "date": "2026-02-10",
-          "count": 0,
-          "level": 0
+          "count": 3,
+          "level": 1
         },
         {
           "date": "2026-02-11",
@@ -5991,8 +5833,8 @@
         },
         {
           "date": "2026-02-14",
-          "count": 0,
-          "level": 0
+          "count": 2,
+          "level": 1
         }
       ],
       [
@@ -6003,8 +5845,8 @@
         },
         {
           "date": "2026-02-16",
-          "count": 0,
-          "level": 0
+          "count": 10,
+          "level": 1
         },
         {
           "date": "2026-02-17",
@@ -6013,18 +5855,18 @@
         },
         {
           "date": "2026-02-18",
-          "count": 0,
-          "level": 0
+          "count": 34,
+          "level": 1
         },
         {
           "date": "2026-02-19",
-          "count": 8,
+          "count": 58,
           "level": 1
         },
         {
           "date": "2026-02-20",
-          "count": 0,
-          "level": 0
+          "count": 25,
+          "level": 1
         },
         {
           "date": "2026-02-21",
@@ -6035,23 +5877,23 @@
       [
         {
           "date": "2026-02-22",
-          "count": 0,
-          "level": 0
+          "count": 5,
+          "level": 1
         },
         {
           "date": "2026-02-23",
-          "count": 0,
-          "level": 0
+          "count": 27,
+          "level": 1
         },
         {
           "date": "2026-02-24",
-          "count": 0,
-          "level": 0
+          "count": 18,
+          "level": 1
         },
         {
           "date": "2026-02-25",
-          "count": 0,
-          "level": 0
+          "count": 6,
+          "level": 1
         },
         {
           "date": "2026-02-26",
@@ -6060,13 +5902,13 @@
         },
         {
           "date": "2026-02-27",
-          "count": 0,
-          "level": 0
+          "count": 21,
+          "level": 1
         },
         {
           "date": "2026-02-28",
-          "count": 0,
-          "level": 0
+          "count": 15,
+          "level": 1
         }
       ],
       [
@@ -6077,8 +5919,8 @@
         },
         {
           "date": "2026-03-02",
-          "count": 0,
-          "level": 0
+          "count": 10,
+          "level": 1
         },
         {
           "date": "2026-03-03",
@@ -6114,23 +5956,23 @@
         },
         {
           "date": "2026-03-09",
-          "count": 1,
+          "count": 2,
           "level": 1
         },
         {
           "date": "2026-03-10",
-          "count": 10,
+          "count": 31,
           "level": 1
         },
         {
           "date": "2026-03-11",
-          "count": 0,
-          "level": 0
+          "count": 5,
+          "level": 1
         },
         {
           "date": "2026-03-12",
-          "count": 0,
-          "level": 0
+          "count": 5,
+          "level": 1
         },
         {
           "date": "2026-03-13",
@@ -6146,8 +5988,8 @@
       [
         {
           "date": "2026-03-15",
-          "count": 0,
-          "level": 0
+          "count": 5,
+          "level": 1
         },
         {
           "date": "2026-03-16",
@@ -6203,7 +6045,7 @@
         },
         {
           "date": "2026-03-26",
-          "count": 13,
+          "count": 23,
           "level": 1
         },
         {
@@ -6213,57 +6055,57 @@
         },
         {
           "date": "2026-03-28",
-          "count": 0,
-          "level": 0
+          "count": 5,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-03-29",
-          "count": 3,
+          "count": 23,
           "level": 1
         },
         {
           "date": "2026-03-30",
-          "count": 24,
+          "count": 49,
           "level": 1
         },
         {
           "date": "2026-03-31",
-          "count": 0,
-          "level": 0
+          "count": 29,
+          "level": 1
         },
         {
           "date": "2026-04-01",
-          "count": 0,
-          "level": 0
+          "count": 14,
+          "level": 1
         },
         {
           "date": "2026-04-02",
-          "count": 0,
-          "level": 0
+          "count": 4,
+          "level": 1
         },
         {
           "date": "2026-04-03",
-          "count": 0,
-          "level": 0
+          "count": 3,
+          "level": 1
         },
         {
           "date": "2026-04-04",
-          "count": 0,
-          "level": 0
+          "count": 16,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-04-05",
           "count": 30,
-          "level": 2
+          "level": 1
         },
         {
           "date": "2026-04-06",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-04-07",
@@ -6272,113 +6114,113 @@
         },
         {
           "date": "2026-04-08",
-          "count": 6,
+          "count": 16,
           "level": 1
         },
         {
           "date": "2026-04-09",
-          "count": 0,
-          "level": 0
+          "count": 161,
+          "level": 2
         },
         {
           "date": "2026-04-10",
-          "count": 0,
-          "level": 0
+          "count": 12,
+          "level": 1
         },
         {
           "date": "2026-04-11",
-          "count": 4,
+          "count": 136,
           "level": 1
         }
       ],
       [
         {
           "date": "2026-04-12",
-          "count": 0,
-          "level": 0
+          "count": 100,
+          "level": 1
         },
         {
           "date": "2026-04-13",
-          "count": 5,
+          "count": 117,
           "level": 1
         },
         {
           "date": "2026-04-14",
-          "count": 0,
-          "level": 0
+          "count": 12,
+          "level": 1
         },
         {
           "date": "2026-04-15",
-          "count": 0,
-          "level": 0
+          "count": 8,
+          "level": 1
         },
         {
           "date": "2026-04-16",
-          "count": 0,
-          "level": 0
+          "count": 35,
+          "level": 1
         },
         {
           "date": "2026-04-17",
-          "count": 0,
-          "level": 0
+          "count": 71,
+          "level": 1
         },
         {
           "date": "2026-04-18",
-          "count": 16,
+          "count": 84,
           "level": 1
         }
       ],
       [
         {
           "date": "2026-04-19",
-          "count": 4,
+          "count": 77,
           "level": 1
         },
         {
           "date": "2026-04-20",
-          "count": 6,
+          "count": 80,
           "level": 1
         },
         {
           "date": "2026-04-21",
-          "count": 10,
+          "count": 139,
           "level": 1
         },
         {
           "date": "2026-04-22",
-          "count": 0,
-          "level": 0
+          "count": 45,
+          "level": 1
         },
         {
           "date": "2026-04-23",
-          "count": 0,
-          "level": 0
+          "count": 26,
+          "level": 1
         },
         {
           "date": "2026-04-24",
-          "count": 0,
-          "level": 0
+          "count": 58,
+          "level": 1
         },
         {
           "date": "2026-04-25",
-          "count": 0,
-          "level": 0
+          "count": 82,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-04-26",
-          "count": 2,
+          "count": 32,
           "level": 1
         },
         {
           "date": "2026-04-27",
-          "count": 18,
+          "count": 56,
           "level": 1
         },
         {
           "date": "2026-04-28",
-          "count": 2,
+          "count": 47,
           "level": 1
         },
         {
@@ -6389,7 +6231,7 @@
         {
           "date": "2026-04-30",
           "count": 37,
-          "level": 2
+          "level": 1
         },
         {
           "date": "2026-05-01",
@@ -6398,40 +6240,40 @@
         },
         {
           "date": "2026-05-02",
-          "count": 18,
+          "count": 34,
           "level": 1
         }
       ],
       [
         {
           "date": "2026-05-03",
-          "count": 12,
+          "count": 24,
           "level": 1
         },
         {
           "date": "2026-05-04",
-          "count": 0,
-          "level": 0
+          "count": 4,
+          "level": 1
         },
         {
           "date": "2026-05-05",
-          "count": 0,
-          "level": 0
+          "count": 19,
+          "level": 1
         },
         {
           "date": "2026-05-06",
-          "count": 0,
-          "level": 0
+          "count": 19,
+          "level": 1
         },
         {
           "date": "2026-05-07",
-          "count": 0,
-          "level": 0
+          "count": 6,
+          "level": 1
         },
         {
           "date": "2026-05-08",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-05-09",
@@ -6442,13 +6284,13 @@
       [
         {
           "date": "2026-05-10",
-          "count": 2,
+          "count": 16,
           "level": 1
         },
         {
           "date": "2026-05-11",
-          "count": 0,
-          "level": 0
+          "count": 5,
+          "level": 1
         },
         {
           "date": "2026-05-12",
@@ -6467,933 +6309,975 @@
         },
         {
           "date": "2026-05-15",
-          "count": 0,
-          "level": 0
+          "count": 4,
+          "level": 1
         },
         {
           "date": "2026-05-16",
-          "count": 11,
+          "count": 58,
           "level": 1
         }
       ],
       [
         {
           "date": "2026-05-17",
-          "count": 1,
+          "count": 10,
           "level": 1
         },
         {
           "date": "2026-05-18",
-          "count": 3,
+          "count": 56,
           "level": 1
         },
         {
           "date": "2026-05-19",
-          "count": 0,
-          "level": 0
+          "count": 8,
+          "level": 1
         },
         {
           "date": "2026-05-20",
-          "count": 0,
-          "level": 0
+          "count": 11,
+          "level": 1
         },
         {
           "date": "2026-05-21",
-          "count": 0,
-          "level": 0
+          "count": 19,
+          "level": 1
         },
         {
           "date": "2026-05-22",
-          "count": 0,
-          "level": 0
+          "count": 3,
+          "level": 1
         },
         {
           "date": "2026-05-23",
-          "count": 0,
-          "level": 0
+          "count": 8,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-05-24",
-          "count": 16,
+          "count": 30,
           "level": 1
         },
         {
           "date": "2026-05-25",
-          "count": 3,
+          "count": 9,
           "level": 1
         },
         {
           "date": "2026-05-26",
-          "count": 2,
+          "count": 17,
           "level": 1
         },
         {
           "date": "2026-05-27",
-          "count": 0,
-          "level": 0
+          "count": 29,
+          "level": 1
         },
         {
           "date": "2026-05-28",
-          "count": 12,
+          "count": 20,
           "level": 1
         },
         {
           "date": "2026-05-29",
-          "count": 0,
-          "level": 0
+          "count": 115,
+          "level": 1
         },
         {
           "date": "2026-05-30",
-          "count": 1,
+          "count": 120,
           "level": 1
         }
       ],
       [
         {
           "date": "2026-05-31",
-          "count": 0,
-          "level": 0
+          "count": 49,
+          "level": 1
         },
         {
           "date": "2026-06-01",
-          "count": 0,
-          "level": 0
+          "count": 8,
+          "level": 1
         },
         {
           "date": "2026-06-02",
-          "count": 0,
-          "level": 0
+          "count": 5,
+          "level": 1
         },
         {
           "date": "2026-06-03",
-          "count": 0,
-          "level": 0
+          "count": 17,
+          "level": 1
         },
         {
           "date": "2026-06-04",
-          "count": 0,
-          "level": 0
+          "count": 4,
+          "level": 1
         },
         {
           "date": "2026-06-05",
-          "count": 2,
+          "count": 6,
           "level": 1
         },
         {
           "date": "2026-06-06",
-          "count": 0,
-          "level": 0
+          "count": 7,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-06-07",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2026-06-08",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2026-06-09",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2026-06-10",
           "count": 4,
           "level": 1
         },
         {
+          "date": "2026-06-08",
+          "count": 1,
+          "level": 1
+        },
+        {
+          "date": "2026-06-09",
+          "count": 2,
+          "level": 1
+        },
+        {
+          "date": "2026-06-10",
+          "count": 6,
+          "level": 1
+        },
+        {
           "date": "2026-06-11",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-06-12",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-06-13",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-06-14",
-          "count": 1,
+          "count": 21,
           "level": 1
         },
         {
           "date": "2026-06-15",
-          "count": 0,
-          "level": 0
+          "count": 10,
+          "level": 1
         },
         {
           "date": "2026-06-16",
-          "count": 2,
+          "count": 17,
           "level": 1
         },
         {
           "date": "2026-06-17",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-06-18",
-          "count": 0,
-          "level": 0
+          "count": 3,
+          "level": 1
         },
         {
           "date": "2026-06-19",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-06-20",
-          "count": 0,
-          "level": 0
+          "count": 3,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-06-21",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2026-06-22",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2026-06-23",
           "count": 1,
           "level": 1
         },
         {
+          "date": "2026-06-22",
+          "count": 1,
+          "level": 1
+        },
+        {
+          "date": "2026-06-23",
+          "count": 2,
+          "level": 1
+        },
+        {
           "date": "2026-06-24",
-          "count": 0,
-          "level": 0
+          "count": 2,
+          "level": 1
         },
         {
           "date": "2026-06-25",
-          "count": 7,
+          "count": 11,
           "level": 1
         },
         {
           "date": "2026-06-26",
-          "count": 0,
-          "level": 0
+          "count": 151,
+          "level": 2
         },
         {
           "date": "2026-06-27",
-          "count": 3,
+          "count": 109,
           "level": 1
         }
       ],
       [
         {
           "date": "2026-06-28",
-          "count": 0,
-          "level": 0
+          "count": 33,
+          "level": 1
         },
         {
           "date": "2026-06-29",
-          "count": 3,
+          "count": 7,
           "level": 1
         },
         {
           "date": "2026-06-30",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2026-07-01",
           "count": 5,
           "level": 1
         },
         {
+          "date": "2026-07-01",
+          "count": 65,
+          "level": 1
+        },
+        {
           "date": "2026-07-02",
-          "count": 4,
+          "count": 13,
           "level": 1
         },
         {
           "date": "2026-07-03",
-          "count": 62,
-          "level": 3
+          "count": 85,
+          "level": 1
         },
         {
           "date": "2026-07-04",
-          "count": 2,
+          "count": 12,
           "level": 1
         }
       ],
       [
         {
           "date": "2026-07-05",
-          "count": 6,
+          "count": 8,
           "level": 1
         },
         {
           "date": "2026-07-06",
-          "count": 0,
-          "level": 0
+          "count": 7,
+          "level": 1
         },
         {
           "date": "2026-07-07",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-07-08",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-07-09",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-07-10",
-          "count": 0,
-          "level": 0
+          "count": 2,
+          "level": 1
         },
         {
           "date": "2026-07-11",
-          "count": 68,
-          "level": 3
+          "count": 92,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-07-12",
-          "count": 10,
+          "count": 39,
           "level": 1
         },
         {
           "date": "2026-07-13",
-          "count": 0,
-          "level": 0
+          "count": 28,
+          "level": 1
         },
         {
           "date": "2026-07-14",
-          "count": 0,
-          "level": 0
+          "count": 11,
+          "level": 1
         },
         {
           "date": "2026-07-15",
-          "count": 0,
-          "level": 0
+          "count": 19,
+          "level": 1
         },
         {
           "date": "2026-07-16",
-          "count": 0,
-          "level": 0
+          "count": 3,
+          "level": 1
         },
         {
           "date": "2026-07-17",
-          "count": 1,
+          "count": 8,
           "level": 1
         },
         {
           "date": "2026-07-18",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-07-19",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-07-20",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-07-21",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-07-22",
-          "count": 0,
-          "level": 0
+          "count": 3,
+          "level": 1
         },
         {
           "date": "2026-07-23",
-          "count": 0,
-          "level": 0
+          "count": 3,
+          "level": 1
         },
         {
           "date": "2026-07-24",
-          "count": 0,
-          "level": 0
+          "count": 5,
+          "level": 1
         },
         {
           "date": "2026-07-25",
-          "count": 28,
-          "level": 2
+          "count": 63,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-07-26",
-          "count": 17,
+          "count": 30,
           "level": 1
         },
         {
           "date": "2026-07-27",
-          "count": 10,
+          "count": 13,
           "level": 1
         },
         {
           "date": "2026-07-28",
-          "count": 0,
-          "level": 0
+          "count": 21,
+          "level": 1
         },
         {
           "date": "2026-07-29",
-          "count": 0,
-          "level": 0
+          "count": 28,
+          "level": 1
         },
         {
           "date": "2026-07-30",
-          "count": 0,
-          "level": 0
+          "count": 2,
+          "level": 1
         },
         {
           "date": "2026-07-31",
-          "count": 0,
-          "level": 0
+          "count": 59,
+          "level": 1
         },
         {
           "date": "2026-08-01",
-          "count": 5,
+          "count": 26,
           "level": 1
         }
       ],
       [
         {
           "date": "2026-08-02",
-          "count": 15,
+          "count": 30,
           "level": 1
         },
         {
           "date": "2026-08-03",
-          "count": 12,
+          "count": 37,
           "level": 1
         },
         {
           "date": "2026-08-04",
-          "count": 1,
+          "count": 7,
           "level": 1
         },
         {
           "date": "2026-08-05",
-          "count": 0,
-          "level": 0
+          "count": 1,
+          "level": 1
         },
         {
           "date": "2026-08-06",
-          "count": 0,
-          "level": 0
+          "count": 66,
+          "level": 1
         },
         {
           "date": "2026-08-07",
-          "count": 0,
-          "level": 0
+          "count": 107,
+          "level": 1
         },
         {
           "date": "2026-08-08",
-          "count": 0,
-          "level": 0
+          "count": 108,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-08-09",
-          "count": 0,
-          "level": 0
+          "count": 13,
+          "level": 1
         },
         {
           "date": "2026-08-10",
-          "count": 15,
+          "count": 52,
           "level": 1
         },
         {
           "date": "2026-08-11",
-          "count": 6,
+          "count": 18,
           "level": 1
         },
         {
           "date": "2026-08-12",
-          "count": 10,
+          "count": 49,
           "level": 1
         },
         {
           "date": "2026-08-13",
-          "count": 0,
-          "level": 0
+          "count": 31,
+          "level": 1
         },
         {
           "date": "2026-08-14",
-          "count": 0,
-          "level": 0
+          "count": 9,
+          "level": 1
         },
         {
           "date": "2026-08-15",
-          "count": 0,
-          "level": 0
+          "count": 106,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-08-16",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2026-08-17",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2026-08-18",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2026-08-19",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2026-08-20",
-          "count": 2,
+          "count": 6,
           "level": 1
         },
         {
-          "date": "2026-08-21",
-          "count": 208,
+          "date": "2026-08-17",
+          "count": 48,
+          "level": 1
+        },
+        {
+          "date": "2026-08-18",
+          "count": 48,
+          "level": 1
+        },
+        {
+          "date": "2026-08-19",
+          "count": 93,
+          "level": 1
+        },
+        {
+          "date": "2026-08-20",
+          "count": 2329,
           "level": 4
         },
         {
+          "date": "2026-08-21",
+          "count": 230,
+          "level": 2
+        },
+        {
           "date": "2026-08-22",
-          "count": 120,
-          "level": 4
+          "count": 141,
+          "level": 2
         }
       ],
       [
         {
           "date": "2026-08-23",
-          "count": 0,
-          "level": 0
-        },
-        {
-          "date": "2026-08-24",
-          "count": 16,
-          "level": 1
-        },
-        {
-          "date": "2026-08-25",
-          "count": 9,
-          "level": 1
-        },
-        {
-          "date": "2026-08-26",
           "count": 1,
           "level": 1
         },
         {
-          "date": "2026-08-27",
-          "count": 22,
+          "date": "2026-08-24",
+          "count": 76,
           "level": 1
         },
         {
+          "date": "2026-08-25",
+          "count": 37,
+          "level": 1
+        },
+        {
+          "date": "2026-08-26",
+          "count": 67,
+          "level": 1
+        },
+        {
+          "date": "2026-08-27",
+          "count": 176,
+          "level": 2
+        },
+        {
           "date": "2026-08-28",
-          "count": 13,
+          "count": 32,
           "level": 1
         },
         {
           "date": "2026-08-29",
-          "count": 0,
-          "level": 0
+          "count": 20,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-08-30",
-          "count": 15,
-          "level": 1
-        },
-        {
-          "date": "2026-08-31",
-          "count": 64,
-          "level": 3
-        },
-        {
-          "date": "2026-09-01",
-          "count": 30,
+          "count": 224,
           "level": 2
         },
         {
+          "date": "2026-08-31",
+          "count": 557,
+          "level": 4
+        },
+        {
+          "date": "2026-09-01",
+          "count": 282,
+          "level": 3
+        },
+        {
           "date": "2026-09-02",
-          "count": 18,
-          "level": 1
+          "count": 189,
+          "level": 2
         },
         {
           "date": "2026-09-03",
-          "count": 73,
+          "count": 376,
           "level": 3
         },
         {
           "date": "2026-09-04",
-          "count": 85,
+          "count": 686,
           "level": 4
         },
         {
           "date": "2026-09-05",
-          "count": 66,
-          "level": 3
+          "count": 271,
+          "level": 2
         }
       ],
       [
         {
           "date": "2026-09-06",
-          "count": 64,
-          "level": 3
+          "count": 117,
+          "level": 1
         },
         {
           "date": "2026-09-07",
-          "count": 107,
-          "level": 4
+          "count": 130,
+          "level": 1
         },
         {
           "date": "2026-09-08",
-          "count": 64,
-          "level": 3
+          "count": 89,
+          "level": 1
         },
         {
           "date": "2026-09-09",
-          "count": 63,
-          "level": 3
+          "count": 169,
+          "level": 2
         },
         {
           "date": "2026-09-10",
-          "count": 67,
+          "count": 388,
           "level": 3
         },
         {
           "date": "2026-09-11",
-          "count": 54,
-          "level": 3
+          "count": 448,
+          "level": 4
         },
         {
           "date": "2026-09-12",
-          "count": 27,
+          "count": 147,
           "level": 2
         }
       ],
       [
         {
           "date": "2026-09-13",
-          "count": 33,
+          "count": 242,
           "level": 2
         },
         {
           "date": "2026-09-14",
-          "count": 20,
+          "count": 139,
           "level": 1
         },
         {
           "date": "2026-09-15",
-          "count": 52,
+          "count": 256,
           "level": 2
         },
         {
           "date": "2026-09-16",
-          "count": 15,
-          "level": 1
+          "count": 182,
+          "level": 2
         },
         {
           "date": "2026-09-17",
-          "count": 14,
+          "count": 114,
           "level": 1
         },
         {
           "date": "2026-09-18",
-          "count": 57,
-          "level": 3
+          "count": 158,
+          "level": 2
         },
         {
           "date": "2026-09-19",
-          "count": 40,
-          "level": 2
+          "count": 76,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-09-20",
-          "count": 28,
+          "count": 211,
           "level": 2
         },
         {
           "date": "2026-09-21",
-          "count": 15,
-          "level": 1
+          "count": 198,
+          "level": 2
         },
         {
           "date": "2026-09-22",
-          "count": 5,
+          "count": 131,
           "level": 1
         },
         {
           "date": "2026-09-23",
-          "count": 6,
+          "count": 78,
           "level": 1
         },
         {
           "date": "2026-09-24",
-          "count": 25,
-          "level": 1
+          "count": 278,
+          "level": 2
         },
         {
           "date": "2026-09-25",
-          "count": 22,
-          "level": 1
+          "count": 291,
+          "level": 3
         },
         {
           "date": "2026-09-26",
-          "count": 35,
-          "level": 2
+          "count": 349,
+          "level": 3
         }
       ],
       [
         {
           "date": "2026-09-27",
-          "count": 27,
+          "count": 253,
           "level": 2
         },
         {
           "date": "2026-09-28",
-          "count": 10,
-          "level": 1
+          "count": 234,
+          "level": 2
         },
         {
           "date": "2026-09-29",
-          "count": 9,
-          "level": 1
+          "count": 157,
+          "level": 2
         },
         {
           "date": "2026-09-30",
-          "count": 15,
-          "level": 1
+          "count": 146,
+          "level": 2
         },
         {
           "date": "2026-10-01",
-          "count": 11,
+          "count": 132,
           "level": 1
         },
         {
           "date": "2026-10-02",
-          "count": 28,
-          "level": 2
+          "count": 359,
+          "level": 3
         },
         {
           "date": "2026-10-03",
-          "count": 21,
-          "level": 1
+          "count": 201,
+          "level": 2
         }
       ],
       [
         {
           "date": "2026-10-04",
-          "count": 66,
-          "level": 3
+          "count": 497,
+          "level": 4
         },
         {
           "date": "2026-10-05",
-          "count": 9,
+          "count": 56,
           "level": 1
         },
         {
           "date": "2026-10-06",
-          "count": 15,
+          "count": 64,
           "level": 1
         },
         {
           "date": "2026-10-07",
-          "count": 25,
-          "level": 1
+          "count": 198,
+          "level": 2
         },
         {
           "date": "2026-10-08",
-          "count": 25,
-          "level": 1
+          "count": 309,
+          "level": 3
         },
         {
           "date": "2026-10-09",
-          "count": 94,
-          "level": 4
+          "count": 345,
+          "level": 3
         },
         {
           "date": "2026-10-10",
-          "count": 59,
+          "count": 298,
           "level": 3
         }
       ],
       [
         {
           "date": "2026-10-11",
-          "count": 10,
+          "count": 123,
           "level": 1
         },
         {
           "date": "2026-10-12",
-          "count": 57,
-          "level": 3
+          "count": 205,
+          "level": 2
         },
         {
           "date": "2026-10-13",
-          "count": 45,
+          "count": 179,
           "level": 2
         },
         {
           "date": "2026-10-14",
-          "count": 18,
+          "count": 128,
           "level": 1
         },
         {
           "date": "2026-10-15",
-          "count": 12,
+          "count": 82,
           "level": 1
         },
         {
           "date": "2026-10-16",
-          "count": 0,
-          "level": 0
+          "count": 23,
+          "level": 1
         },
         {
           "date": "2026-10-17",
-          "count": 0,
-          "level": 0
+          "count": 134,
+          "level": 1
         }
       ],
       [
         {
           "date": "2026-10-18",
-          "count": 3,
+          "count": 67,
           "level": 1
         },
         {
           "date": "2026-10-19",
-          "count": 31,
-          "level": 2
-        },
-        {
-          "date": "2026-10-20",
-          "count": 8,
+          "count": 78,
           "level": 1
         },
         {
+          "date": "2026-10-20",
+          "count": 182,
+          "level": 2
+        },
+        {
           "date": "2026-10-21",
-          "count": 3,
+          "count": 72,
           "level": 1
         },
         {
           "date": "2026-10-22",
-          "count": 1,
-          "level": 1
+          "count": 162,
+          "level": 2
         },
         {
           "date": "2026-10-23",
-          "count": 2,
+          "count": 26,
           "level": 1
         },
         {
           "date": "2026-10-24",
-          "count": 2,
-          "level": 1
+          "count": 178,
+          "level": 2
         }
       ],
       [
         {
           "date": "2026-10-25",
-          "count": 17,
+          "count": 63,
           "level": 1
         },
         {
           "date": "2026-10-26",
-          "count": 88,
-          "level": 4
+          "count": 274,
+          "level": 2
         },
         {
           "date": "2026-10-27",
-          "count": 26,
+          "count": 67,
           "level": 1
         },
         {
           "date": "2026-10-28",
-          "count": 100,
-          "level": 4
+          "count": 275,
+          "level": 2
         },
         {
           "date": "2026-10-29",
-          "count": 35,
-          "level": 2
+          "count": 128,
+          "level": 1
         },
         {
           "date": "2026-10-30",
-          "count": 35,
-          "level": 2
+          "count": 102,
+          "level": 1
         },
         {
           "date": "2026-10-31",
-          "count": 57,
-          "level": 3
+          "count": 213,
+          "level": 2
         }
       ],
       [
         {
           "date": "2026-11-01",
-          "count": 63,
-          "level": 3
+          "count": 159,
+          "level": 2
         },
         {
           "date": "2026-11-02",
-          "count": 26,
+          "count": 134,
           "level": 1
         },
         {
           "date": "2026-11-03",
-          "count": 5,
+          "count": 65,
           "level": 1
         },
         {
           "date": "2026-11-04",
-          "count": 17,
-          "level": 1
+          "count": 172,
+          "level": 2
         },
         {
           "date": "2026-11-05",
-          "count": 4,
-          "level": 1
+          "count": 222,
+          "level": 2
         },
         {
           "date": "2026-11-06",
-          "count": 0,
-          "level": 0
+          "count": 160,
+          "level": 2
+        },
+        {
+          "date": "2026-11-07",
+          "count": 1,
+          "level": 1
+        }
+      ],
+      [
+        {
+          "date": "2026-11-08",
+          "count": 101,
+          "level": 1
+        },
+        {
+          "date": "2026-11-09",
+          "count": 105,
+          "level": 1
+        },
+        {
+          "date": "2026-11-10",
+          "count": 213,
+          "level": 2
+        },
+        {
+          "date": "2026-11-11",
+          "count": 186,
+          "level": 2
+        },
+        {
+          "date": "2026-11-12",
+          "count": 136,
+          "level": 1
+        },
+        {
+          "date": "2026-11-13",
+          "count": 11,
+          "level": 1
+        },
+        {
+          "date": "2026-11-14",
+          "count": 74,
+          "level": 1
         }
       ]
     ]
@@ -7404,7 +7288,7 @@
     "listed": 5,
     "families": 7,
     "themes": 1,
-    "stars": 484,
+    "stars": 489,
     "tools": 22,
     "with_shots": 28
   }
